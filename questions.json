@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the main purpose of a Software Development Life Cycle (SDLC)?",
+    "choices": ["To create a marketing plan", "To provide a structured process for building software", "To write only user manuals", "To avoid testing"],
+    "answer": 1
+  },
+  {
+    "question": "Which phase comes first in most SDLC models?",
+    "choices": ["Deployment", "Maintenance", "Requirements gathering", "Testing"],
+    "answer": 2
+  },
+  {
+    "question": "What does STLC stand for?",
+    "choices": ["System Testing Lifecycle", "Software Test Life Cycle", "Software Timeline Logic Cycle", "Structured Test Level Chart"],
+    "answer": 1
+  },
+  {
+    "question": "Which testing type validates the end-to-end user flow?",
+    "choices": ["Unit testing", "System testing", "Smoke testing", "Load testing"],
+    "answer": 1
+  },
+  {
+    "question": "Which document typically defines what the software should do?",
+    "choices": ["Release notes", "Requirements specification", "Code review checklist", "Server logs"],
+    "answer": 1
+  },
+  {
+    "question": "What is the goal of regression testing?",
+    "choices": ["Find new features", "Ensure changes did not break existing functionality", "Measure performance only", "Verify UI colors"],
+    "answer": 1
+  },
+  {
+    "question": "Which SDLC phase involves writing code?",
+    "choices": ["Design", "Implementation", "Planning", "Requirements"],
+    "answer": 1
+  },
+  {
+    "question": "What is a test case?",
+    "choices": ["A set of inputs and expected results", "A project deadline", "A user story only", "A deployment script"],
+    "answer": 0
+  },
+  {
+    "question": "What is the primary focus of user acceptance testing (UAT)?",
+    "choices": ["Code coverage", "User needs and requirements", "Database optimization", "Security patches"],
+    "answer": 1
+  },
+  {
+    "question": "Which SDLC model emphasizes iterative development?",
+    "choices": ["Waterfall", "Agile", "V-Model", "Spiral"],
+    "answer": 1
+  }
+]
