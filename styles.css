@@ -23,6 +23,7 @@ body {
 
 .container {
   display: flex;
+  align-items: flex-start;
   gap: 24px;
   max-width: 1200px;
   margin: 40px auto;
