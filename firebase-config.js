@@ -69,6 +69,22 @@ export async function loadQuestionsFromFirestore() {
 export async function saveScoreToFirestore(studentName, score, total, percent) {
   await initPromise;
   
+  // Validate inputs
+  if (!studentName || typeof studentName !== 'string' || studentName.trim() === '') {
+    console.error('Invalid student name provided');
+    return false;
+  }
+  
+  if (typeof score !== 'number' || typeof total !== 'number' || typeof percent !== 'number') {
+    console.error('Invalid score values provided');
+    return false;
+  }
+  
+  if (score < 0 || total < 0 || percent < 0 || percent > 100) {
+    console.error('Score values out of valid range');
+    return false;
+  }
+  
   if (!firestoreReady || !firestoreModule) {
     console.log('Firebase not available, score not saved to Firestore');
     return false;
@@ -77,7 +93,7 @@ export async function saveScoreToFirestore(studentName, score, total, percent) {
   try {
     const scoresCollection = firestoreModule.collection(firestoreModule.db, 'scores');
     await firestoreModule.addDoc(scoresCollection, {
-      studentName,
+      studentName: studentName.trim(),
       score,
       total,
       percent,
