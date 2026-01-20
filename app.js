@@ -1,3 +1,5 @@
+import { loadQuestionsFromFirestore, saveScoreToFirestore } from './firebase-config.js';
+
 const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
@@ -23,14 +25,37 @@ let studentName = '';
 
 const totalQuestions = 10;
 
-fetch('questions.json')
-  .then((response) => response.json())
-  .then((data) => {
+// Load questions from Firestore with fallback to questions.json
+async function loadQuestions() {
+  try {
+    // Try Firestore first
+    const firestoreQuestions = await loadQuestionsFromFirestore();
+    
+    if (firestoreQuestions && firestoreQuestions.length > 0) {
+      console.log('Loaded questions from Firestore');
+      questions = firestoreQuestions;
+      return;
+    }
+    
+    console.log('Firestore returned empty, falling back to questions.json');
+  } catch (error) {
+    console.log('Firestore failed, falling back to questions.json:', error);
+  }
+  
+  // Fallback to questions.json
+  try {
+    const response = await fetch('questions.json');
+    const data = await response.json();
+    console.log('Loaded questions from questions.json');
     questions = data;
-  })
-  .catch(() => {
+  } catch (error) {
+    console.error('Failed to load questions from questions.json:', error);
     questions = [];
-  });
+  }
+}
+
+// Initialize questions on page load
+loadQuestions();
 
 startBtn.addEventListener('click', () => {
   studentName = nameInput.value.trim();
@@ -140,6 +165,9 @@ function finishQuiz() {
   const percent = Math.round((score / total) * 100);
 
   resultSummary.textContent = `${studentName}, you scored ${score}/${total} (${percent}%).`;
+  
+  // Save score to Firestore
+  saveScoreToFirestore(studentName, score, total, percent);
 }
 
 function resetState() {
