@@ -27,7 +27,11 @@ async function initializeFirebase() {
       collection: firestoreImports.collection,
       getDocs: firestoreImports.getDocs,
       addDoc: firestoreImports.addDoc,
-      serverTimestamp: firestoreImports.serverTimestamp
+      serverTimestamp: firestoreImports.serverTimestamp,
+      query: firestoreImports.query,
+      where: firestoreImports.where,
+      orderBy: firestoreImports.orderBy,
+      limit: firestoreImports.limit
     };
     
     firestoreReady = true;
@@ -104,5 +108,47 @@ export async function saveScoreToFirestore(studentName, score, total, percent) {
   } catch (error) {
     console.error('Error saving score to Firestore:', error);
     return false;
+  }
+}
+
+// Load recent scores from the last 24 hours
+export async function loadRecentScores() {
+  await initPromise;
+  
+  if (!firestoreReady || !firestoreModule) {
+    console.log('Firebase not available, cannot load recent scores');
+    return [];
+  }
+  
+  try {
+    // Calculate timestamp for 24 hours ago
+    const twentyFourHoursAgo = new Date();
+    twentyFourHoursAgo.setHours(twentyFourHoursAgo.getHours() - 24);
+    
+    const scoresCollection = firestoreModule.collection(firestoreModule.db, 'scores');
+    const recentQuery = firestoreModule.query(
+      scoresCollection,
+      firestoreModule.where('timestamp', '>=', twentyFourHoursAgo),
+      firestoreModule.orderBy('timestamp', 'desc'),
+      firestoreModule.limit(20)
+    );
+    
+    const querySnapshot = await firestoreModule.getDocs(recentQuery);
+    
+    const scores = [];
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      scores.push({
+        id: doc.id,
+        ...data,
+        // Convert Firestore timestamp to JavaScript Date if present
+        timestamp: data.timestamp?.toDate ? data.timestamp.toDate() : data.timestamp
+      });
+    });
+    
+    return scores;
+  } catch (error) {
+    console.error('Error loading recent scores from Firestore:', error);
+    return [];
   }
 }
