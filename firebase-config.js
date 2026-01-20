@@ -4,6 +4,9 @@
 let firestoreReady = false;
 let firestoreModule = null;
 
+// Configuration constants
+const RECENT_SCORES_HOURS = 24; // Time window for recent scores display
+
 // Initialize Firebase
 async function initializeFirebase() {
   try {
@@ -121,14 +124,14 @@ export async function loadRecentScores() {
   }
   
   try {
-    // Calculate timestamp for 24 hours ago
-    const twentyFourHoursAgo = new Date();
-    twentyFourHoursAgo.setHours(twentyFourHoursAgo.getHours() - 24);
+    // Calculate timestamp for recent scores time window
+    const cutoffTime = new Date();
+    cutoffTime.setHours(cutoffTime.getHours() - RECENT_SCORES_HOURS);
     
     const scoresCollection = firestoreModule.collection(firestoreModule.db, 'scores');
     const recentQuery = firestoreModule.query(
       scoresCollection,
-      firestoreModule.where('timestamp', '>=', twentyFourHoursAgo),
+      firestoreModule.where('timestamp', '>=', cutoffTime),
       firestoreModule.orderBy('timestamp', 'desc'),
       firestoreModule.limit(20)
     );

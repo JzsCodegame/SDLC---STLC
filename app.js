@@ -25,6 +25,8 @@ let timeRemaining = 300;
 let studentName = '';
 
 const totalQuestions = 10;
+const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
+const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 
 // Load questions from Firestore with fallback to questions.json
 async function loadQuestions() {
@@ -128,7 +130,7 @@ function formatTimeAgo(timestamp) {
 displayRecentScores();
 
 // Refresh recent scores every 30 seconds
-setInterval(displayRecentScores, 30000);
+setInterval(displayRecentScores, SCORES_REFRESH_INTERVAL);
 
 startBtn.addEventListener('click', () => {
   studentName = nameInput.value.trim();
@@ -245,7 +247,7 @@ function finishQuiz() {
       // Wait a moment for Firestore to process, then refresh
       setTimeout(() => {
         displayRecentScores();
-      }, 1000);
+      }, FIRESTORE_PROCESSING_DELAY);
     }
   });
 }
