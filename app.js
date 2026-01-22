@@ -27,6 +27,7 @@ let studentName = '';
 const totalQuestions = 10;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
+const ATTEMPT_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // Load questions from Firestore with fallback to questions.json
 async function loadQuestions() {
@@ -112,7 +113,7 @@ async function displayRecentScores() {
 
 // Format timestamp as "X minutes/hours ago"
 function formatTimeAgo(timestamp) {
-  if (!timestamp) return '';
+  if (!timestamp) return ''; 
   
   const now = new Date();
   const date = timestamp instanceof Date ? timestamp : new Date(timestamp);
@@ -132,6 +133,53 @@ displayRecentScores();
 // Refresh recent scores every 30 seconds
 setInterval(displayRecentScores, SCORES_REFRESH_INTERVAL);
 
+function normalizeStudentName(name) {
+  return name.trim().toLowerCase();
+}
+
+function getAttemptKey(name) {
+  return `quizAttempt:${normalizeStudentName(name)}`;
+}
+
+function getAttemptTimestamp(name) {
+  const raw = localStorage.getItem(getAttemptKey(name));
+  const parsed = raw ? Number(raw) : null;
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function setAttemptTimestamp(name) {
+  localStorage.setItem(getAttemptKey(name), String(Date.now()));
+}
+
+function formatTimeRemaining(ms) {
+  const totalMinutes = Math.ceil(ms / 60000);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  if (hours <= 0) {
+    return `${minutes} minute${minutes !== 1 ? 's' : ''}`;
+  }
+  if (minutes === 0) {
+    return `${hours} hour${hours !== 1 ? 's' : ''}`;
+  }
+  return `${hours} hour${hours !== 1 ? 's' : ''} ${minutes} minute${minutes !== 1 ? 's' : ''}`;
+}
+
+function canStartQuiz(name) {
+  const lastAttempt = getAttemptTimestamp(name);
+  if (!lastAttempt) return true;
+
+  const elapsed = Date.now() - lastAttempt;
+  if (elapsed >= ATTEMPT_WINDOW_MS) {
+    localStorage.removeItem(getAttemptKey(name));
+    return true;
+  }
+
+  const remaining = ATTEMPT_WINDOW_MS - elapsed;
+  alert(`${name}, you already took the quiz. Please wait ${formatTimeRemaining(remaining)} before trying again.`);
+  return false;
+}
+
 startBtn.addEventListener('click', () => {
   studentName = nameInput.value.trim();
   if (!studentName) {
@@ -143,6 +191,13 @@ startBtn.addEventListener('click', () => {
     alert('Questions could not be loaded. Please try again later.');
     return;
   }
+
+  if (!canStartQuiz(studentName)) {
+    return;
+  }
+
+  // Mark the attempt immediately so no retakes within 24 hours.
+  setAttemptTimestamp(studentName);
 
   startQuiz();
 });
