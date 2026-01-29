@@ -29,6 +29,35 @@ const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const ATTEMPT_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
 
+// Helper functions to prevent copy/paste during quiz
+function preventCopyPaste(event) {
+  event.preventDefault();
+}
+
+function preventKeyboardShortcuts(event) {
+  // Prevent Ctrl+C, Ctrl+V, Ctrl+X, Cmd+C, Cmd+V, Cmd+X
+  const key = event.key.toLowerCase();
+  if ((event.ctrlKey || event.metaKey) && (key === 'c' || key === 'v' || key === 'x')) {
+    event.preventDefault();
+  }
+}
+
+function enableCopyPasteBlocking() {
+  document.addEventListener('copy', preventCopyPaste);
+  document.addEventListener('cut', preventCopyPaste);
+  document.addEventListener('paste', preventCopyPaste);
+  document.addEventListener('contextmenu', preventCopyPaste);
+  document.addEventListener('keydown', preventKeyboardShortcuts);
+}
+
+function disableCopyPasteBlocking() {
+  document.removeEventListener('copy', preventCopyPaste);
+  document.removeEventListener('cut', preventCopyPaste);
+  document.removeEventListener('paste', preventCopyPaste);
+  document.removeEventListener('contextmenu', preventCopyPaste);
+  document.removeEventListener('keydown', preventKeyboardShortcuts);
+}
+
 // Load questions from Firestore with fallback to questions.json
 async function loadQuestions() {
   try {
@@ -235,6 +264,7 @@ function startQuiz() {
   startScreen.classList.add('hidden');
   quizScreen.classList.remove('hidden');
 
+  enableCopyPasteBlocking();
   startTimer();
   renderQuestion();
 }
@@ -288,6 +318,7 @@ function updateTimer() {
 
 function finishQuiz() {
   clearInterval(timer);
+  disableCopyPasteBlocking();
   quizScreen.classList.add('hidden');
   resultScreen.classList.remove('hidden');
 
@@ -312,4 +343,5 @@ function resetState() {
   currentIndex = 0;
   score = 0;
   timeRemaining = 300;
+  disableCopyPasteBlocking();
 }
