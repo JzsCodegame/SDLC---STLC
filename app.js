@@ -36,7 +36,8 @@ function preventCopyPaste(event) {
 
 function preventKeyboardShortcuts(event) {
   // Prevent Ctrl+C, Ctrl+V, Ctrl+X, Cmd+C, Cmd+V, Cmd+X
-  if ((event.ctrlKey || event.metaKey) && (event.key === 'c' || event.key === 'v' || event.key === 'x')) {
+  const key = event.key.toLowerCase();
+  if ((event.ctrlKey || event.metaKey) && (key === 'c' || key === 'v' || key === 'x')) {
     event.preventDefault();
   }
 }
