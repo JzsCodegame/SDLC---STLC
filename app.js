@@ -317,6 +317,7 @@ function updateTimer() {
 
 function finishQuiz() {
   clearInterval(timer);
+  disableCopyPasteBlocking();
   quizScreen.classList.add('hidden');
   resultScreen.classList.remove('hidden');
 
