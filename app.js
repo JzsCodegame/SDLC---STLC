@@ -37,8 +37,20 @@ function preventCopyPaste(event) {
 function preventKeyboardShortcuts(event) {
   // Prevent Ctrl+C, Ctrl+V, Ctrl+X, Cmd+C, Cmd+V, Cmd+X
   const key = event.key.toLowerCase();
-  if ((event.ctrlKey || event.metaKey) && (key === 'c' || key === 'v' || key === 'x')) {
+  if ((event.ctrlKey || event.metaKey) && (key === 'a' || key === 'c' || key === 'v' || key === 'x')) {
     event.preventDefault();
+  }
+}
+
+function clearQuizSelection() {
+  const selection = document.getSelection();
+  if (!selection || selection.isCollapsed) return;
+
+  const anchorNode = selection.anchorNode;
+  const focusNode = selection.focusNode;
+
+  if (quizScreen.contains(anchorNode) || quizScreen.contains(focusNode)) {
+    selection.removeAllRanges();
   }
 }
 
@@ -48,6 +60,7 @@ function enableCopyPasteBlocking() {
   document.addEventListener('paste', preventCopyPaste);
   document.addEventListener('contextmenu', preventCopyPaste);
   document.addEventListener('keydown', preventKeyboardShortcuts);
+  document.addEventListener('selectionchange', clearQuizSelection);
 }
 
 function disableCopyPasteBlocking() {
@@ -56,6 +69,7 @@ function disableCopyPasteBlocking() {
   document.removeEventListener('paste', preventCopyPaste);
   document.removeEventListener('contextmenu', preventCopyPaste);
   document.removeEventListener('keydown', preventKeyboardShortcuts);
+  document.removeEventListener('selectionchange', clearQuizSelection);
 }
 
 // Load questions from Firestore with fallback to questions.json
@@ -261,6 +275,7 @@ function startQuiz() {
   resetState();
   studentDisplay.textContent = `Student: ${studentName}`;
 
+  document.body.classList.add('quiz-active');
   startScreen.classList.add('hidden');
   quizScreen.classList.remove('hidden');
 
@@ -319,6 +334,7 @@ function updateTimer() {
 function finishQuiz() {
   clearInterval(timer);
   disableCopyPasteBlocking();
+  document.body.classList.remove('quiz-active');
   quizScreen.classList.add('hidden');
   resultScreen.classList.remove('hidden');
 
@@ -344,4 +360,5 @@ function resetState() {
   score = 0;
   timeRemaining = 300;
   disableCopyPasteBlocking();
+  document.body.classList.remove('quiz-active');
 }
