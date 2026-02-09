@@ -21,6 +21,12 @@ body {
   color: var(--text);
 }
 
+body.quiz-active #quiz-screen {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
 .container {
   display: flex;
   align-items: flex-start;
