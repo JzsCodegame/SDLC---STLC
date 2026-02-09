@@ -1,102 +1,102 @@
 [
   {
-    "question": "How does Agile differ from Waterfall in terms of QA involvement?",
+    "question": "In an Agile sprint, why is it risky for QA to wait until all development work is completed before starting testing?",
     "choices": [
-      "QA starts only after development is complete",
-      "QA works only during UAT",
-      "QA is involved continuously throughout the sprint",
-      "QA focuses only on documentation"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "When does QA typically begin testing in an Agile sprint?",
-    "choices": [
-      "After deployment to production",
-      "At the end of the sprint",
-      "Only during sprint review",
-      "As soon as development for a story begins"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "What is the primary purpose of a daily stand-up in Agile?",
-    "choices": [
-      "To review completed documentation",
-      "To discuss blockers, progress, and next steps",
-      "To assign annual goals",
-      "To perform code reviews"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What guides QA testing most directly in Agile?",
-    "choices": [
-      "User stories and acceptance criteria",
-      "Technical design documents only",
-      "Production logs",
-      "Deployment scripts"
+      "It delays feedback and increases the likelihood of late discovery of requirement and integration issues",
+      "It improves collaboration because QA stays out of the way",
+      "It guarantees fewer defects because changes are finished",
+      "It is required by Agile frameworks"
     ],
     "answer": 0
   },
   {
-    "question": "Who is responsible for prioritizing defects in Agile?",
+    "question": "How does unclear acceptance criteria most commonly impact QA work in Agile projects?",
     "choices": [
-      "QA engineer only",
-      "Scrum Master",
-      "Product Owner with business input",
-      "Automation engineer"
+      "It reduces the need for regression testing",
+      "It speeds up sprint execution",
+      "It leads to inconsistent test coverage and recurring defect disputes",
+      "It improves testing flexibility by removing constraints"
     ],
     "answer": 2
   },
   {
-    "question": "What is the main goal of a sprint review?",
+    "question": "When a defect is marked as \"Fixed\" in Agile, what is QA’s next responsibility?",
     "choices": [
-      "To assign defects to developers",
-      "To demonstrate completed work to stakeholders",
-      "To plan the next sprint in detail",
-      "To perform regression testing"
+      "Start full regression immediately and skip retesting",
+      "Close the defect to keep sprint velocity high",
+      "Move the defect to the next sprint automatically",
+      "Perform retesting to confirm the specific fix works as expected"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Why is regression testing especially critical in Agile environments?",
+    "choices": [
+      "Because testing occurs only once per release",
+      "Because frequent changes can unintentionally break existing functionality",
+      "Because Agile requires only automated testing",
+      "Because unit testing is owned by QA"
     ],
     "answer": 1
   },
   {
-    "question": "What is the purpose of a sprint retrospective?",
+    "question": "Which action best demonstrates QA ownership during a sprint review?",
     "choices": [
-      "To review test cases",
-      "To deploy code to production",
-      "To identify improvements for the next sprint",
-      "To finalize requirements"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "How are changing requirements handled in Agile?",
-    "choices": [
-      "They are rejected once sprint starts",
-      "They are documented and postponed indefinitely",
-      "They are incorporated through backlog refinement",
-      "They are handled only after project completion"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why is regression testing critical in Agile?",
-    "choices": [
-      "Because Agile has no documentation",
-      "Because changes are frequent and iterative",
-      "Because automation replaces manual testing",
-      "Because testing happens only once"
+      "Approving deployment independently",
+      "Explaining remaining quality risks, open defects, and test coverage gaps clearly",
+      "Updating the sprint backlog live during the demo",
+      "Rewriting acceptance criteria during the review"
     ],
     "answer": 1
   },
   {
-    "question": "How does automation best support Agile teams?",
+    "question": "In Agile, who typically makes the final decision on whether a defect should block a release?",
     "choices": [
-      "By replacing all manual testers",
-      "By eliminating the need for QA",
-      "By speeding up regression and repeated validations",
-      "By stopping requirement changes"
+      "QA engineer",
+      "Developer",
+      "Product Owner with stakeholder input and team context",
+      "Scrum Master"
     ],
     "answer": 2
+  },
+  {
+    "question": "What is the main purpose of a sprint retrospective from a QA perspective?",
+    "choices": [
+      "Analyze quality trends and identify process improvements for future sprints",
+      "Finalize test plans for the next sprint",
+      "Assign individual performance ratings",
+      "Convert defects into user stories"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How does automation best support Agile teams without reducing quality?",
+    "choices": [
+      "By replacing all manual testing",
+      "By enabling fast, repeatable regression testing and consistent checks across builds",
+      "By focusing only on UI appearance validation",
+      "By eliminating the need for acceptance criteria"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is a major QA risk when defects are continuously deferred across multiple Agile sprints?",
+    "choices": [
+      "Improved sprint velocity",
+      "Accumulation of technical and quality debt that increases release risk over time",
+      "Reduced need for testing",
+      "Fewer merge conflicts"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which statement best reflects the Agile quality mindset?",
+    "choices": [
+      "Quality is the responsibility of QA only",
+      "Testing happens after development is complete",
+      "Automation replaces collaboration",
+      "Quality is a shared responsibility across the entire team"
+    ],
+    "answer": 3
   }
 ]
