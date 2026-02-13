@@ -1,102 +1,107 @@
 [
   {
-    "question": "In an Agile sprint, why is it risky for QA to wait until all development work is completed before starting testing?",
-    "choices": [
-      "It delays feedback and increases the likelihood of late discovery of requirement and integration issues",
-      "It improves collaboration because QA stays out of the way",
-      "It guarantees fewer defects because changes are finished",
-      "It is required by Agile frameworks"
-    ],
+    "question": "Which SQL clause is primarily used to filter rows returned by a SELECT query?",
+    "choices": ["WHERE", "GROUP BY", "ORDER BY", "HAVING"],
     "answer": 0
   },
   {
-    "question": "How does unclear acceptance criteria most commonly impact QA work in Agile projects?",
-    "choices": [
-      "It reduces the need for regression testing",
-      "It speeds up sprint execution",
-      "It leads to inconsistent test coverage and recurring defect disputes",
-      "It improves testing flexibility by removing constraints"
-    ],
+    "question": "In a relational database, what is the main purpose of a PRIMARY KEY?",
+    "choices": ["To allow NULL values", "To uniquely identify each row in a table", "To link tables without constraints", "To store encrypted data"],
+    "answer": 1
+  },
+  {
+    "question": "What does a FOREIGN KEY do in a relational database?",
+    "choices": ["Encrypts a column", "Duplicates records for backup", "References a primary key in another table to enforce relationships", "Automatically sorts results"],
     "answer": 2
   },
   {
-    "question": "When a defect is marked as \"Fixed\" in Agile, what is QA’s next responsibility?",
+    "question": "Which query returns all columns for customers located in the USA?",
     "choices": [
-      "Start full regression immediately and skip retesting",
-      "Close the defect to keep sprint velocity high",
-      "Move the defect to the next sprint automatically",
-      "Perform retesting to confirm the specific fix works as expected"
+      "SELECT Customers WHERE Country = 'USA';",
+      "SELECT * FROM Customers WHEN Country = 'USA';",
+      "SELECT ALL FROM Customers FILTER Country = 'USA';",
+      "SELECT * FROM Customers WHERE Country = 'USA';"
     ],
     "answer": 3
   },
   {
-    "question": "Why is regression testing especially critical in Agile environments?",
+    "question": "Why do QA engineers most commonly use SELECT statements (instead of INSERT/UPDATE/DELETE) in testing?",
     "choices": [
-      "Because testing occurs only once per release",
-      "Because frequent changes can unintentionally break existing functionality",
-      "Because Agile requires only automated testing",
-      "Because unit testing is owned by QA"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which action best demonstrates QA ownership during a sprint review?",
-    "choices": [
-      "Approving deployment independently",
-      "Explaining remaining quality risks, open defects, and test coverage gaps clearly",
-      "Updating the sprint backlog live during the demo",
-      "Rewriting acceptance criteria during the review"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Agile, who typically makes the final decision on whether a defect should block a release?",
-    "choices": [
-      "QA engineer",
-      "Developer",
-      "Product Owner with stakeholder input and team context",
-      "Scrum Master"
+      "Because SELECT is faster than all other statements",
+      "Because SELECT is the only SQL command supported by RDBMS",
+      "Because SELECT retrieves data for validation without changing production-like records",
+      "Because SELECT automatically fixes data issues"
     ],
     "answer": 2
   },
   {
-    "question": "What is the main purpose of a sprint retrospective from a QA perspective?",
+    "question": "In the UI -> API -> DB flow, what does QA typically validate using SQL after a user submits a form?",
     "choices": [
-      "Analyze quality trends and identify process improvements for future sprints",
-      "Finalize test plans for the next sprint",
-      "Assign individual performance ratings",
-      "Convert defects into user stories"
+      "That the browser cache cleared",
+      "That the correct record was inserted/updated in the database",
+      "That the CSS styling updated",
+      "That the API endpoint name changed"
     ],
+    "answer": 1
+  },
+  {
+    "question": "What is the correct way to count unique countries in a Customers table?",
+    "choices": [
+      "SELECT DISTINCT COUNT(Country) FROM Customers;",
+      "SELECT COUNT(Country) UNIQUE FROM Customers;",
+      "SELECT COUNT(DISTINCT Country) FROM Customers;",
+      "SELECT UNIQUE(Country) FROM Customers;"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "If an array of results includes duplicates and you need only unique values, which keyword should you use?",
+    "choices": ["DISTINCT", "UNIQUEJOIN", "MERGE", "ONLY"],
     "answer": 0
   },
   {
-    "question": "How does automation best support Agile teams without reducing quality?",
-    "choices": [
-      "By replacing all manual testing",
-      "By enabling fast, repeatable regression testing and consistent checks across builds",
-      "By focusing only on UI appearance validation",
-      "By eliminating the need for acceptance criteria"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is a major QA risk when defects are continuously deferred across multiple Agile sprints?",
-    "choices": [
-      "Improved sprint velocity",
-      "Accumulation of technical and quality debt that increases release risk over time",
-      "Reduced need for testing",
-      "Fewer merge conflicts"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which statement best reflects the Agile quality mindset?",
-    "choices": [
-      "Quality is the responsibility of QA only",
-      "Testing happens after development is complete",
-      "Automation replaces collaboration",
-      "Quality is a shared responsibility across the entire team"
-    ],
+    "question": "Which JOIN returns only rows where matching keys exist in both tables?",
+    "choices": ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "INNER JOIN"],
     "answer": 3
+  },
+  {
+    "question": "Which JOIN returns all rows from the left table and matching rows from the right table (NULLs when no match)?",
+    "choices": ["FULL JOIN", "LEFT JOIN", "CROSS JOIN", "INNER JOIN"],
+    "answer": 1
+  },
+  {
+    "question": "What's a common data integrity risk if foreign key relationships are not enforced?",
+    "choices": [
+      "Faster query performance",
+      "Automatic test generation",
+      "Orphan records and inconsistent relationships between tables",
+      "Guaranteed unique values in every column"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "If Customers.CustomerID is the primary key, which column in Orders would typically be the foreign key to link an order to a customer?",
+    "choices": ["Orders.OrderID", "Orders.CustomerID", "Orders.Amount", "Orders.CreatedDate"],
+    "answer": 1
+  },
+  {
+    "question": "Which operator would you use to filter for values that are NOT equal to 'USA'?",
+    "choices": ["<>", "==", "><", "!=="],
+    "answer": 0
+  },
+  {
+    "question": "Which clause is used to filter grouped/aggregated results (e.g., COUNT, SUM) after GROUP BY?",
+    "choices": ["WHERE", "ORDER BY", "HAVING", "LIMIT"],
+    "answer": 2
+  },
+  {
+    "question": "Why are primary/foreign keys especially important for QA when validating multi-table business flows (e.g., customers -> orders)?",
+    "choices": [
+      "They guarantee UI rendering performance",
+      "They enable reliable joins to trace related records across tables",
+      "They automatically resolve defects in Jira",
+      "They eliminate the need for test cases"
+    ],
+    "answer": 1
   }
 ]

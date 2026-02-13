@@ -72,31 +72,36 @@ function disableCopyPasteBlocking() {
   document.removeEventListener('selectionchange', clearQuizSelection);
 }
 
-// Load questions from Firestore with fallback to questions.json
+// Load questions from questions.json with fallback to Firestore
 async function loadQuestions() {
   try {
-    // Try Firestore first
+    const response = await fetch('questions.json', { cache: 'no-store' });
+    const data = await response.json();
+
+    if (Array.isArray(data) && data.length > 0) {
+      console.log('Loaded questions from questions.json');
+      questions = data;
+      return;
+    }
+
+    console.log('questions.json returned empty, falling back to Firestore');
+  } catch (error) {
+    console.log('questions.json failed, falling back to Firestore:', error);
+  }
+
+  // Fallback to Firestore
+  try {
     const firestoreQuestions = await loadQuestionsFromFirestore();
-    
     if (firestoreQuestions && firestoreQuestions.length > 0) {
       console.log('Loaded questions from Firestore');
       questions = firestoreQuestions;
       return;
     }
-    
-    console.log('Firestore returned empty, falling back to questions.json');
+
+    console.error('Firestore returned empty question set.');
+    questions = [];
   } catch (error) {
-    console.log('Firestore failed, falling back to questions.json:', error);
-  }
-  
-  // Fallback to questions.json
-  try {
-    const response = await fetch('questions.json');
-    const data = await response.json();
-    console.log('Loaded questions from questions.json');
-    questions = data;
-  } catch (error) {
-    console.error('Failed to load questions from questions.json:', error);
+    console.error('Failed to load questions from Firestore:', error);
     questions = [];
   }
 }
