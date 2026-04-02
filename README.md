@@ -4,16 +4,16 @@ This is a starter static quiz site built for GitHub Pages with Firebase Firestor
 
 ## How it works
 - Students enter their name
-- A 10-question quiz starts with a 5-minute timer
+- A 20-question quiz starts with a 5-minute timer
 - Results show at the end
 - Quiz scores are automatically saved to Firestore
 
 ## Firebase Firestore Integration
 
 This app uses Firebase Firestore for:
-- **Loading questions**: Questions are fetched from the `questions` collection in Firestore
+- **Loading questions**: Questions are loaded from `questions.json` (primary source)
 - **Storing scores**: Quiz results are saved to the `scores` collection with student name, score, total, percentage, and timestamp
-- **Fallback support**: If Firestore fails or returns no data, the app falls back to loading from `questions.json`
+- **Fallback support**: If `questions.json` is unavailable/empty, the app falls back to the `questions` collection in Firestore
 
 ### Seeding Questions to Firestore
 
@@ -34,7 +34,7 @@ To add questions to Firestore:
 Alternatively, you can import the existing `questions.json` file into Firestore using Firebase CLI or custom scripts.
 
 ## Update questions
-Edit `questions.json` to update the quiz content. This file serves as a fallback when Firestore is unavailable. Each question has:
+Edit `questions.json` to update the quiz content. This file is the primary question source used by students. Each question has:
 - `question`: the question text
 - `choices`: array of answer options
 - `answer`: the index of the correct choice (0-based)

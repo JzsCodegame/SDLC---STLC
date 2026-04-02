@@ -1,102 +1,202 @@
 [
   {
-    "question": "In an Agile sprint, why is it risky for QA to wait until all development work is completed before starting testing?",
+    "question": "How do you identify that an issue is a defect and not expected behavior?",
     "choices": [
-      "It delays feedback and increases the likelihood of late discovery of requirement and integration issues",
-      "It improves collaboration because QA stays out of the way",
-      "It guarantees fewer defects because changes are finished",
-      "It is required by Agile frameworks"
+      "Compare actual behavior with approved requirements and acceptance criteria",
+      "Assume any unusual UI behavior is always a defect",
+      "Log it immediately without checking documentation",
+      "Ask another tester to decide and skip analysis"
     ],
     "answer": 0
   },
   {
-    "question": "How does unclear acceptance criteria most commonly impact QA work in Agile projects?",
+    "question": "What should a tester do first after observing unexpected behavior in the application?",
     "choices": [
-      "It reduces the need for regression testing",
-      "It speeds up sprint execution",
-      "It leads to inconsistent test coverage and recurring defect disputes",
-      "It improves testing flexibility by removing constraints"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "When a defect is marked as \"Fixed\" in Agile, what is QA’s next responsibility?",
-    "choices": [
-      "Start full regression immediately and skip retesting",
-      "Close the defect to keep sprint velocity high",
-      "Move the defect to the next sprint automatically",
-      "Perform retesting to confirm the specific fix works as expected"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Why is regression testing especially critical in Agile environments?",
-    "choices": [
-      "Because testing occurs only once per release",
-      "Because frequent changes can unintentionally break existing functionality",
-      "Because Agile requires only automated testing",
-      "Because unit testing is owned by QA"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which action best demonstrates QA ownership during a sprint review?",
-    "choices": [
-      "Approving deployment independently",
-      "Explaining remaining quality risks, open defects, and test coverage gaps clearly",
-      "Updating the sprint backlog live during the demo",
-      "Rewriting acceptance criteria during the review"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Agile, who typically makes the final decision on whether a defect should block a release?",
-    "choices": [
-      "QA engineer",
-      "Developer",
-      "Product Owner with stakeholder input and team context",
-      "Scrum Master"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main purpose of a sprint retrospective from a QA perspective?",
-    "choices": [
-      "Analyze quality trends and identify process improvements for future sprints",
-      "Finalize test plans for the next sprint",
-      "Assign individual performance ratings",
-      "Convert defects into user stories"
+      "Capture basic evidence and verify against requirements/test case",
+      "Mark it as Critical and escalate instantly",
+      "Restart the system and ignore the issue",
+      "Create an enhancement ticket instead"
     ],
     "answer": 0
   },
   {
-    "question": "How does automation best support Agile teams without reducing quality?",
+    "question": "Why is it important to reproduce a defect before logging it?",
     "choices": [
-      "By replacing all manual testing",
-      "By enabling fast, repeatable regression testing and consistent checks across builds",
-      "By focusing only on UI appearance validation",
-      "By eliminating the need for acceptance criteria"
+      "To confirm it is real and provide repeatable steps for developers",
+      "To make the report longer",
+      "To reduce the number of screenshots",
+      "To avoid assigning severity"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
-    "question": "What is a major QA risk when defects are continuously deferred across multiple Agile sprints?",
+    "question": "How do you confirm whether a defect comes from the application or the test environment?",
     "choices": [
-      "Improved sprint velocity",
-      "Accumulation of technical and quality debt that increases release risk over time",
-      "Reduced need for testing",
-      "Fewer merge conflicts"
+      "Run the same scenario across environments and validate logs/configuration",
+      "Assume it is always a product defect",
+      "Only check browser cache",
+      "Wait for developers to confirm without collecting data"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
-    "question": "Which statement best reflects the Agile quality mindset?",
+    "question": "Why is requirement validation important before raising a defect?",
     "choices": [
-      "Quality is the responsibility of QA only",
-      "Testing happens after development is complete",
-      "Automation replaces collaboration",
-      "Quality is a shared responsibility across the entire team"
+      "It ensures the expected result is based on documented behavior",
+      "It helps skip writing reproduction steps",
+      "It automatically sets defect priority",
+      "It avoids attaching evidence"
     ],
-    "answer": 3
+    "answer": 0
+  },
+  {
+    "question": "What should always be included in a standard defect template?",
+    "choices": [
+      "Title, environment, steps to reproduce, expected result, actual result, severity/priority, and evidence",
+      "Only title and screenshot",
+      "Only module name and tester name",
+      "Only severity and comments"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is the defect title important in a defect report?",
+    "choices": [
+      "It gives a quick, searchable summary of the issue",
+      "It replaces the need for a description",
+      "It determines whether the defect is valid",
+      "It is only useful for managers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why must expected and actual results both be included in a defect report?",
+    "choices": [
+      "They clearly show the gap between intended and observed behavior",
+      "They reduce the need for reproduction steps",
+      "They allow defects to be auto-closed",
+      "They are needed only for UI bugs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the purpose of adding environment details in a defect template?",
+    "choices": [
+      "To help reproduce and isolate environment-specific issues",
+      "To increase report word count",
+      "To assign developers automatically",
+      "To avoid attaching logs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why do we include severity in a defect report?",
+    "choices": [
+      "To indicate business/technical impact of the defect",
+      "To track who reported the defect",
+      "To define sprint velocity",
+      "To identify duplicate tickets"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the initial status of a defect after a tester logs it in most workflows?",
+    "choices": [
+      "New",
+      "Retest",
+      "Closed",
+      "Deferred"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does the status 'Assigned' mean in defect tracking?",
+    "choices": [
+      "The defect has been given to an owner (usually a developer) for analysis/fix",
+      "The defect is verified and closed",
+      "The defect is waiting for retest",
+      "The defect is postponed to a future release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does the status 'Fixed' mean?",
+    "choices": [
+      "A code change was made and is ready for QA retesting",
+      "The defect is permanently closed by QA",
+      "The defect was found to be invalid",
+      "The defect was duplicated"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What should a tester do after a developer marks a defect as fixed?",
+    "choices": [
+      "Retest the same steps and verify the fix in the target build",
+      "Close it immediately without testing",
+      "Move it to deferred",
+      "Create a new enhancement request"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the difference between retesting and regression testing?",
+    "choices": [
+      "Retesting checks the specific fix; regression checks related existing functionality",
+      "Retesting is for performance only; regression is for security only",
+      "Both are exactly the same activity",
+      "Regression is done before development"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What should happen if the defect still exists after retesting?",
+    "choices": [
+      "Reopen the defect with new evidence and updated observations",
+      "Close the defect to avoid delay",
+      "Mark it as duplicate",
+      "Change it to enhancement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "A defect is valid but business decides not to fix it in current release. What status is most appropriate?",
+    "choices": [
+      "Deferred",
+      "Duplicate",
+      "Rejected",
+      "Closed"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "You find the same issue already reported by another tester. What should be done?",
+    "choices": [
+      "Mark as Duplicate and link to the original defect",
+      "Create a new high-priority defect anyway",
+      "Close both defects",
+      "Convert it to a test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why should production defects be added to the regression suite?",
+    "choices": [
+      "To prevent the same issue from recurring in future releases",
+      "To reduce the number of automated tests",
+      "To replace all manual testing",
+      "To avoid writing root-cause analysis"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How do defect reports improve software quality over time?",
+    "choices": [
+      "They reveal patterns/root causes, improving prevention and test coverage",
+      "They eliminate the need for requirements",
+      "They automatically fix code",
+      "They remove the need for communication"
+    ],
+    "answer": 0
   }
 ]
