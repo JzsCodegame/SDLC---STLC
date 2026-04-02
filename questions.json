@@ -1,102 +1,202 @@
 [
   {
-    "question": "In an Agile sprint, why is it risky for QA to wait until all development work is completed before starting testing?",
+    "question": "If a defect occurs intermittently, what is the best way to report it?",
     "choices": [
-      "It delays feedback and increases the likelihood of late discovery of requirement and integration issues",
-      "It improves collaboration because QA stays out of the way",
-      "It guarantees fewer defects because changes are finished",
-      "It is required by Agile frameworks"
+      "Log it with frequency details, observed pattern, timestamps, and evidence",
+      "Skip reporting until it happens consistently",
+      "Mark it as rejected immediately",
+      "Report it without any reproduction notes"
     ],
     "answer": 0
   },
   {
-    "question": "How does unclear acceptance criteria most commonly impact QA work in Agile projects?",
+    "question": "What is the most practical first step before filing a defect when expected and actual behavior differ?",
     "choices": [
-      "It reduces the need for regression testing",
-      "It speeds up sprint execution",
-      "It leads to inconsistent test coverage and recurring defect disputes",
-      "It improves testing flexibility by removing constraints"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "When a defect is marked as \"Fixed\" in Agile, what is QA’s next responsibility?",
-    "choices": [
-      "Start full regression immediately and skip retesting",
-      "Close the defect to keep sprint velocity high",
-      "Move the defect to the next sprint automatically",
-      "Perform retesting to confirm the specific fix works as expected"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Why is regression testing especially critical in Agile environments?",
-    "choices": [
-      "Because testing occurs only once per release",
-      "Because frequent changes can unintentionally break existing functionality",
-      "Because Agile requires only automated testing",
-      "Because unit testing is owned by QA"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which action best demonstrates QA ownership during a sprint review?",
-    "choices": [
-      "Approving deployment independently",
-      "Explaining remaining quality risks, open defects, and test coverage gaps clearly",
-      "Updating the sprint backlog live during the demo",
-      "Rewriting acceptance criteria during the review"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Agile, who typically makes the final decision on whether a defect should block a release?",
-    "choices": [
-      "QA engineer",
-      "Developer",
-      "Product Owner with stakeholder input and team context",
-      "Scrum Master"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main purpose of a sprint retrospective from a QA perspective?",
-    "choices": [
-      "Analyze quality trends and identify process improvements for future sprints",
-      "Finalize test plans for the next sprint",
-      "Assign individual performance ratings",
-      "Convert defects into user stories"
+      "Re-check requirement and acceptance criteria for the scenario",
+      "Set status to Closed",
+      "Create a duplicate ticket",
+      "Escalate to production support"
     ],
     "answer": 0
   },
   {
-    "question": "How does automation best support Agile teams without reducing quality?",
+    "question": "How many reproduction attempts are generally reasonable before reporting a defect?",
     "choices": [
-      "By replacing all manual testing",
-      "By enabling fast, repeatable regression testing and consistent checks across builds",
-      "By focusing only on UI appearance validation",
-      "By eliminating the need for acceptance criteria"
+      "Enough attempts to establish reproducibility or clear intermittency evidence",
+      "Exactly one attempt",
+      "Exactly ten attempts regardless of issue",
+      "No attempts are needed"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
-    "question": "What is a major QA risk when defects are continuously deferred across multiple Agile sprints?",
+    "question": "What is the key difference between a defect and an enhancement request?",
     "choices": [
-      "Improved sprint velocity",
-      "Accumulation of technical and quality debt that increases release risk over time",
-      "Reduced need for testing",
-      "Fewer merge conflicts"
+      "A defect is deviation from expected behavior; enhancement is a new/improved capability",
+      "Enhancements are always higher severity",
+      "Defects never require reproduction steps",
+      "There is no difference"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
-    "question": "Which statement best reflects the Agile quality mindset?",
+    "question": "How do logs, screenshots, and recordings help defect identification?",
     "choices": [
-      "Quality is the responsibility of QA only",
-      "Testing happens after development is complete",
-      "Automation replaces collaboration",
-      "Quality is a shared responsibility across the entire team"
+      "They provide objective evidence and speed developer diagnosis",
+      "They replace the need for defect descriptions",
+      "They are useful only for UI color issues",
+      "They are required only after closure"
     ],
-    "answer": 3
+    "answer": 0
+  },
+  {
+    "question": "What should a tester do when actual result does not match expected result?",
+    "choices": [
+      "Document the mismatch with steps, data, and evidence, then log the defect",
+      "Ignore if test execution is near deadline",
+      "Change expected result to match actual",
+      "Close the test case as passed"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is writing exact steps to reproduce critical in defect reports?",
+    "choices": [
+      "It lets others reliably recreate the issue and verify the fix",
+      "It reduces need for module details",
+      "It guarantees severity is Critical",
+      "It avoids retesting"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How should a defect description be written for developers?",
+    "choices": [
+      "Clear, concise, and structured with scenario context and observed behavior",
+      "As a one-line complaint",
+      "Only with technical jargon",
+      "Without mentioning user action"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is priority included in a defect report?",
+    "choices": [
+      "To indicate implementation urgency based on release/business needs",
+      "To indicate who created the defect",
+      "To define browser compatibility",
+      "To classify duplicate tickets"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why should module name, build version, and test data be included in a defect report?",
+    "choices": [
+      "They narrow troubleshooting scope and make reproduction accurate",
+      "They are optional for all defects",
+      "They are needed only for rejected defects",
+      "They replace expected/actual results"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does defect status 'Open' typically mean?",
+    "choices": [
+      "The defect is acknowledged and pending analysis/fix work",
+      "The defect is verified fixed",
+      "The defect is permanently closed",
+      "The defect is duplicated"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does status 'Retest' mean in many defect workflows?",
+    "choices": [
+      "Fix is available and QA needs to validate it",
+      "Defect is postponed",
+      "Defect is invalid",
+      "Defect was merged with another"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does status 'Closed' indicate?",
+    "choices": [
+      "QA has verified the fix and no further action is required",
+      "Developer has started analysis",
+      "Business requested deferral",
+      "Issue was not reproducible"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does status 'Rejected' generally mean?",
+    "choices": [
+      "The reported issue is considered invalid or not a product defect",
+      "The defect is fixed in production",
+      "The ticket is ready for retest",
+      "The issue is duplicated"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does status 'Duplicate' mean in defect tracking?",
+    "choices": [
+      "The same issue already exists in another defect record",
+      "The issue is fixed but unverified",
+      "The issue is deferred",
+      "The issue is rejected by business"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "When should a defect be reopened?",
+    "choices": [
+      "When retest shows the issue still exists or regresses",
+      "When developer starts work",
+      "When requirement changes",
+      "When ticket is older than one day"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What should a tester verify before closing a defect?",
+    "choices": [
+      "Fix validity, related impact, and expected behavior in target environment",
+      "Only ticket assignee name",
+      "Only screenshot quality",
+      "Only severity level"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "A developer disagrees and says issue is not a defect, but you believe it is. Best next step?",
+    "choices": [
+      "Review requirement evidence with dev/PO and align on expected behavior",
+      "Immediately escalate as blocker",
+      "Delete the defect",
+      "Mark it deferred"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "A defect passes in QA but fails in another environment. How should this be handled?",
+    "choices": [
+      "Record environment-specific evidence and continue investigation with DevOps/dev team",
+      "Close defect because QA passed",
+      "Mark as duplicate automatically",
+      "Convert to enhancement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How does a lead/manager commonly track defect progress across a project?",
+    "choices": [
+      "By monitoring dashboards/metrics such as status trends, severity, aging, and reopen rate",
+      "By reading only closed tickets",
+      "By checking commit count only",
+      "By skipping periodic reviews"
+    ],
+    "answer": 0
   }
 ]
