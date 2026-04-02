@@ -4,7 +4,7 @@ This is a starter static quiz site built for GitHub Pages with Firebase Firestor
 
 ## How it works
 - Students enter their name
-- A 10-question quiz starts with a 5-minute timer
+- A 20-question quiz starts with a 5-minute timer
 - Results show at the end
 - Quiz scores are automatically saved to Firestore
 

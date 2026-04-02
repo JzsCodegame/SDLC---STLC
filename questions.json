@@ -1,107 +1,202 @@
 [
   {
-    "question": "Which SQL clause is primarily used to filter rows returned by a SELECT query?",
-    "choices": ["WHERE", "GROUP BY", "ORDER BY", "HAVING"],
+    "question": "How do you identify that an issue is a defect and not expected behavior?",
+    "choices": [
+      "Compare actual behavior with approved requirements and acceptance criteria",
+      "Assume any unusual UI behavior is always a defect",
+      "Log it immediately without checking documentation",
+      "Ask another tester to decide and skip analysis"
+    ],
     "answer": 0
   },
   {
-    "question": "In a relational database, what is the main purpose of a PRIMARY KEY?",
-    "choices": ["To allow NULL values", "To uniquely identify each row in a table", "To link tables without constraints", "To store encrypted data"],
-    "answer": 1
-  },
-  {
-    "question": "What does a FOREIGN KEY do in a relational database?",
-    "choices": ["Encrypts a column", "Duplicates records for backup", "References a primary key in another table to enforce relationships", "Automatically sorts results"],
-    "answer": 2
-  },
-  {
-    "question": "Which query returns all columns for customers located in the USA?",
+    "question": "What should a tester do first after observing unexpected behavior in the application?",
     "choices": [
-      "SELECT Customers WHERE Country = 'USA';",
-      "SELECT * FROM Customers WHEN Country = 'USA';",
-      "SELECT ALL FROM Customers FILTER Country = 'USA';",
-      "SELECT * FROM Customers WHERE Country = 'USA';"
+      "Capture basic evidence and verify against requirements/test case",
+      "Mark it as Critical and escalate instantly",
+      "Restart the system and ignore the issue",
+      "Create an enhancement ticket instead"
     ],
-    "answer": 3
-  },
-  {
-    "question": "Why do QA engineers most commonly use SELECT statements (instead of INSERT/UPDATE/DELETE) in testing?",
-    "choices": [
-      "Because SELECT is faster than all other statements",
-      "Because SELECT is the only SQL command supported by RDBMS",
-      "Because SELECT retrieves data for validation without changing production-like records",
-      "Because SELECT automatically fixes data issues"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "In the UI -> API -> DB flow, what does QA typically validate using SQL after a user submits a form?",
-    "choices": [
-      "That the browser cache cleared",
-      "That the correct record was inserted/updated in the database",
-      "That the CSS styling updated",
-      "That the API endpoint name changed"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the correct way to count unique countries in a Customers table?",
-    "choices": [
-      "SELECT DISTINCT COUNT(Country) FROM Customers;",
-      "SELECT COUNT(Country) UNIQUE FROM Customers;",
-      "SELECT COUNT(DISTINCT Country) FROM Customers;",
-      "SELECT UNIQUE(Country) FROM Customers;"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "If an array of results includes duplicates and you need only unique values, which keyword should you use?",
-    "choices": ["DISTINCT", "UNIQUEJOIN", "MERGE", "ONLY"],
     "answer": 0
   },
   {
-    "question": "Which JOIN returns only rows where matching keys exist in both tables?",
-    "choices": ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "INNER JOIN"],
-    "answer": 3
-  },
-  {
-    "question": "Which JOIN returns all rows from the left table and matching rows from the right table (NULLs when no match)?",
-    "choices": ["FULL JOIN", "LEFT JOIN", "CROSS JOIN", "INNER JOIN"],
-    "answer": 1
-  },
-  {
-    "question": "What's a common data integrity risk if foreign key relationships are not enforced?",
+    "question": "Why is it important to reproduce a defect before logging it?",
     "choices": [
-      "Faster query performance",
-      "Automatic test generation",
-      "Orphan records and inconsistent relationships between tables",
-      "Guaranteed unique values in every column"
+      "To confirm it is real and provide repeatable steps for developers",
+      "To make the report longer",
+      "To reduce the number of screenshots",
+      "To avoid assigning severity"
     ],
-    "answer": 2
-  },
-  {
-    "question": "If Customers.CustomerID is the primary key, which column in Orders would typically be the foreign key to link an order to a customer?",
-    "choices": ["Orders.OrderID", "Orders.CustomerID", "Orders.Amount", "Orders.CreatedDate"],
-    "answer": 1
-  },
-  {
-    "question": "Which operator would you use to filter for values that are NOT equal to 'USA'?",
-    "choices": ["<>", "==", "><", "!=="],
     "answer": 0
   },
   {
-    "question": "Which clause is used to filter grouped/aggregated results (e.g., COUNT, SUM) after GROUP BY?",
-    "choices": ["WHERE", "ORDER BY", "HAVING", "LIMIT"],
-    "answer": 2
+    "question": "How do you confirm whether a defect comes from the application or the test environment?",
+    "choices": [
+      "Run the same scenario across environments and validate logs/configuration",
+      "Assume it is always a product defect",
+      "Only check browser cache",
+      "Wait for developers to confirm without collecting data"
+    ],
+    "answer": 0
   },
   {
-    "question": "Why are primary/foreign keys especially important for QA when validating multi-table business flows (e.g., customers -> orders)?",
+    "question": "Why is requirement validation important before raising a defect?",
     "choices": [
-      "They guarantee UI rendering performance",
-      "They enable reliable joins to trace related records across tables",
-      "They automatically resolve defects in Jira",
-      "They eliminate the need for test cases"
+      "It ensures the expected result is based on documented behavior",
+      "It helps skip writing reproduction steps",
+      "It automatically sets defect priority",
+      "It avoids attaching evidence"
     ],
-    "answer": 1
+    "answer": 0
+  },
+  {
+    "question": "What should always be included in a standard defect template?",
+    "choices": [
+      "Title, environment, steps to reproduce, expected result, actual result, severity/priority, and evidence",
+      "Only title and screenshot",
+      "Only module name and tester name",
+      "Only severity and comments"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is the defect title important in a defect report?",
+    "choices": [
+      "It gives a quick, searchable summary of the issue",
+      "It replaces the need for a description",
+      "It determines whether the defect is valid",
+      "It is only useful for managers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why must expected and actual results both be included in a defect report?",
+    "choices": [
+      "They clearly show the gap between intended and observed behavior",
+      "They reduce the need for reproduction steps",
+      "They allow defects to be auto-closed",
+      "They are needed only for UI bugs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the purpose of adding environment details in a defect template?",
+    "choices": [
+      "To help reproduce and isolate environment-specific issues",
+      "To increase report word count",
+      "To assign developers automatically",
+      "To avoid attaching logs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why do we include severity in a defect report?",
+    "choices": [
+      "To indicate business/technical impact of the defect",
+      "To track who reported the defect",
+      "To define sprint velocity",
+      "To identify duplicate tickets"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the initial status of a defect after a tester logs it in most workflows?",
+    "choices": [
+      "New",
+      "Retest",
+      "Closed",
+      "Deferred"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does the status 'Assigned' mean in defect tracking?",
+    "choices": [
+      "The defect has been given to an owner (usually a developer) for analysis/fix",
+      "The defect is verified and closed",
+      "The defect is waiting for retest",
+      "The defect is postponed to a future release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does the status 'Fixed' mean?",
+    "choices": [
+      "A code change was made and is ready for QA retesting",
+      "The defect is permanently closed by QA",
+      "The defect was found to be invalid",
+      "The defect was duplicated"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What should a tester do after a developer marks a defect as fixed?",
+    "choices": [
+      "Retest the same steps and verify the fix in the target build",
+      "Close it immediately without testing",
+      "Move it to deferred",
+      "Create a new enhancement request"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the difference between retesting and regression testing?",
+    "choices": [
+      "Retesting checks the specific fix; regression checks related existing functionality",
+      "Retesting is for performance only; regression is for security only",
+      "Both are exactly the same activity",
+      "Regression is done before development"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What should happen if the defect still exists after retesting?",
+    "choices": [
+      "Reopen the defect with new evidence and updated observations",
+      "Close the defect to avoid delay",
+      "Mark it as duplicate",
+      "Change it to enhancement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "A defect is valid but business decides not to fix it in current release. What status is most appropriate?",
+    "choices": [
+      "Deferred",
+      "Duplicate",
+      "Rejected",
+      "Closed"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "You find the same issue already reported by another tester. What should be done?",
+    "choices": [
+      "Mark as Duplicate and link to the original defect",
+      "Create a new high-priority defect anyway",
+      "Close both defects",
+      "Convert it to a test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why should production defects be added to the regression suite?",
+    "choices": [
+      "To prevent the same issue from recurring in future releases",
+      "To reduce the number of automated tests",
+      "To replace all manual testing",
+      "To avoid writing root-cause analysis"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How do defect reports improve software quality over time?",
+    "choices": [
+      "They reveal patterns/root causes, improving prevention and test coverage",
+      "They eliminate the need for requirements",
+      "They automatically fix code",
+      "They remove the need for communication"
+    ],
+    "answer": 0
   }
 ]

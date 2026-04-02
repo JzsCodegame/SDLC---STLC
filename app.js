@@ -24,7 +24,7 @@ let timer = null;
 let timeRemaining = 300;
 let studentName = '';
 
-const totalQuestions = 10;
+const totalQuestions = 20;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const ATTEMPT_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
