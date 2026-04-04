@@ -218,3 +218,23 @@ button {
   text-align: center;
   padding: 20px 0;
 }
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.flashcard-actions {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.flashcard-answer {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #f3f4f6;
+  font-weight: 600;
+}

@@ -17,8 +17,11 @@
       <section id="start-screen" class="card">
         <label for="student-name">Student name</label>
         <input id="student-name" type="text" placeholder="Enter your name" />
-        <button id="start-btn" class="primary">Start Quiz</button>
-        <p class="hint">You have 5 minutes to answer 10 questions.</p>
+        <div class="actions">
+          <button id="start-btn" class="primary">Start Quiz</button>
+          <button id="flashcards-btn" class="secondary">Study Flashcards</button>
+        </div>
+        <p class="hint">You have 5 minutes to answer 40 questions.</p>
       </section>
 
       <section id="quiz-screen" class="card hidden">
@@ -33,6 +36,26 @@
         <form id="choices" class="choices"></form>
 
         <button id="next-btn" class="primary">Next</button>
+      </section>
+
+
+
+      <section id="flashcard-screen" class="card hidden">
+        <div class="quiz-meta">
+          <span id="flashcard-progress"></span>
+          <span>Flashcard Mode</span>
+        </div>
+
+        <h2 id="flashcard-question"></h2>
+        <p id="flashcard-answer" class="flashcard-answer hidden"></p>
+
+        <div class="flashcard-actions">
+          <button id="flashcard-prev" class="secondary">Previous</button>
+          <button id="flashcard-show" class="primary">Show Answer</button>
+          <button id="flashcard-next" class="secondary">Next</button>
+        </div>
+
+        <button id="flashcard-back" class="secondary">Back to Start</button>
       </section>
 
       <section id="result-screen" class="card hidden">

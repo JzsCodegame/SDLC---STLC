@@ -2,9 +2,11 @@ import { loadQuestionsFromFirestore, saveScoreToFirestore, loadRecentScores } fr
 
 const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
+const flashcardScreen = document.getElementById('flashcard-screen');
 const resultScreen = document.getElementById('result-screen');
 
 const startBtn = document.getElementById('start-btn');
+const flashcardsBtn = document.getElementById('flashcards-btn');
 const nextBtn = document.getElementById('next-btn');
 const restartBtn = document.getElementById('restart-btn');
 
@@ -17,14 +19,24 @@ const choicesForm = document.getElementById('choices');
 const resultSummary = document.getElementById('result-summary');
 const recentScoresContainer = document.getElementById('recent-scores');
 
+const flashcardProgress = document.getElementById('flashcard-progress');
+const flashcardQuestion = document.getElementById('flashcard-question');
+const flashcardAnswer = document.getElementById('flashcard-answer');
+const flashcardPrevBtn = document.getElementById('flashcard-prev');
+const flashcardShowBtn = document.getElementById('flashcard-show');
+const flashcardNextBtn = document.getElementById('flashcard-next');
+const flashcardBackBtn = document.getElementById('flashcard-back');
+
 let questions = [];
 let currentIndex = 0;
 let score = 0;
 let timer = null;
 let timeRemaining = 300;
 let studentName = '';
+let flashcardIndex = 0;
+let flashcardAnswerVisible = false;
 
-const totalQuestions = 10;
+const totalQuestions = 40;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const ATTEMPT_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
@@ -72,31 +84,36 @@ function disableCopyPasteBlocking() {
   document.removeEventListener('selectionchange', clearQuizSelection);
 }
 
-// Load questions from Firestore with fallback to questions.json
+// Load questions from questions.json with fallback to Firestore
 async function loadQuestions() {
   try {
-    // Try Firestore first
+    const response = await fetch('questions.json', { cache: 'no-store' });
+    const data = await response.json();
+
+    if (Array.isArray(data) && data.length > 0) {
+      console.log('Loaded questions from questions.json');
+      questions = data;
+      return;
+    }
+
+    console.log('questions.json returned empty, falling back to Firestore');
+  } catch (error) {
+    console.log('questions.json failed, falling back to Firestore:', error);
+  }
+
+  // Fallback to Firestore
+  try {
     const firestoreQuestions = await loadQuestionsFromFirestore();
-    
     if (firestoreQuestions && firestoreQuestions.length > 0) {
       console.log('Loaded questions from Firestore');
       questions = firestoreQuestions;
       return;
     }
-    
-    console.log('Firestore returned empty, falling back to questions.json');
+
+    console.error('Firestore returned empty question set.');
+    questions = [];
   } catch (error) {
-    console.log('Firestore failed, falling back to questions.json:', error);
-  }
-  
-  // Fallback to questions.json
-  try {
-    const response = await fetch('questions.json');
-    const data = await response.json();
-    console.log('Loaded questions from questions.json');
-    questions = data;
-  } catch (error) {
-    console.error('Failed to load questions from questions.json:', error);
+    console.error('Failed to load questions from Firestore:', error);
     questions = [];
   }
 }
@@ -245,6 +262,39 @@ startBtn.addEventListener('click', () => {
   startQuiz();
 });
 
+
+flashcardsBtn.addEventListener('click', () => {
+  if (!questions.length) {
+    alert('Questions could not be loaded. Please try again later.');
+    return;
+  }
+
+  startFlashcards();
+});
+
+flashcardShowBtn.addEventListener('click', () => {
+  flashcardAnswerVisible = !flashcardAnswerVisible;
+  flashcardAnswer.classList.toggle('hidden', !flashcardAnswerVisible);
+  flashcardShowBtn.textContent = flashcardAnswerVisible ? 'Hide Answer' : 'Show Answer';
+});
+
+flashcardPrevBtn.addEventListener('click', () => {
+  if (!questions.length) return;
+  flashcardIndex = (flashcardIndex - 1 + questions.length) % questions.length;
+  renderFlashcard();
+});
+
+flashcardNextBtn.addEventListener('click', () => {
+  if (!questions.length) return;
+  flashcardIndex = (flashcardIndex + 1) % questions.length;
+  renderFlashcard();
+});
+
+flashcardBackBtn.addEventListener('click', () => {
+  flashcardScreen.classList.add('hidden');
+  startScreen.classList.remove('hidden');
+});
+
 nextBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const selected = choicesForm.querySelector('input[name="choice"]:checked');
@@ -269,6 +319,7 @@ restartBtn.addEventListener('click', () => {
   resetState();
   startScreen.classList.remove('hidden');
   resultScreen.classList.add('hidden');
+  flashcardScreen.classList.add('hidden');
 });
 
 function startQuiz() {
@@ -310,6 +361,31 @@ function renderQuestion() {
   });
 
   nextBtn.textContent = currentIndex === total - 1 ? 'Finish' : 'Next';
+}
+
+
+function startFlashcards() {
+  resetState();
+  startScreen.classList.add('hidden');
+  resultScreen.classList.add('hidden');
+  quizScreen.classList.add('hidden');
+  flashcardScreen.classList.remove('hidden');
+
+  flashcardIndex = 0;
+  renderFlashcard();
+}
+
+function renderFlashcard() {
+  const total = questions.length;
+  const current = questions[flashcardIndex];
+
+  flashcardProgress.textContent = `Card ${flashcardIndex + 1} of ${total}`;
+  flashcardQuestion.textContent = current.question;
+  flashcardAnswer.textContent = `Answer: ${current.choices[current.answer]}`;
+
+  flashcardAnswerVisible = false;
+  flashcardAnswer.classList.add('hidden');
+  flashcardShowBtn.textContent = 'Show Answer';
 }
 
 function startTimer() {
@@ -361,4 +437,5 @@ function resetState() {
   timeRemaining = 300;
   disableCopyPasteBlocking();
   document.body.classList.remove('quiz-active');
+  flashcardAnswerVisible = false;
 }

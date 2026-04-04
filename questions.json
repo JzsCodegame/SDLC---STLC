@@ -1,102 +1,402 @@
 [
   {
-    "question": "In an Agile sprint, why is it risky for QA to wait until all development work is completed before starting testing?",
+    "question": "How do you identify that an issue is actually a defect and not expected behavior?",
     "choices": [
-      "It delays feedback and increases the likelihood of late discovery of requirement and integration issues",
-      "It improves collaboration because QA stays out of the way",
-      "It guarantees fewer defects because changes are finished",
-      "It is required by Agile frameworks"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "How does unclear acceptance criteria most commonly impact QA work in Agile projects?",
-    "choices": [
-      "It reduces the need for regression testing",
-      "It speeds up sprint execution",
-      "It leads to inconsistent test coverage and recurring defect disputes",
-      "It improves testing flexibility by removing constraints"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "When a defect is marked as \"Fixed\" in Agile, what is QA’s next responsibility?",
-    "choices": [
-      "Start full regression immediately and skip retesting",
-      "Close the defect to keep sprint velocity high",
-      "Move the defect to the next sprint automatically",
-      "Perform retesting to confirm the specific fix works as expected"
+      "Ask only another tester without checking docs",
+      "Assume every UI difference is a defect",
+      "Treat all defects as enhancements",
+      "Compare actual behavior against approved requirements/acceptance criteria"
     ],
     "answer": 3
   },
   {
-    "question": "Why is regression testing especially critical in Agile environments?",
+    "question": "What should a tester do first after seeing unexpected behavior?",
     "choices": [
-      "Because testing occurs only once per release",
-      "Because frequent changes can unintentionally break existing functionality",
-      "Because Agile requires only automated testing",
-      "Because unit testing is owned by QA"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which action best demonstrates QA ownership during a sprint review?",
-    "choices": [
-      "Approving deployment independently",
-      "Explaining remaining quality risks, open defects, and test coverage gaps clearly",
-      "Updating the sprint backlog live during the demo",
-      "Rewriting acceptance criteria during the review"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Agile, who typically makes the final decision on whether a defect should block a release?",
-    "choices": [
-      "QA engineer",
-      "Developer",
-      "Product Owner with stakeholder input and team context",
-      "Scrum Master"
+      "Immediately close the test case",
+      "Skip to regression testing",
+      "Capture evidence and verify expected behavior from requirements/test case",
+      "Escalate to production support first"
     ],
     "answer": 2
   },
   {
-    "question": "What is the main purpose of a sprint retrospective from a QA perspective?",
+    "question": "Why should a defect be reproduced before logging?",
     "choices": [
-      "Analyze quality trends and identify process improvements for future sprints",
-      "Finalize test plans for the next sprint",
-      "Assign individual performance ratings",
-      "Convert defects into user stories"
+      "To avoid writing expected results",
+      "To skip severity assignment",
+      "To reduce defect count",
+      "To confirm validity and provide repeatable steps"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "How should intermittent defects be handled?",
+    "choices": [
+      "Log with frequency, conditions, and evidence gathered across attempts",
+      "Close as not a bug",
+      "Mark as duplicate immediately",
+      "Ignore until always reproducible"
     ],
     "answer": 0
   },
   {
-    "question": "How does automation best support Agile teams without reducing quality?",
+    "question": "What is the key difference between defect/bug and enhancement request?",
     "choices": [
-      "By replacing all manual testing",
-      "By enabling fast, repeatable regression testing and consistent checks across builds",
-      "By focusing only on UI appearance validation",
-      "By eliminating the need for acceptance criteria"
+      "Enhancement always has higher severity",
+      "Defect/bug is broken expected behavior; enhancement is requested improvement",
+      "There is no difference",
+      "Defect never needs steps"
     ],
     "answer": 1
   },
   {
-    "question": "What is a major QA risk when defects are continuously deferred across multiple Agile sprints?",
+    "question": "How do you confirm if a problem is app-related or environment-related?",
     "choices": [
-      "Improved sprint velocity",
-      "Accumulation of technical and quality debt that increases release risk over time",
-      "Reduced need for testing",
-      "Fewer merge conflicts"
+      "Assume environment is always correct",
+      "Check only browser zoom",
+      "Retest across environments and compare logs/configuration",
+      "Always blame application code"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
-    "question": "Which statement best reflects the Agile quality mindset?",
+    "question": "Why validate requirements before raising a defect?",
     "choices": [
-      "Quality is the responsibility of QA only",
-      "Testing happens after development is complete",
-      "Automation replaces collaboration",
-      "Quality is a shared responsibility across the entire team"
+      "To avoid attaching evidence",
+      "To force Critical priority",
+      "To ensure expected behavior is grounded in documented scope",
+      "To skip reproduction attempts"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "When actual result does not match expected result, what next?",
+    "choices": [
+      "Wait for release",
+      "Edit expected result to match actual",
+      "Mark test as passed",
+      "Document mismatch with exact steps/data and log defect"
     ],
     "answer": 3
+  },
+  {
+    "question": "Why include logs/screenshots/videos in defect reports?",
+    "choices": [
+      "They are required only after closure",
+      "They replace all text fields",
+      "They provide objective proof and speed root-cause analysis",
+      "They are useful only for UI bugs"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What fields should be in a standard defect template?",
+    "choices": [
+      "Only expected and actual",
+      "Only assignee and comments",
+      "Title, module, env, build, steps, expected, actual, severity, priority, evidence",
+      "Only title and severity"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Why is a clear defect title important?",
+    "choices": [
+      "It sets fixed date automatically",
+      "It makes triage/search/reporting faster",
+      "It removes need for retest",
+      "It replaces defect description"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "How should defect description be written?",
+    "choices": [
+      "As a vague one-liner",
+      "Clear, concise, structured, and reproducible",
+      "Only with screenshots and no text",
+      "Only with technical abbreviations"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Why must expected and actual results both be included?",
+    "choices": [
+      "Only needed for API defects",
+      "To skip environment details",
+      "To reduce number of defects",
+      "They show the exact gap between intended and observed behavior"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Why include environment details in a defect report?",
+    "choices": [
+      "To avoid assigning severity",
+      "To auto-close ticket",
+      "To identify environment-specific failures and reproduce accurately",
+      "To increase ticket length"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Why include severity in a defect report?",
+    "choices": [
+      "To determine sprint capacity",
+      "To track tester utilization",
+      "To express impact on system/business",
+      "To indicate duplicate count"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Why include priority in a defect report?",
+    "choices": [
+      "To define test data format",
+      "To indicate root cause certainty",
+      "To show number of logs attached",
+      "To indicate fix urgency based on release/business needs"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What supporting evidence should be attached in defect template?",
+    "choices": [
+      "Only ticket number",
+      "None if severity is low",
+      "Only developer comments",
+      "Screenshots/videos, logs, request/response payloads, and relevant data"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Why mention module, build version, and test data?",
+    "choices": [
+      "To replace reproduction steps",
+      "To narrow troubleshooting scope and improve reproducibility",
+      "To avoid retesting",
+      "Only for production defects"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is a common initial defect status after logging?",
+    "choices": [
+      "Fixed",
+      "Retest",
+      "Closed",
+      "New"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does status 'Assigned' mean?",
+    "choices": [
+      "Ownership is given to person/team for analysis/fix",
+      "Defect is validated as fixed",
+      "Defect is duplicate",
+      "Defect is postponed"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does status 'Open' typically mean?",
+    "choices": [
+      "Defect is rejected",
+      "Defect is fixed and verified",
+      "Defect is archived",
+      "Defect is acknowledged and active in lifecycle"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does status 'Fixed' mean?",
+    "choices": [
+      "Defect is closed permanently",
+      "Code change delivered and awaiting QA verification",
+      "Defect merged with another",
+      "Defect is not reproducible"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does status 'Retest' mean?",
+    "choices": [
+      "Defect rejected by QA",
+      "Defect reopened by developer",
+      "Business deferred the issue",
+      "QA must validate the delivered fix"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does status 'Closed' mean?",
+    "choices": [
+      "Developer started coding",
+      "Issue is duplicate",
+      "Ticket moved to backlog",
+      "QA verified fix successfully and no further action needed"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does status 'Rejected' mean?",
+    "choices": [
+      "Issue is deferred",
+      "Issue deemed invalid or out of scope/not a defect",
+      "Issue is fixed",
+      "Issue passed retest"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does status 'Deferred' mean?",
+    "choices": [
+      "Valid issue scheduled for a future release",
+      "Issue is duplicate",
+      "Issue is closed",
+      "Issue is fixed"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does status 'Duplicate' mean?",
+    "choices": [
+      "Issue is deferred",
+      "Issue is fixed twice",
+      "Issue is rejected",
+      "Issue already exists in another ticket and should link to original"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "After developer marks a defect fixed, what should tester do?",
+    "choices": [
+      "Close immediately",
+      "Retest using original steps and verify expected behavior",
+      "Move to deferred",
+      "Delete ticket"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Why is retesting required after a fix?",
+    "choices": [
+      "To confirm defect is truly resolved in target build/environment",
+      "To change severity",
+      "To avoid regression",
+      "To reduce backlog"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Difference between retesting and regression testing?",
+    "choices": [
+      "Retesting is only for UI",
+      "They are identical",
+      "Retesting verifies specific fix; regression checks unaffected areas",
+      "Regression is only for unit tests"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Why run regression after major defect fix?",
+    "choices": [
+      "To reduce automation",
+      "Regression is required only for low severity",
+      "To skip UAT",
+      "Major fixes can unintentionally impact related functionality"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What if defect still exists after retest?",
+    "choices": [
+      "Mark as duplicate",
+      "Reopen with fresh evidence and updated observations",
+      "Convert to enhancement",
+      "Close as won\u2019t fix"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "When should a defect be reopened?",
+    "choices": [
+      "When no logs are attached",
+      "When sprint ends",
+      "When developer is reassigned",
+      "When verification fails or issue reappears"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What should tester verify before closing a defect?",
+    "choices": [
+      "Only report title",
+      "Only ticket comments",
+      "Fix works, related impact is acceptable, and expected result is met",
+      "Only assignee name"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Why is tester-developer communication important in defect resolution?",
+    "choices": [
+      "It removes need for evidence",
+      "It increases ticket count",
+      "It reduces misunderstandings and speeds accurate fixes",
+      "It eliminates retest"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "How can leads/managers track defect progress?",
+    "choices": [
+      "Track only story points",
+      "Use dashboards/metrics: status trend, aging, severity mix, reopen rate",
+      "Read only closed tickets",
+      "Ignore deferred defects"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Why is defect aging important?",
+    "choices": [
+      "It replaces severity",
+      "It highlights unresolved risk and process bottlenecks",
+      "It indicates UI quality only",
+      "It auto-fixes defects"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "If requirement is unclear but mismatch is seen, what do first?",
+    "choices": [
+      "Immediately reject issue",
+      "Push to production",
+      "Clarify expected behavior with PO/BA before final classification",
+      "Mark fixed"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Why should production defects be added to regression suite?",
+    "choices": [
+      "To avoid root cause analysis",
+      "To reduce number of tests",
+      "To skip retesting",
+      "To prevent recurrence in future releases"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "How do defect reports improve quality over time?",
+    "choices": [
+      "They eliminate communication",
+      "They expose recurring patterns that drive preventive actions",
+      "They make all defects low priority",
+      "They remove need for requirements"
+    ],
+    "answer": 1
   }
 ]
