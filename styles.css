@@ -218,3 +218,35 @@ button {
   text-align: center;
   padding: 20px 0;
 }
+
+.flashcard-answer {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+
+.flashcard-list {
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.flashcard-list h3 {
+  margin: 0 0 6px;
+}
+
+.flashcard-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  background: var(--bg);
+}
+
+.flashcard-item summary {
+  cursor: pointer;
+  font-weight: 600;
+}

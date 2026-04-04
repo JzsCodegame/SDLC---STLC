@@ -17,13 +17,14 @@ const choicesForm = document.getElementById('choices');
 const resultSummary = document.getElementById('result-summary');
 const recentScoresContainer = document.getElementById('recent-scores');
 
+const flashcardList = document.getElementById('flashcard-list');
+
 let questions = [];
 let currentIndex = 0;
 let score = 0;
 let timer = null;
 let timeRemaining = 300;
 let studentName = '';
-
 const totalQuestions = 20;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
@@ -81,6 +82,7 @@ async function loadQuestions() {
     if (Array.isArray(data) && data.length > 0) {
       console.log('Loaded questions from questions.json');
       questions = data;
+      renderFlashcardList();
       return;
     }
 
@@ -95,6 +97,7 @@ async function loadQuestions() {
     if (firestoreQuestions && firestoreQuestions.length > 0) {
       console.log('Loaded questions from Firestore');
       questions = firestoreQuestions;
+      renderFlashcardList();
       return;
     }
 
@@ -250,6 +253,7 @@ startBtn.addEventListener('click', () => {
   startQuiz();
 });
 
+
 nextBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const selected = choicesForm.querySelector('input[name="choice"]:checked');
@@ -315,6 +319,30 @@ function renderQuestion() {
   });
 
   nextBtn.textContent = currentIndex === total - 1 ? 'Finish' : 'Next';
+}
+
+
+
+function renderFlashcardList() {
+  if (!flashcardList) return;
+
+  flashcardList.querySelectorAll('details').forEach((item) => item.remove());
+
+  questions.forEach((question, index) => {
+    const details = document.createElement('details');
+    details.className = 'flashcard-item';
+
+    const summary = document.createElement('summary');
+    summary.textContent = `${index + 1}. ${question.question}`;
+
+    const answer = document.createElement('p');
+    answer.className = 'flashcard-answer';
+    answer.textContent = `Answer: ${question.choices[question.answer]}`;
+
+    details.appendChild(summary);
+    details.appendChild(answer);
+    flashcardList.appendChild(details);
+  });
 }
 
 function startTimer() {
