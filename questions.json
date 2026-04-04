@@ -80,62 +80,62 @@
     "answer": 0
   },
   {
-    "question": "Why is it important to reproduce a defect before logging it?",
+    "question": "How many reproduction attempts are generally reasonable before reporting a defect?",
     "choices": [
-      "To confirm it is real and provide repeatable steps for developers",
-      "To make the report longer",
-      "To reduce the number of screenshots",
-      "To avoid assigning severity"
+      "Enough attempts to establish reproducibility or clear intermittency evidence",
+      "Exactly one attempt",
+      "Exactly ten attempts regardless of issue",
+      "No attempts are needed"
     ],
     "answer": 0
   },
   {
-    "question": "How do you confirm whether a defect comes from the application or the test environment?",
+    "question": "What is the key difference between a defect and an enhancement request?",
     "choices": [
-      "Run the same scenario across environments and validate logs/configuration",
-      "Assume it is always a product defect",
-      "Only check browser cache",
-      "Wait for developers to confirm without collecting data"
+      "A defect is deviation from expected behavior; enhancement is a new/improved capability",
+      "Enhancements are always higher severity",
+      "Defects never require reproduction steps",
+      "There is no difference"
     ],
     "answer": 0
   },
   {
-    "question": "Why is requirement validation important before raising a defect?",
+    "question": "How do logs, screenshots, and recordings help defect identification?",
     "choices": [
-      "It ensures the expected result is based on documented behavior",
-      "It helps skip writing reproduction steps",
-      "It automatically sets defect priority",
-      "It avoids attaching evidence"
+      "They provide objective evidence and speed developer diagnosis",
+      "They replace the need for defect descriptions",
+      "They are useful only for UI color issues",
+      "They are required only after closure"
     ],
     "answer": 0
   },
   {
-    "question": "What should always be included in a standard defect template?",
+    "question": "What should a tester do when actual result does not match expected result?",
     "choices": [
-      "Title, environment, steps to reproduce, expected result, actual result, severity/priority, and evidence",
-      "Only title and screenshot",
-      "Only module name and tester name",
-      "Only severity and comments"
+      "Document the mismatch with steps, data, and evidence, then log the defect",
+      "Ignore if test execution is near deadline",
+      "Change expected result to match actual",
+      "Close the test case as passed"
     ],
     "answer": 0
   },
   {
-    "question": "Why is the defect title important in a defect report?",
+    "question": "Why is writing exact steps to reproduce critical in defect reports?",
     "choices": [
-      "It gives a quick, searchable summary of the issue",
-      "It replaces the need for a description",
-      "It determines whether the defect is valid",
-      "It is only useful for managers"
+      "It lets others reliably recreate the issue and verify the fix",
+      "It reduces need for module details",
+      "It guarantees severity is Critical",
+      "It avoids retesting"
     ],
     "answer": 0
   },
   {
-    "question": "Why must expected and actual results both be included in a defect report?",
+    "question": "How should a defect description be written for developers?",
     "choices": [
-      "They clearly show the gap between intended and observed behavior",
-      "They reduce the need for reproduction steps",
-      "They allow defects to be auto-closed",
-      "They are needed only for UI bugs"
+      "Clear, concise, and structured with scenario context and observed behavior",
+      "As a one-line complaint",
+      "Only with technical jargon",
+      "Without mentioning user action"
     ],
     "answer": 0
   },
