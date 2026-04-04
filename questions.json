@@ -67,7 +67,7 @@
       "To ensure expected behavior is grounded in documented scope",
       "To skip reproduction attempts"
     ],
-    "answer": 2
+    "answer": 3
   },
   {
     "question": "When actual result does not match expected result, what next?",
@@ -77,7 +77,87 @@
       "Mark test as passed",
       "Document mismatch with exact steps/data and log defect"
     ],
-    "answer": 3
+    "answer": 0
+  },
+  {
+    "question": "Why is it important to reproduce a defect before logging it?",
+    "choices": [
+      "To confirm it is real and provide repeatable steps for developers",
+      "To make the report longer",
+      "To reduce the number of screenshots",
+      "To avoid assigning severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How do you confirm whether a defect comes from the application or the test environment?",
+    "choices": [
+      "Run the same scenario across environments and validate logs/configuration",
+      "Assume it is always a product defect",
+      "Only check browser cache",
+      "Wait for developers to confirm without collecting data"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is requirement validation important before raising a defect?",
+    "choices": [
+      "It ensures the expected result is based on documented behavior",
+      "It helps skip writing reproduction steps",
+      "It automatically sets defect priority",
+      "It avoids attaching evidence"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What should always be included in a standard defect template?",
+    "choices": [
+      "Title, environment, steps to reproduce, expected result, actual result, severity/priority, and evidence",
+      "Only title and screenshot",
+      "Only module name and tester name",
+      "Only severity and comments"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is the defect title important in a defect report?",
+    "choices": [
+      "It gives a quick, searchable summary of the issue",
+      "It replaces the need for a description",
+      "It determines whether the defect is valid",
+      "It is only useful for managers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why must expected and actual results both be included in a defect report?",
+    "choices": [
+      "They clearly show the gap between intended and observed behavior",
+      "They reduce the need for reproduction steps",
+      "They allow defects to be auto-closed",
+      "They are needed only for UI bugs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the key difference between a defect and an enhancement request?",
+    "choices": [
+      "A defect is deviation from expected behavior; enhancement is a new/improved capability",
+      "Defects never require reproduction steps",
+      "There is no difference",
+      "Enhancements are always higher severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How do logs, screenshots, and recordings help defect identification?",
+    "choices": [
+      "They provide objective evidence and speed developer diagnosis",
+      "They replace the need for defect descriptions",
+      "They are useful only for UI color issues",
+      "They are required only after closure"
+    ],
+    "answer": 0
   },
   {
     "question": "Why include logs/screenshots/videos in defect reports?",
@@ -107,7 +187,27 @@
       "It removes need for retest",
       "It replaces defect description"
     ],
-    "answer": 1
+    "answer": 0
+  },
+  {
+    "question": "Why is writing exact steps to reproduce critical in defect reports?",
+    "choices": [
+      "It avoids retesting",
+      "It lets others reliably recreate the issue and verify the fix",
+      "It reduces need for module details",
+      "It guarantees severity is Critical"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How should a defect description be written for developers?",
+    "choices": [
+      "As a one-line complaint",
+      "Only with technical jargon",
+      "Clear, concise, and structured with scenario context and observed behavior",
+      "Without mentioning user action"
+    ],
+    "answer": 2
   },
   {
     "question": "How should defect description be written?",
@@ -117,7 +217,17 @@
       "Only with screenshots and no text",
       "Only with technical abbreviations"
     ],
-    "answer": 1
+    "answer": 2
+  },
+  {
+    "question": "Why should module name, build version, and test data be included in a defect report?",
+    "choices": [
+      "They replace expected/actual results",
+      "They are optional for all defects",
+      "They are needed only for rejected defects",
+      "They narrow troubleshooting scope and make reproduction accurate"
+    ],
+    "answer": 3
   },
   {
     "question": "Why must expected and actual results both be included?",
@@ -277,7 +387,7 @@
       "Move to deferred",
       "Delete ticket"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
     "question": "Why is retesting required after a fix?",
@@ -317,7 +427,7 @@
       "Convert to enhancement",
       "Close as won\u2019t fix"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
     "question": "When should a defect be reopened?",
