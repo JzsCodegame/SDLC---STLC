@@ -27,7 +27,67 @@
       "Enough attempts to establish reproducibility or clear intermittency evidence",
       "Exactly one attempt"
     ],
-    "answer": 2
+    "answer": 0
+  },
+  {
+    "question": "Why is it important to reproduce a defect before logging it?",
+    "choices": [
+      "To confirm it is real and provide repeatable steps for developers",
+      "To make the report longer",
+      "To reduce the number of screenshots",
+      "To avoid assigning severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "How do you confirm whether a defect comes from the application or the test environment?",
+    "choices": [
+      "Run the same scenario across environments and validate logs/configuration",
+      "Assume it is always a product defect",
+      "Only check browser cache",
+      "Wait for developers to confirm without collecting data"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is requirement validation important before raising a defect?",
+    "choices": [
+      "It ensures the expected result is based on documented behavior",
+      "It helps skip writing reproduction steps",
+      "It automatically sets defect priority",
+      "It avoids attaching evidence"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What should always be included in a standard defect template?",
+    "choices": [
+      "Title, environment, steps to reproduce, expected result, actual result, severity/priority, and evidence",
+      "Only title and screenshot",
+      "Only module name and tester name",
+      "Only severity and comments"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why is the defect title important in a defect report?",
+    "choices": [
+      "It gives a quick, searchable summary of the issue",
+      "It replaces the need for a description",
+      "It determines whether the defect is valid",
+      "It is only useful for managers"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Why must expected and actual results both be included in a defect report?",
+    "choices": [
+      "They clearly show the gap between intended and observed behavior",
+      "They reduce the need for reproduction steps",
+      "They allow defects to be auto-closed",
+      "They are needed only for UI bugs"
+    ],
+    "answer": 0
   },
   {
     "question": "What is the key difference between a defect and an enhancement request?",
@@ -57,7 +117,7 @@
       "Ignore if test execution is near deadline",
       "Document the mismatch with steps, data, and evidence, then log the defect"
     ],
-    "answer": 3
+    "answer": 0
   },
   {
     "question": "Why is writing exact steps to reproduce critical in defect reports?",
@@ -67,7 +127,7 @@
       "It reduces need for module details",
       "It guarantees severity is Critical"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "question": "How should a defect description be written for developers?",
@@ -117,7 +177,7 @@
       "Defect is invalid",
       "Defect was merged with another"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "question": "What does status 'Closed' indicate?",
@@ -127,7 +187,7 @@
       "QA has verified the fix and no further action is required",
       "Business requested deferral"
     ],
-    "answer": 2
+    "answer": 0
   },
   {
     "question": "What does status 'Rejected' generally mean?",
@@ -177,7 +237,7 @@
       "Delete the defect",
       "Mark it deferred"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "question": "A defect passes in QA but fails in another environment. How should this be handled?",
@@ -187,7 +247,7 @@
       "Convert to enhancement",
       "Mark as duplicate automatically"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
     "question": "How does a lead/manager commonly track defect progress across a project?",
