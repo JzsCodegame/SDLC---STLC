@@ -46,3 +46,38 @@ Open `index.html` directly in your browser or serve the folder with any local we
 ## Deploy
 Enable GitHub Pages from the repository settings and select the `main` branch root.
 
+
+## Docker + Jenkins automation for publishing students
+
+This project now includes:
+- `Dockerfile` (Node 22 Alpine) to containerize and serve the app on port `8080`
+- `Jenkinsfile` to run CI stages and generate `students.json` from a Google Sheet
+- `scripts/publish-students.js` to fetch a Google Sheet (CSV export URL) and publish the first 20 students
+
+### Google Sheet format
+Use a sheet with a header row. Recommended first column/header: `name`.
+
+Example:
+```csv
+name
+Alice
+Bob
+...
+```
+
+### Required Jenkins environment variable
+- `GOOGLE_SHEET_CSV_URL`: Google Sheet CSV export URL (for example: `https://docs.google.com/spreadsheets/d/<SHEET_ID>/export?format=csv&gid=0`)
+
+### Local run (script only)
+```bash
+export GOOGLE_SHEET_CSV_URL="https://docs.google.com/spreadsheets/d/<SHEET_ID>/export?format=csv&gid=0"
+node scripts/publish-students.js
+```
+
+This generates `students.json` containing up to 20 students with publish metadata.
+
+
+### Source document URL added
+- `SOURCE_DOCUMENT_URL` is set in `Jenkinsfile` to:
+  `https://docs.google.com/document/d/1RzyuPH6ryIVD6z5iRuyJxmUa6jGLJE_wAB5R4S4mUWA/edit?tab=t.0#heading=h.fmjzqinx4dso`
+- The publish script includes this URL in `students.json` as `sourceDocumentUrl` for traceability.
