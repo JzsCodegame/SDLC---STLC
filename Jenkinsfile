@@ -42,7 +42,7 @@ pipeline {
 
     stage('Archive generated students file') {
       steps {
-        archiveArtifacts artifacts: 'students.json', fingerprint: true
+        archiveArtifacts artifacts: "${STUDENTS_OUTPUT_FILE}", fingerprint: true
       }
     }
   }
