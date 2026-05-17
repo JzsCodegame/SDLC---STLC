@@ -1,511 +1,201 @@
 [
   {
-    "question": "How do you identify that an issue is actually a defect and not expected behavior?",
+    "question": "What are the seven stages of SDLC in order?",
     "choices": [
-      "Ask only another tester without checking docs",
-      "Assume every UI difference is a defect",
-      "Treat all defects as enhancements",
-      "Compare actual behavior against approved requirements/acceptance criteria"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "What should a tester do first after seeing unexpected behavior?",
-    "choices": [
-      "Immediately close the test case",
-      "Skip to regression testing",
-      "Capture evidence and verify expected behavior from requirements/test case",
-      "Escalate to production support first"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why should a defect be reproduced before logging?",
-    "choices": [
-      "To avoid writing expected results",
-      "To skip severity assignment",
-      "To reduce defect count",
-      "To confirm validity and provide repeatable steps"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "How should intermittent defects be handled?",
-    "choices": [
-      "Log with frequency, conditions, and evidence gathered across attempts",
-      "Close as not a bug",
-      "Mark as duplicate immediately",
-      "Ignore until always reproducible"
+      "Planning, Requirement Analysis, Design, Development, Testing, Deployment, Maintenance",
+      "Planning, Design, Development, Testing, Analysis, Implementation, Support",
+      "Analysis, Planning, Design, Coding, Testing, Release, Maintenance",
+      "Requirements, Planning, Development, Testing, Integration, Deployment, Support"
     ],
     "answer": 0
   },
   {
-    "question": "What is the key difference between defect/bug and enhancement request?",
+    "question": "Which criteria must good requirements meet according to the study guide?",
     "choices": [
-      "Enhancement always has higher severity",
-      "Defect/bug is broken expected behavior; enhancement is requested improvement",
-      "There is no difference",
-      "Defect never needs steps"
+      "Simple, accurate, detailed, and flexible",
+      "Concise, clear, complete, unambiguous, testable, and measurable",
+      "Brief, precise, comprehensive, and validated",
+      "Specific, realistic, achievable, and time-bound"
     ],
     "answer": 1
   },
   {
-    "question": "How do you confirm if a problem is app-related or environment-related?",
+    "question": "What is the main difference between functional and non-functional testing?",
     "choices": [
-      "Assume environment is always correct",
-      "Check only browser zoom",
-      "Retest across environments and compare logs/configuration",
-      "Always blame application code"
+      "Functional tests system features, non-functional tests system performance",
+      "Functional is manual testing, non-functional is automated testing",
+      "Functional tests positive scenarios, non-functional tests negative scenarios",
+      "Functional tests UI elements, non-functional tests database connections"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "In Black Box Testing, what does the tester focus on?",
+    "choices": [
+      "The internal code structure and logic",
+      "Only the database queries and connections",
+      "Inputs and outputs without seeing internal code",
+      "The system architecture and design patterns"
     ],
     "answer": 2
   },
   {
-    "question": "Why validate requirements before raising a defect?",
+    "question": "What is the correct order of the Defect Life Cycle?",
     "choices": [
-      "To avoid attaching evidence",
-      "To force Critical priority",
-      "To ensure expected behavior is grounded in documented scope",
-      "To skip reproduction attempts"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "When actual result does not match expected result, what next?",
-    "choices": [
-      "Wait for release",
-      "Edit expected result to match actual",
-      "Mark test as passed",
-      "Document mismatch with exact steps/data and log defect"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "How many reproduction attempts are generally reasonable before reporting a defect?",
-    "choices": [
-      "Enough attempts to establish reproducibility or clear intermittency evidence",
-      "Exactly one attempt",
-      "Exactly ten attempts regardless of issue",
-      "No attempts are needed"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What is the key difference between a defect and an enhancement request?",
-    "choices": [
-      "A defect is deviation from expected behavior; enhancement is a new/improved capability",
-      "Enhancements are always higher severity",
-      "Defects never require reproduction steps",
-      "There is no difference"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "How do logs, screenshots, and recordings help defect identification?",
-    "choices": [
-      "They provide objective evidence and speed developer diagnosis",
-      "They replace the need for defect descriptions",
-      "They are useful only for UI color issues",
-      "They are required only after closure"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What should a tester do when actual result does not match expected result?",
-    "choices": [
-      "Document the mismatch with steps, data, and evidence, then log the defect",
-      "Ignore if test execution is near deadline",
-      "Change expected result to match actual",
-      "Close the test case as passed"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Why is writing exact steps to reproduce critical in defect reports?",
-    "choices": [
-      "It lets others reliably recreate the issue and verify the fix",
-      "It reduces need for module details",
-      "It guarantees severity is Critical",
-      "It avoids retesting"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "How should a defect description be written for developers?",
-    "choices": [
-      "Clear, concise, and structured with scenario context and observed behavior",
-      "As a one-line complaint",
-      "Only with technical jargon",
-      "Without mentioning user action"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What is the key difference between a defect and an enhancement request?",
-    "choices": [
-      "A defect is deviation from expected behavior; enhancement is a new/improved capability",
-      "Defects never require reproduction steps",
-      "There is no difference",
-      "Enhancements are always higher severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "How do logs, screenshots, and recordings help defect identification?",
-    "choices": [
-      "They provide objective evidence and speed developer diagnosis",
-      "They replace the need for defect descriptions",
-      "They are useful only for UI color issues",
-      "They are required only after closure"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Why include logs/screenshots/videos in defect reports?",
-    "choices": [
-      "They are required only after closure",
-      "They replace all text fields",
-      "They provide objective proof and speed root-cause analysis",
-      "They are useful only for UI bugs"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What fields should be in a standard defect template?",
-    "choices": [
-      "Only expected and actual",
-      "Only assignee and comments",
-      "Title, module, env, build, steps, expected, actual, severity, priority, evidence",
-      "Only title and severity"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why is a clear defect title important?",
-    "choices": [
-      "It sets fixed date automatically",
-      "It makes triage/search/reporting faster",
-      "It removes need for retest",
-      "It replaces defect description"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Why is writing exact steps to reproduce critical in defect reports?",
-    "choices": [
-      "It avoids retesting",
-      "It lets others reliably recreate the issue and verify the fix",
-      "It reduces need for module details",
-      "It guarantees severity is Critical"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "How should a defect description be written for developers?",
-    "choices": [
-      "As a one-line complaint",
-      "Only with technical jargon",
-      "Clear, concise, and structured with scenario context and observed behavior",
-      "Without mentioning user action"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "How should defect description be written?",
-    "choices": [
-      "As a vague one-liner",
-      "Clear, concise, structured, and reproducible",
-      "Only with screenshots and no text",
-      "Only with technical abbreviations"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why should module name, build version, and test data be included in a defect report?",
-    "choices": [
-      "They replace expected/actual results",
-      "They are optional for all defects",
-      "They are needed only for rejected defects",
-      "They narrow troubleshooting scope and make reproduction accurate"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Why must expected and actual results both be included?",
-    "choices": [
-      "Only needed for API defects",
-      "To skip environment details",
-      "To reduce number of defects",
-      "They show the exact gap between intended and observed behavior"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Why include environment details in a defect report?",
-    "choices": [
-      "To avoid assigning severity",
-      "To auto-close ticket",
-      "To identify environment-specific failures and reproduce accurately",
-      "To increase ticket length"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why include severity in a defect report?",
-    "choices": [
-      "To determine sprint capacity",
-      "To track tester utilization",
-      "To express impact on system/business",
-      "To indicate duplicate count"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why include priority in a defect report?",
-    "choices": [
-      "To define test data format",
-      "To indicate root cause certainty",
-      "To show number of logs attached",
-      "To indicate fix urgency based on release/business needs"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "What supporting evidence should be attached in defect template?",
-    "choices": [
-      "Only ticket number",
-      "None if severity is low",
-      "Only developer comments",
-      "Screenshots/videos, logs, request/response payloads, and relevant data"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "Why mention module, build version, and test data?",
-    "choices": [
-      "To replace reproduction steps",
-      "To narrow troubleshooting scope and improve reproducibility",
-      "To avoid retesting",
-      "Only for production defects"
+      "New → Open → Fixed → Closed → Verified",
+      "New → Verified → Open → Fixed → Retested → Verified → Closed",
+      "Open → New → Assigned → Fixed → Tested → Closed",
+      "Created → Assigned → In Progress → Resolved → Closed"
     ],
     "answer": 1
   },
   {
-    "question": "What is a common initial defect status after logging?",
+    "question": "Which Agile methodology replaced the traditional Waterfall approach?",
     "choices": [
-      "Fixed",
-      "Retest",
-      "Closed",
-      "New"
+      "Iterative development with fixed phases",
+      "Continuous cycles with collaboration and communication",
+      "Sequential development with documentation focus",
+      "Parallel development with milestone tracking"
     ],
-    "answer": 3
+    "answer": 1
   },
   {
-    "question": "What does status 'Assigned' mean?",
+    "question": "What is the standard format for User Stories in Agile?",
     "choices": [
-      "Ownership is given to person/team for analysis/fix",
-      "Defect is validated as fixed",
-      "Defect is duplicate",
-      "Defect is postponed"
+      "Given [condition], When [action], Then [result]",
+      "As a [role], I want [feature], so that [benefit]",
+      "The system shall [requirement] when [condition]",
+      "User can [action] to achieve [goal] with [constraint]"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What are the three daily standup questions in Agile?",
+    "choices": [
+      "What's my priority? What's completed? What's next?",
+      "What did I do yesterday? What will I do today? Any blockers?",
+      "What's working? What's broken? What needs help?",
+      "What's planned? What's in progress? What's done?"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which testing approach validates system behavior at limits and constraints?",
+    "choices": [
+      "Positive testing",
+      "Negative testing",
+      "Boundary testing",
+      "Integration testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the primary purpose of a Test Plan?",
+    "choices": [
+      "To document all possible test scenarios",
+      "To define what to test, when to test, and how to test",
+      "To track defects and their resolution status",
+      "To measure team performance and productivity"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does the Requirement Traceability Matrix (RTM) accomplish?",
+    "choices": [
+      "Links requirements to test cases and defects through unique IDs",
+      "Tracks project timeline and milestone completion",
+      "Measures test execution speed and efficiency",
+      "Documents team roles and responsibilities"
     ],
     "answer": 0
   },
   {
-    "question": "What does status 'Open' typically mean?",
+    "question": "What is the difference between Severity and Priority in defect management?",
     "choices": [
-      "Defect is rejected",
-      "Defect is fixed and verified",
-      "Defect is archived",
-      "Defect is acknowledged and active in lifecycle"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "What does status 'Fixed' mean?",
-    "choices": [
-      "Defect is closed permanently",
-      "Code change delivered and awaiting QA verification",
-      "Defect merged with another",
-      "Defect is not reproducible"
+      "Severity is business impact, Priority is technical complexity",
+      "Severity is impact level, Priority is urgency level",
+      "Severity is customer-facing, Priority is internal team focus",
+      "Severity is cost impact, Priority is time impact"
     ],
     "answer": 1
   },
   {
-    "question": "What does status 'Retest' mean?",
+    "question": "Which environments are typically used in the software development process?",
     "choices": [
-      "Defect rejected by QA",
-      "Defect reopened by developer",
-      "Business deferred the issue",
-      "QA must validate the delivered fix"
+      "Development, Testing, Staging, Production",
+      "Build, Test, Deploy, Monitor",
+      "Dev, QA/UAT, CAT, Production",
+      "Code, Validate, Release, Support"
     ],
-    "answer": 3
+    "answer": 2
   },
   {
-    "question": "What does status 'Closed' mean?",
+    "question": "What is the main role of a Scrum Master in Agile teams?",
     "choices": [
-      "Developer started coding",
-      "Issue is duplicate",
-      "Ticket moved to backlog",
-      "QA verified fix successfully and no further action needed"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "What does status 'Rejected' mean?",
-    "choices": [
-      "Issue is deferred",
-      "Issue deemed invalid or out of scope/not a defect",
-      "Issue is fixed",
-      "Issue passed retest"
+      "Manages team performance and assigns tasks",
+      "Facilitates meetings and removes blockers",
+      "Writes user stories and acceptance criteria",
+      "Reviews code and approves releases"
     ],
     "answer": 1
   },
   {
-    "question": "What does status 'Deferred' mean?",
+    "question": "What are the six core Agile ceremonies mentioned in the study guide?",
     "choices": [
-      "Valid issue scheduled for a future release",
-      "Issue is duplicate",
-      "Issue is closed",
-      "Issue is fixed"
+      "Planning, Standup, Review, Testing, Demo, Closure",
+      "Backlog, Planning, Standup, Refinement, Review, Retrospective",
+      "Requirements, Design, Development, Testing, Integration, Deployment",
+      "Sprint Zero, Execution, Review, Planning, Standup, Release"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does a Burn-Down Chart visualize in Agile projects?",
+    "choices": [
+      "Team productivity over time",
+      "Remaining work versus time",
+      "Defect discovery and resolution rates",
+      "Budget consumption across sprints"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the primary difference between UAT and CAT testing?",
+    "choices": [
+      "UAT is manual, CAT is automated",
+      "UAT tests functionality, CAT tests performance",
+      "UAT uses business users, CAT uses actual customers",
+      "UAT is internal, CAT is external vendor testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What should each Test Case include according to the study guide?",
+    "choices": [
+      "ID, description, steps, expected result, actual result, pass/fail status",
+      "Title, priority, environment, developer assignment, completion date",
+      "User story, acceptance criteria, test data, execution time, evidence",
+      "Prerequisites, actions, validation, defects, approvals, sign-off"
     ],
     "answer": 0
   },
   {
-    "question": "What does status 'Duplicate' mean?",
+    "question": "What is Root Cause Analysis (RCA) in the context of defect management?",
     "choices": [
-      "Issue is deferred",
-      "Issue is fixed twice",
-      "Issue is rejected",
-      "Issue already exists in another ticket and should link to original"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "After developer marks a defect fixed, what should tester do?",
-    "choices": [
-      "Close immediately",
-      "Retest using original steps and verify expected behavior",
-      "Move to deferred",
-      "Delete ticket"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why is retesting required after a fix?",
-    "choices": [
-      "To confirm defect is truly resolved in target build/environment",
-      "To change severity",
-      "To avoid regression",
-      "To reduce backlog"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Difference between retesting and regression testing?",
-    "choices": [
-      "Retesting is only for UI",
-      "They are identical",
-      "Retesting verifies specific fix; regression checks unaffected areas",
-      "Regression is only for unit tests"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why run regression after major defect fix?",
-    "choices": [
-      "To reduce automation",
-      "Regression is required only for low severity",
-      "To skip UAT",
-      "Major fixes can unintentionally impact related functionality"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "What if defect still exists after retest?",
-    "choices": [
-      "Mark as duplicate",
-      "Reopen with fresh evidence and updated observations",
-      "Convert to enhancement",
-      "Close as won\u2019t fix"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "When should a defect be reopened?",
-    "choices": [
-      "When no logs are attached",
-      "When sprint ends",
-      "When developer is reassigned",
-      "When verification fails or issue reappears"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "What should tester verify before closing a defect?",
-    "choices": [
-      "Only report title",
-      "Only ticket comments",
-      "Fix works, related impact is acceptable, and expected result is met",
-      "Only assignee name"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why is tester-developer communication important in defect resolution?",
-    "choices": [
-      "It removes need for evidence",
-      "It increases ticket count",
-      "It reduces misunderstandings and speeds accurate fixes",
-      "It eliminates retest"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "How can leads/managers track defect progress?",
-    "choices": [
-      "Track only story points",
-      "Use dashboards/metrics: status trend, aging, severity mix, reopen rate",
-      "Read only closed tickets",
-      "Ignore deferred defects"
+      "A process to estimate defect fix time",
+      "A team effort to determine why a defect occurred",
+      "A method to prioritize defects by business impact",
+      "A technique to automate defect detection"
     ],
     "answer": 1
   },
   {
-    "question": "Why is defect aging important?",
+    "question": "According to the study guide, what is the relationship between SDLC and STLC?",
     "choices": [
-      "It replaces severity",
-      "It highlights unresolved risk and process bottlenecks",
-      "It indicates UI quality only",
-      "It auto-fixes defects"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "If requirement is unclear but mismatch is seen, what do first?",
-    "choices": [
-      "Immediately reject issue",
-      "Push to production",
-      "Clarify expected behavior with PO/BA before final classification",
-      "Mark fixed"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Why should production defects be added to regression suite?",
-    "choices": [
-      "To avoid root cause analysis",
-      "To reduce number of tests",
-      "To skip retesting",
-      "To prevent recurrence in future releases"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "How do defect reports improve quality over time?",
-    "choices": [
-      "They eliminate communication",
-      "They expose recurring patterns that drive preventive actions",
-      "They make all defects low priority",
-      "They remove need for requirements"
+      "STLC replaces SDLC in Agile methodologies",
+      "SDLC covers end-to-end development, STLC focuses only on testing phases",
+      "STLC is the automated version of SDLC processes",
+      "SDLC and STLC are completely independent methodologies"
     ],
     "answer": 1
   }
