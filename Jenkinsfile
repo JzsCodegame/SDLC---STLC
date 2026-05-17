@@ -7,6 +7,8 @@ pipeline {
     STUDENTS_OUTPUT_FILE = 'students.json'
     MAX_STUDENTS = '20'
     SOURCE_DOCUMENT_URL = 'https://docs.google.com/document/d/1RzyuPH6ryIVD6z5iRuyJxmUa6jGLJE_wAB5R4S4mUWA/edit?tab=t.0#heading=h.fmjzqinx4dso'
+    DEPLOY_COMMAND = ''
+    ENABLE_DOCKER_STAGES = 'false'
   }
 
   options {
@@ -35,14 +37,41 @@ pipeline {
     }
 
     stage('Build Docker image') {
+      when {
+        expression { env.ENABLE_DOCKER_STAGES?.toBoolean() }
+      }
       steps {
-        sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
+        sh '''
+          if ! command -v docker >/dev/null 2>&1; then
+            echo "Docker is not installed on this Jenkins agent."
+            echo "Install Docker or set ENABLE_DOCKER_STAGES=false to skip Docker build/deploy."
+            exit 1
+          fi
+
+          docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+        '''
       }
     }
 
     stage('Archive generated students file') {
       steps {
         archiveArtifacts artifacts: "${STUDENTS_OUTPUT_FILE}", fingerprint: true
+      }
+    }
+
+    stage('Deploy build (optional)') {
+      when {
+        expression { env.ENABLE_DOCKER_STAGES?.toBoolean() }
+      }
+      steps {
+        sh '''
+          if [ -n "$DEPLOY_COMMAND" ]; then
+            echo "Running deploy command..."
+            sh -lc "$DEPLOY_COMMAND"
+          else
+            echo "Skipping deploy stage. Set DEPLOY_COMMAND in Jenkins to enable deployment."
+          fi
+        '''
       }
     }
   }

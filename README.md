@@ -152,9 +152,36 @@ Configure these in Jenkins job or global environment:
 3. **Build Docker image**
    - Runs `docker build -t mini-quiz-academy:<build_number> .`.
 4. **Archive generated students file**
-   - Stores `students.json` as Jenkins artifact.
+   - Stores `${STUDENTS_OUTPUT_FILE}` as Jenkins artifact (defaults to `students.json`).
 
 ---
+
+
+
+### 7.2) Build step and deploy step in Jenkins
+This pipeline includes a **Build Docker image** step, enabled when `ENABLE_DOCKER_STAGES=true`.
+
+To deploy after build, set `ENABLE_DOCKER_STAGES=true` and configure `DEPLOY_COMMAND` in Jenkins. The pipeline will run it in the optional **Deploy build** stage.
+
+Example:
+```bash
+DEPLOY_COMMAND="docker tag mini-quiz-academy:${BUILD_NUMBER} my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER} && docker push my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER}"
+```
+
+If `DEPLOY_COMMAND` is empty, deploy is skipped and the build still succeeds.
+
+If you see `docker: not found` in Jenkins logs:
+- Your Jenkins agent does not have Docker installed/in PATH.
+- Either install Docker on that agent, or keep `ENABLE_DOCKER_STAGES=false`.
+
+
+### 7.1) Using your GitHub repository in Jenkins
+If your source repository is `https://github.com/JzsCodegame/P_O_M_FrameWork`, configure the Jenkins job SCM/repository URL to that exact GitHub URL.
+
+Important:
+- This GitHub link is the **repository URL**, not the Jenkins server URL.
+- Your Jenkins server URL is usually something like `http://<jenkins-host>:8080`.
+- Build deployment target should be configured in Jenkins stages (artifact archive, Docker registry, or downstream server), while GitHub remains the source checkout.
 
 ### 8) How to run locally (developer workflow)
 #### A) Generate students file only
