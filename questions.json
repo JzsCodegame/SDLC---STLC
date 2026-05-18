@@ -1,201 +1,201 @@
 [
   {
-    "question": "How many stages are there in the SDLC?",
+    "question": "What are the seven stages of SDLC in order?",
     "choices": [
-      "5 stages",
-      "6 stages",
-      "7 stages",
-      "8 stages"
+      "Planning, Requirement Analysis, Design, Development, Testing, Deployment, Maintenance",
+      "Planning, Design, Development, Testing, Analysis, Deployment, Maintenance",
+      "Analysis, Planning, Design, Development, Testing, Deployment, Maintenance",
+      "Planning, Requirement Analysis, Development, Design, Testing, Deployment, Maintenance"
     ],
-    "answer": 2
+    "answer": 0
   },
   {
-    "question": "Which SDLC methodology allows continuous improvement and frequent communication?",
-    "choices": [
-      "Waterfall",
-      "Iterative",
-      "Agile",
-      "Spiral"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What does QA stand for in software testing?",
-    "choices": [
-      "Quality Analysis",
-      "Quality Assurance",
-      "Quick Assessment",
-      "Quality Application"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which requirement criterion means there should be only one interpretation?",
+    "question": "Which of the following is NOT one of the good requirement criteria?",
     "choices": [
       "Concise",
-      "Complete",
-      "Unambiguous",
-      "Testable"
+      "Testable",
+      "Flexible",
+      "Unambiguous"
     ],
     "answer": 2
   },
   {
-    "question": "What type of testing focuses on system behavior without seeing internal code?",
+    "question": "What is the main difference between functional and non-functional testing?",
     "choices": [
-      "White Box Testing",
-      "Black Box Testing",
-      "Gray Box Testing",
-      "Unit Testing"
+      "Functional tests system performance, non-functional tests system behavior",
+      "Functional tests system behavior against requirements, non-functional tests performance and security",
+      "Functional testing is automated, non-functional testing is manual",
+      "Functional testing uses white box approach, non-functional uses black box"
     ],
     "answer": 1
   },
   {
-    "question": "In Agile, what is a User Story?",
+    "question": "In the defect life cycle, what status comes immediately after 'Open'?",
     "choices": [
-      "A detailed technical specification",
-      "A requirement written from user perspective",
-      "A test execution report",
-      "A defect tracking document"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What happens when Expected Result ≠ Actual Result?",
-    "choices": [
-      "Test passes",
-      "Test is skipped",
-      "A defect is logged",
-      "Test is repeated"
+      "Fixed",
+      "Verified",
+      "Assigned",
+      "Closed"
     ],
     "answer": 2
+  },
+  {
+    "question": "What does Black Box Testing focus on?",
+    "choices": [
+      "Internal code structure and logic",
+      "System architecture and databases",
+      "Input and output without seeing internal code",
+      "Unit testing and integration points"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which Agile ceremony is used to discuss what was done yesterday, what will be done today, and any blockers?",
+    "choices": [
+      "Sprint Planning",
+      "Sprint Review",
+      "Daily Stand-Up",
+      "Backlog Refinement"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the typical format for User Stories in Agile?",
+    "choices": [
+      "Given, When, Then",
+      "As a [role], I want [feature], so that [benefit]",
+      "Who, What, Where, When",
+      "Title, Description, Steps, Expected Result"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In STLC, which stage comes immediately after Test Planning?",
+    "choices": [
+      "Test Execution",
+      "Test Design",
+      "Test Analysis",
+      "Bug Tracking"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the difference between severity and priority in defect management?",
+    "choices": [
+      "Severity is business impact, priority is technical complexity",
+      "Severity is impact level, priority is urgency level",
+      "Severity is for developers, priority is for QA",
+      "Severity is automated, priority is manual"
+    ],
+    "answer": 1
   },
   {
     "question": "Which environment is used for QA to execute test cases?",
     "choices": [
-      "Production",
       "Development",
+      "Production",
       "QA/Test",
-      "Customer"
+      "CAT"
     ],
     "answer": 2
   },
   {
-    "question": "What is the first stage of STLC?",
+    "question": "What is the main purpose of a Requirement Traceability Matrix (RTM)?",
     "choices": [
-      "Test Planning",
-      "Test Execution",
-      "Requirement Analysis",
-      "Test Design"
+      "To track project timeline and deadlines",
+      "To link requirements to test cases and defects through unique IDs",
+      "To manage team assignments and responsibilities",
+      "To document code changes and versions"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In Agile, what is a Sprint typically?",
+    "choices": [
+      "A 6-month development cycle",
+      "A 1-3 week timeline unit for development and testing",
+      "A single user story completion",
+      "A quarterly planning meeting"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What type of testing validates system behavior at limits and constraints?",
+    "choices": [
+      "Positive testing",
+      "Negative testing",
+      "Boundary testing",
+      "Integration testing"
     ],
     "answer": 2
   },
   {
-    "question": "How many core Agile ceremonies are there?",
-    "choices": [
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What does RTM stand for?",
-    "choices": [
-      "Real Time Monitoring",
-      "Requirement Traceability Matrix",
-      "Risk Testing Method",
-      "Rapid Test Management"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which defect life cycle status comes after 'Fixed'?",
-    "choices": [
-      "Closed",
-      "Open",
-      "Retested",
-      "Assigned"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the typical duration of an Agile sprint?",
-    "choices": [
-      "1 week",
-      "2-3 weeks",
-      "1 month",
-      "6 weeks"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which testing type includes performance, load, and security testing?",
-    "choices": [
-      "Functional Testing",
-      "Non-Functional Testing",
-      "Unit Testing",
-      "Integration Testing"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What does UAT stand for?",
-    "choices": [
-      "Unit Acceptance Testing",
-      "User Acceptance Testing",
-      "Unified Application Testing",
-      "Universal Access Testing"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In the Daily Stand-Up meeting, how many standard questions are asked?",
-    "choices": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the purpose of Smoke Testing?",
-    "choices": [
-      "To test security features",
-      "To perform load testing",
-      "To do quick high-level checks",
-      "To test database connections"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which role maintains the Product Backlog in Agile?",
+    "question": "Which role in Agile is responsible for maintaining the product backlog and setting priorities?",
     "choices": [
       "Scrum Master",
-      "Product Owner",
       "Business Analyst",
+      "Product Owner",
       "QA Lead"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
-    "question": "What is boundary testing used for?",
+    "question": "What is the main difference between UAT and CAT testing?",
     "choices": [
-      "Testing user interface design",
-      "Testing system behavior at limits",
-      "Testing network connections",
-      "Testing code compilation"
+      "UAT is automated, CAT is manual",
+      "UAT uses internal business users, CAT uses actual customers or pilot users",
+      "UAT tests functionality, CAT tests performance",
+      "UAT is done before development, CAT is done after deployment"
     ],
     "answer": 1
   },
   {
-    "question": "What does RCA stand for in defect analysis?",
+    "question": "What happens when Expected Result ≠ Actual Result in test execution?",
     "choices": [
-      "Risk Control Analysis",
-      "Root Cause Analysis",
-      "Requirement Change Analysis",
-      "Regression Coverage Analysis"
+      "The test case is marked as Pass",
+      "The test case is skipped",
+      "A defect is logged",
+      "The test case is rewritten"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Agile, what is the purpose of a Burn-Down Chart?",
+    "choices": [
+      "To track budget and expenses",
+      "To show remaining work versus time in a sprint",
+      "To document defects found during testing",
+      "To plan future releases and features"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main advantage of Agile over Waterfall methodology?",
+    "choices": [
+      "Agile requires less documentation",
+      "Agile allows continuous cycles, collaboration, and faster feedback",
+      "Agile is less expensive to implement",
+      "Agile requires fewer team members"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which testing type focuses on verifying data flow between UI and database using SQL queries?",
+    "choices": [
+      "Frontend testing",
+      "API testing",
+      "Backend testing",
+      "Security testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main purpose of Regression Testing?",
+    "choices": [
+      "To test new features for the first time",
+      "To ensure new changes haven't broken existing functionality",
+      "To test system performance under load",
+      "To validate user acceptance criteria"
     ],
     "answer": 1
   }
