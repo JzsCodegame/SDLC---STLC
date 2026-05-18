@@ -1,202 +1,202 @@
 [
   {
-    "question": "How many stages are in the Software Development Life Cycle (SDLC)?",
+    "question": "What are the seven stages of SDLC in order?",
     "choices": [
-      "6 stages",
-      "7 stages",
-      "8 stages",
-      "5 stages"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which of the following is NOT one of the good requirement criteria mentioned in the training?",
-    "choices": [
-      "Concise",
-      "Clear",
-      "Optional",
-      "Testable"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What does Black Box Testing focus on?",
-    "choices": [
-      "Internal code structure",
-      "Input and output without seeing code",
-      "Database connections",
-      "Unit test results"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Agile methodology, what is a User Story?",
-    "choices": [
-      "A detailed technical specification",
-      "A requirement written from user's perspective",
-      "A test execution report",
-      "A defect tracking document"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the first stage of the Software Testing Life Cycle (STLC)?",
-    "choices": [
-      "Test Planning",
-      "Test Execution",
-      "Requirement Analysis",
-      "Test Case Design"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which testing type validates system performance under varying loads?",
-    "choices": [
-      "Functional Testing",
-      "Security Testing",
-      "Load Testing",
-      "Boundary Testing"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main difference between Severity and Priority in defect management?",
-    "choices": [
-      "Severity is impact, Priority is urgency",
-      "Priority is impact, Severity is urgency",
-      "They are the same thing",
-      "Severity is for bugs, Priority is for issues"
+      "Planning, Requirement Analysis, Design, Development, Testing, Deployment, Maintenance",
+      "Planning, Analysis, Design, Coding, Testing, Implementation, Support",
+      "Requirements, Planning, Design, Development, Testing, Release, Maintenance",
+      "Analysis, Planning, Design, Development, Testing, Deployment, Evolution"
     ],
     "answer": 0
   },
   {
-    "question": "In the Defect Life Cycle, what status comes after 'Fixed'?",
+    "question": "Which requirement analysis criteria ensures that requirements can be verified by QA?",
+    "choices": [
+      "Concise",
+      "Testable",
+      "Measurable",
+      "Complete"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main difference between Black Box and White Box testing?",
+    "choices": [
+      "Black Box tests performance while White Box tests functionality",
+      "Black Box focuses on inputs/outputs without seeing code, White Box examines internal code structure",
+      "Black Box is manual testing while White Box is automated testing",
+      "Black Box tests UI elements while White Box tests databases"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In Agile, what document format typically replaces traditional requirement documents like BRD and FRD?",
+    "choices": [
+      "Test Plans",
+      "Technical Specifications",
+      "User Stories",
+      "Acceptance Criteria"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the correct format for a User Story in Agile?",
+    "choices": [
+      "Given [condition], When [action], Then [result]",
+      "As a [role], I want [feature], so that [benefit]",
+      "The system shall [requirement] when [condition]",
+      "User must [action] to achieve [outcome]"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which Agile ceremony is used for the team to demonstrate completed features to stakeholders?",
+    "choices": [
+      "Daily Stand-up",
+      "Sprint Planning",
+      "Sprint Review/Demo",
+      "Sprint Retrospective"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What are the three standard questions asked during Daily Stand-up meetings?",
+    "choices": [
+      "What did I do yesterday? What will I do today? Any blockers?",
+      "What's my progress? What's my plan? What help do I need?",
+      "What's completed? What's in progress? What's blocked?",
+      "What worked well? What didn't work? What can we improve?"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "In the Defect Life Cycle, what status comes immediately after 'Fixed'?",
     "choices": [
       "Closed",
-      "Open",
+      "Verified",
       "Retested",
-      "Assigned"
+      "Resolved"
     ],
     "answer": 2
   },
   {
-    "question": "What are the three questions asked in Daily Stand-up meetings?",
+    "question": "What is the difference between Severity and Priority in defect classification?",
     "choices": [
-      "What bugs were found? What tests passed? Any delays?",
-      "What did I do yesterday? What will I do today? Any blockers?",
-      "What requirements changed? What code was written? What was tested?",
-      "What meetings occurred? What decisions were made? What approvals are needed?"
+      "Severity is business impact, Priority is technical complexity",
+      "Severity is how critical the defect is, Priority is how urgent it needs to be fixed",
+      "Severity is for developers, Priority is for QA",
+      "Severity is impact on users, Priority is impact on system"
     ],
     "answer": 1
   },
   {
-    "question": "Which Agile role is responsible for facilitating meetings and removing blockers?",
+    "question": "Which type of testing validates system behavior at limits and constraints?",
     "choices": [
-      "Product Owner",
-      "Business Analyst",
-      "Scrum Master",
-      "QA Lead"
+      "Negative Testing",
+      "Boundary Testing",
+      "Positive Testing",
+      "Integration Testing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does RTM stand for and what is its purpose?",
+    "choices": [
+      "Real-Time Monitoring - tracks system performance",
+      "Requirement Traceability Matrix - links requirements to test cases and defects",
+      "Regression Test Management - manages test case execution",
+      "Risk and Test Metrics - measures testing effectiveness"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In the STLC, which stage comes immediately after Test Planning?",
+    "choices": [
+      "Test Execution",
+      "Test Analysis",
+      "Test Case Design",
+      "Bug Tracking"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main advantage of Agile methodology over Waterfall?",
+    "choices": [
+      "Lower cost and faster delivery",
+      "Better documentation and planning",
+      "Continuous collaboration and adaptability to changes",
+      "Simpler project management and fewer meetings"
     ],
     "answer": 2
   },
   {
-    "question": "What is the purpose of a Requirement Traceability Matrix (RTM)?",
+    "question": "Which environment is used by QA to execute test cases?",
     "choices": [
-      "To track project timelines",
-      "To link requirements to test cases and defects",
-      "To manage team assignments",
-      "To calculate project costs"
+      "Development environment",
+      "Production environment",
+      "QA/Test environment",
+      "User Acceptance environment"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is Regression Testing?",
+    "choices": [
+      "Testing new functionality for the first time",
+      "Testing system performance under load",
+      "Retesting existing functionality after changes to ensure nothing is broken",
+      "Testing system security and vulnerabilities"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Jira hierarchy for Agile projects, what is the correct order from largest to smallest?",
+    "choices": [
+      "Epic → User Story → Task → Subtask",
+      "Project → Epic → Feature → User Story",
+      "Release → Sprint → User Story → Test Case",
+      "Epic → Feature → User Story → Task"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the primary role of a Scrum Master in Agile teams?",
+    "choices": [
+      "Manages the team and assigns tasks",
+      "Writes user stories and defines requirements",
+      "Facilitates meetings and removes blockers",
+      "Tests the application and reports defects"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which testing type focuses on performance, security, usability, and compatibility?",
+    "choices": [
+      "Functional Testing",
+      "Non-Functional Testing",
+      "Structural Testing",
+      "Integration Testing"
     ],
     "answer": 1
+  },
+  {
+    "question": "What should happen when Expected Result ≠ Actual Result during test execution?",
+    "choices": [
+      "Mark the test case as Pass and continue",
+      "Rewrite the test case with correct expectations",
+      "Mark as Fail and create a defect",
+      "Skip the test case and move to the next one"
+    ],
+    "answer": 2
   },
   {
     "question": "In Agile, what is a Sprint typically?",
     "choices": [
-      "A 6-month development cycle",
-      "A 1-3 week iteration",
-      "A single user story",
-      "A testing phase only"
+      "A type of testing methodology",
+      "A 1-3 week time-boxed iteration for development and testing",
+      "A meeting where team discusses progress",
+      "A document that contains user requirements"
     ],
     "answer": 1
-  },
-  {
-    "question": "What does UAT stand for in software testing?",
-    "choices": [
-      "Unit Acceptance Testing",
-      "User Application Testing",
-      "User Acceptance Testing",
-      "Unified Automation Testing"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which environment is used for QA to execute test cases?",
-    "choices": [
-      "Production",
-      "Development",
-      "QA/Test",
-      "Customer"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main characteristic of Waterfall methodology compared to Agile?",
-    "choices": [
-      "More collaborative",
-      "Linear and rigid",
-      "Faster delivery",
-      "Better documentation"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In test case design, what should happen if Expected Result does not equal Actual Result?",
-    "choices": [
-      "Mark as Pass",
-      "Ignore the difference",
-      "Mark as Fail and log defect",
-      "Rewrite the test case"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the purpose of Regression Testing?",
-    "choices": [
-      "To test new features only",
-      "To ensure new changes haven't broken existing functionality",
-      "To test performance",
-      "To validate security"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which testing approach focuses on testing system limits and constraints?",
-    "choices": [
-      "Positive Testing",
-      "Negative Testing",
-      "Boundary Testing",
-      "Integration Testing"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main purpose of Sprint Retrospective meetings?",
-    "choices": [
-      "Plan next sprint tasks",
-      "Demo completed features",
-      "Analyze what went well and what can be improved",
-      "Assign new user stories"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "In Agile hierarchy, what contains User Stories?",
-    "choices": [
-      "Test Cases",
-      "Defects",
-      "Epics",
-      "Sprints"
-    ],
-    "answer": 2
   }
 ]
