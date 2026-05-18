@@ -1,6 +1,6 @@
 [
   {
-    "question": "How many stages are there in SDLC according to the study guide?",
+    "question": "How many stages are there in the SDLC according to the study guide?",
     "choices": [
       "6 stages",
       "7 stages",
@@ -10,193 +10,193 @@
     "answer": 1
   },
   {
-    "question": "What are the good requirement criteria that must be analyzed?",
+    "question": "Which of the following is NOT one of the good requirement criteria mentioned in the study guide?",
     "choices": [
-      "Clear, complete, testable, and measurable",
-      "Concise, clear, complete, unambiguous, testable, measurable, and constructive",
-      "Simple, direct, and understandable",
-      "Detailed, comprehensive, and technical"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the difference between functional and non-functional testing?",
-    "choices": [
-      "Functional tests code, non-functional tests UI",
-      "Functional tests performance, non-functional tests features",
-      "Functional tests system functionality against requirements, non-functional tests performance, security, and usability",
-      "Functional tests databases, non-functional tests applications"
+      "Concise",
+      "Testable",
+      "Flexible",
+      "Measurable"
     ],
     "answer": 2
   },
   {
-    "question": "What is Black Box Testing?",
+    "question": "In the ATM example, what happens after 3 wrong PIN attempts according to the study guide?",
     "choices": [
-      "Testing where you can see the internal code structure",
-      "Testing only the database connections",
-      "Testing inputs and outputs without knowing the internal code",
-      "Testing only the user interface elements"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What are the three categories of test cases mentioned in the study guide?",
-    "choices": [
-      "Simple, complex, and advanced",
-      "Manual, automated, and hybrid",
-      "Positive, negative, and boundary",
-      "Unit, integration, and system"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the correct User Story format in Agile?",
-    "choices": [
-      "Given [condition], When [action], Then [result]",
-      "As a [role], I want [feature], so that [benefit]",
-      "The system shall [requirement]",
-      "User must be able to [action]"
+      "Card is returned",
+      "Account is locked",
+      "System shuts down",
+      "PIN is reset"
     ],
     "answer": 1
   },
   {
-    "question": "What is the main difference between Waterfall and Agile methodologies?",
+    "question": "What does Black Box Testing focus on according to the study guide?",
     "choices": [
-      "Waterfall is faster than Agile",
-      "Waterfall is linear and rigid, Agile is cyclical and collaborative",
-      "Waterfall uses sprints, Agile uses phases",
-      "Waterfall requires more documentation than Agile"
+      "Internal code structure",
+      "Database connections",
+      "Input and output without seeing internal code",
+      "Network protocols"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which Agile methodology allows continuous cycles and collaboration according to the study guide?",
+    "choices": [
+      "Waterfall",
+      "Iterative",
+      "Agile",
+      "Spiral"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the standard format for User Stories mentioned in the study guide?",
+    "choices": [
+      "Given, When, Then",
+      "As a, I want, So that",
+      "Who, What, Why",
+      "Input, Process, Output"
     ],
     "answer": 1
   },
   {
-    "question": "What are the three daily standup questions in Agile?",
+    "question": "In the defect life cycle, what status comes immediately after 'Fixed'?",
     "choices": [
-      "What is planned? What is completed? What is delayed?",
+      "Closed",
+      "Verified",
+      "Retested",
+      "Reopened"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is a Non-Functional testing type mentioned in the study guide?",
+    "choices": [
+      "Boundary testing",
+      "Positive testing",
+      "Performance testing",
+      "Black box testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "How many core Agile ceremonies are mentioned in the study guide?",
+    "choices": [
+      "4 ceremonies",
+      "5 ceremonies",
+      "6 ceremonies",
+      "7 ceremonies"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What are the three questions asked in Daily Stand-up meetings?",
+    "choices": [
       "What did I do yesterday? What will I do today? Any blockers?",
-      "What was tested? What passed? What failed?",
-      "What is assigned? What is in progress? What is done?"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the correct Defect Life Cycle sequence?",
-    "choices": [
-      "New → Fixed → Closed",
-      "New → Verified → Open → Fixed → Retested → Verified → Closed",
-      "Open → Assigned → Fixed → Closed",
-      "New → Assigned → Tested → Closed"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the difference between Priority and Severity in defects?",
-    "choices": [
-      "Priority is impact, Severity is urgency",
-      "Priority and Severity are the same thing",
-      "Severity is impact, Priority is urgency",
-      "Priority is for QA, Severity is for developers"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What does STLC stand for?",
-    "choices": [
-      "Software Technology Life Cycle",
-      "System Testing Life Cycle",
-      "Software Testing Life Cycle",
-      "Standard Testing Life Cycle"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the purpose of a Test Plan?",
-    "choices": [
-      "To execute test cases automatically",
-      "To define what to test, when to test, and how to test",
-      "To log defects and track their status",
-      "To write user stories and acceptance criteria"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is Regression Testing?",
-    "choices": [
-      "Testing new features only",
-      "Testing the database connections",
-      "Retesting functionality after bug fixes to ensure no side effects",
-      "Testing the user interface design"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What are the typical Agile team roles mentioned in the study guide?",
-    "choices": [
-      "Manager, Developer, Tester",
-      "Product Owner, Scrum Master, BA, QA, Developers",
-      "Architect, Designer, Programmer",
-      "Business Lead, Technical Lead, QA Lead"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the main purpose of acceptance criteria in User Stories?",
-    "choices": [
-      "To estimate development effort",
-      "To assign tasks to team members",
-      "To define when the story is 'done' and testable",
-      "To prioritize stories in the backlog"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is Root Cause Analysis (RCA) in the context of defects?",
-    "choices": [
-      "Testing the root directory of the application",
-      "Analyzing why a defect occurred with team collaboration",
-      "Testing the database root tables",
-      "Checking the root user permissions"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What are the different types of environments mentioned in the study guide?",
-    "choices": [
-      "Local, Remote, Cloud",
-      "Dev, QA/UAT, Production",
-      "Test, Stage, Live",
-      "Internal, External, Hybrid"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the main characteristic of Boundary Testing?",
-    "choices": [
-      "Testing at the physical boundaries of the system",
-      "Testing the system behavior at limits and constraints",
-      "Testing the network boundary connections",
-      "Testing the user interface boundaries"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the relationship between Epics, User Stories, and Test Cases in Agile?",
-    "choices": [
-      "Epics contain User Stories, which link to Test Cases",
-      "Test Cases contain User Stories, which link to Epics",
-      "User Stories contain Epics, which link to Test Cases",
-      "They are all independent with no relationship"
+      "What is my priority? What is complete? What is pending?",
+      "What worked well? What didn't work? What can improve?",
+      "What is assigned? What is tested? What is deployed?"
     ],
     "answer": 0
   },
   {
-    "question": "What is the main purpose of UAT (User Acceptance Testing)?",
+    "question": "According to the study guide, what does QA ensure in the software development process?",
     "choices": [
-      "To test the system architecture",
-      "To validate that the application meets real-world business needs",
-      "To test the database performance",
-      "To check the code quality"
+      "Code compilation",
+      "Database design",
+      "Quality before software reaches customers",
+      "Network configuration"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which environment is used for QA to execute test cases?",
+    "choices": [
+      "Development environment",
+      "Production environment",
+      "Testing/QA environment",
+      "Staging environment"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What does RTM stand for in QA terminology?",
+    "choices": [
+      "Real Time Monitoring",
+      "Requirement Traceability Matrix",
+      "Regression Test Management",
+      "Release Timeline Mapping"
     ],
     "answer": 1
+  },
+  {
+    "question": "In Agile, what is the typical duration of a sprint mentioned in the study guide?",
+    "choices": [
+      "1 week",
+      "1-3 weeks",
+      "4-6 weeks",
+      "2 months"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main difference between Severity and Priority in defect management?",
+    "choices": [
+      "Severity is impact, Priority is urgency",
+      "Severity is urgency, Priority is impact",
+      "They are the same thing",
+      "Severity is for bugs, Priority is for features"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "According to the study guide, which testing approach validates system behavior at limits?",
+    "choices": [
+      "Positive testing",
+      "Negative testing",
+      "Boundary testing",
+      "Integration testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What does the instructor emphasize as QA's ultimate responsibility?",
+    "choices": [
+      "Writing code",
+      "Managing timelines",
+      "Evidence and documentation of proper testing",
+      "Training developers"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In the Jira hierarchy mentioned in the study guide, what comes after Epic?",
+    "choices": [
+      "Test Cases",
+      "User Stories",
+      "Defects",
+      "Tasks"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does CAT stand for in the context of testing environments?",
+    "choices": [
+      "Customer Acceptance Testing",
+      "Continuous Automated Testing",
+      "Component Analysis Testing",
+      "Critical Application Testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "According to the study guide, what is the key principle that makes QA always in demand?",
+    "choices": [
+      "QA tools are expensive",
+      "Developers don't like testing",
+      "The QA process itself never disappears",
+      "Automation requires manual oversight"
+    ],
+    "answer": 2
   }
 ]
