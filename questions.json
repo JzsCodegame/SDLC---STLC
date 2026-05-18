@@ -1,202 +1,202 @@
 [
   {
-    "question": "What are the 7 stages of SDLC in order?",
+    "question": "Which of the following is NOT one of the 7 stages of SDLC?",
     "choices": [
-      "Planning, Requirement Analysis, Design, Development, Testing, Deployment, Maintenance",
-      "Planning, Analysis, Design, Coding, Testing, Implementation, Support",
-      "Identification, Planning, Design, Development, Testing, Deployment, Evolution",
-      "Requirements, Design, Development, Testing, Integration, Deployment, Maintenance"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Which criteria must good requirements meet according to the study guide?",
-    "choices": [
-      "Clear, complete, testable, and documented",
-      "Concise, clear, complete, unambiguous, testable, measurable, and constructive",
-      "Simple, accurate, verifiable, and traceable",
-      "Detailed, specific, comprehensive, and validated"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is Black Box Testing?",
-    "choices": [
-      "Testing internal code structure and logic",
-      "Testing system architecture and integrations",
-      "Testing functionality without seeing internal code, focusing on inputs and outputs",
-      "Testing security vulnerabilities and penetration points"
+      "Planning",
+      "Requirement Analysis",
+      "Integration",
+      "Deployment"
     ],
     "answer": 2
   },
   {
-    "question": "Which testing categories include performance, load, stress, and usability testing?",
+    "question": "According to the study guide, what are the key criteria that good requirements must satisfy?",
     "choices": [
-      "Functional Testing",
-      "Non-Functional Testing",
-      "Structural Testing",
-      "Integration Testing"
+      "Clear, complete, and documented",
+      "Concise, clear, unambiguous, complete, testable, and measurable",
+      "Simple, detailed, and approved",
+      "Functional, non-functional, and validated"
     ],
     "answer": 1
   },
   {
-    "question": "What is the correct User Story format in Agile?",
+    "question": "In Agile methodology, what is the typical duration of a sprint?",
+    "choices": [
+      "1 week",
+      "2-3 weeks",
+      "1 month",
+      "6 weeks"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the correct format for writing User Stories in Agile?",
     "choices": [
       "Given [condition], When [action], Then [result]",
       "As a [role], I want [feature], so that [benefit]",
-      "The system shall [requirement] when [condition]",
-      "User must be able to [action] in order to [outcome]"
+      "The system shall [requirement]",
+      "User must be able to [action]"
     ],
     "answer": 1
   },
   {
-    "question": "What are the main phases of STLC (Software Testing Life Cycle)?",
+    "question": "Which type of testing focuses on verifying system functionality against requirements without seeing the internal code?",
     "choices": [
-      "Planning, Design, Execution, Reporting",
-      "Analysis, Planning, Design, Execution, Closure",
-      "Requirement Analysis, Test Planning, Test Analysis, Test Design, Test Execution, Bug Tracking, Acceptance",
-      "Requirements, Test Cases, Execution, Defect Management"
+      "White Box Testing",
+      "Black Box Testing",
+      "Gray Box Testing",
+      "Unit Testing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the correct sequence of the Defect Life Cycle?",
+    "choices": [
+      "New → Open → Fixed → Closed",
+      "New → Verified → Open → Fixed → Retested → Verified → Closed",
+      "Open → Assigned → Fixed → Verified",
+      "New → Assigned → Closed"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In STLC, which stage comes immediately after Test Planning?",
+    "choices": [
+      "Test Execution",
+      "Test Analysis",
+      "Test Case Design",
+      "Bug Tracking"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What are the three main categories of test cases mentioned in the study guide?",
+    "choices": [
+      "Manual, Automated, Performance",
+      "Functional, Non-functional, Integration",
+      "Positive, Negative, Boundary",
+      "Unit, System, Acceptance"
     ],
     "answer": 2
   },
   {
-    "question": "What is the correct Defect Life Cycle sequence?",
-    "choices": [
-      "New, Open, Fixed, Closed",
-      "New, Verified, Open, Fixed, Retested, Verified, Closed",
-      "Open, Assigned, Fixed, Tested, Closed",
-      "New, Assigned, In Progress, Fixed, Verified"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which Agile ceremony focuses on 'What did I do yesterday? What will I do today? Any blockers?'",
+    "question": "Which Agile ceremony is used to discuss 'What did I do yesterday?', 'What will I do today?', and 'Any blockers?'",
     "choices": [
       "Sprint Planning",
-      "Sprint Review",
       "Daily Stand-Up",
-      "Sprint Retrospective"
+      "Sprint Review",
+      "Retrospective"
     ],
-    "answer": 2
+    "answer": 1
   },
   {
     "question": "What is the difference between Severity and Priority in defect management?",
     "choices": [
-      "Severity is business impact, Priority is technical complexity",
-      "Severity is impact/damage level, Priority is urgency of fixing",
-      "Severity is cost to fix, Priority is customer visibility",
-      "Severity is testing effort, Priority is development effort"
+      "Severity is how urgent, Priority is impact level",
+      "Severity is impact level, Priority is how urgent",
+      "They are the same thing",
+      "Severity is for bugs, Priority is for features"
     ],
     "answer": 1
   },
   {
-    "question": "In Agile, what document type typically replaces traditional requirement documents (BRD/FRD)?",
+    "question": "Which environment is used by QA to execute test cases?",
     "choices": [
-      "Test Plans",
-      "Technical Specifications",
-      "User Stories",
-      "Acceptance Criteria"
+      "Development",
+      "QA/Test",
+      "Production",
+      "UAT"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does RTM stand for in QA terminology?",
+    "choices": [
+      "Real Time Monitoring",
+      "Requirement Traceability Matrix",
+      "Rapid Test Management",
+      "Release Testing Method"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In Agile, what is the hierarchy from largest to smallest?",
+    "choices": [
+      "Epic → Feature → User Story → Task",
+      "Feature → Epic → User Story → Task",
+      "User Story → Epic → Feature → Task",
+      "Task → User Story → Feature → Epic"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which type of testing ensures the application is usable by people with disabilities?",
+    "choices": [
+      "Security Testing",
+      "Performance Testing",
+      "508 Compliance Testing",
+      "Load Testing"
     ],
     "answer": 2
   },
   {
-    "question": "What are the three main categories of test cases?",
+    "question": "What is the main purpose of Regression Testing?",
     "choices": [
-      "Manual, Automated, Regression",
-      "Positive, Negative, Boundary",
-      "Functional, Integration, System",
-      "Unit, Component, End-to-End"
+      "To test new features only",
+      "To ensure new changes haven't broken existing functionality",
+      "To test performance under load",
+      "To validate user acceptance"
     ],
     "answer": 1
   },
   {
-    "question": "Which Agile role is responsible for maintaining the product backlog and setting priorities?",
+    "question": "Which role in Agile is responsible for facilitating meetings and removing blockers?",
     "choices": [
-      "Scrum Master",
-      "Business Analyst",
       "Product Owner",
+      "Business Analyst",
+      "Scrum Master",
       "QA Lead"
     ],
     "answer": 2
   },
   {
-    "question": "What is the purpose of a Requirement Traceability Matrix (RTM)?",
+    "question": "What is the typical estimation ratio between Developer and QA effort points?",
     "choices": [
-      "To track project timeline and milestones",
-      "To link requirements to test cases and defects through unique IDs",
-      "To manage team assignments and responsibilities",
-      "To monitor test execution progress and results"
+      "Equal points",
+      "QA gets double the points",
+      "QA gets half the developer's points",
+      "QA gets one-third of developer's points"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
-    "question": "Which testing type validates that new changes haven't broken existing functionality?",
+    "question": "Which testing approach focuses on internal code logic and architecture?",
     "choices": [
-      "Smoke Testing",
-      "Integration Testing",
-      "Regression Testing",
-      "System Testing"
+      "Black Box Testing",
+      "Functional Testing",
+      "White Box Testing",
+      "User Acceptance Testing"
     ],
     "answer": 2
   },
   {
     "question": "What is the main difference between Waterfall and Agile methodologies?",
     "choices": [
-      "Waterfall uses automated testing, Agile uses manual testing",
+      "Waterfall is faster than Agile",
       "Waterfall is linear and rigid, Agile is cyclical and collaborative",
-      "Waterfall focuses on documentation, Agile focuses on code",
-      "Waterfall is faster, Agile is more thorough"
+      "Waterfall uses sprints, Agile uses phases",
+      "Waterfall requires more testing than Agile"
     ],
     "answer": 1
   },
   {
-    "question": "In the context of environments, which environment is used for QA to execute test cases?",
+    "question": "In the context of test cases, what should happen when Expected Result ≠ Actual Result?",
     "choices": [
-      "Development environment",
-      "Production environment",
-      "QA/Test environment",
-      "Staging environment"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What does Root Cause Analysis (RCA) involve in Agile defect management?",
-    "choices": [
-      "QA independently determines the cause of defects",
-      "QA and Dev collaborate to identify why a defect occurred",
-      "Only developers analyze the technical root cause",
-      "Business analysts review requirement gaps"
+      "Mark as Pass and continue",
+      "Mark as Fail and create a defect",
+      "Skip the test case",
+      "Rewrite the expected result"
     ],
     "answer": 1
-  },
-  {
-    "question": "Which Agile artifact shows remaining work versus time in a graphical format?",
-    "choices": [
-      "Product Backlog",
-      "Sprint Backlog",
-      "Burn-Down Chart",
-      "User Story Map"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the primary focus of UAT (User Acceptance Testing)?",
-    "choices": [
-      "Testing system performance under load",
-      "Validating technical integrations between modules",
-      "Business users validating the application meets real-world needs",
-      "Testing security vulnerabilities and data protection"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "According to the study guide, what is QA's ultimate responsibility in the software development process?",
-    "choices": [
-      "Writing automated test scripts",
-      "Managing project timelines and deliverables",
-      "Ensuring quality and serving as the last line of defense before software release",
-      "Training end users on new system features"
-    ],
-    "answer": 2
   }
 ]
