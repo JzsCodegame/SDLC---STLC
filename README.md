@@ -184,50 +184,6 @@ Important:
 - Build deployment target should be configured in Jenkins stages (artifact archive, Docker registry, or downstream server), while GitHub remains the source checkout.
 
 
-### 7.3) Jenkins is in Docker, but job says `docker: not found` — what to install?
-If Jenkins itself runs in a container, jobs do **not** automatically get Docker CLI/daemon access.
-
-Use one of these patterns:
-
-1. **Docker-outside-of-Docker (recommended for local server)**
-   - Install Docker Engine on the host machine.
-   - Start Jenkins container with Docker socket mounted:
-     ```bash
-     docker run -d --name jenkins        -p 8080:8080 -p 50000:50000        -v jenkins_home:/var/jenkins_home        -v /var/run/docker.sock:/var/run/docker.sock        jenkins/jenkins:lts
-     ```
-   - Ensure Docker CLI exists in Jenkins runtime (install in image or agent).
-
-2. **Dedicated Docker agent/node**
-   - Keep Jenkins controller as-is.
-   - Run builds on a Jenkins agent VM/container that has Docker installed.
-   - Assign a label (for example `docker`) and restrict Docker stages to that label.
-
-3. **Docker-in-Docker (DinD)**
-   - Possible, but more complex and less preferred for beginners.
-   - Use only if you cannot mount host socket or provide Docker-capable agents.
-
-#### Jenkins plugins commonly used with Docker
-- **Docker Pipeline** plugin (lets pipeline use `docker.build(...)`, `inside`, etc.).
-- **Docker** plugin (cloud/agent integration patterns).
-
-> Plugin alone is not enough: the runtime still needs Docker daemon access.
-
-#### Where does `${BUILD_NUMBER}` come from?
-- `${BUILD_NUMBER}` is a Jenkins built-in environment variable.
-- Jenkins sets it automatically for each run (1, 2, 3, ...).
-- You do **not** create it manually.
-- In pipeline syntax you can use either `${BUILD_NUMBER}` in shell or `env.BUILD_NUMBER` in Groovy.
-
-Quick check step:
-```groovy
-stage('Debug build metadata') {
-  steps {
-    sh 'echo BUILD_NUMBER=$BUILD_NUMBER'
-    echo "BUILD_NUMBER from Groovy: ${env.BUILD_NUMBER}"
-  }
-}
-```
-
 ### 8) How to run locally (developer workflow)
 #### A) Generate students file only
 ```bash
