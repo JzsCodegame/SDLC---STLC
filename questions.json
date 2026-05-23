@@ -5,12 +5,12 @@
       "6 stages",
       "7 stages",
       "8 stages",
-      "9 stages"
+      "5 stages"
     ],
     "answer": 1
   },
   {
-    "question": "Which of the following is NOT one of the good requirement criteria mentioned in the study guide?",
+    "question": "Which of the following is NOT one of the good requirement criteria mentioned in the training?",
     "choices": [
       "Concise",
       "Testable",
@@ -18,6 +18,16 @@
       "Measurable"
     ],
     "answer": 2
+  },
+  {
+    "question": "In the defect life cycle, what status comes immediately after 'New'?",
+    "choices": [
+      "Assigned",
+      "Open",
+      "Fixed",
+      "Verified"
+    ],
+    "answer": 1
   },
   {
     "question": "What does Black Box Testing focus on?",
@@ -30,12 +40,22 @@
     "answer": 1
   },
   {
+    "question": "Which testing type validates system behavior under varying loads?",
+    "choices": [
+      "Functional testing",
+      "Security testing",
+      "Performance testing",
+      "Usability testing"
+    ],
+    "answer": 2
+  },
+  {
     "question": "In Agile methodology, what is the typical duration of a sprint?",
     "choices": [
       "1 week",
       "2-3 weeks",
-      "4-5 weeks",
-      "6-8 weeks"
+      "1 month",
+      "6 weeks"
     ],
     "answer": 1
   },
@@ -43,66 +63,66 @@
     "question": "What is the first stage of the Software Testing Life Cycle (STLC)?",
     "choices": [
       "Test Planning",
+      "Test Design",
       "Requirement Analysis",
-      "Test Case Design",
       "Test Execution"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
-    "question": "Which environment is used for QA to execute test cases?",
+    "question": "Which Agile role is responsible for maintaining the product backlog?",
     "choices": [
-      "Development",
-      "Testing/QA",
-      "Production",
-      "Maintenance"
+      "Scrum Master",
+      "Product Owner",
+      "Business Analyst",
+      "QA Lead"
     ],
     "answer": 1
   },
   {
-    "question": "What format do User Stories typically follow in Agile?",
+    "question": "What does UAT stand for in software testing?",
     "choices": [
-      "Given-When-Then",
-      "As a-I want-So that",
-      "Who-What-Why",
-      "Input-Process-Output"
+      "Unit Acceptance Testing",
+      "User Acceptance Testing",
+      "Unified Application Testing",
+      "Universal Access Testing"
     ],
     "answer": 1
   },
   {
-    "question": "In the Defect Life Cycle, what status comes after 'Fixed'?",
+    "question": "In the daily standup meeting, which question is NOT typically asked?",
     "choices": [
-      "Closed",
-      "Retested",
-      "Assigned",
-      "Reopened"
+      "What did I do yesterday?",
+      "What will I do today?",
+      "Any blockers?",
+      "What is my salary expectation?"
     ],
-    "answer": 1
+    "answer": 3
   },
   {
-    "question": "What are the three main categories of test cases mentioned in the study guide?",
+    "question": "What is the main difference between severity and priority in defect management?",
     "choices": [
-      "Unit, Integration, System",
-      "Positive, Negative, Boundary",
-      "Manual, Automated, Performance",
-      "Functional, Structural, Behavioral"
+      "Severity is impact, Priority is urgency",
+      "Priority is impact, Severity is urgency",
+      "They are the same thing",
+      "Severity is for bugs, Priority is for enhancements"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
-    "question": "Which Agile ceremony involves answering 'What did I do yesterday?', 'What will I do today?', and 'Any blockers?'",
+    "question": "Which testing approach tests the system at its limits or boundaries?",
     "choices": [
-      "Sprint Planning",
-      "Daily Stand-Up",
-      "Sprint Review",
-      "Retrospective"
+      "Positive testing",
+      "Negative testing",
+      "Boundary testing",
+      "Integration testing"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
     "question": "What does RTM stand for in QA terminology?",
     "choices": [
-      "Real-Time Monitoring",
+      "Real Time Monitoring",
       "Requirement Traceability Matrix",
       "Regression Test Management",
       "Risk and Test Metrics"
@@ -110,87 +130,7 @@
     "answer": 1
   },
   {
-    "question": "Which type of testing focuses on performance, security, and usability?",
-    "choices": [
-      "Functional Testing",
-      "Non-Functional Testing",
-      "Structural Testing",
-      "Unit Testing"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Agile, what is the role of a Scrum Master?",
-    "choices": [
-      "Write code and fix bugs",
-      "Define product requirements",
-      "Facilitate meetings and remove blockers",
-      "Execute test cases"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main difference between Severity and Priority in defect management?",
-    "choices": [
-      "Severity is impact, Priority is urgency",
-      "Severity is urgency, Priority is impact",
-      "They mean the same thing",
-      "Severity is for QA, Priority is for developers"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Which SDLC methodology allows continuous cycles and frequent communication?",
-    "choices": [
-      "Waterfall",
-      "Iterative",
-      "Agile",
-      "Spiral"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What does UAT stand for?",
-    "choices": [
-      "Unit Acceptance Testing",
-      "User Acceptance Testing",
-      "Universal Application Testing",
-      "Unified Automation Testing"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In the Jira hierarchy mentioned in the study guide, what comes after Epic?",
-    "choices": [
-      "Test Cases",
-      "User Stories",
-      "Defects",
-      "Tasks"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the purpose of Regression Testing?",
-    "choices": [
-      "Test new features only",
-      "Ensure new changes haven't broken existing functionality",
-      "Test database connections",
-      "Validate user interface design"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which testing approach validates system behavior at limits and constraints?",
-    "choices": [
-      "Positive Testing",
-      "Negative Testing",
-      "Boundary Testing",
-      "Integration Testing"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main artifact that shows remaining work vs time in Agile?",
+    "question": "In Agile, what artifact shows remaining work versus time?",
     "choices": [
       "Product Backlog",
       "Sprint Backlog",
@@ -198,5 +138,65 @@
       "User Story"
     ],
     "answer": 2
+  },
+  {
+    "question": "Which environment is used for QA to execute test cases?",
+    "choices": [
+      "Production",
+      "Development",
+      "Testing/QA",
+      "CAT"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main purpose of regression testing?",
+    "choices": [
+      "Test new features only",
+      "Ensure new changes haven't broken existing functionality",
+      "Test performance under load",
+      "Validate user interface design"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following is an example of non-functional testing?",
+    "choices": [
+      "Login validation",
+      "Form submission",
+      "Load testing",
+      "Data entry verification"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In the User Story format 'As a [role], I want [feature], so that [benefit]', what does the benefit section represent?",
+    "choices": [
+      "Technical requirement",
+      "Acceptance criteria",
+      "Business value",
+      "Test case"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main responsibility of a Scrum Master in Agile?",
+    "choices": [
+      "Write code",
+      "Test applications",
+      "Facilitate process and remove blockers",
+      "Define product requirements"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which testing type focuses on verifying that combined modules work together correctly?",
+    "choices": [
+      "Unit testing",
+      "Integration testing",
+      "System testing",
+      "Acceptance testing"
+    ],
+    "answer": 1
   }
 ]
