@@ -260,7 +260,6 @@ Fix options:
    ```
 3. Or move the job to a Jenkins agent/node label where Docker is installed.
 
-
 #### Push rejected: `! [rejected] HEAD -> main (fetch first)`
 - Cause: job is committing from a detached `HEAD` or stale local ref while `main` advanced remotely.
 - Fix: before push, switch to the target branch and rebase on remote, then push.
