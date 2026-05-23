@@ -59,19 +59,15 @@ pipeline {
       }
     }
 
-    stage('Deploy build (optional)') {
+    stage('Generate AI quiz questions') {
       when {
-        expression { env.ENABLE_DOCKER_STAGES?.toBoolean() }
+        expression { env.ANTHROPIC_API_KEY?.trim() }
       }
       steps {
-        sh '''
-          if [ -n "$DEPLOY_COMMAND" ]; then
-            echo "Running deploy command..."
-            sh -lc "$DEPLOY_COMMAND"
-          else
-            echo "Skipping deploy stage. Set DEPLOY_COMMAND in Jenkins to enable deployment."
-          fi
-        '''
+        sh 'node scripts/generate-ai-questions.js'
+      }
+    }
+
     stage('Deploy build') {
       when {
         expression { env.DEPLOY_COMMAND?.trim() }

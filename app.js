@@ -20,6 +20,7 @@ const recentScoresContainer = document.getElementById('recent-scores');
 const flashcardList = document.getElementById('flashcard-list');
 const flashcardTopicSelect = document.getElementById('flashcard-topic');
 const flashcardTopicCount = document.getElementById('flashcard-topic-count');
+const quizTopicSelect = document.getElementById('quiz-topic');
 
 let questions = [];
 let currentIndex = 0;
@@ -27,7 +28,9 @@ let score = 0;
 let timer = null;
 let timeRemaining = 300;
 let studentName = '';
-const totalQuestions = 20;
+let selectedQuizQuestions = [];
+let availableTopics = new Map();
+const totalQuestions = 25;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const MAX_FLASHCARD_TOPICS = 10;
@@ -188,6 +191,78 @@ displayRecentScores();
 // Refresh recent scores every 30 seconds
 setInterval(displayRecentScores, SCORES_REFRESH_INTERVAL);
 
+function normalizeStudentName(name) {
+  return name.trim().toLowerCase();
+}
+
+function getAttemptKey(name) {
+  return `quizAttempt:${normalizeStudentName(name)}`;
+}
+
+function getAttemptTimestamp(name) {
+  const raw = localStorage.getItem(getAttemptKey(name));
+  const parsed = raw ? Number(raw) : null;
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function setAttemptTimestamp(name) {
+  localStorage.setItem(getAttemptKey(name), String(Date.now()));
+}
+
+function formatTimeRemaining(ms) {
+  const totalMinutes = Math.ceil(ms / 60000);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  if (hours <= 0) {
+    return `${minutes} minute${minutes !== 1 ? 's' : ''}`;
+  }
+  if (minutes === 0) {
+    return `${hours} hour${hours !== 1 ? 's' : ''}`;
+  }
+  return `${hours} hour${hours !== 1 ? 's' : ''} ${minutes} minute${minutes !== 1 ? 's' : ''}`;
+}
+
+function canStartQuiz(name) {
+  const lastAttempt = getAttemptTimestamp(name);
+  if (!lastAttempt) return true;
+
+  const elapsed = Date.now() - lastAttempt;
+  if (elapsed >= ATTEMPT_WINDOW_MS) {
+    localStorage.removeItem(getAttemptKey(name));
+    return true;
+  }
+
+  const remaining = ATTEMPT_WINDOW_MS - elapsed;
+  alert(`${name}, you already took the quiz. Please wait ${formatTimeRemaining(remaining)} before trying again.`);
+  return false;
+}
+
+
+function populateQuizTopicDropdown(topicMap) {
+  if (!quizTopicSelect) return;
+
+  quizTopicSelect.innerHTML = '';
+  const orderedTopics = [...topicMap.keys()];
+  const javaIndex = orderedTopics.indexOf('Java');
+  if (javaIndex > -1) {
+    orderedTopics.splice(javaIndex, 1);
+  }
+  orderedTopics.unshift('Java');
+
+  orderedTopics.forEach((topic) => {
+    const option = document.createElement('option');
+    option.value = topic;
+    option.textContent = topic;
+    quizTopicSelect.appendChild(option);
+  });
+}
+
+function selectQuizQuestionsByTopic(topic) {
+  const topicQuestions = availableTopics.get(topic) || [];
+  selectedQuizQuestions = pickRandomItems(topicQuestions, totalQuestions);
+}
+
 startBtn.addEventListener('click', () => {
   studentName = nameInput.value.trim();
   if (!studentName) {
@@ -199,6 +274,21 @@ startBtn.addEventListener('click', () => {
     alert('Questions could not be loaded. Please try again later.');
     return;
   }
+
+  const selectedTopic = quizTopicSelect?.value || 'Java';
+  selectQuizQuestionsByTopic(selectedTopic);
+
+  if (!selectedQuizQuestions.length) {
+    alert(`No questions are currently available for ${selectedTopic}. Please choose another topic.`);
+    return;
+  }
+
+  if (!canStartQuiz(studentName)) {
+    return;
+  }
+
+  // Mark the attempt immediately so no retakes within 24 hours.
+  setAttemptTimestamp(studentName);
 
   startQuiz();
 });
@@ -212,12 +302,12 @@ nextBtn.addEventListener('click', (event) => {
     return;
   }
 
-  const isCorrect = Number(selected.value) === questions[currentIndex].answer;
+  const isCorrect = Number(selected.value) === selectedQuizQuestions[currentIndex].answer;
   if (isCorrect) score += 1;
 
   currentIndex += 1;
 
-  if (currentIndex >= Math.min(totalQuestions, questions.length)) {
+  if (currentIndex >= Math.min(totalQuestions, selectedQuizQuestions.length)) {
     finishQuiz();
   } else {
     renderQuestion();
@@ -244,11 +334,19 @@ function startQuiz() {
 }
 
 function renderQuestion() {
-  const total = Math.min(totalQuestions, questions.length);
-  const currentQuestion = questions[currentIndex];
+  const total = Math.min(totalQuestions, selectedQuizQuestions.length);
+  const currentQuestion = selectedQuizQuestions[currentIndex];
 
   progressDisplay.textContent = `Question ${currentIndex + 1} of ${total}`;
-  questionText.textContent = currentQuestion.question;
+
+  questionText.textContent = '';
+  if (currentQuestion.aiGenerated) {
+    const badge = document.createElement('span');
+    badge.className = 'ai-badge';
+    badge.textContent = '✨ AI';
+    questionText.appendChild(badge);
+  }
+  questionText.appendChild(document.createTextNode(currentQuestion.question));
 
   choicesForm.innerHTML = '';
   currentQuestion.choices.forEach((choice, index) => {
@@ -294,6 +392,7 @@ function detectTopic(questionText = '') {
     { topic: 'Deployment & DevOps', patterns: ['deployment', 'devops', 'ci/cd', 'jenkins', 'docker'] },
     { topic: 'Defects & Bug Tracking', patterns: ['defect', 'bug', 'severity', 'priority'] },
     { topic: 'Test Artifacts', patterns: ['test case', 'test plan', 'traceability', 'rtm'] },
+    { topic: 'Java', patterns: ['java', 'jvm', 'jdk', 'jre', 'class', 'object', 'inheritance', 'polymorphism'] },
     { topic: 'Maintenance', patterns: ['maintenance', 'production support', 'patch'] }
   ];
 
@@ -309,8 +408,13 @@ function buildTopicMap() {
     grouped.get(topic).push(question);
   });
 
-  const entries = [...grouped.entries()].sort((a, b) => b[1].length - a[1].length).slice(0, MAX_FLASHCARD_TOPICS);
-  return new Map(entries);
+  const sortedEntries = [...grouped.entries()].sort((a, b) => b[1].length - a[1].length);
+  const limitedEntries = sortedEntries.slice(0, MAX_FLASHCARD_TOPICS);
+  if (!limitedEntries.some(([topic]) => topic === 'Java') && grouped.has('Java')) {
+    limitedEntries.pop();
+    limitedEntries.unshift(['Java', grouped.get('Java')]);
+  }
+  return new Map(limitedEntries);
 }
 
 function renderFlashcardTopic(topicMap, topic) {
@@ -331,7 +435,13 @@ function renderFlashcardTopic(topicMap, topic) {
     details.className = 'flashcard-item';
 
     const summary = document.createElement('summary');
-    summary.textContent = `${index + 1}. ${question.question}`;
+    if (question.aiGenerated) {
+      const badge = document.createElement('span');
+      badge.className = 'ai-badge';
+      badge.textContent = '✨ AI';
+      summary.appendChild(badge);
+    }
+    summary.appendChild(document.createTextNode(`${index + 1}. ${question.question}`));
 
     const answer = document.createElement('p');
     answer.className = 'flashcard-answer';
@@ -347,6 +457,8 @@ function renderFlashcardList() {
   if (!flashcardList || !flashcardTopicSelect) return;
 
   const topicMap = buildTopicMap();
+  availableTopics = topicMap;
+  populateQuizTopicDropdown(topicMap);
 
   flashcardTopicSelect.innerHTML = '';
   [...topicMap.keys()].forEach((topic) => {
@@ -390,7 +502,7 @@ function finishQuiz() {
   quizScreen.classList.add('hidden');
   resultScreen.classList.remove('hidden');
 
-  const total = Math.min(totalQuestions, questions.length);
+  const total = Math.min(totalQuestions, selectedQuizQuestions.length);
   const percent = Math.round((score / total) * 100);
 
   resultSummary.textContent = `${studentName}, you scored ${score}/${total} (${percent}%).`;
