@@ -72,6 +72,12 @@ pipeline {
             echo "Skipping deploy stage. Set DEPLOY_COMMAND in Jenkins to enable deployment."
           fi
         '''
+    stage('Deploy build') {
+      when {
+        expression { env.DEPLOY_COMMAND?.trim() }
+      }
+      steps {
+        sh "${DEPLOY_COMMAND}"
       }
     }
   }
