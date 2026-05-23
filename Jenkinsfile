@@ -7,6 +7,7 @@ pipeline {
     STUDENTS_OUTPUT_FILE = 'students.json'
     MAX_STUDENTS = '20'
     SOURCE_DOCUMENT_URL = 'https://docs.google.com/document/d/1RzyuPH6ryIVD6z5iRuyJxmUa6jGLJE_wAB5R4S4mUWA/edit?tab=t.0#heading=h.fmjzqinx4dso'
+    DEPLOY_COMMAND = ''
   }
 
   options {
@@ -43,6 +44,15 @@ pipeline {
     stage('Archive generated students file') {
       steps {
         archiveArtifacts artifacts: "${STUDENTS_OUTPUT_FILE}", fingerprint: true
+      }
+    }
+
+    stage('Deploy build') {
+      when {
+        expression { env.DEPLOY_COMMAND?.trim() }
+      }
+      steps {
+        sh "${DEPLOY_COMMAND}"
       }
     }
   }
