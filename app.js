@@ -18,6 +18,9 @@ const resultSummary = document.getElementById('result-summary');
 const recentScoresContainer = document.getElementById('recent-scores');
 
 const flashcardList = document.getElementById('flashcard-list');
+const flashcardTopicSelect = document.getElementById('flashcard-topic');
+const flashcardTopicCount = document.getElementById('flashcard-topic-count');
+const quizTopicSelect = document.getElementById('quiz-topic');
 
 let questions = [];
 let currentIndex = 0;
@@ -25,9 +28,13 @@ let score = 0;
 let timer = null;
 let timeRemaining = 300;
 let studentName = '';
-const totalQuestions = 20;
+let selectedQuizQuestions = [];
+let availableTopics = new Map();
+const totalQuestions = 25;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
+const MAX_FLASHCARD_TOPICS = 10;
+const FLASHCARDS_PER_TOPIC = 20;
 const ATTEMPT_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // Helper functions to prevent copy/paste during quiz
@@ -231,6 +238,31 @@ function canStartQuiz(name) {
   return false;
 }
 
+
+function populateQuizTopicDropdown(topicMap) {
+  if (!quizTopicSelect) return;
+
+  quizTopicSelect.innerHTML = '';
+  const orderedTopics = [...topicMap.keys()];
+  const javaIndex = orderedTopics.indexOf('Java');
+  if (javaIndex > -1) {
+    orderedTopics.splice(javaIndex, 1);
+  }
+  orderedTopics.unshift('Java');
+
+  orderedTopics.forEach((topic) => {
+    const option = document.createElement('option');
+    option.value = topic;
+    option.textContent = topic;
+    quizTopicSelect.appendChild(option);
+  });
+}
+
+function selectQuizQuestionsByTopic(topic) {
+  const topicQuestions = availableTopics.get(topic) || [];
+  selectedQuizQuestions = pickRandomItems(topicQuestions, totalQuestions);
+}
+
 startBtn.addEventListener('click', () => {
   studentName = nameInput.value.trim();
   if (!studentName) {
@@ -240,6 +272,14 @@ startBtn.addEventListener('click', () => {
 
   if (!questions.length) {
     alert('Questions could not be loaded. Please try again later.');
+    return;
+  }
+
+  const selectedTopic = quizTopicSelect?.value || 'Java';
+  selectQuizQuestionsByTopic(selectedTopic);
+
+  if (!selectedQuizQuestions.length) {
+    alert(`No questions are currently available for ${selectedTopic}. Please choose another topic.`);
     return;
   }
 
@@ -262,12 +302,12 @@ nextBtn.addEventListener('click', (event) => {
     return;
   }
 
-  const isCorrect = Number(selected.value) === questions[currentIndex].answer;
+  const isCorrect = Number(selected.value) === selectedQuizQuestions[currentIndex].answer;
   if (isCorrect) score += 1;
 
   currentIndex += 1;
 
-  if (currentIndex >= Math.min(totalQuestions, questions.length)) {
+  if (currentIndex >= Math.min(totalQuestions, selectedQuizQuestions.length)) {
     finishQuiz();
   } else {
     renderQuestion();
@@ -294,8 +334,8 @@ function startQuiz() {
 }
 
 function renderQuestion() {
-  const total = Math.min(totalQuestions, questions.length);
-  const currentQuestion = questions[currentIndex];
+  const total = Math.min(totalQuestions, selectedQuizQuestions.length);
+  const currentQuestion = selectedQuizQuestions[currentIndex];
 
   progressDisplay.textContent = `Question ${currentIndex + 1} of ${total}`;
   questionText.textContent = currentQuestion.question;
@@ -323,12 +363,66 @@ function renderQuestion() {
 
 
 
-function renderFlashcardList() {
+function pickRandomItems(items, count) {
+  const shuffled = [...items];
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled.slice(0, Math.min(count, shuffled.length));
+}
+
+function detectTopic(questionText = '') {
+  const text = questionText.toLowerCase();
+  const topicKeywords = [
+    { topic: 'SDLC', patterns: ['sdlc', 'software development life cycle'] },
+    { topic: 'STLC', patterns: ['stlc', 'software testing life cycle'] },
+    { topic: 'Testing Types', patterns: ['unit test', 'integration test', 'system test', 'acceptance test', 'testing type'] },
+    { topic: 'Agile & Scrum', patterns: ['agile', 'scrum', 'sprint', 'kanban'] },
+    { topic: 'Requirements', patterns: ['requirement', 'functional', 'non-functional', 'srs'] },
+    { topic: 'Design', patterns: ['design', 'architecture', 'uml', 'prototype'] },
+    { topic: 'Deployment & DevOps', patterns: ['deployment', 'devops', 'ci/cd', 'jenkins', 'docker'] },
+    { topic: 'Defects & Bug Tracking', patterns: ['defect', 'bug', 'severity', 'priority'] },
+    { topic: 'Test Artifacts', patterns: ['test case', 'test plan', 'traceability', 'rtm'] },
+    { topic: 'Java', patterns: ['java', 'jvm', 'jdk', 'jre', 'class', 'object', 'inheritance', 'polymorphism'] },
+    { topic: 'Maintenance', patterns: ['maintenance', 'production support', 'patch'] }
+  ];
+
+  const found = topicKeywords.find(({ patterns }) => patterns.some((pattern) => text.includes(pattern)));
+  return found ? found.topic : 'General Concepts';
+}
+
+function buildTopicMap() {
+  const grouped = new Map();
+  questions.forEach((question) => {
+    const topic = detectTopic(question.question);
+    if (!grouped.has(topic)) grouped.set(topic, []);
+    grouped.get(topic).push(question);
+  });
+
+  const sortedEntries = [...grouped.entries()].sort((a, b) => b[1].length - a[1].length);
+  const limitedEntries = sortedEntries.slice(0, MAX_FLASHCARD_TOPICS);
+  if (!limitedEntries.some(([topic]) => topic === 'Java') && grouped.has('Java')) {
+    limitedEntries.pop();
+    limitedEntries.unshift(['Java', grouped.get('Java')]);
+  }
+  return new Map(limitedEntries);
+}
+
+function renderFlashcardTopic(topicMap, topic) {
   if (!flashcardList) return;
 
   flashcardList.querySelectorAll('details').forEach((item) => item.remove());
 
-  questions.forEach((question, index) => {
+  const selectedTopic = topic && topicMap.has(topic) ? topic : topicMap.keys().next().value;
+  const topicQuestions = topicMap.get(selectedTopic) || [];
+  const selectedQuestions = pickRandomItems(topicQuestions, FLASHCARDS_PER_TOPIC);
+
+  if (flashcardTopicCount) {
+    flashcardTopicCount.textContent = `Showing ${selectedQuestions.length} flashcards from “${selectedTopic}”.`;
+  }
+
+  selectedQuestions.forEach((question, index) => {
     const details = document.createElement('details');
     details.className = 'flashcard-item';
 
@@ -344,6 +438,29 @@ function renderFlashcardList() {
     flashcardList.appendChild(details);
   });
 }
+
+function renderFlashcardList() {
+  if (!flashcardList || !flashcardTopicSelect) return;
+
+  const topicMap = buildTopicMap();
+  availableTopics = topicMap;
+  populateQuizTopicDropdown(topicMap);
+
+  flashcardTopicSelect.innerHTML = '';
+  [...topicMap.keys()].forEach((topic) => {
+    const option = document.createElement('option');
+    option.value = topic;
+    option.textContent = topic;
+    flashcardTopicSelect.appendChild(option);
+  });
+
+  flashcardTopicSelect.onchange = () => {
+    renderFlashcardTopic(topicMap, flashcardTopicSelect.value);
+  };
+
+  renderFlashcardTopic(topicMap, flashcardTopicSelect.value);
+}
+
 
 function startTimer() {
   timeRemaining = 300;
@@ -371,7 +488,7 @@ function finishQuiz() {
   quizScreen.classList.add('hidden');
   resultScreen.classList.remove('hidden');
 
-  const total = Math.min(totalQuestions, questions.length);
+  const total = Math.min(totalQuestions, selectedQuizQuestions.length);
   const percent = Math.round((score / total) * 100);
 
   resultSummary.textContent = `${studentName}, you scored ${score}/${total} (${percent}%).`;

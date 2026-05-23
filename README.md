@@ -216,6 +216,19 @@ Field notes:
 - Cause: agent has no Docker runtime/permission.
 - Fix: run job on Docker-capable agent or configure Docker-in-Docker/host socket policy.
 
+
+#### Push rejected: `! [rejected] HEAD -> main (fetch first)`
+- Cause: job is committing from a detached `HEAD` or stale local ref while `main` advanced remotely.
+- Fix: before push, switch to the target branch and rebase on remote, then push.
+  Example:
+  ```bash
+  git checkout "$GITHUB_BRANCH"
+  git fetch origin "$GITHUB_BRANCH"
+  git pull --rebase origin "$GITHUB_BRANCH"
+  git push origin "HEAD:$GITHUB_BRANCH"
+  ```
+- Note: if multiple timers/jobs publish concurrently, keep `disableConcurrentBuilds()` (or equivalent job-level serialization) enabled to reduce push races.
+
 ---
 
 ### 11) Operational best practices
