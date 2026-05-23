@@ -1,116 +1,36 @@
 [
   {
-    "question": "How many stages are there in the SDLC according to the study guide?",
+    "question": "What are the 7 stages of SDLC in the correct order?",
     "choices": [
-      "6 stages",
-      "7 stages",
-      "8 stages",
-      "9 stages"
+      "Planning → Requirement Analysis → Design → Development → Testing → Deployment → Maintenance",
+      "Planning → Design → Requirement Analysis → Development → Testing → Deployment → Maintenance",
+      "Requirement Analysis → Planning → Design → Development → Testing → Deployment → Maintenance",
+      "Planning → Requirement Analysis → Development → Design → Testing → Deployment → Maintenance"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
-    "question": "Which SDLC stage involves choosing programming languages, databases, and architecture?",
+    "question": "Which of the following is NOT one of the good requirement criteria discussed in class?",
     "choices": [
-      "Planning",
-      "Design",
-      "Development",
-      "Testing"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What are the good requirement criteria mentioned in the study guide?",
-    "choices": [
-      "Clear, complete, testable only",
-      "Concise, clear, complete, unambiguous, testable, measurable",
-      "Simple, direct, functional",
-      "Brief, accurate, validated"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Black Box Testing, what does the tester focus on?",
-    "choices": [
-      "Internal code structure",
-      "Database design",
-      "Inputs and outputs without seeing code",
-      "Unit test results"
+      "Concise",
+      "Testable",
+      "Flexible",
+      "Measurable"
     ],
     "answer": 2
   },
   {
-    "question": "What happens when a user enters wrong PIN three times at an ATM according to the study guide example?",
+    "question": "What is the main difference between functional and non-functional testing?",
     "choices": [
-      "Transaction is cancelled",
-      "Account is locked",
-      "Card is retained",
-      "System shuts down"
+      "Functional testing is automated while non-functional testing is manual",
+      "Functional testing verifies what the system does while non-functional testing checks how well it performs",
+      "Functional testing is done by developers while non-functional testing is done by QA",
+      "Functional testing uses white box approach while non-functional testing uses black box approach"
     ],
     "answer": 1
   },
   {
-    "question": "Which type of testing focuses on performance, security, and usability?",
-    "choices": [
-      "Functional testing",
-      "Non-functional testing",
-      "Unit testing",
-      "Integration testing"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the typical duration of a sprint in Agile according to the study guide?",
-    "choices": [
-      "1 week",
-      "2-3 weeks",
-      "1 month",
-      "6 weeks"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In the User Story format, what comes after 'As a [role], I want [feature]'?",
-    "choices": [
-      "Because [reason]",
-      "So that [benefit]",
-      "When [condition]",
-      "Then [result]"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What are the three daily standup questions mentioned in the study guide?",
-    "choices": [
-      "What did I do yesterday? What will I do today? Any blockers?",
-      "What's working? What's not? What's next?",
-      "Progress, plans, problems",
-      "Status, schedule, scope"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Which Agile role maintains the product backlog and sets priorities?",
-    "choices": [
-      "Scrum Master",
-      "Product Owner",
-      "Business Analyst",
-      "QA Lead"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What does STLC stand for?",
-    "choices": [
-      "Software Testing Life Cycle",
-      "System Testing Life Cycle",
-      "Software Technology Life Cycle",
-      "Structured Testing Life Cycle"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "In the defect life cycle, what status comes after 'Open'?",
+    "question": "In the defect life cycle, what status comes immediately after 'Open'?",
     "choices": [
       "Fixed",
       "Assigned",
@@ -120,83 +40,163 @@
     "answer": 1
   },
   {
+    "question": "What is the correct format for writing User Stories in Agile?",
+    "choices": [
+      "Given [condition], When [action], Then [result]",
+      "As a [role], I want [feature], so that [benefit]",
+      "The system shall [requirement] when [condition]",
+      "User must [action] to achieve [goal]"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which Agile ceremony is used to discuss 'What did I do yesterday?', 'What will I do today?', and 'Any blockers?'",
+    "choices": [
+      "Sprint Planning",
+      "Sprint Review",
+      "Daily Stand-Up",
+      "Sprint Retrospective"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main purpose of Black Box Testing?",
+    "choices": [
+      "To test the internal code structure",
+      "To test inputs and outputs without seeing the internal code",
+      "To test only the user interface",
+      "To test database connections"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In the QA training program structure, what comes after Phase 1 (Manual QA)?",
+    "choices": [
+      "Database testing",
+      "Performance testing",
+      "Phase 2: Automation with Java basics and Selenium",
+      "User Acceptance Testing"
+    ],
+    "answer": 2
+  },
+  {
     "question": "What is the difference between severity and priority in defect management?",
     "choices": [
-      "They are the same thing",
-      "Severity is impact, Priority is urgency",
-      "Priority is impact, Severity is urgency",
-      "Severity is for developers, Priority is for QA"
+      "Severity is how urgent the fix is, priority is the impact level",
+      "Severity is the impact level, priority is how urgent the fix is",
+      "Severity and priority mean the same thing",
+      "Severity is set by QA, priority is set by developers only"
     ],
     "answer": 1
   },
   {
     "question": "Which environment is used for QA to execute test cases?",
     "choices": [
-      "Development",
-      "Testing/QA",
       "Production",
-      "Staging"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What does RTM stand for in QA terminology?",
-    "choices": [
-      "Real Time Monitoring",
-      "Requirement Traceability Matrix",
-      "Risk Testing Method",
-      "Regression Test Management"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which Agile ceremony involves showing completed features to stakeholders?",
-    "choices": [
-      "Daily Standup",
-      "Sprint Planning",
-      "Sprint Review/Demo",
-      "Retrospective"
+      "Development",
+      "QA/Test environment",
+      "CAT environment"
     ],
     "answer": 2
   },
   {
-    "question": "What type of testing ensures that new changes haven't broken existing functionality?",
+    "question": "What does STLC stand for and when does it begin?",
     "choices": [
-      "Smoke testing",
-      "Regression testing",
-      "Integration testing",
-      "Acceptance testing"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In Agile, what is an Epic?",
-    "choices": [
-      "A single user story",
-      "A large feature containing multiple user stories",
-      "A sprint goal",
-      "A defect category"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "What is the main purpose of acceptance criteria in user stories?",
-    "choices": [
-      "To estimate effort",
-      "To define when the story is done and testable",
-      "To assign developers",
-      "To set priority"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "According to the study guide, what happens in the Sprint Retrospective meeting?",
-    "choices": [
-      "Plan the next sprint",
-      "Demo completed features",
-      "Analyze what went well and what can be improved",
-      "Assign new user stories"
+      "Software Testing Life Cycle, begins at Planning stage",
+      "System Testing Life Cycle, begins at Design stage",
+      "Software Testing Life Cycle, begins at Requirement Analysis stage",
+      "System Testing Life Cycle, begins at Development stage"
     ],
     "answer": 2
+  },
+  {
+    "question": "In Agile, what is the typical duration of a sprint?",
+    "choices": [
+      "1 week",
+      "2-3 weeks (10 business days typically)",
+      "1 month",
+      "6 weeks"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main responsibility of a Scrum Master in Agile?",
+    "choices": [
+      "Writing user stories and acceptance criteria",
+      "Coding and development work",
+      "Facilitating meetings and ensuring Scrum process adherence",
+      "Managing the product backlog priorities"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What type of testing verifies that new changes haven't broken existing functionality?",
+    "choices": [
+      "Smoke Testing",
+      "Integration Testing",
+      "Regression Testing",
+      "Boundary Testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In test case design, what should happen if Expected Result ≠ Actual Result?",
+    "choices": [
+      "Mark the test case as Pass",
+      "Mark the test case as Fail and create a defect",
+      "Skip the test case",
+      "Modify the expected result to match actual"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the purpose of Requirement Traceability Matrix (RTM)?",
+    "choices": [
+      "To track project timelines",
+      "To link requirements to test cases and defects through unique IDs",
+      "To manage team assignments",
+      "To calculate project budget"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which testing approach focuses on testing system limits and constraints?",
+    "choices": [
+      "Positive Testing",
+      "Negative Testing",
+      "Boundary Testing",
+      "Integration Testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main difference between UAT and CAT testing?",
+    "choices": [
+      "UAT is automated, CAT is manual",
+      "UAT is done by business users, CAT is done by actual customers or pilot users",
+      "UAT tests functionality, CAT tests performance",
+      "UAT is done in production, CAT is done in test environment"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In Agile hierarchy, what is the correct order from largest to smallest?",
+    "choices": [
+      "User Story → Epic → Task → Subtask",
+      "Epic → User Story → Task → Subtask",
+      "Task → Epic → User Story → Subtask",
+      "Epic → Task → User Story → Subtask"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main advantage of Agile methodology over Waterfall?",
+    "choices": [
+      "Agile is cheaper than Waterfall",
+      "Agile allows continuous cycles, collaboration, and adaptability while Waterfall is linear and rigid",
+      "Agile requires fewer team members",
+      "Agile eliminates the need for documentation"
+    ],
+    "answer": 1
   }
 ]
