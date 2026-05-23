@@ -70,7 +70,7 @@ pipeline {
 
     stage('Deploy build') {
       when {
-        expression { env.ENABLE_DOCKER_STAGES?.toBoolean() && env.DEPLOY_COMMAND?.trim() }
+        expression { env.DEPLOY_COMMAND?.trim() }
       }
       steps {
         sh "${DEPLOY_COMMAND}"
