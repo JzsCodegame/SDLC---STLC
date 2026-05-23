@@ -183,6 +183,7 @@ Important:
 - Your Jenkins server URL is usually something like `http://<jenkins-host>:8080`.
 - Build deployment target should be configured in Jenkins stages (artifact archive, Docker registry, or downstream server), while GitHub remains the source checkout.
 
+
 ### 8) How to run locally (developer workflow)
 #### A) Generate students file only
 ```bash
@@ -242,6 +243,23 @@ Field notes:
 #### Docker build fails in Jenkins
 - Cause: agent has no Docker runtime/permission.
 - Fix: run job on Docker-capable agent or configure Docker-in-Docker/host socket policy.
+
+#### Error in Jenkins log: `Build step 'Execute shell' ... docker: not found`
+This error usually comes from a **Freestyle job shell step**, not from this repository `Jenkinsfile` stages.
+
+Fix options:
+1. Use a **Pipeline job** that runs this repo's `Jenkinsfile` (recommended).
+2. If keeping Freestyle + Execute shell, guard Docker commands manually:
+   ```bash
+   if command -v docker >/dev/null 2>&1; then
+     docker tag mini-quiz-academy:${BUILD_NUMBER} my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER}
+     docker push my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER}
+   else
+     echo "Docker not installed on this agent; skipping tag/push."
+   fi
+   ```
+3. Or move the job to a Jenkins agent/node label where Docker is installed.
+
 
 ---
 
