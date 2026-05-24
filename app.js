@@ -226,6 +226,7 @@ function populateQuizTopicDropdown(topicMap) {
 }
 
 
+
 function getJavaW3PracticeQuestions() {
   return [
     { question: 'Which keyword is used to define a class in Java?', choices: ['class', 'define', 'struct', 'object'], answer: 0 },
@@ -262,7 +263,7 @@ function selectQuizQuestionsByTopic(topic) {
     const javaGuideQuestions = topicQuestions.length ? pickRandomItems(topicQuestions, Math.min(totalQuestions, topicQuestions.length)) : [];
     const supplementalQuestions = getJavaW3PracticeQuestions();
     const needed = Math.max(0, totalQuestions - javaGuideQuestions.length);
-    selectedQuizQuestions = [...javaGuideQuestions, ...pickRandomItems(supplementalQuestions, needed)];
+    selectedQuizQuestions = [...javaGuideQuestions, ...pickRandomItems(supplementalQuestions, needed)].slice(0, totalQuestions);
     return;
   }
 
@@ -406,6 +407,15 @@ function detectTopic(questionText = '') {
   return found ? found.topic : 'General Concepts';
 }
 
+
+function ensureJavaTopic(topicMap) {
+  const normalized = new Map(topicMap);
+  if (!normalized.has('Java')) {
+    normalized.set('Java', getJavaW3PracticeQuestions());
+  }
+  return normalized;
+}
+
 function buildTopicMap() {
   const grouped = new Map();
   questions.forEach((question) => {
@@ -416,11 +426,7 @@ function buildTopicMap() {
 
   const sortedEntries = [...grouped.entries()].sort((a, b) => b[1].length - a[1].length);
   const limitedEntries = sortedEntries.slice(0, MAX_FLASHCARD_TOPICS);
-  if (!limitedEntries.some(([topic]) => topic === 'Java') && grouped.has('Java')) {
-    limitedEntries.pop();
-    limitedEntries.unshift(['Java', grouped.get('Java')]);
-  }
-  return new Map(limitedEntries);
+  return ensureJavaTopic(new Map(limitedEntries));
 }
 
 function renderFlashcardTopic(topicMap, topic) {
@@ -462,7 +468,7 @@ function renderFlashcardTopic(topicMap, topic) {
 function renderFlashcardList() {
   if (!flashcardList || !flashcardTopicSelect) return;
 
-  const topicMap = buildTopicMap();
+  const topicMap = ensureJavaTopic(buildTopicMap());
 
   if (!topicMap.size) {
     availableTopics = new Map([['Java', getJavaW3PracticeQuestions()]]);
@@ -471,6 +477,7 @@ function renderFlashcardList() {
     renderEmptyFlashcardState('No study-guide questions loaded. Showing Java practice fallback.');
     return;
   }
+
   availableTopics = topicMap;
   populateQuizTopicDropdown(topicMap);
 

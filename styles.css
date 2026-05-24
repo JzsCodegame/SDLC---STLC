@@ -261,17 +261,3 @@ button {
 #flashcard-topic {
   margin-bottom: 0;
 }
-
-.ai-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #a78bfa, #60a5fa);
-  color: #fff;
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 1px 6px;
-  border-radius: 10px;
-  margin-right: 6px;
-  vertical-align: middle;
-  letter-spacing: 0.03em;
-  user-select: none;
-}
