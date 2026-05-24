@@ -141,6 +141,31 @@ Configure these in Jenkins job or global environment:
 
 ---
 
+
+
+### 7.1) Make it true CI/CD (event-driven + scheduled)
+A pure hourly cron is useful for periodic publishing, but it is **not** full CI by itself.
+For true CI/CD behavior, use both:
+
+1. **GitHub webhook trigger (recommended)** for immediate builds on push/PR events.
+2. **Hourly schedule** as a backup for time-based content refresh and resilience.
+
+Recommended Jenkins job trigger setup:
+- Enable **GitHub hook trigger for GITScm polling** (or Multibranch webhook indexing).
+- Keep a light cron such as `H * * * *` for hourly refresh jobs.
+- Disable duplicate-trigger races with `disableConcurrentBuilds()` (already in pipeline options).
+
+How to wire webhook:
+1. In GitHub repo → **Settings → Webhooks → Add webhook**.
+2. Payload URL: `https://<your-jenkins>/github-webhook/`
+3. Content type: `application/json`
+4. Events: at minimum **Just the push event** (optionally PR events too).
+5. In Jenkins, ensure the job has webhook trigger enabled and repository URL matches.
+
+Alternative if webhook cannot be used:
+- Enable **Poll SCM** with a short interval (example: `H/5 * * * *`).
+- This is less real-time and more resource-heavy than webhooks.
+
 ### 7) Jenkins pipeline stages (what to expect)
 `Jenkinsfile` runs these stages:
 
@@ -215,6 +240,19 @@ Field notes:
 #### Docker build fails in Jenkins
 - Cause: agent has no Docker runtime/permission.
 - Fix: run job on Docker-capable agent or configure Docker-in-Docker/host socket policy.
+
+
+#### Push rejected: `! [rejected] HEAD -> main (fetch first)`
+- Cause: job is committing from a detached `HEAD` or stale local ref while `main` advanced remotely.
+- Fix: before push, switch to the target branch and rebase on remote, then push.
+  Example:
+  ```bash
+  git checkout "$GITHUB_BRANCH"
+  git fetch origin "$GITHUB_BRANCH"
+  git pull --rebase origin "$GITHUB_BRANCH"
+  git push origin "HEAD:$GITHUB_BRANCH"
+  ```
+- Note: if multiple timers/jobs publish concurrently, keep `disableConcurrentBuilds()` (or equivalent job-level serialization) enabled to reduce push races.
 
 ---
 
