@@ -260,6 +260,7 @@ function populateQuizTopicDropdown(topicMap) {
 
 
 
+
 function getJavaW3PracticeQuestions() {
   return [
     { question: 'Which keyword is used to define a class in Java?', choices: ['class', 'define', 'struct', 'object'], answer: 0 },
@@ -322,6 +323,7 @@ startBtn.addEventListener('click', () => {
       alert(`Study guide has ${javaCount} Java question(s). Filling remaining ${totalQuestions - javaCount} with W3-style Java practice questions.`);
     }
   }
+
   selectQuizQuestionsByTopic(selectedTopic);
 
   if (!selectedQuizQuestions.length) {
@@ -384,7 +386,15 @@ function renderQuestion() {
   const currentQuestion = selectedQuizQuestions[currentIndex];
 
   progressDisplay.textContent = `Question ${currentIndex + 1} of ${total}`;
-  questionText.textContent = currentQuestion.question;
+
+  questionText.textContent = '';
+  if (currentQuestion.aiGenerated) {
+    const badge = document.createElement('span');
+    badge.className = 'ai-badge';
+    badge.textContent = '✨ AI';
+    questionText.appendChild(badge);
+  }
+  questionText.appendChild(document.createTextNode(currentQuestion.question));
 
   choicesForm.innerHTML = '';
   currentQuestion.choices.forEach((choice, index) => {
@@ -473,7 +483,13 @@ function renderFlashcardTopic(topicMap, topic) {
     details.className = 'flashcard-item';
 
     const summary = document.createElement('summary');
-    summary.textContent = `${index + 1}. ${question.question}`;
+    if (question.aiGenerated) {
+      const badge = document.createElement('span');
+      badge.className = 'ai-badge';
+      badge.textContent = '✨ AI';
+      summary.appendChild(badge);
+    }
+    summary.appendChild(document.createTextNode(`${index + 1}. ${question.question}`));
 
     const answer = document.createElement('p');
     answer.className = 'flashcard-answer';
