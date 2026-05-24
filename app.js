@@ -79,6 +79,18 @@ function disableCopyPasteBlocking() {
   document.removeEventListener('selectionchange', clearQuizSelection);
 }
 
+
+function getBundledFallbackQuestions() {
+  const javaQuestions = getJavaW3PracticeQuestions();
+  return javaQuestions.slice(0, 25);
+}
+
+function renderEmptyFlashcardState(message) {
+  if (!flashcardList) return;
+  flashcardList.querySelectorAll('details').forEach((item) => item.remove());
+  if (flashcardTopicCount) flashcardTopicCount.textContent = message;
+}
+
 // Load questions from questions.json with fallback to Firestore
 async function loadQuestions() {
   try {
@@ -111,7 +123,13 @@ async function loadQuestions() {
     questions = [];
   } catch (error) {
     console.error('Failed to load questions from Firestore:', error);
-    questions = [];
+    questions = getBundledFallbackQuestions();
+    renderFlashcardList();
+  }
+
+  if (!questions.length) {
+    questions = getBundledFallbackQuestions();
+    renderFlashcardList();
   }
 }
 
@@ -196,10 +214,8 @@ function populateQuizTopicDropdown(topicMap) {
   quizTopicSelect.innerHTML = '';
   const orderedTopics = [...topicMap.keys()];
   const javaIndex = orderedTopics.indexOf('Java');
-  if (javaIndex > -1) {
-    orderedTopics.splice(javaIndex, 1);
-  }
-  orderedTopics.unshift('Java');
+  if (javaIndex > -1) orderedTopics.splice(javaIndex, 1);
+  if (topicMap.has('Java') || !orderedTopics.length) orderedTopics.unshift('Java');
 
   orderedTopics.forEach((topic) => {
     const option = document.createElement('option');
@@ -208,73 +224,6 @@ function populateQuizTopicDropdown(topicMap) {
     quizTopicSelect.appendChild(option);
   });
 }
-
-
-
-function getJavaW3PracticeQuestions() {
-  return [
-    { question: 'Which keyword is used to define a class in Java?', choices: ['class', 'define', 'struct', 'object'], answer: 0 },
-    { question: 'Which method is the entry point of a Java application?', choices: ['run()', 'main()', 'start()', 'init()'], answer: 1 },
-    { question: 'Which primitive type stores true/false values?', choices: ['bool', 'boolean', 'bit', 'flag'], answer: 1 },
-    { question: 'Which symbol ends a statement in Java?', choices: [':', '.', ';', ','], answer: 2 },
-    { question: 'Which keyword is used to inherit a class?', choices: ['inherits', 'extends', 'implements', 'super'], answer: 1 },
-    { question: 'Which access modifier makes a member visible only within its own class?', choices: ['public', 'protected', 'private', 'default'], answer: 2 },
-    { question: 'Which keyword is used to create an object?', choices: ['make', 'new', 'create', 'object'], answer: 1 },
-    { question: 'Which loop executes at least once?', choices: ['for', 'while', 'do...while', 'foreach'], answer: 2 },
-    { question: 'Which package is imported automatically in every Java program?', choices: ['java.util', 'java.io', 'java.lang', 'java.net'], answer: 2 },
-    { question: 'Which method compares string values correctly?', choices: ['==', 'equals()', 'compareTo() only', 'matches() only'], answer: 1 },
-    { question: 'What is the default value of an int field?', choices: ['null', '0', '1', 'undefined'], answer: 1 },
-    { question: 'Which keyword prevents method overriding?', choices: ['static', 'final', 'const', 'sealed'], answer: 1 },
-    { question: 'Which interface supports dynamic-size lists?', choices: ['Set', 'Map', 'List', 'Queue'], answer: 2 },
-    { question: 'Which class is commonly used for key-value pairs?', choices: ['ArrayList', 'HashMap', 'LinkedList', 'TreeSet'], answer: 1 },
-    { question: 'Which exception is unchecked?', choices: ['IOException', 'SQLException', 'NullPointerException', 'ClassNotFoundException'], answer: 2 },
-    { question: 'Which keyword handles exceptions?', choices: ['throw', 'catch', 'error', 'except'], answer: 1 },
-    { question: 'Which block always runs after try/catch (normally)?', choices: ['end', 'cleanup', 'finally', 'last'], answer: 2 },
-    { question: 'Which keyword refers to the current object?', choices: ['this', 'self', 'current', 'me'], answer: 0 },
-    { question: 'Which keyword calls the parent class constructor?', choices: ['parent', 'base', 'super', 'this'], answer: 2 },
-    { question: 'Which collection does NOT allow duplicates?', choices: ['List', 'Set', 'ArrayList', 'Vector'], answer: 1 },
-    { question: 'Which type is used for decimal numbers (higher precision than float)?', choices: ['double', 'decimal', 'number', 'real'], answer: 0 },
-    { question: 'Which operator checks equality of primitive values?', choices: ['=', '===', '==', 'equals'], answer: 2 },
-    { question: 'Which keyword is used to define a constant variable?', choices: ['const', 'final', 'static', 'immutable'], answer: 1 },
-    { question: 'Which JVM component turns bytecode into machine code at runtime?', choices: ['JRE', 'JIT compiler', 'JDK', 'javac'], answer: 1 },
-    { question: 'Which tool compiles .java files to .class files?', choices: ['java', 'jar', 'javac', 'javadoc'], answer: 2 }
-  ];
-}
-
-function selectQuizQuestionsByTopic(topic) {
-  const topicQuestions = availableTopics.get(topic) || [];
-  if (topic === 'Java') {
-    const javaGuideQuestions = topicQuestions.length ? pickRandomItems(topicQuestions, Math.min(totalQuestions, topicQuestions.length)) : [];
-    const supplementalQuestions = getJavaW3PracticeQuestions();
-    const needed = Math.max(0, totalQuestions - javaGuideQuestions.length);
-    selectedQuizQuestions = [...javaGuideQuestions, ...pickRandomItems(supplementalQuestions, needed)];
-    return;
-  }
-
-  selectedQuizQuestions = pickRandomItems(topicQuestions, totalQuestions);
-}
-
-
-function populateQuizTopicDropdown(topicMap) {
-  if (!quizTopicSelect) return;
-
-  quizTopicSelect.innerHTML = '';
-  const orderedTopics = [...topicMap.keys()];
-  const javaIndex = orderedTopics.indexOf('Java');
-  if (javaIndex > -1) {
-    orderedTopics.splice(javaIndex, 1);
-  }
-  orderedTopics.unshift('Java');
-
-  orderedTopics.forEach((topic) => {
-    const option = document.createElement('option');
-    option.value = topic;
-    option.textContent = topic;
-    quizTopicSelect.appendChild(option);
-  });
-}
-
-
 
 
 function getJavaW3PracticeQuestions() {
@@ -339,7 +288,6 @@ startBtn.addEventListener('click', () => {
       alert(`Study guide has ${javaCount} Java question(s). Filling remaining ${totalQuestions - javaCount} with W3-style Java practice questions.`);
     }
   }
-
   selectQuizQuestionsByTopic(selectedTopic);
 
   if (!selectedQuizQuestions.length) {
@@ -515,6 +463,14 @@ function renderFlashcardList() {
   if (!flashcardList || !flashcardTopicSelect) return;
 
   const topicMap = buildTopicMap();
+
+  if (!topicMap.size) {
+    availableTopics = new Map([['Java', getJavaW3PracticeQuestions()]]);
+    populateQuizTopicDropdown(availableTopics);
+    if (flashcardTopicSelect) flashcardTopicSelect.innerHTML = '<option value="Java">Java</option>';
+    renderEmptyFlashcardState('No study-guide questions loaded. Showing Java practice fallback.');
+    return;
+  }
   availableTopics = topicMap;
   populateQuizTopicDropdown(topicMap);
 

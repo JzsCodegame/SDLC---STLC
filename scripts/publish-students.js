@@ -13,7 +13,7 @@ function resolveMaxStudents() {
   }
 
   if (!/^\d+$/.test(MAX_STUDENTS_RAW.trim())) {
-    throw new Error('MAX_STUDENTS must be a non-negative integer.');
+    throw new Error('MAX_STUDENTS must be a non-negative integer (0 or greater).');
   }
 
   return Number(MAX_STUDENTS_RAW.trim());

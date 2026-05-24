@@ -141,6 +141,31 @@ Configure these in Jenkins job or global environment:
 
 ---
 
+
+
+### 7.1) Make it true CI/CD (event-driven + scheduled)
+A pure hourly cron is useful for periodic publishing, but it is **not** full CI by itself.
+For true CI/CD behavior, use both:
+
+1. **GitHub webhook trigger (recommended)** for immediate builds on push/PR events.
+2. **Hourly schedule** as a backup for time-based content refresh and resilience.
+
+Recommended Jenkins job trigger setup:
+- Enable **GitHub hook trigger for GITScm polling** (or Multibranch webhook indexing).
+- Keep a light cron such as `H * * * *` for hourly refresh jobs.
+- Disable duplicate-trigger races with `disableConcurrentBuilds()` (already in pipeline options).
+
+How to wire webhook:
+1. In GitHub repo → **Settings → Webhooks → Add webhook**.
+2. Payload URL: `https://<your-jenkins>/github-webhook/`
+3. Content type: `application/json`
+4. Events: at minimum **Just the push event** (optionally PR events too).
+5. In Jenkins, ensure the job has webhook trigger enabled and repository URL matches.
+
+Alternative if webhook cannot be used:
+- Enable **Poll SCM** with a short interval (example: `H/5 * * * *`).
+- This is less real-time and more resource-heavy than webhooks.
+
 ### 7) Jenkins pipeline stages (what to expect)
 `Jenkinsfile` runs these stages:
 
@@ -175,8 +200,8 @@ If you see `docker: not found` in Jenkins logs:
 - Either install Docker on that agent, or keep `ENABLE_DOCKER_STAGES=false`.
 
 
-### 7.1) Using your GitHub repository in Jenkins
-If your source repository is `https://github.com/JzsCodegame/P_O_M_FrameWork`, configure the Jenkins job SCM/repository URL to that exact GitHub URL.
+### 7.3) Using your GitHub repository in Jenkins
+If your source repository is `https://github.com/<owner>/<repo>`, configure the Jenkins job SCM/repository URL to that exact GitHub URL.
 
 Important:
 - This GitHub link is the **repository URL**, not the Jenkins server URL.
@@ -260,7 +285,6 @@ Fix options:
    fi
    ```
 3. Or move the job to a Jenkins agent/node label where Docker is installed.
-
 
 #### Push rejected: `! [rejected] HEAD -> main (fetch first)`
 - Cause: job is committing from a detached `HEAD` or stale local ref while `main` advanced remotely.
