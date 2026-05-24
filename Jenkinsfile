@@ -61,7 +61,7 @@ pipeline {
 
     stage('Generate AI quiz questions') {
       when {
-        expression { env.ANTHROPIC_API_KEY != null && env.ANTHROPIC_API_KEY != '' }
+        expression { env.ANTHROPIC_API_KEY && env.ANTHROPIC_API_KEY != '' }
       }
       steps {
         sh 'node scripts/generate-ai-questions.js'
@@ -70,7 +70,7 @@ pipeline {
 
     stage('Deploy build') {
       when {
-        expression { env.DEPLOY_COMMAND != null && env.DEPLOY_COMMAND != '' }
+        expression { env.DEPLOY_COMMAND && env.DEPLOY_COMMAND != '' }
       }
       steps {
         sh "${DEPLOY_COMMAND}"
