@@ -54,6 +54,8 @@ const TOPIC_PROMPTS = {
 - Basic Java syntax (loops, conditionals, arrays)
 - JVM, JDK, JRE differences
 Include output-prediction exercises like "What is the output of this Java code?" and "Which code snippet correctly demonstrates...?"
+Use W3Schools-style practice: short runnable-looking Java snippets, output prediction, identify the compile/runtime issue, or choose the correct code line.
+For at least 18 generated Java questions, include a compact Java code snippet inside the question text using triple backticks.
 Every question text MUST contain the word "Java" or a Java-specific keyword (e.g. "JVM", "JDK", "ArrayList").`,
   },
   SDLC: {
@@ -219,6 +221,7 @@ ${topicDef.guidance}
 
 Additional requirements:
 - Make each question exercise-based and practical (predict output, spot the error, choose the correct implementation)
+- Java questions should feel like W3Schools practice, with small code examples students can inspect before answering
 - Provide exactly 4 answer choices per question (labeled option A through D internally)
 - Exactly one choice must be correct
 - Distractors should be plausible but clearly wrong to someone who knows the topic

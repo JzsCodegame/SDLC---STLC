@@ -13,6 +13,7 @@ const studentDisplay = document.getElementById('student-display');
 const timerDisplay = document.getElementById('timer');
 const progressDisplay = document.getElementById('progress');
 const questionText = document.getElementById('question-text');
+const questionCode = document.getElementById('question-code');
 const choicesForm = document.getElementById('choices');
 const resultSummary = document.getElementById('result-summary');
 const recentScoresContainer = document.getElementById('recent-scores');
@@ -21,6 +22,11 @@ const flashcardList = document.getElementById('flashcard-list');
 const flashcardTopicSelect = document.getElementById('flashcard-topic');
 const flashcardTopicCount = document.getElementById('flashcard-topic-count');
 const quizTopicSelect = document.getElementById('quiz-topic');
+const javaPracticeLab = document.getElementById('java-practice-lab');
+const javaEditor = document.getElementById('java-editor');
+const javaOutput = document.getElementById('java-output');
+const javaResetBtn = document.getElementById('java-reset-btn');
+const javaOutputBtn = document.getElementById('java-output-btn');
 
 let questions = [];
 let currentIndex = 0;
@@ -35,6 +41,18 @@ const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const MAX_FLASHCARD_TOPICS = 10;
 const FLASHCARDS_PER_TOPIC = 20;
+const JAVA_LAB_SAMPLE = {
+  code: [
+    'class Main {',
+    '  public static void main(String[] args) {',
+    '    int score = 82;',
+    '    String result = score >= 70 ? "pass" : "review";',
+    '    System.out.println(result);',
+    '  }',
+    '}'
+  ].join('\n'),
+  output: 'pass'
+};
 
 // Helper functions to prevent copy/paste during quiz
 function preventCopyPaste(event) {
@@ -223,51 +241,420 @@ function populateQuizTopicDropdown(topicMap) {
     option.textContent = topic;
     quizTopicSelect.appendChild(option);
   });
+
+  syncJavaPracticeLab();
 }
+
+function syncJavaPracticeLab() {
+  if (!javaPracticeLab) return;
+
+  const isJavaTopic = (quizTopicSelect?.value || 'Java') === 'Java';
+  javaPracticeLab.classList.toggle('hidden', !isJavaTopic);
+
+  if (isJavaTopic && javaEditor && !javaEditor.value.trim()) {
+    javaEditor.value = JAVA_LAB_SAMPLE.code;
+  }
+}
+
+function resetJavaPracticeLab() {
+  if (!javaEditor || !javaOutput) return;
+  javaEditor.value = JAVA_LAB_SAMPLE.code;
+  javaOutput.textContent = '';
+}
+
+function showJavaPracticeOutput() {
+  if (!javaOutput) return;
+  javaOutput.textContent = JAVA_LAB_SAMPLE.output;
+}
+
+quizTopicSelect?.addEventListener('change', syncJavaPracticeLab);
+javaResetBtn?.addEventListener('click', resetJavaPracticeLab);
+javaOutputBtn?.addEventListener('click', showJavaPracticeOutput);
 
 
 
 function getJavaW3PracticeQuestions() {
   return [
-    { question: 'Which keyword is used to define a class in Java?', choices: ['class', 'define', 'struct', 'object'], answer: 0 },
-    { question: 'Which method is the entry point of a Java application?', choices: ['run()', 'main()', 'start()', 'init()'], answer: 1 },
-    { question: 'Which primitive type stores true/false values?', choices: ['bool', 'boolean', 'bit', 'flag'], answer: 1 },
-    { question: 'Which symbol ends a statement in Java?', choices: [':', '.', ';', ','], answer: 2 },
-    { question: 'Which keyword is used to inherit a class?', choices: ['inherits', 'extends', 'implements', 'super'], answer: 1 },
-    { question: 'Which access modifier makes a member visible only within its own class?', choices: ['public', 'protected', 'private', 'default'], answer: 2 },
-    { question: 'Which keyword is used to create an object?', choices: ['make', 'new', 'create', 'object'], answer: 1 },
-    { question: 'Which loop executes at least once?', choices: ['for', 'while', 'do...while', 'foreach'], answer: 2 },
-    { question: 'Which package is imported automatically in every Java program?', choices: ['java.util', 'java.io', 'java.lang', 'java.net'], answer: 2 },
-    { question: 'Which method compares string values correctly?', choices: ['==', 'equals()', 'compareTo() only', 'matches() only'], answer: 1 },
-    { question: 'What is the default value of an int field?', choices: ['null', '0', '1', 'undefined'], answer: 1 },
-    { question: 'Which keyword prevents method overriding?', choices: ['static', 'final', 'const', 'sealed'], answer: 1 },
-    { question: 'Which interface supports dynamic-size lists?', choices: ['Set', 'Map', 'List', 'Queue'], answer: 2 },
-    { question: 'Which class is commonly used for key-value pairs?', choices: ['ArrayList', 'HashMap', 'LinkedList', 'TreeSet'], answer: 1 },
-    { question: 'Which exception is unchecked?', choices: ['IOException', 'SQLException', 'NullPointerException', 'ClassNotFoundException'], answer: 2 },
-    { question: 'Which keyword handles exceptions?', choices: ['throw', 'catch', 'error', 'except'], answer: 1 },
-    { question: 'Which block always runs after try/catch (normally)?', choices: ['end', 'cleanup', 'finally', 'last'], answer: 2 },
-    { question: 'Which keyword refers to the current object?', choices: ['this', 'self', 'current', 'me'], answer: 0 },
-    { question: 'Which keyword calls the parent class constructor?', choices: ['parent', 'base', 'super', 'this'], answer: 2 },
-    { question: 'Which collection does NOT allow duplicates?', choices: ['List', 'Set', 'ArrayList', 'Vector'], answer: 1 },
-    { question: 'Which type is used for decimal numbers (higher precision than float)?', choices: ['double', 'decimal', 'number', 'real'], answer: 0 },
-    { question: 'Which operator checks equality of primitive values?', choices: ['=', '===', '==', 'equals'], answer: 2 },
-    { question: 'Which keyword is used to define a constant variable?', choices: ['const', 'final', 'static', 'immutable'], answer: 1 },
-    { question: 'Which JVM component turns bytecode into machine code at runtime?', choices: ['JRE', 'JIT compiler', 'JDK', 'javac'], answer: 1 },
-    { question: 'Which tool compiles .java files to .class files?', choices: ['java', 'jar', 'javac', 'javadoc'], answer: 2 }
+    {
+      question: 'Java code output: what is printed?',
+      code: [
+        'class Main {',
+        '  public static void main(String[] args) {',
+        '    System.out.println("Hello Java");',
+        '  }',
+        '}'
+      ].join('\n'),
+      choices: ['Hello Java', 'Hello', 'Java', 'No output'],
+      answer: 0
+    },
+    {
+      question: 'Java code output: what value is printed?',
+      code: [
+        'class Main {',
+        '  public static void main(String[] args) {',
+        '    int total = 10 + 5;',
+        '    System.out.println(total);',
+        '  }',
+        '}'
+      ].join('\n'),
+      choices: ['10', '15', '105', '5'],
+      answer: 1
+    },
+    {
+      question: 'Java code output: what is printed by the loop?',
+      code: [
+        'for (int i = 1; i <= 3; i++) {',
+        '  System.out.print(i);',
+        '}'
+      ].join('\n'),
+      choices: ['012', '123', '1234', '111'],
+      answer: 1
+    },
+    {
+      question: 'Java code output: which word is printed?',
+      code: [
+        'int age = 18;',
+        'if (age >= 18) {',
+        '  System.out.println("Adult");',
+        '} else {',
+        '  System.out.println("Minor");',
+        '}'
+      ].join('\n'),
+      choices: ['Adult', 'Minor', '18', 'No output'],
+      answer: 0
+    },
+    {
+      question: 'Java code output: what does this String comparison print?',
+      code: [
+        'String a = "QA";',
+        'String b = "QA";',
+        'System.out.println(a.equals(b));'
+      ].join('\n'),
+      choices: ['true', 'false', 'QA', 'Compilation error'],
+      answer: 0
+    },
+    {
+      question: 'Java arrays: what is printed?',
+      code: [
+        'int[] numbers = {2, 4, 6};',
+        'System.out.println(numbers.length);'
+      ].join('\n'),
+      choices: ['2', '3', '4', '6'],
+      answer: 1
+    },
+    {
+      question: 'Java methods: which result is printed?',
+      code: [
+        'static int add(int a, int b) {',
+        '  return a + b;',
+        '}',
+        'System.out.println(add(2, 3));'
+      ].join('\n'),
+      choices: ['2', '3', '5', '23'],
+      answer: 2
+    },
+    {
+      question: 'Java OOP: what is printed because of method overriding?',
+      code: [
+        'class Animal { String sound() { return "sound"; } }',
+        'class Dog extends Animal { String sound() { return "bark"; } }',
+        'Animal pet = new Dog();',
+        'System.out.println(pet.sound());'
+      ].join('\n'),
+      choices: ['sound', 'bark', 'Dog', 'Animal'],
+      answer: 1
+    },
+    {
+      question: 'Java constructors: what is printed?',
+      code: [
+        'class Car {',
+        '  String model;',
+        '  Car(String model) { this.model = model; }',
+        '}',
+        'Car car = new Car("Civic");',
+        'System.out.println(car.model);'
+      ].join('\n'),
+      choices: ['Car', 'model', 'Civic', 'null'],
+      answer: 2
+    },
+    {
+      question: 'Java encapsulation: which value is printed through the getter?',
+      code: [
+        'class Counter {',
+        '  private int value = 7;',
+        '  int getValue() { return value; }',
+        '}',
+        'System.out.println(new Counter().getValue());'
+      ].join('\n'),
+      choices: ['0', '7', 'value', 'private'],
+      answer: 1
+    },
+    {
+      question: 'Java static members: what is printed?',
+      code: [
+        'class Visit { static int count = 0; }',
+        'Visit.count++;',
+        'Visit.count++;',
+        'System.out.println(Visit.count);'
+      ].join('\n'),
+      choices: ['0', '1', '2', 'Compilation error'],
+      answer: 2
+    },
+    {
+      question: 'Java ArrayList: what is printed after adding two items?',
+      code: [
+        'ArrayList<String> names = new ArrayList<>();',
+        'names.add("Ana");',
+        'names.add("Bo");',
+        'System.out.println(names.size());'
+      ].join('\n'),
+      choices: ['0', '1', '2', 'AnaBo'],
+      answer: 2
+    },
+    {
+      question: 'Java HashMap: what is printed by get("id")?',
+      code: [
+        'HashMap<String, String> user = new HashMap<>();',
+        'user.put("id", "QA-101");',
+        'System.out.println(user.get("id"));'
+      ].join('\n'),
+      choices: ['id', 'QA-101', 'user', 'null'],
+      answer: 1
+    },
+    {
+      question: 'Java exception handling: what is printed?',
+      code: [
+        'try {',
+        '  int x = 10 / 0;',
+        '  System.out.println(x);',
+        '} catch (ArithmeticException e) {',
+        '  System.out.println("caught");',
+        '}'
+      ].join('\n'),
+      choices: ['10', '0', 'caught', 'ArithmeticException is printed as text'],
+      answer: 2
+    },
+    {
+      question: 'Java finally block: what is printed?',
+      code: [
+        'try {',
+        '  System.out.print("try ");',
+        '} finally {',
+        '  System.out.print("finally");',
+        '}'
+      ].join('\n'),
+      choices: ['try', 'finally', 'try finally', 'No output'],
+      answer: 2
+    },
+    {
+      question: 'Java do-while loop: what is printed?',
+      code: [
+        'int i = 5;',
+        'do {',
+        '  System.out.println(i);',
+        '} while (i < 5);'
+      ].join('\n'),
+      choices: ['5', 'No output', '4', 'Compilation error'],
+      answer: 0
+    },
+    {
+      question: 'Java boolean logic: what does this print?',
+      code: [
+        'boolean ready = true;',
+        'boolean blocked = true;',
+        'System.out.println(ready && !blocked);'
+      ].join('\n'),
+      choices: ['true', 'false', 'ready', 'blocked'],
+      answer: 1
+    },
+    {
+      question: 'Java ternary operator: which word is printed?',
+      code: [
+        'int score = 82;',
+        'String result = score >= 70 ? "pass" : "review";',
+        'System.out.println(result);'
+      ].join('\n'),
+      choices: ['pass', 'review', '82', 'true'],
+      answer: 0
+    },
+    {
+      question: 'Java enhanced for loop: what sum is printed?',
+      code: [
+        'int sum = 0;',
+        'for (int n : new int[] {1, 2, 3}) {',
+        '  sum += n;',
+        '}',
+        'System.out.println(sum);'
+      ].join('\n'),
+      choices: ['3', '6', '123', '0'],
+      answer: 1
+    },
+    {
+      question: 'Java interface polymorphism: what is printed?',
+      code: [
+        'interface Alert { String send(); }',
+        'class EmailAlert implements Alert {',
+        '  public String send() { return "sent"; }',
+        '}',
+        'Alert alert = new EmailAlert();',
+        'System.out.println(alert.send());'
+      ].join('\n'),
+      choices: ['Alert', 'EmailAlert', 'sent', 'send'],
+      answer: 2
+    },
+    {
+      question: 'Java abstract class: what is printed?',
+      code: [
+        'abstract class Shape { abstract String name(); }',
+        'class Circle extends Shape { String name() { return "circle"; } }',
+        'Shape shape = new Circle();',
+        'System.out.println(shape.name());'
+      ].join('\n'),
+      choices: ['Shape', 'Circle', 'circle', 'abstract'],
+      answer: 2
+    },
+    {
+      question: 'Java field default values: what is printed for an int field?',
+      code: [
+        'class Score { int value; }',
+        'Score score = new Score();',
+        'System.out.println(score.value);'
+      ].join('\n'),
+      choices: ['0', 'null', 'undefined', 'Compilation error'],
+      answer: 0
+    },
+    {
+      question: 'Java this keyword: what is printed?',
+      code: [
+        'class Ticket {',
+        '  int id;',
+        '  Ticket(int id) { this.id = id; }',
+        '}',
+        'System.out.println(new Ticket(5).id);'
+      ].join('\n'),
+      choices: ['0', '5', 'id', 'this'],
+      answer: 1
+    },
+    {
+      question: 'Java break statement: what is printed?',
+      code: [
+        'for (int i = 0; i < 4; i++) {',
+        '  if (i == 2) break;',
+        '  System.out.print(i);',
+        '}'
+      ].join('\n'),
+      choices: ['01', '012', '0123', '23'],
+      answer: 0
+    },
+    {
+      question: 'Java String concatenation: what is printed?',
+      code: [
+        'String topic = "Java";',
+        'int level = 101;',
+        'System.out.println(topic + level);'
+      ].join('\n'),
+      choices: ['Java101', 'Java 101', 'topic101', 'Compilation error'],
+      answer: 0
+    }
   ];
+}
+
+function getGeneralSoftwarePracticeQuestions() {
+  return [
+    { question: 'SDLC scenario: which phase defines project scope, schedule, and resources?', choices: ['Planning', 'Testing', 'Deployment', 'Maintenance'], answer: 0 },
+    { question: 'SDLC scenario: which phase turns business needs into documented requirements?', choices: ['Design', 'Requirement Analysis', 'Implementation', 'Deployment'], answer: 1 },
+    { question: 'SDLC scenario: which phase creates architecture, database, and UI plans before coding?', choices: ['Planning', 'Design', 'Testing', 'Maintenance'], answer: 1 },
+    { question: 'SDLC scenario: which phase builds the actual application code?', choices: ['Implementation', 'Planning', 'Test Closure', 'Production Support'], answer: 0 },
+    { question: 'SDLC scenario: which phase releases the tested application to users?', choices: ['Design', 'Deployment', 'Requirement Analysis', 'Unit Testing'], answer: 1 },
+    { question: 'STLC scenario: which phase reviews requirements to identify what must be tested?', choices: ['Requirement Analysis', 'Test Closure', 'Deployment', 'Design'], answer: 0 },
+    { question: 'STLC scenario: which phase defines test scope, resources, schedule, and risks?', choices: ['Test Planning', 'Implementation', 'Production Support', 'Coding'], answer: 0 },
+    { question: 'STLC scenario: which phase writes detailed steps and expected results?', choices: ['Environment Setup', 'Test Case Development', 'Deployment', 'Maintenance'], answer: 1 },
+    { question: 'STLC scenario: which phase runs test cases and logs defects?', choices: ['Test Execution', 'Design', 'Planning', 'Requirement Gathering'], answer: 0 },
+    { question: 'STLC scenario: which phase summarizes results and lessons learned?', choices: ['Test Closure', 'Coding', 'Deployment', 'Backlog Grooming'], answer: 0 },
+    { question: 'Testing Types: which testing checks that recent changes did not break existing behavior?', choices: ['Regression testing', 'Smoke testing', 'Load testing', 'Usability testing'], answer: 0 },
+    { question: 'Testing Types: which testing quickly verifies that a build is stable enough for deeper QA?', choices: ['Smoke testing', 'Acceptance testing', 'Security testing', 'Localization testing'], answer: 0 },
+    { question: 'Testing Types: which testing validates a small bug fix or narrow feature change?', choices: ['Sanity testing', 'Performance testing', 'Compatibility testing', 'Exploratory testing'], answer: 0 },
+    { question: 'Testing Types: which testing checks multiple modules working together?', choices: ['Integration testing', 'Unit testing', 'Static testing', 'Alpha testing'], answer: 0 },
+    { question: 'Testing Types: which testing confirms the full product works end to end?', choices: ['System testing', 'Unit testing', 'Code review', 'Branch testing'], answer: 0 },
+    { question: 'Agile & Scrum: which event plans the work selected for the next Sprint?', choices: ['Sprint Planning', 'Daily Scrum', 'Sprint Review', 'Retrospective'], answer: 0 },
+    { question: 'Agile & Scrum: which event inspects progress and blockers each day?', choices: ['Daily Scrum', 'Sprint Review', 'Release Planning', 'Backlog Freeze'], answer: 0 },
+    { question: 'Agile & Scrum: which role owns product priority and the backlog?', choices: ['Product Owner', 'Scrum Master', 'QA Lead', 'Release Manager'], answer: 0 },
+    { question: 'Agile & Scrum: which role facilitates Scrum and removes blockers?', choices: ['Scrum Master', 'Product Owner', 'Database Admin', 'Business Sponsor'], answer: 0 },
+    { question: 'Agile & Scrum: which artifact lists ordered work for the product?', choices: ['Product Backlog', 'Test Summary Report', 'RTM', 'Deployment Script'], answer: 0 },
+    { question: 'Requirements: which statement describes a functional requirement?', choices: ['What the system must do', 'How fast the page must load', 'Which server hosts the app', 'How the sprint is scheduled'], answer: 0 },
+    { question: 'Requirements: which statement describes a non-functional requirement?', choices: ['The app must support 500 users at once', 'The user can reset a password', 'The admin can add products', 'The form saves an address'], answer: 0 },
+    { question: 'Defects & Bug Tracking: what does severity describe?', choices: ['Impact of the defect', 'Order of fixing work', 'Developer seniority', 'Sprint length'], answer: 0 },
+    { question: 'Defects & Bug Tracking: what does priority describe?', choices: ['Urgency of fixing the defect', 'How many testers found it', 'How old the ticket is', 'Which browser was used'], answer: 0 },
+    { question: 'Test Artifacts: what does an RTM connect?', choices: ['Requirements to test cases', 'Developers to branches', 'Users to roles', 'Servers to ports'], answer: 0 }
+  ];
+}
+
+function getTopicPracticeQuestions(topic) {
+  if (topic === 'Java') return getJavaW3PracticeQuestions();
+
+  const generalPractice = getGeneralSoftwarePracticeQuestions();
+  const matchingTopicPractice = generalPractice.filter((question) => detectTopic(question.question) === topic);
+  return matchingTopicPractice.length ? matchingTopicPractice : generalPractice;
+}
+
+function questionIdentity(question) {
+  const code = question.code ? ` ${question.code}` : '';
+  return `${question.question || ''}${code}`.toLowerCase().replace(/\s+/g, ' ').trim();
+}
+
+function addUniqueQuestions(target, seen, candidates, maxCount) {
+  candidates.forEach((question) => {
+    if (target.length >= maxCount) return;
+    const key = questionIdentity(question);
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    target.push(question);
+  });
+}
+
+function completeQuestionSet(topic, topicQuestions, count = totalQuestions) {
+  const completed = [];
+  const seen = new Set();
+  const sameTopicQuestions = questions.filter((question) => detectTopic(question.question) === topic);
+  const broadPractice = topic === 'Java'
+    ? [...getJavaW3PracticeQuestions(), ...getGeneralSoftwarePracticeQuestions()]
+    : [...getTopicPracticeQuestions(topic), ...getGeneralSoftwarePracticeQuestions()];
+
+  addUniqueQuestions(completed, seen, pickRandomItems(topicQuestions, count), count);
+  addUniqueQuestions(completed, seen, pickRandomItems(sameTopicQuestions, count), count);
+  addUniqueQuestions(completed, seen, pickRandomItems(getTopicPracticeQuestions(topic), count), count);
+  addUniqueQuestions(completed, seen, pickRandomItems(broadPractice, count), count);
+
+  while (completed.length < count && broadPractice.length) {
+    const fallback = broadPractice[completed.length % broadPractice.length];
+    completed.push({
+      ...fallback,
+      question: `${fallback.question} (practice review ${completed.length + 1})`
+    });
+  }
+
+  return completed.slice(0, count);
+}
+
+function getQuestionDisplayParts(question) {
+  let prompt = String(question.question || '').trim();
+  let code = String(question.code || '').trim();
+  const codeFenceMatch = prompt.match(/```(?:java)?\s*([\s\S]*?)```/i);
+
+  if (!code && codeFenceMatch) {
+    code = codeFenceMatch[1].trim();
+  }
+
+  if (codeFenceMatch) {
+    prompt = prompt.replace(codeFenceMatch[0], '').replace(/\s+/g, ' ').trim();
+  }
+
+  return { prompt, code };
 }
 
 function selectQuizQuestionsByTopic(topic) {
   const topicQuestions = availableTopics.get(topic) || [];
-  if (topic === 'Java') {
-    const javaGuideQuestions = topicQuestions.length ? pickRandomItems(topicQuestions, Math.min(totalQuestions, topicQuestions.length)) : [];
-    const supplementalQuestions = getJavaW3PracticeQuestions();
-    const needed = Math.max(0, totalQuestions - javaGuideQuestions.length);
-    selectedQuizQuestions = [...javaGuideQuestions, ...pickRandomItems(supplementalQuestions, needed)].slice(0, totalQuestions);
-    return;
-  }
-
-  selectedQuizQuestions = pickRandomItems(topicQuestions, totalQuestions);
+  selectedQuizQuestions = completeQuestionSet(topic, topicQuestions, totalQuestions);
 }
 
 startBtn.addEventListener('click', () => {
@@ -283,16 +670,10 @@ startBtn.addEventListener('click', () => {
   }
 
   const selectedTopic = quizTopicSelect?.value || 'Java';
-  if (selectedTopic === 'Java') {
-    const javaCount = (availableTopics.get('Java') || []).length;
-    if (javaCount < totalQuestions) {
-      alert(`Study guide has ${javaCount} Java question(s). Filling remaining ${totalQuestions - javaCount} with W3-style Java practice questions.`);
-    }
-  }
   selectQuizQuestionsByTopic(selectedTopic);
 
-  if (!selectedQuizQuestions.length) {
-    alert(`No questions are currently available for ${selectedTopic}. Please choose another topic.`);
+  if (selectedQuizQuestions.length !== totalQuestions) {
+    alert(`Could not prepare ${totalQuestions} questions for ${selectedTopic}. Please choose another topic.`);
     return;
   }
 
@@ -343,6 +724,7 @@ function startQuiz() {
 function renderQuestion() {
   const total = Math.min(totalQuestions, selectedQuizQuestions.length);
   const currentQuestion = selectedQuizQuestions[currentIndex];
+  const display = getQuestionDisplayParts(currentQuestion);
 
   progressDisplay.textContent = `Question ${currentIndex + 1} of ${total}`;
 
@@ -353,7 +735,16 @@ function renderQuestion() {
     badge.textContent = '✨ AI';
     questionText.appendChild(badge);
   }
-  questionText.appendChild(document.createTextNode(currentQuestion.question));
+  questionText.appendChild(document.createTextNode(display.prompt || currentQuestion.question));
+
+  if (questionCode) {
+    questionCode.textContent = '';
+    questionCode.classList.add('hidden');
+    if (display.code) {
+      questionCode.textContent = display.code;
+      questionCode.classList.remove('hidden');
+    }
+  }
 
   choicesForm.innerHTML = '';
   currentQuestion.choices.forEach((choice, index) => {
@@ -413,6 +804,11 @@ function ensureJavaTopic(topicMap) {
   if (!normalized.has('Java')) {
     normalized.set('Java', getJavaW3PracticeQuestions());
   }
+
+  [...normalized.keys()].forEach((topic) => {
+    normalized.set(topic, completeQuestionSet(topic, normalized.get(topic) || [], totalQuestions));
+  });
+
   return normalized;
 }
 
@@ -445,6 +841,7 @@ function renderFlashcardTopic(topicMap, topic) {
   selectedQuestions.forEach((question, index) => {
     const details = document.createElement('details');
     details.className = 'flashcard-item';
+    const display = getQuestionDisplayParts(question);
 
     const summary = document.createElement('summary');
     if (question.aiGenerated) {
@@ -453,13 +850,19 @@ function renderFlashcardTopic(topicMap, topic) {
       badge.textContent = '✨ AI';
       summary.appendChild(badge);
     }
-    summary.appendChild(document.createTextNode(`${index + 1}. ${question.question}`));
+    summary.appendChild(document.createTextNode(`${index + 1}. ${display.prompt || question.question}`));
 
     const answer = document.createElement('p');
     answer.className = 'flashcard-answer';
     answer.textContent = `Answer: ${question.choices[question.answer]}`;
 
     details.appendChild(summary);
+    if (display.code) {
+      const code = document.createElement('pre');
+      code.className = 'flashcard-code';
+      code.textContent = display.code;
+      details.appendChild(code);
+    }
     details.appendChild(answer);
     flashcardList.appendChild(details);
   });

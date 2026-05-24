@@ -6,6 +6,7 @@ pipeline {
     IMAGE_TAG = "${env.BUILD_NUMBER}"
     STUDENTS_OUTPUT_FILE = 'students.json'
     MAX_STUDENTS = '20'
+    MIN_QUESTIONS_PER_TOPIC = '25'
     SOURCE_DOCUMENT_URL = 'https://docs.google.com/document/d/1RzyuPH6ryIVD6z5iRuyJxmUa6jGLJE_wAB5R4S4mUWA/edit?tab=t.0#heading=h.fmjzqinx4dso'
     DEPLOY_COMMAND = ''
     ENABLE_DOCKER_STAGES = 'false'
@@ -64,7 +65,7 @@ pipeline {
         expression { env.ANTHROPIC_API_KEY && env.ANTHROPIC_API_KEY != '' }
       }
       steps {
-        sh 'node scripts/generate-ai-questions.js'
+        sh 'MIN_QUESTIONS_PER_TOPIC=${MIN_QUESTIONS_PER_TOPIC} node scripts/generate-ai-questions.js'
       }
     }
 

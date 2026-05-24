@@ -91,6 +91,25 @@ input {
   margin-bottom: 12px;
 }
 
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
+  background: #ffffff;
+  color: var(--text);
+}
+
+textarea {
+  min-height: 170px;
+  resize: vertical;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 button {
   border: none;
   padding: 12px 18px;
@@ -150,6 +169,25 @@ button {
 .choice input {
   width: auto;
   margin: 0;
+}
+
+.question-code,
+.flashcard-code,
+.java-output {
+  white-space: pre-wrap;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #111827;
+  color: #f9fafb;
+  padding: 14px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.question-code {
+  margin: 12px 0 16px;
 }
 
 #result-summary {
@@ -227,6 +265,11 @@ button {
   font-weight: 600;
 }
 
+.flashcard-code {
+  margin: 10px 0;
+  font-size: 0.82rem;
+}
+
 
 .flashcard-list {
   margin-top: 16px;
@@ -260,4 +303,45 @@ button {
 
 #flashcard-topic {
   margin-bottom: 0;
+}
+
+.java-practice-lab {
+  margin: 14px 0 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.java-lab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.java-lab-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.java-lab-header span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.java-lab-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.java-output {
+  min-height: 48px;
+  margin: 12px 0 0;
 }

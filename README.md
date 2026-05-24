@@ -4,7 +4,8 @@ This is a starter static quiz site built for GitHub Pages with Firebase Firestor
 
 ## How it works
 - Students enter their name
-- A 20-question quiz starts with a 5-minute timer
+- A 25-question quiz starts with a 5-minute timer for every selected topic
+- Java uses W3-style practice with code snippets, output prediction, and a small editable code sample
 - Results show at the end
 - Quiz scores are automatically saved to Firestore
 - Flashcard section below the quiz button includes all question/answer pairs

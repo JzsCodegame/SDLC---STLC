@@ -19,6 +19,19 @@
         <input id="student-name" type="text" placeholder="Enter your name" />
         <label for="quiz-topic">Quiz topic</label>
         <select id="quiz-topic"></select>
+        <section id="java-practice-lab" class="java-practice-lab hidden" aria-label="Java practice lab">
+          <div class="java-lab-header">
+            <h3>Java Practice Lab</h3>
+            <span>W3-style</span>
+          </div>
+          <label for="java-editor">Code sample</label>
+          <textarea id="java-editor" spellcheck="false"></textarea>
+          <div class="java-lab-actions">
+            <button id="java-reset-btn" class="secondary" type="button">Reset</button>
+            <button id="java-output-btn" class="secondary" type="button">Run Sample</button>
+          </div>
+          <pre id="java-output" class="java-output" aria-live="polite"></pre>
+        </section>
         <button id="start-btn" class="primary">Start Quiz</button>
         <p class="hint">You have 5 minutes to answer 25 questions from the selected topic.</p>
 
@@ -40,6 +53,7 @@
         <div id="progress" class="progress"></div>
 
         <h2 id="question-text"></h2>
+        <pre id="question-code" class="question-code hidden"></pre>
         <form id="choices" class="choices"></form>
 
         <button id="next-btn" class="primary">Next</button>
