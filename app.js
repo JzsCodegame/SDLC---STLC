@@ -35,7 +35,6 @@ const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const MAX_FLASHCARD_TOPICS = 10;
 const FLASHCARDS_PER_TOPIC = 20;
-const ATTEMPT_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // Helper functions to prevent copy/paste during quiz
 function preventCopyPaste(event) {
@@ -191,51 +190,68 @@ displayRecentScores();
 // Refresh recent scores every 30 seconds
 setInterval(displayRecentScores, SCORES_REFRESH_INTERVAL);
 
-function normalizeStudentName(name) {
-  return name.trim().toLowerCase();
-}
+function populateQuizTopicDropdown(topicMap) {
+  if (!quizTopicSelect) return;
 
-function getAttemptKey(name) {
-  return `quizAttempt:${normalizeStudentName(name)}`;
-}
-
-function getAttemptTimestamp(name) {
-  const raw = localStorage.getItem(getAttemptKey(name));
-  const parsed = raw ? Number(raw) : null;
-  return Number.isFinite(parsed) ? parsed : null;
-}
-
-function setAttemptTimestamp(name) {
-  localStorage.setItem(getAttemptKey(name), String(Date.now()));
-}
-
-function formatTimeRemaining(ms) {
-  const totalMinutes = Math.ceil(ms / 60000);
-  const hours = Math.floor(totalMinutes / 60);
-  const minutes = totalMinutes % 60;
-
-  if (hours <= 0) {
-    return `${minutes} minute${minutes !== 1 ? 's' : ''}`;
+  quizTopicSelect.innerHTML = '';
+  const orderedTopics = [...topicMap.keys()];
+  const javaIndex = orderedTopics.indexOf('Java');
+  if (javaIndex > -1) {
+    orderedTopics.splice(javaIndex, 1);
   }
-  if (minutes === 0) {
-    return `${hours} hour${hours !== 1 ? 's' : ''}`;
-  }
-  return `${hours} hour${hours !== 1 ? 's' : ''} ${minutes} minute${minutes !== 1 ? 's' : ''}`;
+  orderedTopics.unshift('Java');
+
+  orderedTopics.forEach((topic) => {
+    const option = document.createElement('option');
+    option.value = topic;
+    option.textContent = topic;
+    quizTopicSelect.appendChild(option);
+  });
 }
 
-function canStartQuiz(name) {
-  const lastAttempt = getAttemptTimestamp(name);
-  if (!lastAttempt) return true;
 
-  const elapsed = Date.now() - lastAttempt;
-  if (elapsed >= ATTEMPT_WINDOW_MS) {
-    localStorage.removeItem(getAttemptKey(name));
-    return true;
+
+function getJavaW3PracticeQuestions() {
+  return [
+    { question: 'Which keyword is used to define a class in Java?', choices: ['class', 'define', 'struct', 'object'], answer: 0 },
+    { question: 'Which method is the entry point of a Java application?', choices: ['run()', 'main()', 'start()', 'init()'], answer: 1 },
+    { question: 'Which primitive type stores true/false values?', choices: ['bool', 'boolean', 'bit', 'flag'], answer: 1 },
+    { question: 'Which symbol ends a statement in Java?', choices: [':', '.', ';', ','], answer: 2 },
+    { question: 'Which keyword is used to inherit a class?', choices: ['inherits', 'extends', 'implements', 'super'], answer: 1 },
+    { question: 'Which access modifier makes a member visible only within its own class?', choices: ['public', 'protected', 'private', 'default'], answer: 2 },
+    { question: 'Which keyword is used to create an object?', choices: ['make', 'new', 'create', 'object'], answer: 1 },
+    { question: 'Which loop executes at least once?', choices: ['for', 'while', 'do...while', 'foreach'], answer: 2 },
+    { question: 'Which package is imported automatically in every Java program?', choices: ['java.util', 'java.io', 'java.lang', 'java.net'], answer: 2 },
+    { question: 'Which method compares string values correctly?', choices: ['==', 'equals()', 'compareTo() only', 'matches() only'], answer: 1 },
+    { question: 'What is the default value of an int field?', choices: ['null', '0', '1', 'undefined'], answer: 1 },
+    { question: 'Which keyword prevents method overriding?', choices: ['static', 'final', 'const', 'sealed'], answer: 1 },
+    { question: 'Which interface supports dynamic-size lists?', choices: ['Set', 'Map', 'List', 'Queue'], answer: 2 },
+    { question: 'Which class is commonly used for key-value pairs?', choices: ['ArrayList', 'HashMap', 'LinkedList', 'TreeSet'], answer: 1 },
+    { question: 'Which exception is unchecked?', choices: ['IOException', 'SQLException', 'NullPointerException', 'ClassNotFoundException'], answer: 2 },
+    { question: 'Which keyword handles exceptions?', choices: ['throw', 'catch', 'error', 'except'], answer: 1 },
+    { question: 'Which block always runs after try/catch (normally)?', choices: ['end', 'cleanup', 'finally', 'last'], answer: 2 },
+    { question: 'Which keyword refers to the current object?', choices: ['this', 'self', 'current', 'me'], answer: 0 },
+    { question: 'Which keyword calls the parent class constructor?', choices: ['parent', 'base', 'super', 'this'], answer: 2 },
+    { question: 'Which collection does NOT allow duplicates?', choices: ['List', 'Set', 'ArrayList', 'Vector'], answer: 1 },
+    { question: 'Which type is used for decimal numbers (higher precision than float)?', choices: ['double', 'decimal', 'number', 'real'], answer: 0 },
+    { question: 'Which operator checks equality of primitive values?', choices: ['=', '===', '==', 'equals'], answer: 2 },
+    { question: 'Which keyword is used to define a constant variable?', choices: ['const', 'final', 'static', 'immutable'], answer: 1 },
+    { question: 'Which JVM component turns bytecode into machine code at runtime?', choices: ['JRE', 'JIT compiler', 'JDK', 'javac'], answer: 1 },
+    { question: 'Which tool compiles .java files to .class files?', choices: ['java', 'jar', 'javac', 'javadoc'], answer: 2 }
+  ];
+}
+
+function selectQuizQuestionsByTopic(topic) {
+  const topicQuestions = availableTopics.get(topic) || [];
+  if (topic === 'Java') {
+    const javaGuideQuestions = topicQuestions.length ? pickRandomItems(topicQuestions, Math.min(totalQuestions, topicQuestions.length)) : [];
+    const supplementalQuestions = getJavaW3PracticeQuestions();
+    const needed = Math.max(0, totalQuestions - javaGuideQuestions.length);
+    selectedQuizQuestions = [...javaGuideQuestions, ...pickRandomItems(supplementalQuestions, needed)];
+    return;
   }
 
-  const remaining = ATTEMPT_WINDOW_MS - elapsed;
-  alert(`${name}, you already took the quiz. Please wait ${formatTimeRemaining(remaining)} before trying again.`);
-  return false;
+  selectedQuizQuestions = pickRandomItems(topicQuestions, totalQuestions);
 }
 
 
@@ -331,12 +347,6 @@ startBtn.addEventListener('click', () => {
     return;
   }
 
-  if (!canStartQuiz(studentName)) {
-    return;
-  }
-
-  // Mark the attempt immediately so no retakes within 24 hours.
-  setAttemptTimestamp(studentName);
 
   startQuiz();
 });
