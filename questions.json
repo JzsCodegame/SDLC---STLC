@@ -1,202 +1,202 @@
 [
   {
-    "question": "What are the 7 stages of SDLC in correct order?",
+    "question": "How many stages are in the SDLC (Software Development Life Cycle)?",
     "choices": [
-      "Planning, Requirement Analysis, Design, Development, Testing, Deployment, Maintenance",
-      "Planning, Design, Requirement Analysis, Development, Testing, Deployment, Maintenance",
-      "Requirement Analysis, Planning, Design, Development, Testing, Deployment, Maintenance",
-      "Planning, Requirement Analysis, Development, Design, Testing, Deployment, Maintenance"
+      "5 stages",
+      "6 stages",
+      "7 stages",
+      "8 stages"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What are the seven stages of SDLC in correct order?",
+    "choices": [
+      "Planning → Analysis → Design → Development → Testing → Implementation → Maintenance",
+      "Analysis → Planning → Design → Development → Testing → Implementation → Maintenance",
+      "Planning → Design → Analysis → Development → Testing → Implementation → Maintenance",
+      "Planning → Analysis → Development → Design → Testing → Implementation → Maintenance"
     ],
     "answer": 0
   },
   {
-    "question": "Which criteria must good requirements satisfy according to the study guide?",
+    "question": "Which requirement criteria ensures that a requirement can be verified by QA?",
     "choices": [
-      "Concise, Clear, Complete, Unambiguous, Testable, Measurable",
-      "Concise, Clear, Complete, Ambiguous, Testable, Measurable",
-      "Complex, Clear, Complete, Unambiguous, Testable, Measurable",
-      "Concise, Unclear, Complete, Unambiguous, Testable, Measurable"
+      "Measurable",
+      "Complete",
+      "Testable",
+      "Concise"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "What is the main difference between Functional and Non-Functional testing?",
+    "question": "In Agile, what replaces traditional requirement documents like BRD and FRD?",
     "choices": [
-      "Functional tests what the system does; Non-Functional tests performance, security, usability",
-      "Functional tests performance; Non-Functional tests what the system does",
-      "Functional tests security; Non-Functional tests user interface",
-      "Functional and Non-Functional testing are the same thing"
+      "Test Plans",
+      "User Stories",
+      "Epic Documents",
+      "Sprint Backlogs"
     ],
-    "answer": 0
-  },
-  {
-    "question": "In Black Box Testing, what does the tester focus on?",
-    "choices": [
-      "Inputs and outputs without seeing internal code",
-      "Internal code structure and logic",
-      "Database connections only",
-      "Network security protocols"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What are the three categories of test cases mentioned in the study guide?",
-    "choices": [
-      "Positive, Negative, Boundary",
-      "Positive, Neutral, Negative",
-      "Happy, Sad, Boundary",
-      "Valid, Invalid, Edge"
-    ],
-    "answer": 0
+    "answer": 1
   },
   {
     "question": "What is the correct User Story format in Agile?",
     "choices": [
+      "Given [condition], When [action], Then [result]",
       "As a [role], I want [feature], so that [benefit]",
-      "As a [user], I need [requirement], because [reason]",
-      "Given [condition], when [action], then [result]",
-      "The user shall [action] to achieve [goal]"
+      "User shall [action] to achieve [result]",
+      "The system must [function] when [condition]"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What is the main advantage of Agile over Waterfall methodology?",
+    "question": "What type of testing focuses on verifying system functionality against requirements without seeing internal code?",
     "choices": [
-      "Continuous cycles, collaboration, and communication at every step",
-      "Linear progression with no going back",
-      "Lower cost and faster delivery",
-      "Less documentation required"
+      "White Box Testing",
+      "Black Box Testing",
+      "Integration Testing",
+      "Unit Testing"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What are the core roles in a Scrum team?",
+    "question": "Which testing category includes performance, load, stress, and security testing?",
     "choices": [
-      "Product Owner, Scrum Master, Development Team (including QA, Dev, BA)",
-      "Project Manager, Team Lead, Developers",
-      "Business Analyst, QA Lead, Development Manager",
-      "Stakeholder, Architect, Testers"
+      "Functional Testing",
+      "Non-Functional Testing",
+      "Structural Testing",
+      "Integration Testing"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What is the correct order of the Defect Life Cycle?",
+    "question": "What is the correct sequence of the Defect Life Cycle?",
     "choices": [
-      "New → Open → Assigned → Fixed → Verified → Closed",
-      "New → Assigned → Open → Fixed → Verified → Closed",
-      "Open → New → Assigned → Fixed → Closed → Verified",
-      "New → Open → Fixed → Assigned → Verified → Closed"
+      "New → Open → Fixed → Verified → Closed",
+      "New → Verified → Open → Fixed → Retested → Verified → Closed",
+      "New → Assigned → Fixed → Tested → Closed",
+      "Open → Assigned → Fixed → Verified → Closed"
     ],
-    "answer": 0
+    "answer": 1
+  },
+  {
+    "question": "In Agile, what is the typical duration of a sprint?",
+    "choices": [
+      "1 week",
+      "2-3 weeks",
+      "1 month",
+      "6 weeks"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What are the three standard questions asked during Daily Stand-up meetings?",
+    "choices": [
+      "What did I accomplish? What are my goals? What help do I need?",
+      "What did I do yesterday? What will I do today? Any blockers?",
+      "What is my progress? What are my challenges? What is my plan?",
+      "What is complete? What is in progress? What is blocked?"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which Agile role is responsible for facilitating meetings and removing blockers?",
+    "choices": [
+      "Product Owner",
+      "Business Analyst",
+      "Scrum Master",
+      "QA Lead"
+    ],
+    "answer": 2
   },
   {
     "question": "What is the difference between Severity and Priority in defect management?",
     "choices": [
-      "Severity is impact; Priority is urgency",
-      "Severity is urgency; Priority is impact",
-      "Severity and Priority mean the same thing",
-      "Severity is for QA; Priority is for developers"
+      "Severity is urgency, Priority is impact",
+      "Severity is impact, Priority is urgency",
+      "They are the same thing",
+      "Severity is for QA, Priority is for developers"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What are the six core Agile ceremonies/meetings?",
+    "question": "What does RTM stand for in QA terminology?",
     "choices": [
-      "Product Backlog, Sprint Planning, Daily Stand-Up, Backlog Refinement, Sprint Review, Sprint Retrospective",
-      "Planning, Analysis, Design, Development, Testing, Deployment",
-      "Kickoff, Planning, Execution, Review, Closure, Retrospective",
-      "Backlog, Sprint, Daily, Weekly, Monthly, Quarterly"
+      "Real-Time Monitoring",
+      "Requirement Traceability Matrix",
+      "Regression Test Management",
+      "Risk and Test Metrics"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What are the three questions asked in Daily Stand-Up meetings?",
+    "question": "Which environment is used by QA to execute test cases?",
     "choices": [
-      "What did I do yesterday? What will I do today? Any blockers?",
-      "What's working? What's not working? What can we improve?",
-      "What's done? What's in progress? What's next?",
-      "Who, What, When?"
+      "Production environment",
+      "Development environment",
+      "QA/Test environment",
+      "UAT environment"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "What is the purpose of a Test Plan in STLC?",
+    "question": "What is the main purpose of Regression Testing?",
     "choices": [
-      "Defines what to test, when to test, how to test",
-      "Contains detailed test steps and expected results",
-      "Lists all defects found during testing",
-      "Documents user requirements and acceptance criteria"
+      "To test new features",
+      "To ensure new changes haven't broken existing functionality",
+      "To test system performance",
+      "To validate user acceptance"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What is Regression Testing?",
+    "question": "In test case design, what should happen if Expected Result ≠ Actual Result?",
     "choices": [
-      "Retesting to ensure new changes haven't broken existing functionality",
-      "Testing the same functionality multiple times",
-      "Testing only the new features added",
-      "Testing performance under load"
+      "Mark as Pass",
+      "Mark as Fail and create a defect",
+      "Skip the test case",
+      "Rewrite the expected result"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What is the Requirement Traceability Matrix (RTM) used for?",
+    "question": "Which testing validates that all modules work correctly when combined?",
     "choices": [
-      "Links requirements to test cases and defects through unique IDs",
-      "Tracks project timeline and milestones",
-      "Maps team members to their responsibilities",
-      "Documents all environments and their configurations"
+      "Unit Testing",
+      "System Testing",
+      "Integration Testing",
+      "Acceptance Testing"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "What environments are typically used in software testing?",
+    "question": "What is the primary goal of the six-month QA training program mentioned in Class 1?",
     "choices": [
-      "Dev, QA/Test, UAT, Production",
-      "Local, Remote, Cloud, On-premise",
-      "Development, Staging, Live",
-      "Internal, External, Public"
+      "Learn only manual testing",
+      "Become job-ready and interview-ready",
+      "Focus only on automation",
+      "Study only SDLC concepts"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What is the main purpose of UAT (User Acceptance Testing)?",
+    "question": "Which Agile artifact shows remaining work versus time in a graphical format?",
     "choices": [
-      "Business users validate that the application meets real-world needs",
-      "QA tests all functionality before release",
-      "Developers test their code for bugs",
-      "System administrators test server performance"
+      "Product Backlog",
+      "Sprint Backlog",
+      "Burn-Down Chart",
+      "User Story"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "What is Root Cause Analysis (RCA) in defect management?",
+    "question": "What is the main difference between SDLC and STLC?",
     "choices": [
-      "Team effort to determine why a defect occurred",
-      "QA's process to find more defects",
-      "Developer's method to fix bugs quickly",
-      "Manager's review of team performance"
+      "SDLC is for developers, STLC is for QA",
+      "SDLC covers end-to-end software development, STLC focuses only on testing phases",
+      "SDLC is waterfall, STLC is agile",
+      "There is no difference"
     ],
-    "answer": 0
-  },
-  {
-    "question": "What is the relationship between SDLC and STLC?",
-    "choices": [
-      "STLC focuses on testing phases within the broader SDLC framework",
-      "SDLC and STLC are completely separate processes",
-      "STLC replaces SDLC in modern development",
-      "SDLC is only for developers; STLC is only for QA"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What makes a requirement 'testable' according to the study guide?",
-    "choices": [
-      "It can be verified by QA with clear expected results",
-      "It is written by the development team",
-      "It includes technical implementation details",
-      "It is approved by all stakeholders"
-    ],
-    "answer": 0
+    "answer": 1
   }
 ]
