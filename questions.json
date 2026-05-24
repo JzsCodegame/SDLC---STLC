@@ -1,11 +1,11 @@
 [
   {
-    "question": "What are the seven stages of SDLC in correct order?",
+    "question": "What are the 7 stages of SDLC in order?",
     "choices": [
-      "Planning, Requirement Analysis, Design, Development, Testing, Deployment, Maintenance",
-      "Planning, Design, Requirement Analysis, Development, Testing, Deployment, Maintenance",
-      "Requirement Analysis, Planning, Design, Development, Testing, Deployment, Maintenance",
-      "Planning, Requirement Analysis, Development, Design, Testing, Deployment, Maintenance"
+      "Planning → Requirement Analysis → Design → Development → Testing → Deployment → Maintenance",
+      "Planning → Design → Requirement Analysis → Development → Testing → Deployment → Maintenance",
+      "Requirement Analysis → Planning → Design → Development → Testing → Deployment → Maintenance",
+      "Planning → Requirement Analysis → Development → Design → Testing → Deployment → Maintenance"
     ],
     "answer": 0
   },
@@ -13,190 +13,190 @@
     "question": "Which criteria must good requirements meet according to the study guide?",
     "choices": [
       "Concise, Clear, Complete, Unambiguous, Testable, Measurable",
-      "Concise, Clear, Complete, Ambiguous, Testable, Measurable",
-      "Concise, Clear, Complete, Unambiguous, Untestable, Measurable",
-      "Complex, Clear, Complete, Unambiguous, Testable, Measurable"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What is the main difference between functional and non-functional testing?",
-    "choices": [
-      "Functional tests system behavior and outputs; Non-functional tests performance, security, and usability",
-      "Functional tests performance; Non-functional tests system behavior",
-      "Functional tests are automated; Non-functional tests are manual",
-      "Functional tests are done by developers; Non-functional tests are done by QA"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "In the defect life cycle, what status comes after 'Fixed'?",
-    "choices": [
-      "Retested",
-      "Closed",
-      "Verified",
-      "Open"
+      "Detailed, Complex, Complete, Ambiguous, Testable, Measurable",
+      "Concise, Unclear, Complete, Unambiguous, Testable, Immeasurable",
+      "Brief, Clear, Incomplete, Unambiguous, Untestable, Measurable"
     ],
     "answer": 0
   },
   {
     "question": "What is Black Box Testing?",
     "choices": [
-      "Testing where the tester cannot see the internal code, only inputs and outputs",
-      "Testing done in a dark room",
-      "Testing only the login functionality",
-      "Testing done by developers on unit code"
+      "Testing where the tester can see the internal code structure",
+      "Testing that focuses only on system performance",
+      "Testing inputs and outputs without seeing the internal code",
+      "Testing that requires knowledge of programming languages"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "Which Agile methodology replaces traditional requirement documents with shorter user-focused statements?",
+    "question": "Which of the following is an example of Non-Functional Testing?",
     "choices": [
-      "User Stories",
-      "Epic Stories",
-      "Test Cases",
-      "Business Requirements"
+      "Verifying login with correct credentials",
+      "Testing boundary conditions for PIN entry",
+      "Performance testing under heavy load",
+      "Validating account creation form fields"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "What is the correct format for a User Story?",
+    "question": "What is the first stage of STLC (Software Testing Life Cycle)?",
     "choices": [
-      "As a [role], I want [feature], so that [benefit]",
-      "As a [feature], I want [role], so that [benefit]",
-      "As a [benefit], I want [role], so that [feature]",
-      "Given [role], When [feature], Then [benefit]"
+      "Test Planning",
+      "Test Case Design",
+      "Requirement Analysis",
+      "Test Execution"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "What are the three daily standup questions in Agile?",
+    "question": "In Agile methodology, what is a User Story?",
     "choices": [
+      "A detailed technical specification document",
+      "A short description following 'As a [role], I want [feature], so that [benefit]' format",
+      "A comprehensive test plan covering all scenarios",
+      "A defect report describing system failures"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What are the three main questions asked during Daily Stand-Up meetings?",
+    "choices": [
+      "What bugs did I find? What tests will I run? What tools do I need?",
       "What did I do yesterday? What will I do today? Any blockers?",
-      "What did I do today? What will I do tomorrow? Any issues?",
-      "What am I working on? What is my progress? Any help needed?",
-      "What is complete? What is in progress? What is blocked?"
+      "What requirements changed? What code was deployed? What defects were fixed?",
+      "What meetings do I have? What documentation is needed? What training is required?"
     ],
-    "answer": 0
+    "answer": 1
+  },
+  {
+    "question": "In the Defect Life Cycle, what happens after a defect is marked as 'Fixed' by the developer?",
+    "choices": [
+      "The defect is automatically closed",
+      "QA retests and verifies the fix",
+      "The defect is assigned to another developer",
+      "The defect is marked as deferred"
+    ],
+    "answer": 1
   },
   {
     "question": "What is the difference between Severity and Priority in defect management?",
     "choices": [
-      "Severity is impact; Priority is urgency",
-      "Severity is urgency; Priority is impact",
-      "Severity is for developers; Priority is for QA",
-      "Severity is high/medium/low; Priority is critical/major/minor"
+      "Severity is urgency, Priority is impact",
+      "Severity and Priority mean the same thing",
+      "Severity is impact, Priority is urgency",
+      "Severity is for developers, Priority is for QA"
     ],
-    "answer": 0
+    "answer": 2
   },
   {
-    "question": "Which testing type validates system behavior at limits and constraints?",
+    "question": "Which Agile artifact shows the remaining work versus time in a sprint?",
     "choices": [
-      "Boundary Testing",
-      "Positive Testing",
-      "Negative Testing",
-      "Regression Testing"
+      "Product Backlog",
+      "Sprint Backlog",
+      "Burn-Down Chart",
+      "User Story"
     ],
-    "answer": 0
-  },
-  {
-    "question": "What is the main purpose of Requirement Traceability Matrix (RTM)?",
-    "choices": [
-      "Links requirements to test cases and defects through unique IDs",
-      "Tracks project timeline and milestones",
-      "Maps user stories to developers",
-      "Documents test execution results only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "In Agile, what is a Sprint?",
-    "choices": [
-      "A time-boxed iteration typically lasting 1-3 weeks",
-      "A type of user story",
-      "A defect fixing process",
-      "A testing environment"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What does STLC stand for and when does it begin?",
-    "choices": [
-      "Software Testing Life Cycle, begins at Requirement Analysis",
-      "Software Testing Life Cycle, begins at Planning",
-      "System Testing Life Cycle, begins at Design",
-      "Software Test Life Cycle, begins at Development"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Which environment is used for QA test execution?",
-    "choices": [
-      "QA/Test environment",
-      "Production environment",
-      "Development environment",
-      "User environment"
-    ],
-    "answer": 0
+    "answer": 2
   },
   {
     "question": "What is the main difference between Waterfall and Agile methodologies?",
     "choices": [
-      "Waterfall is linear and rigid; Agile is cyclical and collaborative",
-      "Waterfall is faster; Agile is slower",
-      "Waterfall uses sprints; Agile uses phases",
-      "Waterfall is for small projects; Agile is for large projects"
+      "Waterfall is faster than Agile",
+      "Waterfall is linear and rigid, Agile is cyclical and collaborative",
+      "Waterfall requires more documentation than Agile",
+      "Waterfall is only for small projects, Agile is for large projects"
     ],
-    "answer": 0
+    "answer": 1
+  },
+  {
+    "question": "In a typical Agile team, what is the role of a Scrum Master?",
+    "choices": [
+      "To write code and fix bugs",
+      "To define business requirements and priorities",
+      "To facilitate meetings and remove blockers",
+      "To execute test cases and log defects"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What should each Test Case include according to the study guide?",
+    "choices": [
+      "Only Test Case ID and description",
+      "Test Case ID, User Story ID, Steps, Expected Result, Actual Result, Pass/Fail status",
+      "User Story and acceptance criteria only",
+      "Expected results without actual results"
+    ],
+    "answer": 1
   },
   {
     "question": "What is Regression Testing?",
     "choices": [
-      "Retesting to ensure new changes haven't broken existing functionality",
-      "Testing only new features",
-      "Testing done by developers",
-      "Testing done only in production"
+      "Testing new features for the first time",
+      "Testing only the areas where bugs were found",
+      "Retesting existing functionality to ensure new changes haven't broken it",
+      "Testing system performance under load"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which environments are typically used in software development according to the study guide?",
+    "choices": [
+      "Only Development and Production",
+      "Development, QA/Test, UAT, and Production",
+      "Only QA and Production",
+      "Development, Testing, and Staging only"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the purpose of Acceptance Criteria in User Stories?",
+    "choices": [
+      "To provide detailed technical specifications",
+      "To define when the story is 'done' and testable",
+      "To assign story points for estimation",
+      "To identify which developer will work on the story"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "In Agile, what is the relationship between Epic, User Story, and Test Case?",
+    "choices": [
+      "Epic contains User Stories, which link to Test Cases",
+      "Test Cases contain User Stories, which link to Epics",
+      "User Stories contain Epics, which link to Test Cases",
+      "They are all independent with no relationship"
     ],
     "answer": 0
   },
   {
-    "question": "In Jira hierarchy, what is the correct order from largest to smallest?",
+    "question": "What is Root Cause Analysis (RCA) in the context of defect management?",
     "choices": [
-      "Epic → User Stories → Test Cases → Defects",
-      "User Stories → Epic → Test Cases → Defects",
-      "Test Cases → User Stories → Epic → Defects",
-      "Defects → Test Cases → User Stories → Epic"
+      "A method to assign blame for defects",
+      "A collaborative effort to determine why a defect occurred",
+      "A way to estimate how long fixes will take",
+      "A process to prioritize which defects to fix first"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What is the main role of a Scrum Master in Agile?",
+    "question": "According to the study guide, what makes a test case 'independent'?",
     "choices": [
-      "Facilitates meetings and removes blockers",
-      "Writes user stories and requirements",
-      "Develops code and fixes bugs",
-      "Tests functionality and logs defects"
+      "It tests only one feature at a time",
+      "It can be executed without dependency on other test cases",
+      "It requires no test data to execute",
+      "It only tests positive scenarios"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What triggers the creation of a defect?",
+    "question": "What is the main purpose of Sprint Retrospective meetings?",
     "choices": [
-      "When Expected Result ≠ Actual Result",
-      "When a test case is written",
-      "When a user story is created",
-      "When code is developed"
+      "To demonstrate completed features to stakeholders",
+      "To plan which stories to include in the next sprint",
+      "To analyze what went well and what can be improved",
+      "To review and estimate new user stories"
     ],
-    "answer": 0
-  },
-  {
-    "question": "Which Agile ceremony is used to demonstrate completed features to stakeholders?",
-    "choices": [
-      "Sprint Review/Demo",
-      "Daily Standup",
-      "Sprint Planning",
-      "Sprint Retrospective"
-    ],
-    "answer": 0
+    "answer": 2
   }
 ]
