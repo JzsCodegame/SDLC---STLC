@@ -1,6 +1,6 @@
 [
   {
-    "question": "According to the study guide, how many stages are in the SDLC?",
+    "question": "How many stages are there in SDLC according to the study guide?",
     "choices": [
       "6 stages",
       "7 stages",
@@ -10,193 +10,193 @@
     "answer": 1
   },
   {
-    "question": "What are the good requirement criteria that must be analyzed according to the training?",
+    "question": "Which requirement criteria ensures that a requirement has only one interpretation?",
     "choices": [
-      "Clear, complete, testable, and documented",
-      "Concise, clear, complete, unambiguous, testable, measurable, and constructive",
-      "Simple, accurate, verifiable, and traceable",
-      "Detailed, specific, measurable, and time-bound"
+      "Concise",
+      "Unambiguous",
+      "Complete",
+      "Testable"
     ],
     "answer": 1
   },
   {
-    "question": "In the defect life cycle, what status comes immediately after 'Open'?",
+    "question": "What is the first stage of STLC (Software Testing Life Cycle)?",
     "choices": [
-      "Fixed",
-      "Verified",
-      "Assigned",
-      "Closed"
+      "Test Planning",
+      "Test Design",
+      "Requirement Analysis",
+      "Test Execution"
     ],
     "answer": 2
   },
   {
-    "question": "What is the main difference between Functional and Non-Functional testing?",
+    "question": "In Black Box Testing, what does the tester focus on?",
     "choices": [
-      "Functional tests UI, Non-Functional tests database",
-      "Functional tests what the system does, Non-Functional tests how well it performs",
-      "Functional is manual, Non-Functional is automated",
-      "Functional is done by QA, Non-Functional is done by developers"
+      "Internal code structure",
+      "Database queries",
+      "Input and output without seeing code",
+      "Unit test results"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What are the three main categories of test cases mentioned in the study guide?",
+    "choices": [
+      "Manual, Automated, Regression",
+      "Positive, Negative, Boundary",
+      "Functional, System, Integration",
+      "High, Medium, Low"
     ],
     "answer": 1
   },
   {
-    "question": "According to the training, what is Black Box Testing?",
+    "question": "Which Agile ceremony is a 15-minute meeting to discuss yesterday's work, today's plan, and blockers?",
     "choices": [
-      "Testing the internal code structure",
-      "Testing without seeing the code, focusing only on inputs and outputs",
-      "Testing in a dark environment",
-      "Testing only negative scenarios"
+      "Sprint Planning",
+      "Sprint Review",
+      "Daily Stand-Up",
+      "Retrospective"
     ],
-    "answer": 1
+    "answer": 2
   },
   {
-    "question": "In Agile methodology, what are the three questions asked during Daily Stand-Up meetings?",
+    "question": "What is the correct format for a User Story in Agile?",
     "choices": [
-      "What did I do yesterday? What will I do today? Any blockers?",
-      "What is my progress? What are my goals? What help do I need?",
-      "What was completed? What is pending? What are the risks?",
-      "What worked well? What didn't work? What can be improved?"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "What is the correct User Story format taught in the class?",
-    "choices": [
-      "Given [condition], When [action], Then [result]",
+      "Given-When-Then",
       "As a [role], I want [feature], so that [benefit]",
-      "The user should be able to [action] in order to [outcome]",
-      "When [user] performs [action], the system should [response]"
+      "Title-Description-Steps",
+      "ID-Priority-Status"
     ],
     "answer": 1
   },
   {
-    "question": "According to the training, what is the difference between Severity and Priority in defect management?",
+    "question": "In the Defect Life Cycle, what status comes immediately after 'Open'?",
     "choices": [
-      "Severity is how critical the bug is, Priority is how urgent it needs to be fixed",
-      "Severity is assigned by QA, Priority is assigned by developers",
-      "Severity is for functional bugs, Priority is for non-functional bugs",
-      "There is no difference, they mean the same thing"
+      "Fixed",
+      "Assigned",
+      "Verified",
+      "Closed"
     ],
-    "answer": 0
+    "answer": 1
   },
   {
-    "question": "What does RTM stand for in QA terminology?",
+    "question": "What is the difference between Severity and Priority in defect management?",
+    "choices": [
+      "Severity is urgency, Priority is impact",
+      "Severity is impact, Priority is urgency",
+      "They are the same thing",
+      "Severity is for bugs, Priority is for features"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which testing type focuses on performance, load, stress, and security?",
+    "choices": [
+      "Functional Testing",
+      "Non-Functional Testing",
+      "Structural Testing",
+      "Unit Testing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does RTM stand for in QA?",
     "choices": [
       "Real Time Monitoring",
       "Requirement Traceability Matrix",
       "Regression Test Management",
-      "Risk and Test Mapping"
+      "Risk and Test Metrics"
     ],
     "answer": 1
   },
   {
-    "question": "In the STLC, which stage comes immediately after Test Planning?",
+    "question": "In Agile, what is a Sprint typically?",
     "choices": [
-      "Test Execution",
-      "Test Case Design",
-      "Test Analysis",
-      "Bug Tracking"
+      "A 1-month development cycle",
+      "A 1-3 week iteration",
+      "A quarterly planning session",
+      "An annual release"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which environment is used for QA to execute test cases?",
+    "choices": [
+      "Production",
+      "Development",
+      "Testing/QA",
+      "UAT"
     ],
     "answer": 2
   },
   {
-    "question": "What is the main purpose of Regression Testing according to the study guide?",
+    "question": "What is the main purpose of Regression Testing?",
     "choices": [
-      "To test new features only",
-      "To ensure new changes haven't broken existing functionality",
-      "To test the application's performance",
-      "To validate user interface elements"
+      "Test new features only",
+      "Ensure new changes haven't broken existing functionality",
+      "Test performance under load",
+      "Validate user interface design"
     ],
     "answer": 1
   },
   {
-    "question": "According to the training, what are the main roles in a Scrum team?",
+    "question": "In the Agile hierarchy, what contains User Stories?",
     "choices": [
-      "Manager, Developer, Tester",
-      "Product Owner, Scrum Master, Development Team (including QA, Dev, BA)",
-      "Business Analyst, QA Lead, Development Lead",
-      "Project Manager, Technical Lead, Quality Lead"
+      "Tasks",
+      "Epics",
+      "Test Cases",
+      "Defects"
     ],
     "answer": 1
   },
   {
-    "question": "What is the typical duration of a sprint mentioned in the training?",
+    "question": "What does UAT stand for?",
     "choices": [
-      "1 week",
-      "2-3 weeks (typically 10 business days)",
-      "1 month",
-      "6 weeks"
+      "Unit Acceptance Testing",
+      "User Acceptance Testing",
+      "Unified Application Testing",
+      "Universal Automated Testing"
     ],
     "answer": 1
   },
   {
-    "question": "Which testing approach focuses on testing system behavior at limits and constraints?",
+    "question": "Which Scrum role is responsible for facilitating meetings and removing blockers?",
     "choices": [
-      "Positive Testing",
-      "Negative Testing",
-      "Boundary Testing",
-      "Integration Testing"
+      "Product Owner",
+      "Business Analyst",
+      "Scrum Master",
+      "QA Lead"
     ],
     "answer": 2
   },
   {
-    "question": "What is the main difference between UAT and CAT testing?",
+    "question": "What is the main difference between Waterfall and Agile methodologies?",
     "choices": [
-      "UAT is manual, CAT is automated",
-      "UAT is done by business users, CAT is done by actual customers or pilot users",
-      "UAT tests functionality, CAT tests performance",
-      "UAT is before production, CAT is after production"
+      "Waterfall uses automation, Agile is manual",
+      "Waterfall is linear and rigid, Agile is iterative and flexible",
+      "Waterfall is faster, Agile is slower",
+      "Waterfall has more testing, Agile has less"
     ],
     "answer": 1
   },
   {
-    "question": "According to the training, what should happen when Expected Result ≠ Actual Result?",
+    "question": "In test case design, what should happen if Expected Result ≠ Actual Result?",
     "choices": [
-      "Mark the test as incomplete",
-      "Rerun the test case",
-      "Mark as Failed and raise a defect",
-      "Ask the developer to check"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the main advantage of Agile over Waterfall methodology?",
-    "choices": [
-      "Agile is cheaper than Waterfall",
-      "Agile allows continuous collaboration, faster feedback, and adaptability",
-      "Agile requires fewer resources",
-      "Agile has better documentation"
+      "Mark as Pass",
+      "Mark as Fail and create a defect",
+      "Ignore the difference",
+      "Change the expected result"
     ],
     "answer": 1
   },
   {
-    "question": "In the Jira hierarchy mentioned in training, what is the correct order from highest to lowest level?",
+    "question": "What is the purpose of a Burn-Down Chart in Agile?",
     "choices": [
-      "User Story → Epic → Task → Subtask",
-      "Epic → Feature → User Story → Task/Subtask",
-      "Project → Epic → User Story → Bug",
-      "Release → Sprint → User Story → Test Case"
+      "Track team member attendance",
+      "Show remaining work vs time",
+      "List all defects found",
+      "Display test case execution status"
     ],
     "answer": 1
-  },
-  {
-    "question": "What is the purpose of acceptance criteria in User Stories?",
-    "choices": [
-      "To define the technical implementation details",
-      "To specify when the story is 'done' and testable",
-      "To estimate the development effort",
-      "To assign the story to team members"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "According to the study guide, what is the QA's role in Root Cause Analysis (RCA)?",
-    "choices": [
-      "QA performs RCA independently",
-      "QA only reports bugs, developers do RCA",
-      "QA collaborates with Dev, BA, and Architect to analyze the cause together",
-      "QA reviews RCA results but doesn't participate"
-    ],
-    "answer": 2
   }
 ]
