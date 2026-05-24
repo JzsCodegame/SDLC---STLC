@@ -65,7 +65,21 @@ pipeline {
         expression { env.ANTHROPIC_API_KEY && env.ANTHROPIC_API_KEY != '' }
       }
       steps {
-        sh 'MIN_QUESTIONS_PER_TOPIC=${MIN_QUESTIONS_PER_TOPIC} node scripts/generate-ai-questions.js'
+        sh '''
+          if ! command -v docker >/dev/null 2>&1; then
+            echo "Docker is required to run the Node question generator on this Jenkins agent."
+            exit 1
+          fi
+
+          docker run --rm \
+            --volumes-from jenkins \
+            -w "$WORKSPACE" \
+            -e ANTHROPIC_API_KEY="$ANTHROPIC_API_KEY" \
+            -e CLAUDE_MODEL="$ANTHROPIC_MODEL" \
+            -e MIN_QUESTIONS_PER_TOPIC="$MIN_QUESTIONS_PER_TOPIC" \
+            node:22-alpine \
+            node scripts/generate-ai-questions.js
+        '''
       }
     }
 
