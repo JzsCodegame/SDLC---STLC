@@ -40,7 +40,7 @@ const totalQuestions = 25;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const MAX_FLASHCARD_TOPICS = 10;
-const FLASHCARDS_PER_TOPIC = 20;
+const FLASHCARDS_PER_TOPIC = totalQuestions;
 const JAVA_LAB_SAMPLE = {
   code: [
     'class Main {',
@@ -267,7 +267,17 @@ function showJavaPracticeOutput() {
   javaOutput.textContent = JAVA_LAB_SAMPLE.output;
 }
 
-quizTopicSelect?.addEventListener('change', syncJavaPracticeLab);
+function syncFlashcardsToQuizTopic() {
+  syncJavaPracticeLab();
+
+  const selectedTopic = quizTopicSelect?.value;
+  if (!selectedTopic || !flashcardTopicSelect || !availableTopics.has(selectedTopic)) return;
+
+  flashcardTopicSelect.value = selectedTopic;
+  renderFlashcardTopic(availableTopics, selectedTopic);
+}
+
+quizTopicSelect?.addEventListener('change', syncFlashcardsToQuizTopic);
 javaResetBtn?.addEventListener('click', resetJavaPracticeLab);
 javaOutputBtn?.addEventListener('click', showJavaPracticeOutput);
 
@@ -652,9 +662,62 @@ function getQuestionDisplayParts(question) {
   return { prompt, code };
 }
 
-function selectQuizQuestionsByTopic(topic) {
+function getCorrectChoice(question) {
+  const answerIndex = Number(question.answer);
+  if (!Array.isArray(question.choices) || !Number.isInteger(answerIndex)) return '';
+  return String(question.choices[answerIndex] || '').trim();
+}
+
+function buildFlashcardExplanation(question, topic) {
+  const answer = getCorrectChoice(question);
+  const display = getQuestionDisplayParts(question);
+  const prompt = `${display.prompt || question.question || ''} ${display.code || ''}`.toLowerCase();
+  const detectedTopic = topic || detectTopic(question.question);
+
+  if (!answer) {
+    return 'High-level: review the question, identify the main concept, and connect it to the best matching choice.';
+  }
+
+  if (detectedTopic === 'Java') {
+    if (display.code || /print|output|value/.test(prompt)) {
+      return `High-level: trace the Java code step by step; the value or output resolves to "${answer}".`;
+    }
+    if (/oop|object|class|inheritance|polymorphism|encapsulation|method|constructor/.test(prompt)) {
+      return `High-level: this is checking the Java OOP idea connected to "${answer}".`;
+    }
+    return `High-level: remember the Java concept represented by "${answer}" and match it to the code or wording.`;
+  }
+
+  if (/sdlc|stlc|phase|life cycle/.test(prompt)) {
+    return `High-level: "${answer}" is the lifecycle step that best fits the scenario in the question.`;
+  }
+  if (/agile|scrum|sprint|backlog|product owner|scrum master/.test(prompt)) {
+    return `High-level: "${answer}" is the Agile or Scrum role, event, or artifact the question is describing.`;
+  }
+  if (/defect|bug|severity|priority/.test(prompt)) {
+    return `High-level: "${answer}" is the bug-tracking concept that explains impact, urgency, or defect handling.`;
+  }
+  if (/requirement|functional|non-functional|srs/.test(prompt)) {
+    return `High-level: "${answer}" identifies the requirement type or requirement document idea being tested.`;
+  }
+  if (/test|testing|rtm|traceability|smoke|sanity|regression/.test(prompt)) {
+    return `High-level: "${answer}" is the testing term that matches the purpose or activity in the question.`;
+  }
+
+  return `High-level: focus on "${answer}" as the core concept and connect the question wording back to it.`;
+}
+
+function getPreparedTopicQuestions(topic) {
   const topicQuestions = availableTopics.get(topic) || [];
-  selectedQuizQuestions = completeQuestionSet(topic, topicQuestions, totalQuestions);
+  if (topicQuestions.length >= FLASHCARDS_PER_TOPIC) {
+    return topicQuestions.slice(0, FLASHCARDS_PER_TOPIC);
+  }
+
+  return completeQuestionSet(topic, topicQuestions, FLASHCARDS_PER_TOPIC);
+}
+
+function selectQuizQuestionsByTopic(topic) {
+  selectedQuizQuestions = getPreparedTopicQuestions(topic);
 }
 
 startBtn.addEventListener('click', () => {
@@ -831,17 +894,17 @@ function renderFlashcardTopic(topicMap, topic) {
   flashcardList.querySelectorAll('details').forEach((item) => item.remove());
 
   const selectedTopic = topic && topicMap.has(topic) ? topic : topicMap.keys().next().value;
-  const topicQuestions = topicMap.get(selectedTopic) || [];
-  const selectedQuestions = pickRandomItems(topicQuestions, FLASHCARDS_PER_TOPIC);
+  const selectedQuestions = getPreparedTopicQuestions(selectedTopic);
 
   if (flashcardTopicCount) {
-    flashcardTopicCount.textContent = `Showing ${selectedQuestions.length} flashcards from “${selectedTopic}”.`;
+    flashcardTopicCount.textContent = `Showing ${selectedQuestions.length} prep flashcards for "${selectedTopic}". These match the quiz questions currently loaded.`;
   }
 
   selectedQuestions.forEach((question, index) => {
     const details = document.createElement('details');
     details.className = 'flashcard-item';
     const display = getQuestionDisplayParts(question);
+    const correctChoice = getCorrectChoice(question);
 
     const summary = document.createElement('summary');
     if (question.aiGenerated) {
@@ -852,9 +915,16 @@ function renderFlashcardTopic(topicMap, topic) {
     }
     summary.appendChild(document.createTextNode(`${index + 1}. ${display.prompt || question.question}`));
 
-    const answer = document.createElement('p');
+    const answer = document.createElement('div');
     answer.className = 'flashcard-answer';
-    answer.textContent = `Answer: ${question.choices[question.answer]}`;
+
+    const answerLine = document.createElement('p');
+    answerLine.className = 'flashcard-answer-line';
+    answerLine.textContent = `Answer: ${correctChoice || 'Review this concept'}`;
+
+    const explanation = document.createElement('p');
+    explanation.className = 'flashcard-overview';
+    explanation.textContent = buildFlashcardExplanation(question, selectedTopic);
 
     details.appendChild(summary);
     if (display.code) {
@@ -863,6 +933,8 @@ function renderFlashcardTopic(topicMap, topic) {
       code.textContent = display.code;
       details.appendChild(code);
     }
+    answer.appendChild(answerLine);
+    answer.appendChild(explanation);
     details.appendChild(answer);
     flashcardList.appendChild(details);
   });
@@ -893,8 +965,18 @@ function renderFlashcardList() {
   });
 
   flashcardTopicSelect.onchange = () => {
-    renderFlashcardTopic(topicMap, flashcardTopicSelect.value);
+    const selectedTopic = flashcardTopicSelect.value;
+    if (quizTopicSelect && [...quizTopicSelect.options].some((option) => option.value === selectedTopic)) {
+      quizTopicSelect.value = selectedTopic;
+      syncJavaPracticeLab();
+    }
+    renderFlashcardTopic(topicMap, selectedTopic);
   };
+
+  const selectedTopic = quizTopicSelect?.value || flashcardTopicSelect.value;
+  if (selectedTopic && topicMap.has(selectedTopic)) {
+    flashcardTopicSelect.value = selectedTopic;
+  }
 
   renderFlashcardTopic(topicMap, flashcardTopicSelect.value);
 }
