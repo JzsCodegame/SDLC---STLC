@@ -200,7 +200,7 @@ If you see `docker: not found` in Jenkins logs:
 - Either install Docker on that agent, or keep `ENABLE_DOCKER_STAGES=false`.
 
 
-### 7.1) Using your GitHub repository in Jenkins
+### 7.3) Using your GitHub repository in Jenkins
 If your source repository is `https://github.com/JzsCodegame/P_O_M_FrameWork`, configure the Jenkins job SCM/repository URL to that exact GitHub URL.
 
 Important:

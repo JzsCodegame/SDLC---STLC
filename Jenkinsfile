@@ -38,7 +38,7 @@ pipeline {
 
     stage('Build Docker image') {
       when {
-        expression { env.ENABLE_DOCKER_STAGES?.toBoolean() }
+        expression { env.ENABLE_DOCKER_STAGES && env.ENABLE_DOCKER_STAGES.toBoolean() }
       }
       steps {
         sh '''
@@ -61,7 +61,7 @@ pipeline {
 
     stage('Generate AI quiz questions') {
       when {
-        expression { env.ANTHROPIC_API_KEY?.trim() }
+        expression { env.ANTHROPIC_API_KEY && env.ANTHROPIC_API_KEY.trim() }
       }
       steps {
         sh 'node scripts/generate-ai-questions.js'
@@ -70,7 +70,7 @@ pipeline {
 
     stage('Deploy build') {
       when {
-        expression { env.DEPLOY_COMMAND?.trim() }
+        expression { env.DEPLOY_COMMAND && env.DEPLOY_COMMAND.trim() }
       }
       steps {
         sh "${DEPLOY_COMMAND}"
