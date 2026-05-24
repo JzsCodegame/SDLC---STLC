@@ -4,7 +4,20 @@ const fs = require('fs/promises');
 
 const SHEET_CSV_URL = process.env.GOOGLE_SHEET_CSV_URL;
 const OUTPUT_FILE = process.env.STUDENTS_OUTPUT_FILE || 'students.json';
-const MAX_STUDENTS = Number(process.env.MAX_STUDENTS || 20);
+const MAX_STUDENTS_RAW = process.env.MAX_STUDENTS;
+const DEFAULT_MAX_STUDENTS = 20;
+
+function resolveMaxStudents() {
+  if (MAX_STUDENTS_RAW === undefined || MAX_STUDENTS_RAW.trim() === '') {
+    return DEFAULT_MAX_STUDENTS;
+  }
+
+  if (!/^\d+$/.test(MAX_STUDENTS_RAW.trim())) {
+    throw new Error('MAX_STUDENTS must be a non-negative integer (0 or greater).');
+  }
+
+  return Number(MAX_STUDENTS_RAW.trim());
+}
 const SOURCE_DOCUMENT_URL = process.env.SOURCE_DOCUMENT_URL || '';
 
 function parseCsvLine(line) {
@@ -62,6 +75,8 @@ async function main() {
     throw new Error('GOOGLE_SHEET_CSV_URL is required. Use the Google Sheet CSV export URL.');
   }
 
+  const maxStudents = resolveMaxStudents();
+
   const response = await fetch(SHEET_CSV_URL);
   if (!response.ok) {
     throw new Error(`Failed to fetch sheet. HTTP ${response.status}`);
@@ -69,7 +84,7 @@ async function main() {
 
   const csvText = await response.text();
   const rows = toObjects(csvText);
-  const selected = rows.slice(0, MAX_STUDENTS).map((row, index) => ({
+  const selected = rows.slice(0, maxStudents).map((row, index) => ({
     id: index + 1,
     name: row.name || row.student || row.student_name || Object.values(row)[0] || ''
   })).filter((student) => student.name);

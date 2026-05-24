@@ -177,9 +177,37 @@ Alternative if webhook cannot be used:
 3. **Build Docker image**
    - Runs `docker build -t mini-quiz-academy:<build_number> .`.
 4. **Archive generated students file**
-   - Stores `students.json` as Jenkins artifact.
+   - Stores `${STUDENTS_OUTPUT_FILE}` as Jenkins artifact (defaults to `students.json`).
 
 ---
+
+
+
+### 7.2) Build step and deploy step in Jenkins
+This pipeline includes a **Build Docker image** step, enabled when `ENABLE_DOCKER_STAGES=true`.
+
+To deploy after build, set `ENABLE_DOCKER_STAGES=true` and configure `DEPLOY_COMMAND` in Jenkins. The pipeline will run it in the optional **Deploy build** stage.
+
+Example:
+```bash
+DEPLOY_COMMAND="docker tag mini-quiz-academy:${BUILD_NUMBER} my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER} && docker push my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER}"
+```
+
+If `DEPLOY_COMMAND` is empty, deploy is skipped and the build still succeeds.
+
+If you see `docker: not found` in Jenkins logs:
+- Your Jenkins agent does not have Docker installed/in PATH.
+- Either install Docker on that agent, or keep `ENABLE_DOCKER_STAGES=false`.
+
+
+### 7.3) Using your GitHub repository in Jenkins
+If your source repository is `https://github.com/<owner>/<repo>`, configure the Jenkins job SCM/repository URL to that exact GitHub URL.
+
+Important:
+- This GitHub link is the **repository URL**, not the Jenkins server URL.
+- Your Jenkins server URL is usually something like `http://<jenkins-host>:8080`.
+- Build deployment target should be configured in Jenkins stages (artifact archive, Docker registry, or downstream server), while GitHub remains the source checkout.
+
 
 ### 8) How to run locally (developer workflow)
 #### A) Generate students file only
@@ -241,6 +269,22 @@ Field notes:
 - Cause: agent has no Docker runtime/permission.
 - Fix: run job on Docker-capable agent or configure Docker-in-Docker/host socket policy.
 
+
+#### Error in Jenkins log: `Build step 'Execute shell' ... docker: not found`
+This error usually comes from a **Freestyle job shell step**, not from this repository `Jenkinsfile` stages.
+
+Fix options:
+1. Use a **Pipeline job** that runs this repo's `Jenkinsfile` (recommended).
+2. If keeping Freestyle + Execute shell, guard Docker commands manually:
+   ```bash
+   if command -v docker >/dev/null 2>&1; then
+     docker tag mini-quiz-academy:${BUILD_NUMBER} my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER}
+     docker push my-registry.example.com/mini-quiz-academy:${BUILD_NUMBER}
+   else
+     echo "Docker not installed on this agent; skipping tag/push."
+   fi
+   ```
+3. Or move the job to a Jenkins agent/node label where Docker is installed.
 
 #### Push rejected: `! [rejected] HEAD -> main (fetch first)`
 - Cause: job is committing from a detached `HEAD` or stale local ref while `main` advanced remotely.
