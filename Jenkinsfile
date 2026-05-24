@@ -7,6 +7,8 @@ pipeline {
     STUDENTS_OUTPUT_FILE = 'students.json'
     MAX_STUDENTS = '20'
     SOURCE_DOCUMENT_URL = 'https://docs.google.com/document/d/1RzyuPH6ryIVD6z5iRuyJxmUa6jGLJE_wAB5R4S4mUWA/edit?tab=t.0#heading=h.fmjzqinx4dso'
+    DEPLOY_COMMAND = ''
+    ENABLE_DOCKER_STAGES = 'false'
   }
 
   options {
@@ -35,14 +37,43 @@ pipeline {
     }
 
     stage('Build Docker image') {
+      when {
+        expression { env.ENABLE_DOCKER_STAGES?.toBoolean() }
+      }
       steps {
-        sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
+        sh '''
+          if ! command -v docker >/dev/null 2>&1; then
+            echo "Docker is not installed on this Jenkins agent."
+            echo "Install Docker or set ENABLE_DOCKER_STAGES=false to skip Docker build/deploy."
+            exit 1
+          fi
+
+          docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+        '''
       }
     }
 
     stage('Archive generated students file') {
       steps {
         archiveArtifacts artifacts: "${STUDENTS_OUTPUT_FILE}", fingerprint: true
+      }
+    }
+
+    stage('Generate AI quiz questions') {
+      when {
+        expression { env.ANTHROPIC_API_KEY?.trim() }
+      }
+      steps {
+        sh 'node scripts/generate-ai-questions.js'
+      }
+    }
+
+    stage('Deploy build') {
+      when {
+        expression { env.DEPLOY_COMMAND?.trim() }
+      }
+      steps {
+        sh "${DEPLOY_COMMAND}"
       }
     }
   }
