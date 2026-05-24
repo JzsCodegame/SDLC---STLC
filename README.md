@@ -244,6 +244,7 @@ Field notes:
 - Cause: agent has no Docker runtime/permission.
 - Fix: run job on Docker-capable agent or configure Docker-in-Docker/host socket policy.
 
+
 #### Error in Jenkins log: `Build step 'Execute shell' ... docker: not found`
 This error usually comes from a **Freestyle job shell step**, not from this repository `Jenkinsfile` stages.
 

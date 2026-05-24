@@ -258,8 +258,49 @@ function populateQuizTopicDropdown(topicMap) {
   });
 }
 
+
+
+
+function getJavaW3PracticeQuestions() {
+  return [
+    { question: 'Which keyword is used to define a class in Java?', choices: ['class', 'define', 'struct', 'object'], answer: 0 },
+    { question: 'Which method is the entry point of a Java application?', choices: ['run()', 'main()', 'start()', 'init()'], answer: 1 },
+    { question: 'Which primitive type stores true/false values?', choices: ['bool', 'boolean', 'bit', 'flag'], answer: 1 },
+    { question: 'Which symbol ends a statement in Java?', choices: [':', '.', ';', ','], answer: 2 },
+    { question: 'Which keyword is used to inherit a class?', choices: ['inherits', 'extends', 'implements', 'super'], answer: 1 },
+    { question: 'Which access modifier makes a member visible only within its own class?', choices: ['public', 'protected', 'private', 'default'], answer: 2 },
+    { question: 'Which keyword is used to create an object?', choices: ['make', 'new', 'create', 'object'], answer: 1 },
+    { question: 'Which loop executes at least once?', choices: ['for', 'while', 'do...while', 'foreach'], answer: 2 },
+    { question: 'Which package is imported automatically in every Java program?', choices: ['java.util', 'java.io', 'java.lang', 'java.net'], answer: 2 },
+    { question: 'Which method compares string values correctly?', choices: ['==', 'equals()', 'compareTo() only', 'matches() only'], answer: 1 },
+    { question: 'What is the default value of an int field?', choices: ['null', '0', '1', 'undefined'], answer: 1 },
+    { question: 'Which keyword prevents method overriding?', choices: ['static', 'final', 'const', 'sealed'], answer: 1 },
+    { question: 'Which interface supports dynamic-size lists?', choices: ['Set', 'Map', 'List', 'Queue'], answer: 2 },
+    { question: 'Which class is commonly used for key-value pairs?', choices: ['ArrayList', 'HashMap', 'LinkedList', 'TreeSet'], answer: 1 },
+    { question: 'Which exception is unchecked?', choices: ['IOException', 'SQLException', 'NullPointerException', 'ClassNotFoundException'], answer: 2 },
+    { question: 'Which keyword handles exceptions?', choices: ['throw', 'catch', 'error', 'except'], answer: 1 },
+    { question: 'Which block always runs after try/catch (normally)?', choices: ['end', 'cleanup', 'finally', 'last'], answer: 2 },
+    { question: 'Which keyword refers to the current object?', choices: ['this', 'self', 'current', 'me'], answer: 0 },
+    { question: 'Which keyword calls the parent class constructor?', choices: ['parent', 'base', 'super', 'this'], answer: 2 },
+    { question: 'Which collection does NOT allow duplicates?', choices: ['List', 'Set', 'ArrayList', 'Vector'], answer: 1 },
+    { question: 'Which type is used for decimal numbers (higher precision than float)?', choices: ['double', 'decimal', 'number', 'real'], answer: 0 },
+    { question: 'Which operator checks equality of primitive values?', choices: ['=', '===', '==', 'equals'], answer: 2 },
+    { question: 'Which keyword is used to define a constant variable?', choices: ['const', 'final', 'static', 'immutable'], answer: 1 },
+    { question: 'Which JVM component turns bytecode into machine code at runtime?', choices: ['JRE', 'JIT compiler', 'JDK', 'javac'], answer: 1 },
+    { question: 'Which tool compiles .java files to .class files?', choices: ['java', 'jar', 'javac', 'javadoc'], answer: 2 }
+  ];
+}
+
 function selectQuizQuestionsByTopic(topic) {
   const topicQuestions = availableTopics.get(topic) || [];
+  if (topic === 'Java') {
+    const javaGuideQuestions = topicQuestions.length ? pickRandomItems(topicQuestions, Math.min(totalQuestions, topicQuestions.length)) : [];
+    const supplementalQuestions = getJavaW3PracticeQuestions();
+    const needed = Math.max(0, totalQuestions - javaGuideQuestions.length);
+    selectedQuizQuestions = [...javaGuideQuestions, ...pickRandomItems(supplementalQuestions, needed)];
+    return;
+  }
+
   selectedQuizQuestions = pickRandomItems(topicQuestions, totalQuestions);
 }
 
@@ -276,6 +317,13 @@ startBtn.addEventListener('click', () => {
   }
 
   const selectedTopic = quizTopicSelect?.value || 'Java';
+  if (selectedTopic === 'Java') {
+    const javaCount = (availableTopics.get('Java') || []).length;
+    if (javaCount < totalQuestions) {
+      alert(`Study guide has ${javaCount} Java question(s). Filling remaining ${totalQuestions - javaCount} with W3-style Java practice questions.`);
+    }
+  }
+
   selectQuizQuestionsByTopic(selectedTopic);
 
   if (!selectedQuizQuestions.length) {
