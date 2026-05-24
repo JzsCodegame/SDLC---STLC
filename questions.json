@@ -1,202 +1,3277 @@
 [
   {
-    "question": "How many stages are in the SDLC according to the study guide?",
+    "question": "What are the 7 stages of SDLC in order?",
     "choices": [
-      "6 stages",
-      "7 stages",
-      "8 stages",
-      "9 stages"
+      "Planning → Requirement Analysis → Design → Development → Testing → Deployment → Maintenance",
+      "Analysis → Planning → Design → Testing → Development → Deployment → Maintenance",
+      "Planning → Design → Requirement Analysis → Development → Testing → Deployment → Maintenance",
+      "Requirement Analysis → Planning → Development → Design → Testing → Deployment → Maintenance"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which criteria must good requirements meet according to the study guide?",
+    "choices": [
+      "Complete, testable, and documented",
+      "Concise, clear, complete, unambiguous, testable, measurable, and constructive",
+      "Clear, detailed, and approved by stakeholders",
+      "Testable, traceable, and time-bound"
     ],
     "answer": 1
   },
   {
-    "question": "What is the first stage of STLC (Software Testing Life Cycle)?",
+    "question": "What is Black Box Testing?",
     "choices": [
-      "Planning",
-      "Test Case Design",
-      "Requirement Analysis",
-      "Test Execution"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "Which of the following is NOT one of the good requirement criteria mentioned in the study guide?",
-    "choices": [
-      "Concise",
-      "Testable",
-      "Flexible",
-      "Unambiguous"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "In Agile methodology, what is a User Story format?",
-    "choices": [
-      "Given... When... Then...",
-      "As a... I want... So that...",
-      "User shall... System will...",
-      "Input... Process... Output..."
+      "Testing the internal code structure and logic",
+      "Testing without access to source code, focusing only on inputs and outputs",
+      "Testing performed in a dark environment",
+      "Testing that requires special black box hardware"
     ],
     "answer": 1
   },
   {
-    "question": "What is Black Box Testing according to the study guide?",
+    "question": "In the Defect Life Cycle, what is the correct sequence of statuses?",
     "choices": [
-      "Testing the internal code structure",
-      "Testing without seeing the code, focusing on inputs and outputs",
-      "Testing only negative scenarios",
-      "Testing database connections"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which testing type focuses on performance, security, and usability?",
-    "choices": [
-      "Functional Testing",
-      "Black Box Testing",
-      "Non-Functional Testing",
-      "Unit Testing"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What are the three main categories of test cases mentioned in the study guide?",
-    "choices": [
-      "Manual, Automated, Regression",
-      "Positive, Negative, Boundary",
-      "Functional, Non-functional, Integration",
-      "Smoke, Sanity, Full"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In the Defect Life Cycle, what status comes after 'Fixed'?",
-    "choices": [
-      "Closed",
-      "Verified",
-      "Retested",
-      "Open"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What is the typical duration of a sprint in Agile?",
-    "choices": [
-      "1 week",
-      "2-3 weeks",
-      "1 month",
-      "6 weeks"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which Agile role is responsible for facilitating meetings and removing blockers?",
-    "choices": [
-      "Product Owner",
-      "Business Analyst",
-      "Scrum Master",
-      "QA Lead"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "What are the three main questions asked during Daily Stand-up meetings?",
-    "choices": [
-      "What's working? What's not? What's next?",
-      "What did I do yesterday? What will I do today? Any blockers?",
-      "What's completed? What's in progress? What's planned?",
-      "What's tested? What's fixed? What's deployed?"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "In the QA training program structure, what comes after Phase 1 (Manual QA)?",
-    "choices": [
-      "Database Testing",
-      "Phase 2: Automation with Java and Selenium",
-      "Performance Testing",
-      "Advanced Manual Testing"
+      "Open → New → Assigned → Fixed → Verified → Closed",
+      "New → Verified → Open → Fixed → Retested → Verified → Closed",
+      "New → Open → Fixed → Closed",
+      "Assigned → New → Fixed → Verified → Closed"
     ],
     "answer": 1
   },
   {
     "question": "What is the difference between Severity and Priority in defect management?",
     "choices": [
-      "Severity is urgency, Priority is impact",
-      "Severity is impact, Priority is urgency",
-      "They are the same thing",
-      "Severity is for bugs, Priority is for features"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "Which environment is used for QA to execute test cases?",
-    "choices": [
-      "Production",
-      "Development",
-      "QA/Test Environment",
-      "UAT"
+      "Severity is how urgent the fix is, Priority is the impact level",
+      "They are the same thing with different names",
+      "Severity is the impact level, Priority is how urgent the fix is",
+      "Severity is for functional bugs, Priority is for non-functional bugs"
     ],
     "answer": 2
   },
   {
-    "question": "What does RTM stand for in QA terminology?",
+    "question": "Which Agile ceremony focuses on 'What did I do yesterday? What will I do today? Any blockers?'",
     "choices": [
-      "Real Time Monitoring",
-      "Requirement Traceability Matrix",
-      "Regression Test Management",
-      "Release Testing Model"
+      "Sprint Planning",
+      "Sprint Review",
+      "Daily Stand-Up",
+      "Sprint Retrospective"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the main difference between Functional and Non-Functional testing?",
+    "choices": [
+      "Functional tests the UI, Non-Functional tests the database",
+      "Functional verifies what the system does, Non-Functional verifies how well it performs",
+      "Functional is manual testing, Non-Functional is automated testing",
+      "Functional is done by QA, Non-Functional is done by developers"
     ],
     "answer": 1
   },
   {
-    "question": "In Agile, what is the Product Backlog?",
+    "question": "In Agile, what is a User Story format?",
     "choices": [
-      "A list of completed features",
-      "A warehouse of all features and user stories to develop",
-      "A sprint planning document",
-      "A defect tracking system"
+      "Given [condition], When [action], Then [result]",
+      "As a [role], I want [feature], so that [benefit]",
+      "Requirements: [list], Acceptance: [criteria]",
+      "Title: [name], Description: [details], Priority: [level]"
     ],
     "answer": 1
   },
   {
-    "question": "What is the main purpose of Regression Testing?",
+    "question": "What is Regression Testing?",
     "choices": [
-      "To test new features only",
-      "To ensure new changes haven't broken existing functionality",
-      "To test performance under load",
-      "To validate user acceptance"
+      "Testing new features for the first time",
+      "Testing that goes backwards through the application",
+      "Retesting to ensure new changes haven't broken existing functionality",
+      "Testing performed by returning customers"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the purpose of a Requirement Traceability Matrix (RTM)?",
+    "choices": [
+      "To track project timelines and deadlines",
+      "To link requirements to test cases and defects for full traceability",
+      "To measure team performance and productivity",
+      "To document meeting notes and decisions"
     ],
     "answer": 1
   },
   {
-    "question": "Which SDLC methodology allows going back to previous phases and is fully cyclical?",
+    "question": "Which testing environment should NEVER be used for testing activities?",
+    "choices": [
+      "Development (Dev)",
+      "Quality Assurance (QA)",
+      "User Acceptance Testing (UAT)",
+      "Production (Prod)"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the main role of a Scrum Master in Agile?",
+    "choices": [
+      "Write code and fix bugs",
+      "Define product requirements and priorities",
+      "Facilitate meetings and remove blockers",
+      "Execute test cases and log defects"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In STLC, what comes after Test Case Design?",
+    "choices": [
+      "Test Planning",
+      "Test Execution",
+      "Requirement Analysis",
+      "Bug Tracking"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is Boundary Testing?",
+    "choices": [
+      "Testing at the edges or limits of input ranges",
+      "Testing the physical boundaries of the application",
+      "Testing network connectivity boundaries",
+      "Testing user permission boundaries"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the main advantage of Agile over Waterfall methodology?",
+    "choices": [
+      "Agile is cheaper than Waterfall",
+      "Agile allows continuous collaboration and faster feedback loops",
+      "Agile requires fewer team members",
+      "Agile eliminates the need for documentation"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does a Burn-Down Chart show in Agile?",
+    "choices": [
+      "The number of defects found over time",
+      "Team member performance ratings",
+      "Remaining work versus time in a sprint",
+      "Budget consumption over project duration"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Java, what will this code output? int x = 5; System.out.println(x++);",
+    "choices": [
+      "5",
+      "6",
+      "Error",
+      "0"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which Java code correctly declares and initializes an array?",
+    "choices": [
+      "int[] arr = new int[5];",
+      "int arr[] = {1, 2, 3, 4, 5};",
+      "int[] arr = new int[]{1, 2, 3};",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is Root Cause Analysis (RCA) in defect management?",
+    "choices": [
+      "A method to assign blame for defects",
+      "A collaborative process to identify why a defect occurred",
+      "A way to estimate defect fix time",
+      "A technique to prevent all future defects"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the difference between a Test Plan and Test Cases?",
+    "choices": [
+      "Test Plan is detailed steps, Test Cases are high-level strategy",
+      "Test Plan is high-level strategy defining what/when/how to test, Test Cases are detailed executable steps",
+      "They are the same document with different names",
+      "Test Plan is for manual testing, Test Cases are for automation"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is Unit Testing and who typically performs it?",
+    "choices": [
+      "Testing individual code components, typically performed by QA engineers",
+      "Testing the entire application as one unit, performed by end users",
+      "Testing small pieces of code to verify logic, typically performed by developers",
+      "Testing user interface components, performed by business analysts"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the purpose of 508 Compliance Testing?",
+    "choices": [
+      "To test application performance under load",
+      "To ensure application security against attacks",
+      "To verify application accessibility for people with disabilities",
+      "To validate database integrity and consistency"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In Agile, what is an Epic?",
+    "choices": [
+      "A single user story with acceptance criteria",
+      "A large feature that contains multiple user stories",
+      "A defect that affects multiple components",
+      "A sprint that lasts longer than usual"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the main difference between UAT and CAT testing?",
+    "choices": [
+      "UAT is automated, CAT is manual",
+      "UAT is for functional testing, CAT is for performance testing",
+      "UAT uses internal business users, CAT uses actual customers or pilot users",
+      "UAT is done before development, CAT is done after deployment"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What should happen when Expected Result ≠ Actual Result in test execution?",
+    "choices": [
+      "Mark the test as passed and continue",
+      "Skip the test and move to the next one",
+      "Mark the test as failed and log a defect",
+      "Rewrite the expected result to match actual result"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What will this Java code output?\n```java\nclass Animal {\n    void sound() { System.out.println(\"Animal sound\"); }\n}\nclass Dog extends Animal {\n    void sound() { System.out.println(\"Woof\"); }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Animal a = new Dog();\n        a.sound();\n    }\n}\n```",
+    "choices": [
+      "Animal sound",
+      "Woof",
+      "Compilation error",
+      "Runtime error"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which Java code snippet correctly demonstrates encapsulation?",
+    "choices": [
+      "public class Student { public String name; }",
+      "public class Student { private String name; public String getName() { return name; } }",
+      "public class Student { String name; }",
+      "public class Student { protected String name; }"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the output of this Java code?\n```java\npublic class Test {\n    static int count = 0;\n    public Test() {\n        count++;\n    }\n    public static void main(String[] args) {\n        new Test();\n        new Test();\n        System.out.println(count);\n    }\n}\n```",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "Compilation error"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which statement about Java interfaces vs abstract classes is correct?",
+    "choices": [
+      "Interfaces can have constructors",
+      "Abstract classes can extend multiple classes",
+      "Interfaces support multiple inheritance",
+      "Abstract classes cannot have abstract methods"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java code print?\n```java\npublic class Test {\n    void display(int a) {\n        System.out.println(\"int: \" + a);\n    }\n    void display(double a) {\n        System.out.println(\"double: \" + a);\n    }\n    public static void main(String[] args) {\n        Test t = new Test();\n        t.display(5.0f);\n    }\n}\n```",
+    "choices": [
+      "int: 5",
+      "double: 5.0",
+      "Compilation error",
+      "Runtime error"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What happens when this Java code is compiled?\n```java\nclass Parent {\n    private void show() {\n        System.out.println(\"Parent\");\n    }\n}\nclass Child extends Parent {\n    public void show() {\n        System.out.println(\"Child\");\n    }\n}\n```",
+    "choices": [
+      "Compiles successfully - method overriding",
+      "Compilation error - cannot override private method",
+      "Compiles successfully - method overloading",
+      "Runtime error"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the output of this Java ArrayList code?\n```java\nimport java.util.ArrayList;\npublic class Test {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n        list.add(\"Java\");\n        list.add(\"Python\");\n        list.add(1, \"C++\");\n        System.out.println(list.get(1));\n    }\n}\n```",
+    "choices": [
+      "Java",
+      "C++",
+      "Python",
+      "IndexOutOfBoundsException"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which Java access modifier allows access within the same package?",
+    "choices": [
+      "private",
+      "protected",
+      "public",
+      "default (package-private)"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java exception handling code output?\n```java\npublic class Test {\n    public static void main(String[] args) {\n        try {\n            int result = 10/0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Caught\");\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}\n```",
+    "choices": [
+      "Caught",
+      "Finally",
+      "Caught\\nFinally",
+      "Runtime error"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the difference between JVM, JDK, and JRE in Java?",
+    "choices": [
+      "JVM contains JDK and JRE",
+      "JDK contains JRE and JVM",
+      "JRE contains JDK and JVM",
+      "They are all the same thing"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java constructor code output?\n```java\nclass Student {\n    String name;\n    Student() {\n        this(\"Unknown\");\n    }\n    Student(String name) {\n        this.name = name;\n        System.out.println(\"Student: \" + name);\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        new Student();\n    }\n}\n```",
+    "choices": [
+      "Student: null",
+      "Student: Unknown",
+      "Compilation error",
+      "No output"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which Java code correctly demonstrates method overriding?",
+    "choices": [
+      "Same class, same method name, different parameters",
+      "Different class, same method name, same parameters",
+      "Subclass, same method name, same parameters",
+      "Same class, different method name, same parameters"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the output of this Java HashMap code?\n```java\nimport java.util.HashMap;\npublic class Test {\n    public static void main(String[] args) {\n        HashMap<String, Integer> map = new HashMap<>();\n        map.put(\"Java\", 1);\n        map.put(\"Python\", 2);\n        map.put(\"Java\", 3);\n        System.out.println(map.get(\"Java\"));\n    }\n}\n```",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "null"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java static method code print?\n```java\npublic class Test {\n    static void display() {\n        System.out.println(\"Static method\");\n    }\n    public static void main(String[] args) {\n        Test t = null;\n        t.display();\n    }\n}\n```",
+    "choices": [
+      "Static method",
+      "NullPointerException",
+      "Compilation error",
+      "No output"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which Java loop will execute at least once regardless of condition?",
+    "choices": [
+      "for loop",
+      "while loop",
+      "do-while loop",
+      "enhanced for loop"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the output of this Java array code?\n```java\npublic class Test {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3, 4, 5};\n        System.out.println(arr[arr.length - 1]);\n    }\n}\n```",
+    "choices": [
+      "4",
+      "5",
+      "ArrayIndexOutOfBoundsException",
+      "0"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What happens with this Java abstract class code?\n```java\nabstract class Shape {\n    abstract void draw();\n    void display() {\n        System.out.println(\"Shape\");\n    }\n}\nclass Circle extends Shape {\n    // Missing implementation\n}\n```",
+    "choices": [
+      "Compiles successfully",
+      "Compilation error - must implement draw()",
+      "Runtime error",
+      "Circle becomes abstract automatically"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java polymorphism code output?\n```java\nclass Animal {\n    void move() { System.out.println(\"Animal moves\"); }\n}\nclass Bird extends Animal {\n    void move() { System.out.println(\"Bird flies\"); }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Animal[] animals = {new Animal(), new Bird()};\n        for(Animal a : animals) {\n            a.move();\n        }\n    }\n}\n```",
+    "choices": [
+      "Animal moves\\nAnimal moves",
+      "Bird flies\\nBird flies",
+      "Animal moves\\nBird flies",
+      "Compilation error"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which Java exception type must be declared in method signature?",
+    "choices": [
+      "RuntimeException",
+      "NullPointerException",
+      "IOException",
+      "ArithmeticException"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the output of this Java LinkedList code?\n```java\nimport java.util.LinkedList;\npublic class Test {\n    public static void main(String[] args) {\n        LinkedList<Integer> list = new LinkedList<>();\n        list.addFirst(1);\n        list.addLast(2);\n        list.addFirst(3);\n        System.out.println(list.getFirst());\n    }\n}\n```",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "NoSuchElementException"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java conditional code print?\n```java\npublic class Test {\n    public static void main(String[] args) {\n        int x = 10;\n        int y = 20;\n        String result = (x > y) ? \"x is greater\" : \"y is greater\";\n        System.out.println(result);\n    }\n}\n```",
+    "choices": [
+      "x is greater",
+      "y is greater",
+      "true",
+      "false"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which Java keyword is used to prevent method overriding?",
+    "choices": [
+      "static",
+      "final",
+      "abstract",
+      "synchronized"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What happens with this Java try-catch code?\n```java\npublic class Test {\n    public static void main(String[] args) {\n        try {\n            String str = null;\n            System.out.println(str.length());\n        } catch (Exception e) {\n            System.out.println(\"Exception caught\");\n            return;\n        } finally {\n            System.out.println(\"Finally block\");\n        }\n    }\n}\n```",
+    "choices": [
+      "Exception caught",
+      "Finally block",
+      "Exception caught\\nFinally block",
+      "NullPointerException"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A team is following the Waterfall SDLC model. They have completed gathering requirements and are now creating system architecture diagrams and database schemas. Which SDLC phase are they currently in?",
+    "choices": [
+      "Analysis",
+      "Design",
+      "Implementation",
+      "Planning"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the SDLC Analysis phase, a business analyst discovers that the original requirements document is missing critical user acceptance criteria. What should be the immediate next step?",
+    "choices": [
+      "Proceed to Design phase and add criteria later",
+      "Return to Planning phase to redefine scope",
+      "Continue Analysis and document the missing criteria",
+      "Skip to Implementation and gather feedback"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which SDLC model allows developers to return to previous phases when new requirements are discovered during development?",
     "choices": [
       "Waterfall",
-      "Iterative",
+      "Spiral",
+      "V-Model",
+      "Sequential"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A project manager needs to determine if the SDLC Design phase can begin. Which exit criteria from the Analysis phase must be met first?",
+    "choices": [
+      "Code review completed",
+      "Requirements document approved and signed off",
+      "Unit tests written",
+      "Deployment plan finalized"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In an Agile SDLC approach, a development team completes a 2-week sprint. Which phases of the traditional Software Development Life Cycle are typically included within each sprint?",
+    "choices": [
+      "Only Implementation and Testing",
+      "Planning, Analysis, and Design only",
+      "Analysis, Design, Implementation, and Testing",
+      "Only Planning and Analysis"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A software architect is creating detailed technical specifications and UML diagrams during the SDLC. Which deliverable document should they produce at the end of this phase?",
+    "choices": [
+      "Requirements Specification Document",
+      "System Design Document",
+      "Test Plan Document",
+      "User Manual"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the V-Model SDLC approach, unit testing plans are created during which corresponding development phase?",
+    "choices": [
+      "Requirements Analysis",
+      "System Design",
+      "Detailed Design",
+      "Implementation"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A QA engineer is executing test cases and logging defects during the SDLC. The entry criteria for this phase requires which deliverable from the previous phase?",
+    "choices": [
+      "Requirements document",
+      "Test plan",
+      "Deployed application code",
+      "User manual"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Following the Waterfall SDLC model, a team has finished coding. Before moving to the Testing phase, which exit criteria must be satisfied?",
+    "choices": [
+      "User acceptance testing completed",
+      "Code development completed and code review passed",
+      "System deployed to production",
+      "Maintenance plan documented"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the SDLC Maintenance phase, a support team receives bug reports from users. Which type of maintenance activity should they prioritize first?",
+    "choices": [
+      "Perfective maintenance for new features",
+      "Adaptive maintenance for environment changes",
+      "Corrective maintenance for critical bugs",
+      "Preventive maintenance for future issues"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A project following the Spiral SDLC model has completed one iteration. What distinguishes this model from Waterfall in terms of risk management?",
+    "choices": [
+      "Risks are identified only at the end",
+      "Risk analysis occurs in each spiral iteration",
+      "Risks are ignored until testing",
+      "Risk assessment happens once during planning"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During the SDLC Implementation phase, a developer writes this Java code:\n\npublic class User {\n    private String name;\n    public User(String name) { this.name = name; }\n    public String getName() { return name; }\n}\n\nWhich SDLC deliverable should have specified this class structure before coding began?",
+    "choices": [
+      "Requirements Specification",
+      "System Design Document",
+      "Test Cases",
+      "Deployment Guide"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A team is using Agile SDLC methodology. During which traditional Software Development Life Cycle phase equivalent would they typically conduct daily standup meetings?",
+    "choices": [
+      "Planning phase only",
+      "Throughout Implementation phase",
+      "During Testing phase only",
+      "Across all active development phases"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the SDLC Testing phase, a QA engineer discovers this Java method fails unit tests:\n\npublic int divide(int a, int b) {\n    return a / b;\n}\n\nWhat should happen next according to proper SDLC process?",
+    "choices": [
+      "Deploy to production and fix later",
+      "Return to Implementation phase for debugging",
+      "Continue to Deployment phase",
+      "Skip to Maintenance phase"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A project manager is evaluating SDLC models for a project with frequently changing requirements. Which model would be most appropriate?",
+    "choices": [
+      "Waterfall - handles changes systematically",
+      "V-Model - emphasizes verification",
+      "Agile - accommodates changing requirements",
+      "Sequential - maintains order"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During the SDLC Deployment phase, a DevOps engineer needs to satisfy entry criteria. Which deliverable from Testing phase is required?",
+    "choices": [
+      "Requirements document",
+      "Design specifications",
+      "Test execution report with passed test cases",
+      "Project timeline"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A business analyst is creating user stories during the SDLC Analysis phase. Examine this story: 'As a customer, I want to login so that I can access my account.' What additional information is needed to satisfy the exit criteria for this phase?",
+    "choices": [
+      "Acceptance criteria and priority",
+      "Technical implementation details",
+      "Database schema design",
+      "User interface mockups"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the SDLC Planning phase, a project manager must determine team roles. Who is typically responsible for creating technical architecture documents?",
+    "choices": [
+      "Business Analyst",
+      "Software Architect",
+      "QA Engineer",
+      "Project Manager"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A development team following V-Model SDLC has written this Java test case during Design phase:\n\n@Test\npublic void testUserCreation() {\n    User user = new User(\"John\");\n    assertEquals(\"John\", user.getName());\n}\n\nWhen should this test be executed according to V-Model principles?",
+    "choices": [
+      "During Design phase",
+      "During Implementation phase",
+      "During corresponding Testing phase",
+      "During Maintenance phase"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the Software Development Life Cycle, a team has completed coding but discovers the application crashes during integration testing. Which SDLC phase should they return to?",
+    "choices": [
+      "Analysis phase",
+      "Design phase",
+      "Implementation phase",
+      "Deployment phase"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A startup is choosing an SDLC model for their mobile app with unclear requirements and tight deadlines. Which model characteristic should they prioritize?",
+    "choices": [
+      "Extensive documentation like Waterfall",
+      "Iterative development like Agile",
+      "Risk analysis like Spiral",
+      "Parallel development like V-Model"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During the SDLC Maintenance phase, users request a new feature. A developer adds this Java method:\n\npublic void sendEmail(String message) {\n    // new feature implementation\n    System.out.println(\"Email sent: \" + message);\n}\n\nWhich type of maintenance is being performed?",
+    "choices": [
+      "Corrective maintenance",
+      "Adaptive maintenance",
+      "Perfective maintenance",
+      "Preventive maintenance"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A quality assurance lead is defining exit criteria for the SDLC Testing phase. Which metric should be included to ensure quality standards?",
+    "choices": [
+      "Code lines written",
+      "Team velocity",
+      "Test case pass rate above threshold",
+      "Number of features implemented"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the Software Development Life Cycle, a project team discovers that user requirements conflict with technical constraints during Implementation. Following Spiral SDLC model, what should happen next?",
+    "choices": [
+      "Continue implementation and resolve later",
+      "Start a new spiral iteration with risk analysis",
+      "Abandon the project",
+      "Skip to testing phase"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A project team is starting the STLC Requirement Analysis phase. They have received a requirements document but notice several ambiguities. What should be the PRIMARY deliverable from this phase?",
+    "choices": [
+      "Test execution reports",
+      "Requirements Traceability Matrix (RTM)",
+      "Test environment setup guide",
+      "Defect closure report"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the STLC Test Planning phase, which component should NOT be included in a comprehensive test plan document?",
+    "choices": [
+      "Test scope and objectives",
+      "Resource allocation and timeline",
+      "Actual defect counts found during execution",
+      "Risk assessment and mitigation strategies"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During STLC Test Case Development phase, a tester writes: 'Test Step 1: Enter valid email. Expected Result: System accepts input.' What is the main issue with this test case?",
+    "choices": [
+      "Missing test case ID",
+      "Vague test data specification",
+      "No preconditions mentioned",
+      "Missing test environment details"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the correct entry criteria for the STLC Environment Setup phase?",
+    "choices": [
+      "All test cases executed successfully",
+      "Test plan approved and test data prepared",
+      "All defects fixed and retested",
+      "Test summary report completed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC Test Execution phase, a tester finds that 15 out of 100 test cases failed. Before proceeding, what should be verified as the exit criteria?",
+    "choices": [
+      "All test cases must pass",
+      "Planned test cases executed and defects logged",
+      "Environment must be completely stable",
+      "All team members must approve results"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During the STLC Test Closure phase, which metric would be MOST useful for measuring test effectiveness?",
+    "choices": [
+      "Number of testers involved",
+      "Defect density (defects per module)",
+      "Total test environment cost",
+      "Number of test plan revisions"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Software Testing Life Cycle implementation shows: Phase 1→Requirements Analysis, Phase 2→Environment Setup, Phase 3→Test Planning. What is wrong with this sequence?",
+    "choices": [
+      "Requirements Analysis should come after Test Planning",
+      "Environment Setup should come after Test Case Development",
+      "Test Planning should come before Environment Setup",
+      "Nothing is wrong with this sequence"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC, examine this test plan component: 'Testing will cover all functional requirements but exclude performance testing due to timeline constraints.' This represents which test plan section?",
+    "choices": [
+      "Test approach and strategy",
+      "Test scope and limitations",
+      "Resource allocation",
+      "Risk assessment"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A team completes STLC Test Case Development with 200 test cases. However, during review, 50 cases are found to have no clear expected results. What should be the immediate action?",
+    "choices": [
+      "Proceed to Environment Setup phase",
+      "Return to Requirements Analysis phase",
+      "Revise and complete the test cases",
+      "Skip to Test Execution with available cases"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Software Testing Life Cycle, which exit criteria is INCORRECTLY matched with its phase? Environment Setup: 'Test environment is stable and accessible'",
+    "choices": [
+      "Requirements Analysis: 'RTM created and approved'",
+      "Test Planning: 'Test plan document signed off'",
+      "Test Execution: 'All planned test cases designed'",
+      "Test Case Development: 'Test cases reviewed and approved'"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During STLC Test Closure, a test summary report shows: Total Tests: 500, Passed: 450, Failed: 30, Blocked: 20. What is the test pass percentage?",
+    "choices": [
+      "90%",
+      "94%",
+      "96%",
+      "92%"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Java application testing in STLC requires this code to be tested: `String result = (a > 0) ? 'Positive' : 'Negative';` During Test Case Development phase, what test data should be included?",
+    "choices": [
+      "Only positive numbers",
+      "Only negative numbers",
+      "Positive, negative, and zero values",
+      "Only zero values"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC Environment Setup phase, a Java application requires database connectivity. The entry criteria checklist shows: ✓ Test data prepared, ✗ Database server configured, ✓ Application deployed. Can this phase proceed?",
+    "choices": [
+      "Yes, majority criteria are met",
+      "No, all entry criteria must be satisfied",
+      "Yes, database can be configured later",
+      "No, application should not be deployed yet"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During Software Testing Life Cycle Test Execution, this Java code fails testing: `int[] arr = {1,2,3}; System.out.println(arr[3]);` What should be logged in the defect report?",
+    "choices": [
+      "Performance issue in array access",
+      "ArrayIndexOutOfBoundsException occurs",
+      "Memory leak in array creation",
+      "Syntax error in array declaration"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC Test Planning phase, what should be specified when testing this Java method: `public boolean isEven(int num) { return num % 2 == 0; }`?",
+    "choices": [
+      "Only positive test scenarios",
+      "Test approach for boundary values and edge cases",
+      "Performance benchmarks only",
+      "Memory usage requirements only"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Software Testing Life Cycle Test Closure report indicates: 'Code coverage: 85%, Requirement coverage: 95%, Defect leakage: 2%'. What does this suggest about test quality?",
+    "choices": [
+      "Testing was inadequate due to low code coverage",
+      "Testing was comprehensive with minimal production defects",
+      "Requirements analysis was incomplete",
+      "Test execution phase was rushed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC Requirements Analysis phase, testing a Java login system with requirements: 'Username must be 5-15 characters, password must contain special characters.' What should the RTM track?",
+    "choices": [
+      "Only positive login scenarios",
+      "Each requirement mapped to corresponding test cases",
+      "Database performance metrics",
+      "User interface design elements"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During Software Testing Life Cycle Test Case Development, a tester creates cases for: `if(age >= 18) return 'Adult'; else return 'Minor';` What represents complete test coverage?",
+    "choices": [
+      "Test cases for age = 18 only",
+      "Test cases for age < 18 and age >= 18",
+      "Test cases for age = 0 only",
+      "Test cases for negative age values only"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC Test Execution phase, testing this Java code: `String name = null; int length = name.length();` results in NullPointerException. What should be the test case status?",
+    "choices": [
+      "Pass - exception handling working",
+      "Fail - application should handle null gracefully",
+      "Blocked - invalid test data",
+      "Skip - test case incorrectly designed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Software Testing Life Cycle Environment Setup phase requires testing a Java web application. Which component is NOT typically part of the test environment checklist?",
+    "choices": [
+      "Application server configuration",
+      "Test database with sample data",
+      "Source code repository access",
+      "Production deployment procedures"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC Test Planning, what test strategy should be defined for this Java validation: `if(email.contains('@') && email.contains('.')) return true;`?",
+    "choices": [
+      "Only test valid email formats",
+      "Test valid emails, invalid formats, and edge cases like multiple @ symbols",
+      "Only test emails without @ symbol",
+      "Focus solely on performance testing"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During Software Testing Life Cycle Test Closure, metrics show: Test cases planned: 300, Executed: 280, Passed: 250, Failed: 30. What is the test execution percentage?",
+    "choices": [
+      "83.3%",
+      "89.3%",
+      "93.3%",
+      "100%"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In STLC Requirements Analysis phase, a Java calculator application requirement states: 'Division by zero should display error message.' What should be documented in the RTM?",
+    "choices": [
+      "Only successful division test cases",
+      "Requirement ID mapped to division by zero test scenarios",
+      "Performance requirements for calculations",
+      "User interface layout specifications"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Software Testing Life Cycle Test Summary Report shows these Java application results: Functional tests: 95% pass, Integration tests: 88% pass, Regression tests: 92% pass. What conclusion should be drawn?",
+    "choices": [
+      "Application is ready for production release",
+      "Integration testing needs more attention before release",
+      "Functional testing was inadequate",
+      "Regression testing should be repeated entirely"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You have a method `calculateDiscount(double price, int customerType)` that returns different discount percentages. For unit testing this method, which of the following test cases would be MOST appropriate?",
+    "choices": [
+      "Test with actual database connections to verify customer data",
+      "Test the method in isolation with mock parameters like calculateDiscount(100.0, 1)",
+      "Test the entire checkout process from UI to payment",
+      "Test how the method performs under 1000 concurrent users"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During integration testing, you discover that Module A sends data in JSON format but Module B expects XML. What type of integration issue is this?",
+    "choices": [
+      "Performance bottleneck",
+      "Security vulnerability",
+      "Interface mismatch",
+      "Memory leak"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A system testing scenario involves testing an e-commerce application's complete order workflow from product selection to payment confirmation. What makes this distinctly system testing rather than integration testing?",
+    "choices": [
+      "It tests individual methods in isolation",
+      "It focuses only on database connections",
+      "It validates the complete end-to-end business process",
+      "It only checks API response formats"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In acceptance testing for a banking application, the test case states: 'User should be able to transfer $500 from checking to savings account.' This test case is written from whose perspective?",
+    "choices": [
+      "Database administrator",
+      "End user/customer",
+      "System architect",
+      "Network engineer"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which scenario represents functional testing of a login feature?",
+    "choices": [
+      "Measuring how long it takes to authenticate 1000 users",
+      "Verifying that valid credentials allow access and invalid ones are rejected",
+      "Testing login under low memory conditions",
+      "Checking if the login page loads within 2 seconds"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test checks whether a web application can handle 10,000 simultaneous users without crashing. This is an example of which type of testing?",
+    "choices": [
+      "Functional testing",
+      "Non-functional testing",
+      "Unit testing",
+      "Acceptance testing"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In black-box testing of a method `isValidEmail(String email)`, which information should the tester NOT have access to?",
+    "choices": [
+      "Expected output for valid emails",
+      "Expected output for invalid emails",
+      "Internal algorithm and code logic",
+      "Method signature and parameters"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A white-box testing approach for this code snippet would focus on: `if (age >= 18 && hasLicense) { return true; } else { return false; }`. What should the test cases ensure?",
+    "choices": [
+      "Only testing with valid driver ages",
+      "Covering both true and false branches of the condition",
+      "Testing only the user interface",
+      "Focusing on database performance"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Grey-box testing combines elements of both black-box and white-box approaches. In which scenario would grey-box testing be most appropriate?",
+    "choices": [
+      "Testing a calculator's add function with no code access",
+      "Reviewing source code without executing tests",
+      "Testing a web application with limited knowledge of internal architecture",
+      "Testing hardware components only"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "After fixing a bug in the payment processing module, regression testing should focus on which area?",
+    "choices": [
+      "Only the newly fixed payment code",
+      "All existing functionality that might be affected by the payment fix",
+      "Only new features added this sprint",
+      "Only the user interface components"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Smoke testing is performed on a new build. The test reveals that the application crashes on startup. What should happen next?",
+    "choices": [
+      "Continue with detailed functional testing",
+      "Reject the build and return it to development",
+      "Perform load testing to find the root cause",
+      "Deploy to production with a warning"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A sanity testing scenario involves verifying that after a minor bug fix in the search functionality, the search feature still works correctly. How does this differ from regression testing?",
+    "choices": [
+      "Sanity testing is broader and tests the entire application",
+      "Sanity testing is narrower and focuses on the specific changed area",
+      "Sanity testing requires automated tools",
+      "Sanity testing is performed by end users only"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During exploratory testing of a mobile app, a tester discovers that rotating the device while on the checkout page causes data loss. This finding demonstrates which key characteristic of exploratory testing?",
+    "choices": [
+      "Following predetermined test scripts exactly",
+      "Using only automated testing tools",
+      "Simultaneous learning, test design, and execution",
+      "Testing only happy path scenarios"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Performance testing reveals that a web page loads in 5 seconds under normal conditions. What additional information would help determine if this meets requirements?",
+    "choices": [
+      "The number of lines of code in the application",
+      "The performance benchmark or acceptable response time criteria",
+      "The color scheme of the user interface",
+      "The number of developers on the team"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Load testing results show that response time increases from 2 seconds to 8 seconds as user count grows from 100 to 500. What does this indicate?",
+    "choices": [
+      "The system maintains consistent performance under varying loads",
+      "The system performance degrades as load increases",
+      "The system has a security vulnerability",
+      "The system has perfect scalability"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In stress testing, you gradually increase the load until the system fails at 1200 concurrent users. What is the primary value of identifying this failure point?",
+    "choices": [
+      "To prove the system is unreliable",
+      "To understand system limits and breaking point behavior",
+      "To demonstrate that testing is complete",
+      "To show that the system needs no improvements"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Security testing of a login form reveals that it's vulnerable to SQL injection attacks. Which type of input would likely expose this vulnerability?",
+    "choices": [
+      "Valid username and password combinations",
+      "Malicious SQL code in input fields like '; DROP TABLE users; --",
+      "Long usernames with many characters",
+      "Numeric passwords only"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Consider this Java method for unit testing: `public int divide(int a, int b) { return a / b; }`. Which test case would reveal a critical flaw?",
+    "choices": [
+      "divide(10, 2) expecting result 5",
+      "divide(0, 5) expecting result 0",
+      "divide(10, 0) which should handle division by zero",
+      "divide(8, 4) expecting result 2"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In integration testing of these two Java methods, what issue would you likely discover? `Method A: return user.getName().toUpperCase();` `Method B: return processUser(null);`",
+    "choices": [
+      "Performance is too slow",
+      "Method A will throw NullPointerException when Method B passes null",
+      "The methods execute too quickly",
+      "The methods use too much memory"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "System testing of a Java web application involves testing this complete flow: User login → Browse products → Add to cart → Checkout → Payment. If the payment gateway is temporarily down, what should the system testing approach be?",
+    "choices": [
+      "Skip all testing until payment gateway is fixed",
+      "Use a mock payment service to continue end-to-end testing",
+      "Only test the login functionality",
+      "Focus exclusively on database testing"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "For acceptance testing of this requirement: 'System must send email confirmation within 5 minutes of order placement', which test approach is most appropriate?",
+    "choices": [
+      "Test only the email sending code in isolation",
+      "Test the complete user workflow and verify email delivery timing",
+      "Test only database queries",
+      "Test only the user interface design"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "This Java code has a functional bug: `public boolean isEven(int num) { return num % 3 == 0; }`. In functional testing, what would this method incorrectly identify as even?",
+    "choices": [
+      "Numbers divisible by 2",
+      "Numbers divisible by 3",
+      "All odd numbers",
+      "All negative numbers"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Non-functional testing of this Java method focuses on performance: `public String generateReport(List<Data> items)`. Which measurement is most relevant?",
+    "choices": [
+      "Whether the method returns a string",
+      "How long the method takes to execute with 10,000 items",
+      "Whether the method accepts a List parameter",
+      "Whether the method name follows naming conventions"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A regression testing suite includes 200 automated tests. After adding a new feature, 5 previously passing tests now fail. What does this most likely indicate?",
+    "choices": [
+      "The new feature is working perfectly",
+      "The new feature has introduced side effects or broken existing functionality",
+      "The old tests are no longer needed",
+      "The testing framework is malfunctioning"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Scrum team has a velocity of 30 story points per Sprint. The current Sprint Backlog contains 5 user stories: 8 points, 5 points, 13 points, 3 points, and 8 points. What should the Product Owner do?",
+    "choices": [
+      "Accept the Sprint Backlog as is since it totals 37 points",
+      "Remove the 8-point story to get exactly 30 points",
+      "Discuss with the team whether they can commit to 37 points this Sprint",
+      "Split the 13-point story into smaller pieces"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During a Sprint Planning meeting, the Development Team estimates a user story at 21 story points. According to Agile best practices, what should happen next?",
+    "choices": [
+      "Accept the estimate and add it to the Sprint Backlog",
+      "Ask the team to re-estimate using a lower number",
+      "Break the story down into smaller, more manageable pieces",
+      "Assign the story to your most experienced developer"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Kanban board shows: To Do (5 items), In Progress (8 items), Testing (3 items), Done (12 items). If the WIP limit for 'In Progress' is 6, what action should be taken immediately?",
+    "choices": [
+      "Move 2 items from In Progress back to To Do",
+      "Increase the WIP limit to accommodate current work",
+      "Focus the team on moving items from In Progress to Testing",
+      "Add more developers to handle the excess work"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Agile team completed 25, 32, 28, and 30 story points in the last four Sprints respectively. The Product Owner wants to commit to 40 story points in the next Sprint. What is the most appropriate response?",
+    "choices": [
+      "Agree since the team's maximum was 32 points",
+      "Suggest committing to 29 points based on average velocity",
+      "Commit to 40 points but warn it might not be completed",
+      "Refuse because it exceeds the team's proven velocity range"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "During a Daily Scrum standup, a developer says: 'Yesterday I worked on the login feature, today I'll continue with authentication, and I'm blocked by the database team.' What should happen next?",
+    "choices": [
+      "The Scrum Master should immediately call the database team",
+      "The team should discuss the database issue in detail right now",
+      "The Scrum Master should note the impediment and address it after the standup",
+      "The Product Owner should reprioritize to avoid database dependencies"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a Sprint Review, the Development Team demonstrates a feature that meets the acceptance criteria but the Product Owner says it's not what they envisioned. According to Scrum principles, what went wrong?",
+    "choices": [
+      "The Development Team didn't implement the feature correctly",
+      "The acceptance criteria were too vague or incomplete",
+      "The Scrum Master failed to facilitate proper communication",
+      "The Sprint was too short to allow for proper feedback"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Scrum team's Sprint Retrospective identifies that too much time is spent in meetings. The team decides to reduce Daily Scrum from 15 minutes to 5 minutes. Is this approach correct?",
+    "choices": [
+      "Yes, Agile principles favor working software over processes",
+      "No, Daily Scrum must always be exactly 15 minutes",
+      "Yes, but only if the Product Owner approves the change",
+      "No, they should investigate why meetings feel too long instead"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Product Owner adds a high-priority item to the Sprint Backlog on day 3 of a 10-day Sprint. The Development Team objects. Who is correct according to Scrum framework?",
+    "choices": [
+      "Product Owner, since they control priorities",
+      "Development Team, since Sprint Backlog shouldn't change mid-Sprint",
+      "Both, they should negotiate a compromise",
+      "Scrum Master should make the final decision"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Kanban team has a WIP limit of 4 for the 'Development' column, which currently has 4 items. A developer finishes their task and wants to pull new work. What should they do first?",
+    "choices": [
+      "Pull a new item since they have capacity",
+      "Wait for someone else to move an item to the next column",
+      "Help move one of the 4 items forward in the workflow",
+      "Ask the team lead to increase the WIP limit"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Sprint Planning, the team estimates these stories: Story A (5 points), Story B (8 points), Story C (13 points). Their velocity is 20 points per Sprint. What should they commit to?",
+    "choices": [
+      "All three stories (26 points) to challenge themselves",
+      "Stories A and B (13 points) to ensure completion",
+      "Stories A and C (18 points) for optimal capacity usage",
+      "Only Story A (5 points) to guarantee success"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During a Scrum Sprint, the Definition of Done includes 'code review completed' and 'unit tests pass.' A developer moves a story to 'Done' but unit tests are still failing. What should happen?",
+    "choices": [
+      "Accept it as done since code review passed",
+      "Move the story back to 'In Progress' until Definition of Done is met",
+      "Create a bug ticket for the failing tests",
+      "Update the Definition of Done to be less strict"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A new Agile team estimates their first user story. Developer A says 5 points, Developer B says 8 points, Developer C says 13 points. Using Planning Poker principles, what should happen next?",
+    "choices": [
+      "Take the average (8.67, rounded to 8 points)",
+      "Choose the highest estimate (13 points) to be safe",
+      "Have Developers A and C explain their reasoning, then re-estimate",
+      "Let the most senior developer decide"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Scrum team's Sprint Burndown chart shows that after 6 days of a 10-day Sprint, 70% of story points remain. What is the most likely issue?",
+    "choices": [
+      "The team is working too slowly",
+      "The Sprint was over-committed from the start",
+      "Story points were underestimated",
+      "The team needs more resources"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Kanban, your 'Code Review' column has a WIP limit of 2 and currently contains 2 items that have been there for 5 days. What principle suggests the next action?",
+    "choices": [
+      "Pull more items into Code Review to increase efficiency",
+      "Focus on completing the blocked items before starting new work",
+      "Increase the WIP limit to improve flow",
+      "Assign more reviewers to the column"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Product Owner wants to change a user story's acceptance criteria during the Sprint after development has started. According to Agile principles, what should the Scrum Master recommend?",
+    "choices": [
+      "Make the change immediately since customer collaboration is valued",
+      "Wait until the next Sprint to make any changes",
+      "Assess the impact with the team and potentially adjust the Sprint scope",
+      "Refuse the change to protect the team's commitment"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Agile team's velocity has been 25, 30, 28, 32 story points over 4 Sprints. The Product Owner asks how many story points can be delivered in the next 3 Sprints. What's the best estimate?",
+    "choices": [
+      "96 points (32 × 3, using the highest Sprint)",
+      "75 points (25 × 3, using the lowest Sprint)",
+      "86-87 points (28.75 average × 3)",
+      "90 points (30 × 3, excluding outliers)"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During a Sprint Review, stakeholders request a major feature change that would require 3 Sprints. The current Sprint ends tomorrow. What should the Product Owner do according to Scrum?",
+    "choices": [
+      "Extend the current Sprint to accommodate the change",
+      "Add the change to the current Sprint Backlog",
+      "Add the new feature to the Product Backlog for future Sprint planning",
+      "Cancel the current Sprint and start over with new requirements"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Kanban board shows items aging in the 'Testing' column beyond the team's SLA. The WIP limit for Testing is 3, and it has 2 items. What action best follows Kanban principles?",
+    "choices": [
+      "Pull more items into Testing to use available capacity",
+      "Focus resources on clearing the aged items in Testing first",
+      "Increase the WIP limit to improve throughput",
+      "Add more testers to the Testing column"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a Scrum Sprint Retrospective, the team identifies that Daily Standups often run over 15 minutes due to technical discussions. What improvement should they implement?",
+    "choices": [
+      "Eliminate Daily Standups since they're taking too long",
+      "Move technical discussions to separate meetings after standup",
+      "Reduce standup frequency to every other day",
+      "Allow standups to run longer when needed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You are reviewing a functional requirement: 'The system shall process login requests quickly.' What is the main issue with this requirement?",
+    "choices": [
+      "It lacks a specific actor",
+      "It is not testable due to vague criteria",
+      "It describes system architecture",
+      "It is a duplicate requirement"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which of the following is a properly written non-functional requirement for a web application?",
+    "choices": [
+      "The system shall allow users to search for products",
+      "The system shall display search results within 2 seconds for 95% of queries",
+      "The system shall have a search button on the homepage",
+      "The system shall validate user input before processing"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In an SRS document, you find this requirement: 'The system shall either encrypt data using AES-256 OR store passwords in plain text for debugging.' What quality issue does this represent?",
+    "choices": [
+      "Incomplete requirement",
+      "Inconsistent requirement",
+      "Unclear requirement",
+      "Untestable requirement"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A stakeholder provides this user story: 'As a user, I want to login so that I can access my account.' What is missing to make this requirement complete?",
+    "choices": [
+      "The user role is too generic",
+      "No acceptance criteria are defined",
+      "The benefit is not clear enough",
+      "The action is not specific enough"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You are testing this functional requirement: 'The system shall send email notifications to users.' What additional information is needed to make it testable?",
+    "choices": [
+      "Which email service to use",
+      "When notifications should be sent",
+      "The email template design",
+      "The database schema for users"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, you need to implement a functional requirement: 'The system shall calculate shipping cost based on weight.' Which method signature best supports this requirement?\n\nclass ShippingCalculator {\n    // Choose the best method signature\n}",
+    "choices": [
+      "public void calculate()",
+      "public double calculateShipping(double weight)",
+      "public String getShipping()",
+      "public static final double SHIPPING = 5.0"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "An SRS document contains: 'Requirement 1: User login shall complete in under 3 seconds' and 'Requirement 15: System response time shall not exceed 5 seconds for any operation.' What issue exists?",
+    "choices": [
+      "Requirements are incomplete",
+      "Requirements are inconsistent",
+      "Requirements are unclear",
+      "Requirements are not traceable"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which of these represents a well-formed acceptance criterion for the functional requirement 'User can reset password'?",
+    "choices": [
+      "Password reset should be secure and fast",
+      "Given a valid email, when reset is requested, then email is sent within 30 seconds",
+      "Users need to be able to reset passwords easily",
+      "The system must handle password resets properly"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You are analyzing stakeholder requirements for an e-commerce system. The marketing team wants 'fast page loads' while the security team wants 'comprehensive input validation.' These represent which type of requirements respectively?",
+    "choices": [
+      "Both functional requirements",
+      "Both non-functional requirements",
+      "Non-functional and functional requirements",
+      "Functional and non-functional requirements"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, you implement a non-functional requirement for input validation. Which implementation best demonstrates a testable approach?\n\nclass UserValidator {\n    public boolean validateEmail(String email) {\n        // Implementation needed\n    }\n}",
+    "choices": [
+      "return email != null;",
+      "return email.contains(\"@\") && email.length() > 5 && email.matches(\".*\\\\.[a-zA-Z]{2,}\");",
+      "return true; // TODO: Add validation",
+      "return email.equals(\"admin@test.com\");"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "An SRS document section reads: 'The application shall work well under heavy load and shall process user registration requests.' What makes this requirement poorly written?",
+    "choices": [
+      "It combines multiple requirements without clear separation",
+      "It only addresses functional aspects",
+      "It lacks stakeholder identification",
+      "It doesn't specify the programming language"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "You receive this user story: 'As a premium customer, I want faster service.' To make this functional requirement testable, what needs to be added?",
+    "choices": [
+      "Specific definition of 'premium customer' only",
+      "Measurable criteria for 'faster service' only",
+      "Both specific customer definition and measurable service criteria",
+      "Technical implementation details"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, which code snippet best implements the functional requirement 'System shall reject invalid product IDs'?\n\nclass ProductService {\n    public Product getProduct(String id) {\n        // Choose best implementation\n    }\n}",
+    "choices": [
+      "if(id == null) return null; return new Product(id);",
+      "if(id == null || id.trim().isEmpty() || !id.matches(\"PRD[0-9]{4}\")) throw new InvalidProductIdException(); return findProduct(id);",
+      "return new Product(id);",
+      "if(id.length() > 0) return new Product(id); return null;"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A stakeholder analysis reveals that end-users want 'simple interface' while administrators want 'detailed reporting.' These translate to which requirement types?",
+    "choices": [
+      "Both are functional requirements",
+      "Simple interface is functional, detailed reporting is non-functional",
+      "Simple interface is non-functional, detailed reporting is functional",
+      "Both are non-functional requirements"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "You find this requirement in an SRS: 'The system shall be user-friendly and process orders correctly.' What is the primary quality issue?",
+    "choices": [
+      "It lacks completeness in technical details",
+      "It combines testable and non-testable elements",
+      "It doesn't identify the stakeholder",
+      "It's written in passive voice"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which acceptance criteria best supports the non-functional requirement 'System shall have high availability'?",
+    "choices": [
+      "System should rarely go down",
+      "Users can access the system most of the time",
+      "Given normal operating conditions, when measured over 30 days, then system uptime shall be >= 99.9%",
+      "The system must be available when users need it"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, you need to implement a non-functional requirement for logging user actions. Which approach provides the most testable implementation?\n\nclass UserActionLogger {\n    // Implementation needed\n}",
+    "choices": [
+      "public void log() { System.out.println(\"Action logged\"); }",
+      "public boolean logAction(String userId, String action, LocalDateTime timestamp) { return auditService.record(userId, action, timestamp); }",
+      "public void logAction() { // TODO: Add logging }",
+      "public static void log(String msg) { }"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "An SRS document states: 'Requirement ID: REQ-001. The system shall authenticate users. Priority: High. Source: Security Team.' What critical element is missing for requirement traceability?",
+    "choices": [
+      "Acceptance criteria or test conditions",
+      "Implementation timeline",
+      "Cost estimation",
+      "User interface mockups"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "You are reviewing this functional requirement: 'When a user clicks submit, the form data shall be saved to the database or an error message shall be shown.' What makes this requirement hard to test?",
+    "choices": [
+      "It doesn't specify the database type",
+      "It contains multiple possible outcomes without clear conditions",
+      "It doesn't mention validation rules",
+      "It lacks user interface details"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A stakeholder requests: 'The checkout process should handle payment processing and be secure.' How should this be broken down in the SRS?",
+    "choices": [
+      "One functional requirement covering both aspects",
+      "One functional requirement for payment processing, one non-functional requirement for security",
+      "Two functional requirements with different priorities",
+      "One non-functional requirement covering both aspects"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, which implementation best satisfies the functional requirement 'System shall validate that user age is at least 18'?\n\nclass AgeValidator {\n    public ValidationResult validate(int age) {\n        // Choose best implementation\n    }\n}",
+    "choices": [
+      "return age > 0 ? ValidationResult.VALID : ValidationResult.INVALID;",
+      "return age >= 18 ? ValidationResult.VALID : ValidationResult.INVALID;",
+      "return ValidationResult.VALID;",
+      "return age != 18 ? ValidationResult.INVALID : ValidationResult.VALID;"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "An SRS contains this requirement: 'The system shall process up to 1000 concurrent users with response times under 2 seconds while maintaining 99.5% uptime.' This represents what type of requirement?",
+    "choices": [
+      "Pure functional requirement",
+      "Pure non-functional requirement combining performance and availability",
+      "Mixed functional and non-functional requirement",
+      "Business rule requirement"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a UML class diagram, what does the following relationship notation represent: `Customer -----> Order` (solid line with open arrow)?",
+    "choices": [
+      "Inheritance relationship",
+      "Association relationship",
+      "Composition relationship",
+      "Aggregation relationship"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Examine this Singleton design pattern implementation in Java. What is the main issue?\n\n```java\npublic class Database {\n    private static Database instance;\n    \n    private Database() {}\n    \n    public static Database getInstance() {\n        if (instance == null) {\n            instance = new Database();\n        }\n        return instance;\n    }\n}```",
+    "choices": [
+      "Constructor should be public",
+      "Not thread-safe in multithreaded environment",
+      "Missing static keyword on getInstance method",
+      "Instance variable should be final"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a UML sequence diagram, what does a dashed arrow pointing back represent?",
+    "choices": [
+      "Synchronous method call",
+      "Asynchronous method call",
+      "Return message",
+      "Self-invocation"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which design pattern is demonstrated in this Java code?\n\n```java\npublic abstract class ShapeFactory {\n    public abstract Shape createShape();\n}\n\npublic class CircleFactory extends ShapeFactory {\n    public Shape createShape() {\n        return new Circle();\n    }\n}```",
+    "choices": [
+      "Abstract Factory pattern",
+      "Builder pattern",
+      "Factory Method pattern",
+      "Prototype pattern"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In microservices architecture, what is the primary advantage over monolithic architecture regarding development teams?",
+    "choices": [
+      "Shared database access across all services",
+      "Single deployment pipeline for all components",
+      "Independent development and deployment by different teams",
+      "Centralized configuration management"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What does this UML activity diagram symbol represent: ◆ (diamond shape)?",
+    "choices": [
+      "Start node",
+      "End node",
+      "Decision node",
+      "Merge node"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the Observer design pattern implementation below, what will happen when `notifyObservers()` is called?\n\n```java\npublic class WeatherStation {\n    private List<Observer> observers = new ArrayList<>();\n    private int temperature;\n    \n    public void notifyObservers() {\n        for (Observer obs : observers) {\n            obs.update(temperature);\n        }\n    }\n}```",
+    "choices": [
+      "Only the first observer gets updated",
+      "All registered observers receive the temperature update",
+      "Observers are updated in reverse order",
+      "Only the last added observer gets updated"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which architecture style is characterized by organizing code into presentation, business logic, and data access layers?",
+    "choices": [
+      "Event-driven architecture",
+      "Microservices architecture",
+      "Layered (n-tier) architecture",
+      "Service-oriented architecture"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a UML use case diagram, what does an `<<include>>` relationship indicate?",
+    "choices": [
+      "Optional functionality that may be executed",
+      "Alternative flow that replaces the base use case",
+      "Required functionality that is always executed",
+      "Inheritance between use cases"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the main difference between high-level design and low-level design in software development?",
+    "choices": [
+      "High-level uses more advanced programming languages",
+      "High-level focuses on system architecture, low-level focuses on detailed implementation",
+      "High-level is for senior developers, low-level is for junior developers",
+      "High-level design is always done first, low-level design is optional"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In the MVC design pattern, if a user clicks a button to update data, what is the typical flow?",
+    "choices": [
+      "View → Model → Controller",
+      "Model → View → Controller",
+      "Controller → Model → View",
+      "View → Controller → Model"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "What does this Java code demonstrate about the Factory design pattern?\n\n```java\nShape shape = ShapeFactory.createShape(\"CIRCLE\");\nif (shape != null) {\n    shape.draw();\n}```",
+    "choices": [
+      "Client code depends on concrete classes",
+      "Client code is decoupled from object creation details",
+      "Factory pattern violates encapsulation",
+      "Multiple inheritance is required"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In UML class diagrams, what does a filled diamond connector represent?",
+    "choices": [
+      "Association",
+      "Aggregation",
+      "Composition",
+      "Inheritance"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which prototyping approach involves building a working version of critical system components?",
+    "choices": [
+      "Throwaway prototyping",
+      "Evolutionary prototyping",
+      "Paper prototyping",
+      "Incremental prototyping"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In this Observer pattern implementation, what is missing?\n\n```java\npublic class NewsAgency {\n    private String news;\n    private List<Channel> channels = new ArrayList<>();\n    \n    public void setNews(String news) {\n        this.news = news;\n    }\n}```",
+    "choices": [
+      "Private constructor",
+      "Static getInstance method",
+      "Call to notifyObservers() in setNews()",
+      "Synchronized methods"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is a key characteristic of monolithic architecture compared to microservices architecture?",
+    "choices": [
+      "Better scalability of individual components",
+      "Independent technology stack choices",
+      "Single deployable unit for entire application",
+      "Built-in fault isolation"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a UML sequence diagram, what do the vertical dashed lines represent?",
+    "choices": [
+      "Method calls between objects",
+      "Object lifelines",
+      "Return messages",
+      "Conditional execution"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Singleton design implementation return when called multiple times?\n\n```java\npublic class Logger {\n    private static final Logger INSTANCE = new Logger();\n    \n    private Logger() {}\n    \n    public static Logger getInstance() {\n        return INSTANCE;\n    }\n}```",
+    "choices": [
+      "Different instances each time",
+      "The same instance every time",
+      "Null reference",
+      "Compilation error"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which UML diagram type is best suited for showing the workflow of a business process in system design?",
+    "choices": [
+      "Class diagram",
+      "Sequence diagram",
+      "Activity diagram",
+      "Component diagram"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In software architecture, what is the primary benefit of using a layered design approach?",
+    "choices": [
+      "Faster execution speed",
+      "Reduced memory usage",
+      "Separation of concerns and maintainability",
+      "Automatic error handling"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What does this code demonstrate about the MVC design pattern?\n\n```java\npublic class UserController {\n    private User model;\n    private UserView view;\n    \n    public void updateView() {\n        view.display(model.getName(), model.getEmail());\n    }\n}```",
+    "choices": [
+      "Controller directly modifies the view's data",
+      "Controller coordinates between model and view",
+      "Model communicates directly with view",
+      "View controls the model's behavior"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In UML use case diagrams, what does the `<<extend>>` relationship represent?",
+    "choices": [
+      "Mandatory inclusion of functionality",
+      "Optional additional functionality",
+      "Inheritance between actors",
+      "System boundary definition"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the main advantage of throwaway prototyping over evolutionary prototyping?",
+    "choices": [
+      "Faster final product development",
+      "Requirements validation without code quality concerns",
+      "Better system performance",
+      "Reduced development costs"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In this Factory pattern implementation, what happens when an unknown shape type is requested?\n\n```java\npublic class ShapeFactory {\n    public static Shape getShape(String type) {\n        if (\"CIRCLE\".equals(type)) return new Circle();\n        if (\"SQUARE\".equals(type)) return new Square();\n        return null;\n    }\n}```",
+    "choices": [
+      "Throws an exception",
+      "Returns a default shape",
+      "Returns null",
+      "Creates an empty shape"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which architecture style is most suitable for applications requiring high availability and independent scaling of different features?",
+    "choices": [
+      "Monolithic architecture",
+      "Layered architecture",
+      "Microservices architecture",
+      "Client-server architecture"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "You have a Dockerfile with the following content:\n```\nFROM openjdk:11-jre-slim\nCOPY target/app.jar /app.jar\nEXPOSE 8080\nCMD [\"java\", \"-jar\", \"/app.jar\"]\n```\nWhat Docker command should you use to build this image and tag it as 'myapp:v1.0'?",
+    "choices": [
+      "docker run -t myapp:v1.0 .",
+      "docker build -t myapp:v1.0 .",
+      "docker create -t myapp:v1.0 .",
+      "docker pull -t myapp:v1.0 ."
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a Jenkins CI/CD pipeline, you want to run tests only if the previous build step succeeded. Which Jenkins pipeline syntax accomplishes this?",
+    "choices": [
+      "stage('Test') { when { buildResult 'SUCCESS' } steps { sh 'mvn test' } }",
+      "stage('Test') { post { success { sh 'mvn test' } } }",
+      "stage('Test') { steps { sh 'mvn test' } }",
+      "stage('Test') { when { previousResult 'SUCCESS' } steps { sh 'mvn test' } }"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the primary advantage of blue-green deployment strategy in DevOps practices?",
+    "choices": [
+      "It reduces infrastructure costs by 50%",
+      "It allows instant rollback with zero downtime",
+      "It automatically scales applications based on traffic",
+      "It eliminates the need for testing environments"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You're running a Docker container with this command:\n```\ndocker run -d -p 3000:8080 --name webapp myapp:latest\n```\nWhat port should you use in your browser to access the application?",
+    "choices": [
+      "8080",
+      "3000",
+      "80",
+      "443"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Infrastructure as Code, which file extension is typically used for Terraform configuration files in DevOps deployments?",
+    "choices": [
+      ".yml",
+      ".json",
+      ".tf",
+      ".xml"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Jenkins CI/CD pipeline fails with this error message: 'docker: command not found'. What is the most likely cause?",
+    "choices": [
+      "Docker is not installed on the Jenkins agent",
+      "The Dockerfile syntax is incorrect",
+      "The Docker image doesn't exist",
+      "Jenkins doesn't have permission to access the repository"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a canary deployment strategy, you want to route 10% of traffic to the new version. What does this approach help you achieve in DevOps?",
+    "choices": [
+      "Reduce deployment time by 90%",
+      "Test new features with limited user exposure",
+      "Automatically fix bugs in production",
+      "Eliminate the need for staging environments"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You have a Docker Compose file for local development. Which command starts all services defined in the docker-compose.yml file?",
+    "choices": [
+      "docker-compose start",
+      "docker-compose run",
+      "docker-compose up",
+      "docker-compose create"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a CI/CD pipeline using GitHub Actions, what triggers a workflow when code is pushed to the main branch?",
+    "choices": [
+      "on: [push: main]",
+      "on: push: branches: [main]",
+      "trigger: push: main",
+      "when: push: main"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You're debugging a failed Docker container. Which command shows you the logs from a container named 'webapp'?",
+    "choices": [
+      "docker inspect webapp",
+      "docker logs webapp",
+      "docker exec webapp logs",
+      "docker ps webapp"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In DevOps culture, what does the principle of 'Infrastructure as Code' primarily promote?",
+    "choices": [
+      "Writing infrastructure configurations in programming languages only",
+      "Version controlling and automating infrastructure provisioning",
+      "Replacing all manual processes with artificial intelligence",
+      "Using only cloud-based infrastructure services"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Your Jenkins pipeline includes this stage:\n```\nstage('Deploy') {\n  steps {\n    sh 'docker push myregistry/app:${BUILD_NUMBER}'\n  }\n}\n```\nWhat happens if BUILD_NUMBER is 42?",
+    "choices": [
+      "Pushes image tagged as myregistry/app:42",
+      "Pushes image tagged as myregistry/app:${BUILD_NUMBER}",
+      "Creates a new image with build number 42",
+      "Fails because BUILD_NUMBER is not defined"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a rolling deployment strategy, applications are updated by:",
+    "choices": [
+      "Replacing all instances simultaneously",
+      "Gradually replacing instances one by one",
+      "Creating a completely separate environment",
+      "Rolling back to the previous version automatically"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You want to run a Docker container interactively with a bash shell. Which command accomplishes this?",
+    "choices": [
+      "docker run -d myimage bash",
+      "docker run -it myimage bash",
+      "docker exec -it myimage bash",
+      "docker start -i myimage bash"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a CI/CD pipeline, what is the primary purpose of the 'Continuous Integration' phase?",
+    "choices": [
+      "Deploy code to production automatically",
+      "Merge code changes and run automated tests",
+      "Monitor application performance in production",
+      "Create infrastructure resources dynamically"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You have a Dockerfile with this instruction:\n```\nRUN apt-get update && apt-get install -y nodejs npm\n```\nWhat Docker best practice does this follow?",
+    "choices": [
+      "It separates concerns into different layers",
+      "It combines commands to reduce image layers",
+      "It installs the latest versions of packages",
+      "It updates the package repository first"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Jenkins, what file defines a pipeline as code in your repository?",
+    "choices": [
+      "jenkins.yml",
+      "pipeline.groovy",
+      "Jenkinsfile",
+      ".jenkins"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During a blue-green deployment, the 'green' environment represents:",
+    "choices": [
+      "The environment with better performance",
+      "The new version being deployed",
+      "The environment that handles more traffic",
+      "The backup environment for disaster recovery"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You're creating a Docker image for a Java application. Which base image choice follows DevOps best practices for production deployment?",
+    "choices": [
+      "openjdk:11",
+      "openjdk:11-jre-slim",
+      "ubuntu:latest with manual Java installation",
+      "openjdk:11-jdk"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Infrastructure as Code, what does this Terraform syntax represent?\n```\nresource \"aws_instance\" \"web\" {\n  ami           = \"ami-12345678\"\n  instance_type = \"t2.micro\"\n}\n```",
+    "choices": [
+      "A data source for existing infrastructure",
+      "A variable definition for reusable values",
+      "A resource definition for an EC2 instance",
+      "A module import from another configuration"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a CI/CD pipeline using GitHub Actions, what does this workflow syntax do?\n```\n- name: Run tests\n  run: npm test\n```",
+    "choices": [
+      "Installs npm dependencies",
+      "Executes the test command",
+      "Creates a test environment",
+      "Publishes test results"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You want to remove a Docker container named 'oldapp' that is currently stopped. Which command should you use?",
+    "choices": [
+      "docker delete oldapp",
+      "docker rm oldapp",
+      "docker remove oldapp",
+      "docker kill oldapp"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In DevOps practices, what is the main benefit of implementing automated deployment pipelines?",
+    "choices": [
+      "Eliminating the need for manual testing",
+      "Reducing human error and increasing deployment frequency",
+      "Automatically fixing bugs in production",
+      "Reducing infrastructure costs to zero"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "You're setting up a Jenkins job that should trigger when changes are made to a Git repository. Which Jenkins feature enables this?",
+    "choices": [
+      "Build periodically",
+      "Poll SCM",
+      "GitHub hook trigger",
+      "Manual build trigger"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Docker multi-stage builds, what is the primary advantage for CI/CD pipelines?",
+    "choices": [
+      "Multiple applications can be built simultaneously",
+      "Build dependencies are excluded from the final image",
+      "Images can be deployed to multiple environments",
+      "Container startup time is significantly reduced"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A software tester discovers that clicking the 'Save' button causes the application to crash. According to standard severity classifications, how should this defect be categorized?",
+    "choices": [
+      "Low severity - cosmetic issue only",
+      "Medium severity - functionality works with workaround",
+      "High severity - major functionality broken",
+      "Critical severity - system completely unusable"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "You are tracking a bug in Jira where a user profile image displays incorrectly on the homepage. The CEO wants this fixed before tomorrow's board meeting. How should you classify the priority vs severity?",
+    "choices": [
+      "High priority, High severity",
+      "High priority, Low severity",
+      "Low priority, High severity",
+      "Low priority, Low severity"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a bug report, which component is most critical for developers to reproduce the defect?",
+    "choices": [
+      "Screenshots of the issue",
+      "Step-by-step reproduction instructions",
+      "Browser version information",
+      "Time when bug was discovered"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A defect has been marked as 'Resolved' by the development team. What should be the next status in the defect life cycle?",
+    "choices": [
+      "Closed",
+      "Reopen",
+      "In Testing",
+      "Assigned"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "When performing root cause analysis on a defect, you discover it was caused by missing input validation. What category of root cause is this?",
+    "choices": [
+      "Environmental issue",
+      "Design defect",
+      "Coding defect",
+      "Testing defect"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Bugzilla, which field is used to indicate how quickly a defect should be addressed?",
+    "choices": [
+      "Severity",
+      "Priority",
+      "Status",
+      "Component"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A tester reports: 'Expected: Login successful with valid credentials. Actual: Error message displays.' What is missing from this bug report?",
+    "choices": [
+      "Severity level",
+      "Steps to reproduce",
+      "Browser information",
+      "Time stamp"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A memory leak defect causes the application to slow down over time but doesn't crash immediately. What severity should be assigned?",
+    "choices": [
+      "Critical",
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, you find this code that's causing a defect: `String name = null; int length = name.length();` What type of defect will this produce?",
+    "choices": [
+      "ArrayIndexOutOfBoundsException",
+      "NullPointerException",
+      "NumberFormatException",
+      "ClassCastException"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A bug tracking tool shows a defect status progression: New → Assigned → Resolved → Reopened. What should happen next in the defect life cycle?",
+    "choices": [
+      "Close the defect",
+      "Assign to developer",
+      "Mark as duplicate",
+      "Return to testing"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which Java code snippet would most likely result in a high severity defect due to infinite recursion?",
+    "choices": [
+      "public int factorial(int n) { return n * factorial(n-1); }",
+      "public int add(int a, int b) { return a + b; }",
+      "public String getName() { return this.name; }",
+      "public void print() { System.out.println(\"Hello\"); }"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "In defect management, a bug report states: 'The search function doesn't work.' What is the primary issue with this report?",
+    "choices": [
+      "Missing priority level",
+      "Lacks specific steps to reproduce",
+      "No severity assigned",
+      "Missing developer assignment"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A critical defect is discovered in production that affects all users. According to priority classification, how should this be handled?",
+    "choices": [
+      "P4 - Fix in next major release",
+      "P3 - Fix in next sprint",
+      "P2 - Fix within a week",
+      "P1 - Fix immediately"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, this code is causing a defect: `int[] numbers = new int[5]; int value = numbers[5];` What severity would you assign to this array bounds bug?",
+    "choices": [
+      "Low - cosmetic issue",
+      "Medium - minor functionality issue",
+      "High - application crash",
+      "Critical - data corruption"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "During root cause analysis of a login defect, you trace the issue to incorrect SQL query syntax. Which defect category best describes this?",
+    "choices": [
+      "Requirements defect",
+      "Design defect",
+      "Implementation defect",
+      "Configuration defect"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Jira bug report shows: Steps to Reproduce: 1. Open app 2. Click login. Expected: Success. Actual: Fails. What critical information is missing?",
+    "choices": [
+      "Environment details",
+      "Specific login credentials used",
+      "Exact error message received",
+      "All of the above"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "In Java, which code would cause a defect with medium severity due to incorrect string comparison?",
+    "choices": [
+      "if (str1 == str2)",
+      "if (str1.equals(str2))",
+      "if (str1.compareTo(str2) == 0)",
+      "if (str1.equalsIgnoreCase(str2))"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A defect tracking system shows these priority levels: P0, P1, P2, P3. A spelling error in the footer should be classified as:",
+    "choices": [
+      "P0 - Critical",
+      "P1 - High",
+      "P2 - Medium",
+      "P3 - Low"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "When a defect is marked 'Cannot Reproduce' in the bug tracking system, what should be the next step?",
+    "choices": [
+      "Close the defect immediately",
+      "Assign higher priority",
+      "Request more detailed reproduction steps",
+      "Mark as duplicate"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "This Java code produces a defect: `public int divide(int a, int b) { return a / b; }` If called with divide(10, 0), what severity should be assigned?",
+    "choices": [
+      "Low - minor calculation error",
+      "Medium - incorrect result",
+      "High - runtime exception",
+      "Critical - system failure"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In defect life cycle management, a bug has been 'Verified' by QA. What does this status typically indicate?",
+    "choices": [
+      "Bug still exists and needs fixing",
+      "Bug has been fixed and confirmed",
+      "Bug cannot be reproduced",
+      "Bug is assigned to developer"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A bug report in your tracking tool states that a critical defect affects the payment processing module. However, there's a workaround available. How should priority be set?",
+    "choices": [
+      "Critical priority - no workaround exists",
+      "High priority - major impact but workaround exists",
+      "Medium priority - standard business function",
+      "Low priority - minor inconvenience"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a test case with ID TC001, the precondition states 'User must be logged in'. During execution, the tester skips the login step. What is the most likely outcome?",
+    "choices": [
+      "The test case will pass with valid results",
+      "The test case will fail due to unmet preconditions",
+      "The test case will be marked as blocked",
+      "The test case will automatically handle the missing login"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test plan scope section states 'Testing will cover functional requirements R001-R015 only'. Which component would verify this coverage?",
+    "choices": [
+      "Test execution log",
+      "Requirements Traceability Matrix",
+      "Defect report summary",
+      "Test environment specification"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Given this Java test scenario: A test case validates that method calculateDiscount(100, 0.1) returns 10.0. The actual result is 10.00001. What should be the test case status?",
+    "choices": [
+      "Pass - values are functionally equivalent",
+      "Fail - exact match required for numerical assertions",
+      "Blocked - insufficient precision specified",
+      "Deferred - needs business clarification"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "An RTM shows Requirement R005 linked to test cases TC020, TC021, TC022. If TC020 passes but TC021 and TC022 fail, what is the requirement status?",
+    "choices": [
+      "Fully verified",
+      "Partially verified",
+      "Not verified",
+      "Cannot be determined"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test case step reads: 'Enter invalid email format'. The expected result is 'Error message displays'. Which element is missing from this test case structure?",
+    "choices": [
+      "Test case ID",
+      "Specific invalid email example",
+      "Test priority",
+      "Test environment"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a test plan, the 'Entry Criteria' section lists 'Code review completed, Unit tests pass >90%'. What happens if unit test coverage is only 85%?",
+    "choices": [
+      "Testing proceeds with documented risk",
+      "Testing is delayed until criteria are met",
+      "Entry criteria are automatically waived",
+      "Only critical test cases are executed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A Java method returns user age. The test case uses test data: age = 25. The assertion is assertEquals(25, getAge()). The method returns '25' (string). What occurs?",
+    "choices": [
+      "Test passes - values are equivalent",
+      "Test fails - type mismatch between int and String",
+      "Test passes with warning",
+      "Compilation error prevents execution"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "An RTM contains 50 requirements, 200 test cases, but only 45 requirements have test case mappings. What does this indicate?",
+    "choices": [
+      "5 requirements lack test coverage",
+      "RTM has excess test cases",
+      "Traceability is acceptable (90% coverage)",
+      "5 requirements are out of scope"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test case ID follows the pattern: TC_LOGIN_001. What information can be derived from this identifier?",
+    "choices": [
+      "Test priority and execution order",
+      "Functional area and sequence number",
+      "Defect severity and test type",
+      "Requirements mapping and test data"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a test plan's risk assessment, 'Database connectivity failure' is rated HIGH. Which test case characteristic should be prioritized?",
+    "choices": [
+      "Database-related test cases get lower priority",
+      "Database test cases require special test data",
+      "Database test cases should be executed early",
+      "Database test cases need additional documentation"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Java code: public void testLogin() { login('user', 'pass'); assertTrue(isLoggedIn()); }. The test case documentation states expected result as 'User redirected to dashboard'. What's wrong?",
+    "choices": [
+      "Assertion doesn't match documented expected result",
+      "Test data is hardcoded",
+      "Method naming convention is incorrect",
+      "Missing test case preconditions"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test summary report shows: Total test cases: 100, Executed: 95, Passed: 80, Failed: 10, Blocked: 5. What is the pass rate?",
+    "choices": [
+      "80% (passed/total)",
+      "84.2% (passed/executed)",
+      "90% (passed/(passed+failed))",
+      "95% (executed/total)"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Test data management requires 'Customer records must be anonymized before use in test cases'. Which test plan section addresses this?",
+    "choices": [
+      "Test scope and objectives",
+      "Data security and privacy requirements",
+      "Test execution schedule",
+      "Resource allocation"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "An RTM shows bidirectional traceability between requirements and test cases. Requirement R010 maps to TC050, but TC050 doesn't reference R010. What's the issue?",
+    "choices": [
+      "Forward traceability is broken",
+      "Backward traceability is broken",
+      "RTM is correctly maintained",
+      "Test case needs updating"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test case has 8 steps, but step 4 fails. The remaining steps cannot be executed. How should this be documented?",
+    "choices": [
+      "Mark entire test case as failed",
+      "Mark steps 1-4 results, remaining as 'Not Executed'",
+      "Retry from step 1",
+      "Skip to step 5 and continue"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Java test: String result = processOrder('123'); assertEquals('Order processed', result);. The test case specifies test data as 'Valid Order ID'. What's missing?",
+    "choices": [
+      "Specific test data value definition",
+      "Exception handling",
+      "Test case priority",
+      "Cleanup procedures"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test plan states 'Exit Criteria: Zero critical defects, <5% test case failure rate'. Current status: 1 critical defect, 3% failure rate. What action is needed?",
+    "choices": [
+      "Testing can be completed",
+      "Critical defect must be resolved before exit",
+      "Exit criteria should be relaxed",
+      "Additional test cases needed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Test data for login test cases includes: valid users, invalid users, locked accounts. The RTM shows this covers requirements R001-R003. If a new requirement R004 adds 'password expiry', what's needed?",
+    "choices": [
+      "Update existing test cases only",
+      "Add new test data and test cases, update RTM",
+      "Modify RTM mapping only",
+      "No changes needed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test case step states: 'Click Submit button'. Expected result: 'Form submits successfully'. During execution, the button is disabled. What's the correct status?",
+    "choices": [
+      "Fail - expected result not achieved",
+      "Blocked - cannot execute the step",
+      "Pass - system prevents invalid action",
+      "Deferred - needs clarification"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Java test code: @Test public void testAge() { Person p = new Person(); p.setAge(-5); assertEquals(-5, p.getAge()); }. The test case description says 'Verify age validation'. What's the problem?",
+    "choices": [
+      "Test passes but doesn't validate business rules",
+      "Assertion syntax is incorrect",
+      "Test data setup is missing",
+      "Expected result should be positive"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "An RTM shows test case TC075 mapped to requirements R020 and R025. During execution, TC075 fails. What is the impact on requirements coverage?",
+    "choices": [
+      "Both R020 and R025 are not verified",
+      "Only the failing aspect affects coverage",
+      "RTM needs to be updated",
+      "Requirements need retesting"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A test plan's test data section specifies 'Production data copy with PII masked'. A test case uses customer email 'john.doe@email.com'. What's wrong?",
+    "choices": [
+      "Email format is invalid",
+      "Real PII data violates test plan requirements",
+      "Test case lacks proper assertion",
+      "Data should be in database format"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Test summary report shows 15 test cases had 'Environment Issues'. The test plan specified 'Test Environment: Chrome browser v90+'. Actual environment used Chrome v89. What's the root cause?",
+    "choices": [
+      "Test cases were poorly designed",
+      "Environment setup didn't meet test plan specifications",
+      "Browser compatibility issues",
+      "Test data was incorrect"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Java code: int result = divide(10, 0); assertEquals(0, result);. The test case expected result documents 'Division by zero returns 0'. The method throws ArithmeticException. What should be updated?",
+    "choices": [
+      "Test case expected result should specify exception",
+      "Code should return 0 instead of throwing exception",
+      "Assertion should use try-catch",
+      "Test data should avoid zero values"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A production support team receives a critical bug report where users cannot log in due to a database connection timeout. What type of software maintenance is required to fix this issue?",
+    "choices": [
+      "Perfective maintenance",
+      "Corrective maintenance",
+      "Adaptive maintenance",
+      "Preventive maintenance"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Examine this Java code used in production support monitoring:\n```java\nString status = \"CRITICAL\";\nif (status == \"CRITICAL\") {\n    System.out.println(\"Alert sent\");\n} else {\n    System.out.println(\"No action needed\");\n}\n```\nWhat will this code output?",
+    "choices": [
+      "Alert sent",
+      "No action needed",
+      "Compilation error",
+      "Runtime exception"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A patch management process requires testing patches in which order before production deployment?",
+    "choices": [
+      "Production → Staging → Development",
+      "Development → Production → Staging",
+      "Development → Staging → Production",
+      "Staging → Development → Production"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In a production support environment, which SLA metric is typically measured for Tier 1 support incidents?",
+    "choices": [
+      "Time to resolution",
+      "Code review completion time",
+      "Deployment frequency",
+      "Initial response time"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "Look at this maintenance logging code:\n```java\nint errorCount = 0;\nfor (int i = 1; i <= 5; i++) {\n    if (i % 2 == 0) {\n        errorCount++;\n    }\n}\nSystem.out.println(\"Errors: \" + errorCount);\n```\nWhat will be printed?",
+    "choices": [
+      "Errors: 2",
+      "Errors: 3",
+      "Errors: 5",
+      "Errors: 1"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "A company wants to upgrade their system to support new file formats required by recent regulations. This represents which type of maintenance?",
+    "choices": [
+      "Corrective maintenance",
+      "Preventive maintenance",
+      "Adaptive maintenance",
+      "Perfective maintenance"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In patch management, what is the primary purpose of a rollback plan?",
+    "choices": [
+      "To schedule future patches",
+      "To document patch changes",
+      "To revert to previous version if patch fails",
+      "To test patch performance"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Analyze this production support configuration check:\n```java\nString env = System.getProperty(\"environment\", \"dev\");\nboolean isProd = env.equals(\"production\");\nSystem.out.println(\"Production mode: \" + isProd);\n```\nIf no environment property is set, what will be output?",
+    "choices": [
+      "Production mode: true",
+      "Production mode: false",
+      "Production mode: null",
+      "NullPointerException"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which maintenance activity involves adding new features to improve system performance without fixing existing bugs?",
+    "choices": [
+      "Corrective maintenance",
+      "Adaptive maintenance",
+      "Perfective maintenance",
+      "Emergency maintenance"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "In production support, a Tier 2 support escalation typically occurs when:",
+    "choices": [
+      "User requests a new feature",
+      "Tier 1 cannot resolve within SLA timeframe",
+      "System requires scheduled maintenance",
+      "Patch deployment is needed"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Review this maintenance utility method:\n```java\npublic static boolean isValidPatch(String version) {\n    return version != null && version.length() > 0;\n}\nSystem.out.println(isValidPatch(\"\"));\n```\nWhat will this print?",
+    "choices": [
+      "true",
+      "false",
+      "null",
+      "Compilation error"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What type of maintenance involves updating antivirus signatures and security certificates before they expire?",
+    "choices": [
+      "Corrective maintenance",
+      "Adaptive maintenance",
+      "Perfective maintenance",
+      "Preventive maintenance"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "In patch management, which environment should receive the patch first in a typical deployment pipeline?",
+    "choices": [
+      "Production",
+      "Staging",
+      "Development",
+      "User Acceptance Testing"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Study this production support monitoring code:\n```java\nint uptime = 99;\nString status = (uptime >= 99.5) ? \"GOOD\" : \"WARNING\";\nSystem.out.println(\"System status: \" + status);\n```\nWhat will be displayed?",
+    "choices": [
+      "System status: GOOD",
+      "System status: WARNING",
+      "Compilation error",
+      "System status: null"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "A production support team implements automated database cleanup to prevent disk space issues. This is an example of:",
+    "choices": [
+      "Corrective maintenance",
+      "Adaptive maintenance",
+      "Perfective maintenance",
+      "Preventive maintenance"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which patch management practice helps ensure system stability?",
+    "choices": [
+      "Applying patches immediately to production",
+      "Testing patches only in production",
+      "Maintaining patch rollback procedures",
+      "Skipping patch documentation"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Examine this maintenance configuration:\n```java\nMap<String, Integer> config = new HashMap<>();\nconfig.put(\"maxRetries\", 3);\nconfig.put(\"timeout\", 5000);\nSystem.out.println(\"Retries: \" + config.get(\"maxRetries\"));\n```\nWhat will be printed?",
+    "choices": [
+      "Retries: 3",
+      "Retries: 5000",
+      "Retries: null",
+      "Retries: 0"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "In production support, what does a P1 (Priority 1) incident typically indicate?",
+    "choices": [
+      "Minor cosmetic issue",
+      "Feature enhancement request",
+      "System completely down or critical functionality lost",
+      "Scheduled maintenance window"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "A software maintenance team refactors code to improve readability without changing functionality. This is:",
+    "choices": [
+      "Corrective maintenance",
+      "Adaptive maintenance",
+      "Perfective maintenance",
+      "Preventive maintenance"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Look at this patch validation logic:\n```java\nString patchId = \"PATCH_2024_001\";\nboolean isValid = patchId.startsWith(\"PATCH_\") && patchId.length() > 10;\nSystem.out.println(\"Valid patch: \" + isValid);\n```\nWhat will this output?",
+    "choices": [
+      "Valid patch: true",
+      "Valid patch: false",
+      "NullPointerException",
+      "StringIndexOutOfBoundsException"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which production support metric is most important for measuring customer satisfaction?",
+    "choices": [
+      "Mean Time To Recovery (MTTR)",
+      "Code coverage percentage",
+      "Number of deployments per day",
+      "Server CPU utilization"
+    ],
+    "answer": 0,
+    "aiGenerated": true
+  },
+  {
+    "question": "Analyze this maintenance scheduling code:\n```java\nint dayOfWeek = 6; // Saturday\nboolean canDeploy = (dayOfWeek == 6 || dayOfWeek == 7);\nSystem.out.println(\"Deployment allowed: \" + canDeploy);\n```\nWhat will be the output?",
+    "choices": [
+      "Deployment allowed: false",
+      "Deployment allowed: true",
+      "Compilation error",
+      "Runtime exception"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "In patch management, what is a 'hotfix'?",
+    "choices": [
+      "A scheduled maintenance update",
+      "An urgent patch for critical production issues",
+      "A performance improvement patch",
+      "A routine security update"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Review this production support error handling:\n```java\ntry {\n    int result = 10 / 0;\n    System.out.println(\"Result: \" + result);\n} catch (Exception e) {\n    System.out.println(\"Error in maintenance operation\");\n}\n```\nWhat will this code print?",
+    "choices": [
+      "Result: 10",
+      "Result: 0",
+      "Error in maintenance operation",
+      "Nothing will be printed"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What type of maintenance addresses issues found through code reviews and static analysis before they become problems?",
+    "choices": [
+      "Corrective maintenance",
+      "Adaptive maintenance",
+      "Perfective maintenance",
+      "Preventive maintenance"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the time complexity of this Java algorithm?\n\n```java\nfor (int i = 0; i < n; i++) {\n    for (int j = i; j < n; j++) {\n        System.out.println(i + \", \" + j);\n    }\n}\n```",
+    "choices": [
+      "O(n)",
+      "O(n²)",
+      "O(n log n)",
+      "O(2n)"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which SOLID principle is violated in this Java class?\n\n```java\nclass User {\n    private String name;\n    private String email;\n    \n    public void save() {\n        // Save to database\n    }\n    \n    public void sendEmail() {\n        // Send email notification\n    }\n}\n```",
+    "choices": [
+      "Open/Closed Principle",
+      "Single Responsibility Principle",
+      "Liskov Substitution Principle",
+      "Interface Segregation Principle"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will be the output of this Java code?\n\n```java\nString str1 = \"Hello\";\nString str2 = \"Hello\";\nString str3 = new String(\"Hello\");\n\nSystem.out.println(str1 == str2);\nSystem.out.println(str1 == str3);\nSystem.out.println(str1.equals(str3));\n```",
+    "choices": [
+      "true, true, true",
+      "true, false, true",
+      "false, false, true",
+      "true, true, false"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which design pattern is demonstrated in this Java code?\n\n```java\nclass Database {\n    private static Database instance;\n    \n    private Database() {}\n    \n    public static Database getInstance() {\n        if (instance == null) {\n            instance = new Database();\n        }\n        return instance;\n    }\n}\n```",
+    "choices": [
+      "Factory Pattern",
+      "Observer Pattern",
+      "Singleton Pattern",
+      "Strategy Pattern"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the space complexity of this recursive Java method?\n\n```java\npublic int factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n```",
+    "choices": [
+      "O(1)",
+      "O(n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will happen when this Java code is executed?\n\n```java\nList<String> list = Arrays.asList(\"A\", \"B\", \"C\");\nlist.add(\"D\");\nSystem.out.println(list.size());\n```",
+    "choices": [
+      "Prints 4",
+      "Prints 3",
+      "Throws UnsupportedOperationException",
+      "Compilation error"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which software development methodology emphasizes working software over comprehensive documentation?",
+    "choices": [
+      "Waterfall",
+      "Spiral Model",
       "Agile",
-      "Spiral"
+      "V-Model"
     ],
-    "answer": 2
+    "answer": 2,
+    "aiGenerated": true
   },
   {
-    "question": "What is the key principle behind writing good acceptance criteria?",
+    "question": "What is the output of this Java code?\n\n```java\nint[] arr = {1, 2, 3, 4, 5};\nfor (int i = 0; i < arr.length; i++) {\n    if (i == 2) continue;\n    if (i == 4) break;\n    System.out.print(arr[i] + \" \");\n}\n```",
     "choices": [
-      "They should be as detailed as possible",
-      "They should be concise, clear, complete, unambiguous, testable, and measurable",
-      "They should focus only on positive scenarios",
-      "They should be written by developers only"
+      "1 2 4 5",
+      "1 2 4",
+      "1 2 3 4",
+      "1 2"
     ],
-    "answer": 1
+    "answer": 3,
+    "aiGenerated": true
   },
   {
-    "question": "In the context of test case execution, when is a defect created?",
+    "question": "What type of coupling is demonstrated in this Java code?\n\n```java\nclass OrderProcessor {\n    private DatabaseConnection db = new DatabaseConnection();\n    \n    public void processOrder(Order order) {\n        db.save(order);\n    }\n}\n```",
     "choices": [
-      "When the test case is written",
-      "When Expected Result equals Actual Result",
-      "When Expected Result does not equal Actual Result",
-      "When the test case passes"
+      "Loose coupling",
+      "Tight coupling",
+      "No coupling",
+      "Interface coupling"
     ],
-    "answer": 2
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java code print?\n\n```java\nInteger a = 127;\nInteger b = 127;\nInteger c = 128;\nInteger d = 128;\n\nSystem.out.println(a == b);\nSystem.out.println(c == d);\n```",
+    "choices": [
+      "true, true",
+      "false, false",
+      "true, false",
+      "false, true"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which code review practice is MOST effective for catching defects early?",
+    "choices": [
+      "Reviewing code after deployment",
+      "Self-review only",
+      "Peer review before merge",
+      "Review during annual performance evaluations"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the result of this Java method call?\n\n```java\npublic static String processString(String input) {\n    if (input == null || input.isEmpty()) {\n        return \"default\";\n    }\n    return input.toUpperCase();\n}\n\nSystem.out.println(processString(\"\"));\n```",
+    "choices": [
+      "null",
+      "Empty string",
+      "default",
+      "RuntimeException"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the primary purpose of version control branching strategies?",
+    "choices": [
+      "To reduce storage space",
+      "To manage parallel development and releases",
+      "To automatically test code",
+      "To compress source code files"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java code output?\n\n```java\ntry {\n    int result = 10 / 0;\n    System.out.println(\"Result: \" + result);\n} catch (ArithmeticException e) {\n    System.out.println(\"Math error\");\n} finally {\n    System.out.println(\"Done\");\n}\n```",
+    "choices": [
+      "Result: 0\\nDone",
+      "Math error",
+      "Math error\\nDone",
+      "RuntimeException"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which principle states that software entities should be open for extension but closed for modification?",
+    "choices": [
+      "Single Responsibility Principle",
+      "Open/Closed Principle",
+      "Dependency Inversion Principle",
+      "Interface Segregation Principle"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "What is the output of this Java code?\n\n```java\nList<Integer> numbers = new ArrayList<>();\nnumbers.add(1);\nnumbers.add(2);\nnumbers.add(3);\n\nfor (Integer num : numbers) {\n    if (num == 2) {\n        numbers.remove(num);\n    }\n}\nSystem.out.println(numbers.size());\n```",
+    "choices": [
+      "Prints 2",
+      "Prints 3",
+      "Throws ConcurrentModificationException",
+      "Compilation error"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What characterizes technical debt in software development?",
+    "choices": [
+      "Money owed to development tools vendors",
+      "Time spent on code reviews",
+      "Shortcuts taken that require future refactoring",
+      "Number of bugs found in testing"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "What will this Java code print?\n\n```java\nString text = \"Hello World\";\nString[] words = text.split(\" \");\nSystem.out.println(words[0].length() + words[1].length());\n```",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "IndexOutOfBoundsException"
+    ],
+    "answer": 1,
+    "aiGenerated": true
   }
 ]
