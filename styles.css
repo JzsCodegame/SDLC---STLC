@@ -292,19 +292,53 @@ button {
   margin: 0 0 6px;
 }
 
+.flashcard-carousel {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.flashcard-nav {
+  width: 44px;
+  min-height: 44px;
+  align-self: center;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.flashcard-nav:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
 .flashcard-item {
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 10px 12px;
-  margin-top: 10px;
+  padding: 12px;
   background: var(--bg);
 }
 
-.flashcard-item summary {
-  cursor: pointer;
-  font-weight: 600;
+.flashcard-carousel-card {
+  min-height: 220px;
 }
 
+.flashcard-question {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.flashcard-position {
+  min-height: 20px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
 
 .flashcard-topic-count {
   margin-top: 10px;
@@ -314,6 +348,18 @@ button {
 
 #flashcard-topic {
   margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .flashcard-carousel {
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    gap: 8px;
+  }
+
+  .flashcard-nav {
+    width: 38px;
+    min-height: 38px;
+  }
 }
 
 .java-practice-lab {

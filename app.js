@@ -21,6 +21,11 @@ const recentScoresContainer = document.getElementById('recent-scores');
 const flashcardList = document.getElementById('flashcard-list');
 const flashcardTopicSelect = document.getElementById('flashcard-topic');
 const flashcardTopicCount = document.getElementById('flashcard-topic-count');
+const flashcardCarousel = document.getElementById('flashcard-carousel');
+const flashcardCard = document.getElementById('flashcard-card');
+const flashcardPrevBtn = document.getElementById('flashcard-prev');
+const flashcardNextBtn = document.getElementById('flashcard-next');
+const flashcardPosition = document.getElementById('flashcard-position');
 const quizTopicSelect = document.getElementById('quiz-topic');
 const javaPracticeLab = document.getElementById('java-practice-lab');
 const javaEditor = document.getElementById('java-editor');
@@ -37,6 +42,9 @@ let studentName = '';
 let selectedQuizQuestions = [];
 let selectedQuizTopic = 'Java';
 let availableTopics = new Map();
+let currentFlashcardQuestions = [];
+let currentFlashcardTopic = 'Java';
+let currentFlashcardIndex = 0;
 const totalQuestions = 25;
 const DEFAULT_QUIZ_SECONDS = 300;
 const JAVA_QUIZ_SECONDS = 600;
@@ -109,6 +117,11 @@ function getBundledFallbackQuestions() {
 function renderEmptyFlashcardState(message) {
   if (!flashcardList) return;
   flashcardList.querySelectorAll('details').forEach((item) => item.remove());
+  if (flashcardCard) flashcardCard.innerHTML = '';
+  if (flashcardCarousel) flashcardCarousel.classList.add('hidden');
+  if (flashcardPosition) flashcardPosition.textContent = '';
+  if (flashcardPrevBtn) flashcardPrevBtn.disabled = true;
+  if (flashcardNextBtn) flashcardNextBtn.disabled = true;
   if (flashcardTopicCount) flashcardTopicCount.textContent = message;
 }
 
@@ -903,49 +916,82 @@ function renderFlashcardTopic(topicMap, topic) {
 
   const selectedTopic = topic && topicMap.has(topic) ? topic : topicMap.keys().next().value;
   const selectedQuestions = getPreparedTopicQuestions(selectedTopic);
+  currentFlashcardTopic = selectedTopic;
+  currentFlashcardQuestions = selectedQuestions;
+  currentFlashcardIndex = 0;
 
   if (flashcardTopicCount) {
     flashcardTopicCount.textContent = `Showing ${selectedQuestions.length} prep flashcards for "${selectedTopic}". These match the quiz questions currently loaded.`;
   }
 
-  selectedQuestions.forEach((question, index) => {
-    const details = document.createElement('details');
-    details.className = 'flashcard-item';
-    const display = getQuestionDisplayParts(question);
-    const correctChoice = getCorrectChoice(question);
+  renderCurrentFlashcard();
+}
 
-    const summary = document.createElement('summary');
-    if (question.aiGenerated) {
-      const badge = document.createElement('span');
-      badge.className = 'ai-badge';
-      badge.textContent = '✨ AI';
-      summary.appendChild(badge);
-    }
-    summary.appendChild(document.createTextNode(`${index + 1}. ${display.prompt || question.question}`));
+function renderCurrentFlashcard() {
+  if (!flashcardCard) return;
 
-    const answer = document.createElement('div');
-    answer.className = 'flashcard-answer';
+  flashcardCard.innerHTML = '';
+  const total = currentFlashcardQuestions.length;
 
-    const answerLine = document.createElement('p');
-    answerLine.className = 'flashcard-answer-line';
-    answerLine.textContent = `Answer: ${correctChoice || 'Review this concept'}`;
+  if (!total) {
+    if (flashcardCarousel) flashcardCarousel.classList.add('hidden');
+    if (flashcardPosition) flashcardPosition.textContent = '';
+    if (flashcardPrevBtn) flashcardPrevBtn.disabled = true;
+    if (flashcardNextBtn) flashcardNextBtn.disabled = true;
+    return;
+  }
 
-    const explanation = document.createElement('p');
-    explanation.className = 'flashcard-overview';
-    explanation.textContent = buildFlashcardExplanation(question, selectedTopic);
+  if (flashcardCarousel) flashcardCarousel.classList.remove('hidden');
+  currentFlashcardIndex = Math.max(0, Math.min(currentFlashcardIndex, total - 1));
 
-    details.appendChild(summary);
-    if (display.code) {
-      const code = document.createElement('pre');
-      code.className = 'flashcard-code';
-      code.textContent = display.code;
-      details.appendChild(code);
-    }
-    answer.appendChild(answerLine);
-    answer.appendChild(explanation);
-    details.appendChild(answer);
-    flashcardList.appendChild(details);
-  });
+  const question = currentFlashcardQuestions[currentFlashcardIndex];
+  const display = getQuestionDisplayParts(question);
+  const correctChoice = getCorrectChoice(question);
+
+  const heading = document.createElement('h4');
+  heading.className = 'flashcard-question';
+  if (question.aiGenerated) {
+    const badge = document.createElement('span');
+    badge.className = 'ai-badge';
+    badge.textContent = '✨ AI';
+    heading.appendChild(badge);
+  }
+  heading.appendChild(document.createTextNode(`${currentFlashcardIndex + 1}. ${display.prompt || question.question}`));
+
+  const answer = document.createElement('div');
+  answer.className = 'flashcard-answer';
+
+  const answerLine = document.createElement('p');
+  answerLine.className = 'flashcard-answer-line';
+  answerLine.textContent = `Answer: ${correctChoice || 'Review this concept'}`;
+
+  const explanation = document.createElement('p');
+  explanation.className = 'flashcard-overview';
+  explanation.textContent = buildFlashcardExplanation(question, currentFlashcardTopic);
+
+  flashcardCard.appendChild(heading);
+  if (display.code) {
+    const code = document.createElement('pre');
+    code.className = 'flashcard-code';
+    code.textContent = display.code;
+    flashcardCard.appendChild(code);
+  }
+  answer.appendChild(answerLine);
+  answer.appendChild(explanation);
+  flashcardCard.appendChild(answer);
+
+  if (flashcardPosition) {
+    flashcardPosition.textContent = `Card ${currentFlashcardIndex + 1} of ${total}`;
+  }
+  if (flashcardPrevBtn) flashcardPrevBtn.disabled = total <= 1;
+  if (flashcardNextBtn) flashcardNextBtn.disabled = total <= 1;
+}
+
+function moveFlashcard(direction) {
+  if (!currentFlashcardQuestions.length) return;
+  const total = currentFlashcardQuestions.length;
+  currentFlashcardIndex = (currentFlashcardIndex + direction + total) % total;
+  renderCurrentFlashcard();
 }
 
 function renderFlashcardList() {
@@ -988,6 +1034,9 @@ function renderFlashcardList() {
 
   renderFlashcardTopic(topicMap, flashcardTopicSelect.value);
 }
+
+flashcardPrevBtn?.addEventListener('click', () => moveFlashcard(-1));
+flashcardNextBtn?.addEventListener('click', () => moveFlashcard(1));
 
 
 function startTimer() {
