@@ -35,8 +35,11 @@ let timer = null;
 let timeRemaining = 300;
 let studentName = '';
 let selectedQuizQuestions = [];
+let selectedQuizTopic = 'Java';
 let availableTopics = new Map();
 const totalQuestions = 25;
+const DEFAULT_QUIZ_SECONDS = 300;
+const JAVA_QUIZ_SECONDS = 600;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
 const MAX_FLASHCARD_TOPICS = 10;
@@ -717,7 +720,12 @@ function getPreparedTopicQuestions(topic) {
 }
 
 function selectQuizQuestionsByTopic(topic) {
+  selectedQuizTopic = topic || 'Java';
   selectedQuizQuestions = getPreparedTopicQuestions(topic);
+}
+
+function getQuizDurationSeconds(topic = selectedQuizTopic) {
+  return topic === 'Java' ? JAVA_QUIZ_SECONDS : DEFAULT_QUIZ_SECONDS;
 }
 
 startBtn.addEventListener('click', () => {
@@ -983,7 +991,7 @@ function renderFlashcardList() {
 
 
 function startTimer() {
-  timeRemaining = 300;
+  timeRemaining = getQuizDurationSeconds();
   updateTimer();
   timer = setInterval(() => {
     timeRemaining -= 1;
@@ -1028,7 +1036,7 @@ function resetState() {
   clearInterval(timer);
   currentIndex = 0;
   score = 0;
-  timeRemaining = 300;
+  timeRemaining = getQuizDurationSeconds();
   disableCopyPasteBlocking();
   document.body.classList.remove('quiz-active');
 }
