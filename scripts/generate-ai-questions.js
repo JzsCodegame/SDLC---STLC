@@ -41,22 +41,20 @@ const TOPIC_KEYWORDS = [
 // Topic-specific generation guidance for Claude
 const TOPIC_PROMPTS = {
   Java: {
-    description: 'Java OOP (Object-Oriented Programming)',
+    description: 'beginner Java OOP and core Java basics',
     guidance: `Focus on practical, exercise-based questions covering:
-- Core OOP: inheritance, polymorphism, encapsulation, abstraction
+- Core OOP: classes, objects, fields, methods, constructors, inheritance, polymorphism, encapsulation, abstraction
 - Interfaces vs abstract classes
 - Method overloading vs overriding
 - Access modifiers (public, private, protected, default)
-- Constructors (default, parameterized, copy)
-- Static vs instance members
-- Java collections (ArrayList, HashMap, LinkedList)
-- Exception handling (try-catch-finally, checked vs unchecked)
-- Basic Java syntax (loops, conditionals, arrays)
-- JVM, JDK, JRE differences
+- Constructors and the this keyword
+- Static vs instance members at an introductory level
+- Basic Java syntax students need for code reading: loops, conditionals, arrays, strings, variables, boolean logic, and simple return values
 Include output-prediction exercises like "What is the output of this Java code?" and "Which code snippet correctly demonstrates...?"
 Use W3Schools-style practice: short runnable-looking Java snippets, output prediction, identify the compile/runtime issue, or choose the correct code line.
+Stay beginner-friendly. Do NOT generate questions about collections beyond plain arrays, ArrayList, HashMap, LinkedList, exception handling, try/catch/finally, JVM/JDK/JRE trivia, threads, streams, lambdas, generics, annotations, reflection, file I/O, JDBC, Selenium, frameworks, or advanced APIs.
 For at least 18 generated Java questions, include a compact Java code snippet inside the question text using triple backticks.
-Every question text MUST contain the word "Java" or a Java-specific keyword (e.g. "JVM", "JDK", "ArrayList").`,
+Every question text MUST contain the word "Java" or a beginner Java/OOP keyword such as class, object, method, constructor, inheritance, polymorphism, interface, array, loop, or String.`,
   },
   SDLC: {
     description: 'Software Development Life Cycle (SDLC)',
@@ -176,10 +174,40 @@ function groupByTopic(questions) {
   const map = new Map();
   questions.forEach((q) => {
     const topic = detectTopic(q.question);
+    if (topic === 'Java' && !isBeginnerJavaQuestion(q)) return;
     if (!map.has(topic)) map.set(topic, []);
     map.get(topic).push(q);
   });
   return map;
+}
+
+function javaQuestionText(question) {
+  return [
+    question.question,
+    question.code,
+    ...(Array.isArray(question.choices) ? question.choices : [])
+  ].join(' ').toLowerCase();
+}
+
+function isBeginnerJavaQuestion(question) {
+  const text = javaQuestionText(question);
+  const advancedPatterns = [
+    'arraylist', 'hashmap', 'linkedlist', 'collection', 'collections', ' map<', ' list<', ' set<',
+    'exception', 'try', 'catch', 'finally', 'throw', 'throws',
+    'jvm', 'jdk', 'jre', 'thread', 'synchronized', 'volatile',
+    'stream', 'lambda', 'generic', 'annotation', 'reflection',
+    'file', 'jdbc', 'database', 'selenium', 'framework'
+  ];
+  const beginnerPatterns = [
+    'java', 'class', 'object', 'constructor', 'method', 'field', 'this',
+    'extends', 'implements', 'interface', 'abstract', 'inheritance', 'polymorphism',
+    'encapsulation', 'overriding', 'overloading', 'private', 'public', 'static',
+    'loop', 'for (', 'while', 'break', 'array', '[]', 'string', 'equals',
+    'if', 'else', 'boolean', 'int ', 'variable', 'return', 'print', 'output'
+  ];
+
+  return beginnerPatterns.some((pattern) => text.includes(pattern))
+    && !advancedPatterns.some((pattern) => text.includes(pattern));
 }
 
 async function callClaude(prompt) {
@@ -222,6 +250,8 @@ ${topicDef.guidance}
 Additional requirements:
 - Make each question exercise-based and practical (predict output, spot the error, choose the correct implementation)
 - Java questions should feel like W3Schools practice, with small code examples students can inspect before answering
+- For Java, stay within beginner OOP plus core basics: classes, objects, methods, constructors, loops, arrays, strings, conditionals, and simple variables
+- For Java, do not drift into collections, exceptions, JVM/JDK/JRE trivia, frameworks, or other advanced APIs
 - Provide exactly 4 answer choices per question (labeled option A through D internally)
 - Exactly one choice must be correct
 - Distractors should be plausible but clearly wrong to someone who knows the topic
@@ -264,12 +294,22 @@ Where "answer" is the 0-based index of the correct choice (0 = first choice, 1 =
   }
 
   // Validate and tag each question as AI-generated
-  const valid = generated.filter((q) => {
+  let valid = generated.filter((q) => {
     if (typeof q.question !== 'string' || !q.question.trim()) return false;
     if (!Array.isArray(q.choices) || q.choices.length !== 4) return false;
     if (typeof q.answer !== 'number' || q.answer < 0 || q.answer > 3) return false;
     return true;
   });
+
+  if (topic === 'Java') {
+    const beforeFilter = valid.length;
+    valid = valid.filter(isBeginnerJavaQuestion);
+    if (valid.length < beforeFilter) {
+      console.warn(
+        `  Warning: ${beforeFilter - valid.length} advanced Java question(s) discarded for topic "${topic}".`
+      );
+    }
+  }
 
   if (valid.length < generated.length) {
     console.warn(

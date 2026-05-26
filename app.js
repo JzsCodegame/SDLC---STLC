@@ -427,50 +427,58 @@ function getJavaW3PracticeQuestions() {
       answer: 2
     },
     {
-      question: 'Java ArrayList: what is printed after adding two items?',
+      question: 'Java array update: what is printed after changing one element?',
       code: [
-        'ArrayList<String> names = new ArrayList<>();',
-        'names.add("Ana");',
-        'names.add("Bo");',
-        'System.out.println(names.size());'
+        'String[] names = {"Ana", "Bo"};',
+        'names[1] = "Cam";',
+        'System.out.println(names[1]);'
       ].join('\n'),
-      choices: ['0', '1', '2', 'AnaBo'],
+      choices: ['Ana', 'Bo', 'Cam', '2'],
       answer: 2
     },
     {
-      question: 'Java HashMap: what is printed by get("id")?',
+      question: 'Java method overloading: which result is printed?',
       code: [
-        'HashMap<String, String> user = new HashMap<>();',
-        'user.put("id", "QA-101");',
-        'System.out.println(user.get("id"));'
+        'class MathBox {',
+        '  int add(int a, int b) { return a + b; }',
+        '  int add(int a, int b, int c) { return a + b + c; }',
+        '}',
+        'System.out.println(new MathBox().add(1, 2, 3));'
       ].join('\n'),
-      choices: ['id', 'QA-101', 'user', 'null'],
+      choices: ['3', '6', '123', 'Compilation error'],
       answer: 1
     },
     {
-      question: 'Java exception handling: what is printed?',
+      question: 'Java object fields: what is printed after setting the field?',
       code: [
-        'try {',
-        '  int x = 10 / 0;',
-        '  System.out.println(x);',
-        '} catch (ArithmeticException e) {',
-        '  System.out.println("caught");',
-        '}'
+        'class Student {',
+        '  String name;',
+        '}',
+        'Student student = new Student();',
+        'student.name = "Mia";',
+        'System.out.println(student.name);'
       ].join('\n'),
-      choices: ['10', '0', 'caught', 'ArithmeticException is printed as text'],
+      choices: ['Student', 'name', 'Mia', 'null'],
       answer: 2
     },
     {
-      question: 'Java finally block: what is printed?',
+      question: 'Java setter method: what value is printed?',
       code: [
-        'try {',
-        '  System.out.print("try ");',
-        '} finally {',
-        '  System.out.print("finally");',
-        '}'
+        'class Account {',
+        '  private int balance;',
+        '  void setBalance(int balance) {',
+        '    this.balance = balance;',
+        '  }',
+        '  int getBalance() {',
+        '    return balance;',
+        '  }',
+        '}',
+        'Account account = new Account();',
+        'account.setBalance(50);',
+        'System.out.println(account.getBalance());'
       ].join('\n'),
-      choices: ['try', 'finally', 'try finally', 'No output'],
-      answer: 2
+      choices: ['0', '50', 'balance', 'Compilation error'],
+      answer: 1
     },
     {
       question: 'Java do-while loop: what is printed?',
@@ -623,6 +631,40 @@ function getTopicPracticeQuestions(topic) {
   return matchingTopicPractice.length ? matchingTopicPractice : generalPractice;
 }
 
+function javaQuestionText(question) {
+  return [
+    question.question,
+    question.code,
+    ...(Array.isArray(question.choices) ? question.choices : [])
+  ].join(' ').toLowerCase();
+}
+
+function isBeginnerJavaQuestion(question) {
+  const text = javaQuestionText(question);
+  const advancedPatterns = [
+    'arraylist', 'hashmap', 'linkedlist', 'collection', 'collections', ' map<', ' list<', ' set<',
+    'exception', 'try', 'catch', 'finally', 'throw', 'throws',
+    'jvm', 'jdk', 'jre', 'thread', 'synchronized', 'volatile',
+    'stream', 'lambda', 'generic', 'annotation', 'reflection',
+    'file', 'jdbc', 'database', 'selenium', 'framework'
+  ];
+  const beginnerPatterns = [
+    'java', 'class', 'object', 'constructor', 'method', 'field', 'this',
+    'extends', 'implements', 'interface', 'abstract', 'inheritance', 'polymorphism',
+    'encapsulation', 'overriding', 'overloading', 'private', 'public', 'static',
+    'loop', 'for (', 'while', 'break', 'array', '[]', 'string', 'equals',
+    'if', 'else', 'boolean', 'int ', 'variable', 'return', 'print', 'output'
+  ];
+
+  return beginnerPatterns.some((pattern) => text.includes(pattern))
+    && !advancedPatterns.some((pattern) => text.includes(pattern));
+}
+
+function filterTopicQuestions(topic, candidateQuestions) {
+  if (topic !== 'Java') return candidateQuestions;
+  return candidateQuestions.filter(isBeginnerJavaQuestion);
+}
+
 function questionIdentity(question) {
   const code = question.code ? ` ${question.code}` : '';
   return `${question.question || ''}${code}`.toLowerCase().replace(/\s+/g, ' ').trim();
@@ -641,14 +683,19 @@ function addUniqueQuestions(target, seen, candidates, maxCount) {
 function completeQuestionSet(topic, topicQuestions, count = totalQuestions) {
   const completed = [];
   const seen = new Set();
-  const sameTopicQuestions = questions.filter((question) => detectTopic(question.question) === topic);
+  const filteredTopicQuestions = filterTopicQuestions(topic, topicQuestions);
+  const sameTopicQuestions = filterTopicQuestions(
+    topic,
+    questions.filter((question) => detectTopic(question.question) === topic)
+  );
+  const topicPracticeQuestions = filterTopicQuestions(topic, getTopicPracticeQuestions(topic));
   const broadPractice = topic === 'Java'
-    ? [...getJavaW3PracticeQuestions(), ...getGeneralSoftwarePracticeQuestions()]
+    ? getJavaW3PracticeQuestions()
     : [...getTopicPracticeQuestions(topic), ...getGeneralSoftwarePracticeQuestions()];
 
-  addUniqueQuestions(completed, seen, pickRandomItems(topicQuestions, count), count);
+  addUniqueQuestions(completed, seen, pickRandomItems(filteredTopicQuestions, count), count);
   addUniqueQuestions(completed, seen, pickRandomItems(sameTopicQuestions, count), count);
-  addUniqueQuestions(completed, seen, pickRandomItems(getTopicPracticeQuestions(topic), count), count);
+  addUniqueQuestions(completed, seen, pickRandomItems(topicPracticeQuestions, count), count);
   addUniqueQuestions(completed, seen, pickRandomItems(broadPractice, count), count);
 
   while (completed.length < count && broadPractice.length) {

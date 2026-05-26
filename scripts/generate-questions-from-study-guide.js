@@ -217,8 +217,10 @@ function systemInstructions() {
     'You generate quiz questions for beginner QA, SDLC, STLC, and software testing students.',
     'Use only the provided study guide content. Do not invent facts outside the guide.',
     'Each question must have one clear correct answer and three plausible distractors.',
-    'When Java, OOP, class, object, inheritance, polymorphism, Selenium automation, or Java basics appear in the study guide, include Java questions.',
+    'When Java, OOP, class, object, inheritance, polymorphism, or Java basics appear in the study guide, include Java questions.',
     'Java questions should be W3Schools-style practice: short code snippets, output prediction, spot-the-error, or choose-the-correct-code exercises.',
+    'Keep Java questions beginner-friendly: OOP plus core basics like classes, objects, methods, constructors, fields, this, inheritance, polymorphism, encapsulation, abstraction, interfaces, loops, arrays, strings, conditionals, variables, and simple output.',
+    'Do not generate Java questions about collections beyond plain arrays, ArrayList, HashMap, LinkedList, exceptions, try/catch/finally, JVM/JDK/JRE trivia, threads, streams, lambdas, generics, annotations, reflection, file I/O, JDBC, Selenium, frameworks, or advanced APIs.',
     'Avoid trick questions, repeated questions, all-of-the-above, and none-of-the-above.',
     'Return only data that matches the requested JSON schema.'
   ].join(' ');
@@ -229,7 +231,7 @@ function userPrompt(studyGuide) {
     `Create exactly ${QUESTION_COUNT} multiple-choice quiz questions.`,
     `Quiz variant seed: ${QUIZ_VARIANT_SEED}. Use it to vary question selection across scheduled hourly runs.`,
     'Question format required by the app: question string, choices array of exactly four strings, answer as the zero-based index of the correct choice.',
-    'If the question is about Java, include the word "Java" in the question and prefer a compact code sample inside the question text.',
+    'If the question is about Java, include the word "Java" in the question and prefer a compact code sample inside the question text. Keep Java limited to beginner OOP and core basics such as loops, arrays, strings, conditionals, variables, classes, objects, methods, and constructors.',
     '',
     'Study guide:',
     studyGuide
