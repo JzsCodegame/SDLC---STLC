@@ -7,9 +7,16 @@ pipeline {
     STUDENTS_OUTPUT_FILE = 'students.json'
     MAX_STUDENTS = '20'
     MIN_QUESTIONS_PER_TOPIC = '25'
+    QUESTION_COUNT = '25'
+    OLLAMA_MODEL = 'qwen3:8b'
+    OLLAMA_API_URL = 'http://host.docker.internal:11434/api/generate'
     SOURCE_DOCUMENT_URL = 'https://docs.google.com/document/d/1RzyuPH6ryIVD6z5iRuyJxmUa6jGLJE_wAB5R4S4mUWA/edit?tab=t.0#heading=h.fmjzqinx4dso'
     DEPLOY_COMMAND = ''
     ENABLE_DOCKER_STAGES = 'false'
+  }
+
+  triggers {
+    cron('H 6,18 * * *')
   }
 
   options {
@@ -61,25 +68,49 @@ pipeline {
     }
 
     stage('Generate AI quiz questions') {
-      when {
-        expression { env.ANTHROPIC_API_KEY && env.ANTHROPIC_API_KEY != '' }
-      }
       steps {
-        sh '''
-          if ! command -v docker >/dev/null 2>&1; then
-            echo "Docker is required to run the Node question generator on this Jenkins agent."
-            exit 1
-          fi
+        catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
+          sh '''
+            set -eu
 
-          docker run --rm \
-            --volumes-from jenkins \
-            -w "$WORKSPACE" \
-            -e ANTHROPIC_API_KEY="$ANTHROPIC_API_KEY" \
-            -e CLAUDE_MODEL="$ANTHROPIC_MODEL" \
-            -e MIN_QUESTIONS_PER_TOPIC="$MIN_QUESTIONS_PER_TOPIC" \
-            node:22-alpine \
-            node scripts/generate-ai-questions.js
-        '''
+            if ! command -v docker >/dev/null 2>&1; then
+              echo "Docker is required to run the Node question generator on this Jenkins agent."
+              exit 2
+            fi
+
+            rm -f .question-generation-unstable
+            echo "Generating questions.json with local Ollama ${OLLAMA_MODEL} at ${OLLAMA_API_URL}"
+
+            set +e
+            docker run --rm \
+              --volumes-from jenkins \
+              -w "$WORKSPACE" \
+              -e OLLAMA_API_URL="$OLLAMA_API_URL" \
+              -e OLLAMA_MODEL="$OLLAMA_MODEL" \
+              -e STUDY_GUIDE_URL="$SOURCE_DOCUMENT_URL" \
+              -e QUESTION_COUNT="$QUESTION_COUNT" \
+              -e MIN_QUESTIONS_PER_TOPIC="$MIN_QUESTIONS_PER_TOPIC" \
+              -e QUIZ_VARIANT_SEED="$(date -u +%Y-%m-%dT%H)" \
+              -e OUTPUT_FILE=questions.json \
+              -e STUDY_GUIDE_HASH_FILE=.study-guide.sha256 \
+              -e UNSTABLE_MARKER_FILE=.question-generation-unstable \
+              node:22-alpine \
+              node scripts/generate-questions-local-ollama.js
+            GENERATION_STATUS=$?
+            set -e
+
+            if [ "$GENERATION_STATUS" -ne 0 ]; then
+              echo "Local Ollama generation failed; keeping previous questions.json."
+              exit 2
+            fi
+
+            if [ -f .question-generation-unstable ]; then
+              echo "Local Ollama generation completed with fallback notes:"
+              cat .question-generation-unstable
+              exit 2
+            fi
+          '''
+        }
       }
     }
 
