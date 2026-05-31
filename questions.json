@@ -321,7 +321,7 @@
       "10 20 30",
       "10 30",
       "20",
-      "10 30 "
+      "10 30"
     ],
     "answer": 3,
     "aiGenerated": true
@@ -930,5 +930,2142 @@
     ],
     "answer": 0,
     "aiGenerated": true
+  },
+  {
+    "question": "Java class and object: what is printed?",
+    "code": "class Student { String name = \"Mia\"; }\nStudent s = new Student();\nSystem.out.println(s.name);",
+    "choices": [
+      "Student",
+      "name",
+      "Mia",
+      "null"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Java constructor: what value is printed?",
+    "code": "class Car {\n  String model;\n  Car(String model) { this.model = model; }\n}\nSystem.out.println(new Car(\"Civic\").model);",
+    "choices": [
+      "Car",
+      "model",
+      "Civic",
+      "null"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is a Non-Functional Testing type?",
+    "choices": [
+      "A. Unit Testing",
+      "B. Integration Testing",
+      "C. Performance Testing",
+      "D. System Testing"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which of the following is a Functional Testing type?",
+    "choices": [
+      "A. Performance Testing",
+      "B. Security Testing",
+      "C. Boundary Testing",
+      "D. Load Testing"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features?",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable?",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together?",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 2)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 2)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 2)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 3)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 3)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 3)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 4)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 4)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 4)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 5)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 5)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 5)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 6)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 6)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 6)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 7)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 7)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 7)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 8)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 8)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "In Agile methodology, what is the primary purpose of a Sprint Review meeting?",
+    "choices": [
+      "A. To assign user stories to team members",
+      "B. To demonstrate completed features to stakeholders",
+      "C. To estimate the effort required for user stories",
+      "D. To discuss blockers and plan the day's work"
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint?",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which role owns product priority?",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "QA Lead",
+      "Release Manager"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which artifact lists ordered product work?",
+    "choices": [
+      "Product Backlog",
+      "RTM",
+      "Test Plan",
+      "Deployment Script"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 2)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which role owns product priority? (fallback review 2)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "QA Lead",
+      "Release Manager"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which artifact lists ordered product work? (fallback review 2)",
+    "choices": [
+      "Product Backlog",
+      "RTM",
+      "Test Plan",
+      "Deployment Script"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 3)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which role owns product priority? (fallback review 3)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "QA Lead",
+      "Release Manager"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which artifact lists ordered product work? (fallback review 3)",
+    "choices": [
+      "Product Backlog",
+      "RTM",
+      "Test Plan",
+      "Deployment Script"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 4)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which role owns product priority? (fallback review 4)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "QA Lead",
+      "Release Manager"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which artifact lists ordered product work? (fallback review 4)",
+    "choices": [
+      "Product Backlog",
+      "RTM",
+      "Test Plan",
+      "Deployment Script"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 5)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which role owns product priority? (fallback review 5)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "QA Lead",
+      "Release Manager"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which artifact lists ordered product work? (fallback review 5)",
+    "choices": [
+      "Product Backlog",
+      "RTM",
+      "Test Plan",
+      "Deployment Script"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 6)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which role owns product priority? (fallback review 6)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "QA Lead",
+      "Release Manager"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which artifact lists ordered product work? (fallback review 6)",
+    "choices": [
+      "Product Backlog",
+      "RTM",
+      "Test Plan",
+      "Deployment Script"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 7)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which role owns product priority? (fallback review 7)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "QA Lead",
+      "Release Manager"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement?",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement?",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 2)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 2)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 3)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 3)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 4)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 4)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 5)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 5)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 6)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 6)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 7)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 7)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 8)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 8)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 9)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 9)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 10)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 10)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 11)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a non-functional requirement? (fallback review 11)",
+    "choices": [
+      "The app must support 500 users at once",
+      "The user can reset a password",
+      "The admin can add products",
+      "The form saves an address"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements: which statement describes a functional requirement? (fallback review 12)",
+    "choices": [
+      "What the system must do",
+      "How fast the page must load",
+      "Which server hosts the app",
+      "How the sprint is scheduled"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships?",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic?",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 2)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 2)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 3)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 3)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 4)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 4)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 5)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 5)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 6)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 6)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 7)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 7)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 8)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 8)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 9)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 9)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 10)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 10)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 11)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 11)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 12)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which design level describes detailed module logic? (fallback review 12)",
+    "choices": [
+      "Low-level design",
+      "Sprint review",
+      "Smoke testing",
+      "Bug triage"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design: which diagram can show classes and relationships? (fallback review 13)",
+    "choices": [
+      "UML class diagram",
+      "Bug report",
+      "Daily Scrum note",
+      "Build log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline?",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app?",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 2)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 2)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 3)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 3)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 4)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 4)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 5)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 5)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 6)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 6)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 7)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 7)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 8)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 8)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 9)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 9)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 10)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 10)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 11)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 11)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 12)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 12)",
+    "choices": [
+      "Runtime dependencies",
+      "User stories only",
+      "Bug priority only",
+      "Manual test steps only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 13)",
+    "choices": [
+      "Jenkins",
+      "RTM",
+      "Use case",
+      "Severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is a correct statement about the Defect Life Cycle?",
+    "choices": [
+      "A. A defect can only be closed after being fixed",
+      "B. A defect can be reopened if new information is found",
+      "C. A defect must be assigned to a developer before being fixed",
+      "D. All of the above"
+    ],
+    "answer": 3,
+    "aiGenerated": true
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe?",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe?",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 2)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 2)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 3)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 3)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 4)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 4)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 5)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 5)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 6)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 6)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 7)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 7)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 8)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 8)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 9)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 9)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 10)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 10)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 11)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does priority describe? (fallback review 11)",
+    "choices": [
+      "Urgency of fixing the defect",
+      "How many testers found it",
+      "How old the ticket is",
+      "Which browser was used"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking: what does severity describe? (fallback review 12)",
+    "choices": [
+      "Impact of the defect",
+      "Order of fixing work",
+      "Developer seniority",
+      "Sprint length"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the primary purpose of a Test Case?",
+    "choices": [
+      "A. To document the steps required to reproduce a bug",
+      "B. To ensure that the software meets all business requirements",
+      "C. To provide a clear set of steps to verify a specific functionality",
+      "D. To track defects and their resolution status"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect?",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include?",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 2)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 2)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 3)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 3)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 4)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 4)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 5)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 5)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 6)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 6)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 7)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 7)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 8)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 8)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 9)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 9)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 10)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does a test case include? (fallback review 10)",
+    "choices": [
+      "Steps and expected result",
+      "Only source code",
+      "Only a server name",
+      "Only a sprint date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Test Artifacts: what does an RTM connect? (fallback review 11)",
+    "choices": [
+      "Requirements to test cases",
+      "Developers to branches",
+      "Users to roles",
+      "Servers to ports"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release?",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release?",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 2)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 2)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 3)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 3)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 4)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 4)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 5)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 5)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 6)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 6)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 7)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 7)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 8)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 8)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 9)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 9)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 10)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 10)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 11)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 11)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 12)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type improves existing behavior after release? (fallback review 12)",
+    "choices": [
+      "Perfective maintenance",
+      "Unit testing",
+      "Sprint planning",
+      "Requirement traceability"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Maintenance: which type fixes defects after release? (fallback review 13)",
+    "choices": [
+      "Corrective maintenance",
+      "Perfective maintenance",
+      "Adaptive maintenance",
+      "Prototype design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on?",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful?",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 2)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 2)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 3)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 3)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 4)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 4)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 5)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 5)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 6)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 6)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 7)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 7)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 8)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 8)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 9)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 9)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 10)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: why is documentation useful? (fallback review 10)",
+    "choices": [
+      "It helps teams share and verify understanding",
+      "It replaces all testing",
+      "It removes all defects",
+      "It disables deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "General Concepts: what is QA focused on? (fallback review 11)",
+    "choices": [
+      "Improving product quality",
+      "Only writing code",
+      "Only deploying servers",
+      "Only assigning story points"
+    ],
+    "answer": 0
   }
 ]
