@@ -265,6 +265,11 @@ function isBeginnerJavaQuestion(question) {
 
 function detectTopic(questionText = '') {
   const text = questionText.toLowerCase();
+  const explicitTopic = REQUIRED_TOPICS.find((topic) =>
+    text.startsWith(topic.toLowerCase()) || text.startsWith(`${topic.toLowerCase()}:`)
+  );
+  if (explicitTopic) return explicitTopic;
+
   const found = TOPIC_KEYWORDS.find(({ patterns }) => patterns.some((pattern) => text.includes(pattern)));
   return found ? found.topic : 'General Concepts';
 }
