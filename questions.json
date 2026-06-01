@@ -1897,256 +1897,6 @@
     "answer": 0
   },
   {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline?",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app?",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 2)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 2)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 3)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 3)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 4)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 4)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 5)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 5)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 6)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 6)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 7)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 7)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 8)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 8)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 9)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 9)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 10)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 10)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 11)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 11)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 12)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: what does Docker package with an app? (fallback review 12)",
-    "choices": [
-      "Runtime dependencies",
-      "User stories only",
-      "Bug priority only",
-      "Manual test steps only"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "Deployment & DevOps: which tool can run an automated CI/CD pipeline? (fallback review 13)",
-    "choices": [
-      "Jenkins",
-      "RTM",
-      "Use case",
-      "Severity"
-    ],
-    "answer": 0
-  },
-  {
     "question": "Which of the following is a correct statement about the Defect Life Cycle?",
     "choices": [
       "A. A defect can only be closed after being fixed",
@@ -4315,6 +4065,256 @@
       "Writing Java code",
       "Creating a Docker image",
       "Merging a branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment?",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful?",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for?",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 2)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful? (fallback review 2)",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for? (fallback review 2)",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 3)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful? (fallback review 3)",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for? (fallback review 3)",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 4)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful? (fallback review 4)",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for? (fallback review 4)",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 5)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful? (fallback review 5)",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for? (fallback review 5)",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 6)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful? (fallback review 6)",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for? (fallback review 6)",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 7)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful? (fallback review 7)",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for? (fallback review 7)",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 8)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: why is rollback planning useful? (fallback review 8)",
+    "choices": [
+      "It gives a way to recover if a release has problems",
+      "It replaces all testing",
+      "It deletes the backlog",
+      "It removes the need for approvals"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a staging environment used for? (fallback review 8)",
+    "choices": [
+      "Testing a release in a production-like place",
+      "Writing lesson notes only",
+      "Choosing a font family",
+      "Drawing a class mascot"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps: what is a production deployment? (fallback review 9)",
+    "choices": [
+      "Releasing tested software to users",
+      "Writing a class diagram",
+      "Renaming a meeting note",
+      "Changing a logo color"
     ],
     "answer": 0
   }
