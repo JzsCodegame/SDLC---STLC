@@ -74,6 +74,24 @@ const JAVA_ALLOWED_TERMS = [
   'if', 'else', 'boolean', 'int ', 'variable', 'return', 'print', 'output'
 ];
 
+const DEPLOYMENT_EXCLUDED_PATTERNS = [
+  /\bgit\b/,
+  /\bgithub\b/,
+  /\bjenkins\b/,
+  /\bdocker\b/,
+  /\bdockerfile\b/,
+  /\bcontainer(s)?\b/,
+  /\bpull request\b/,
+  /\brepositor(y|ies)\b/,
+  /\bcommit(s)?\b/,
+  /\bbranch(es)?\b/,
+  /\bservicenow\b/,
+  /\bservice now\b/,
+  /\bincident\b/,
+  /\bchange request\b/,
+  /\bproblem ticket\b/
+];
+
 const TOPIC_GUIDANCE = {
   Java: 'Beginner Java OOP plus core basics only: classes, objects, constructors, methods, fields, this, encapsulation, inheritance, polymorphism, abstraction, interfaces, loops, arrays, strings, conditionals, variables, boolean logic, and simple output. Do not use blocked advanced Java topics.',
   SDLC: 'Software Development Life Cycle phases, order, purpose, artifacts, and beginner scenarios.',
@@ -296,7 +314,7 @@ function questionIdentity(question) {
   return `${question.question || ''} ${question.code || ''}`.toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
-function javaQuestionText(question) {
+function questionSearchText(question) {
   return [
     question.question,
     question.code,
@@ -304,10 +322,19 @@ function javaQuestionText(question) {
   ].join(' ').toLowerCase();
 }
 
+function javaQuestionText(question) {
+  return questionSearchText(question);
+}
+
 function isBeginnerJavaQuestion(question) {
   const text = javaQuestionText(question);
   return JAVA_ALLOWED_TERMS.some((term) => text.includes(term))
     && !JAVA_BLOCKED_TERMS.some((term) => text.includes(term));
+}
+
+function isDeploymentReleaseQuestion(question) {
+  const text = questionSearchText(question);
+  return !DEPLOYMENT_EXCLUDED_PATTERNS.some((pattern) => pattern.test(text));
 }
 
 function detectTopic(questionText = '') {
@@ -332,7 +359,9 @@ function sanitizeQuestions(rawQuestions) {
     if (!question.question) continue;
     if (!Array.isArray(question.choices) || question.choices.length !== 4 || question.choices.some((choice) => !choice)) continue;
     if (!Number.isInteger(question.answer) || question.answer < 0 || question.answer > 3) continue;
-    if (detectTopic(question.question) === 'Java' && !isBeginnerJavaQuestion(question)) continue;
+    const topic = detectTopic(question.question);
+    if (topic === 'Java' && !isBeginnerJavaQuestion(question)) continue;
+    if (topic === 'Deployment & DevOps' && !isDeploymentReleaseQuestion(question)) continue;
 
     const key = questionIdentity(question);
     if (!key || seen.has(key)) continue;
