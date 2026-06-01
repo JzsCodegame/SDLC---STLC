@@ -190,9 +190,9 @@ const FALLBACK_BANKS = {
     basic('Design: which design level describes detailed module logic?', ['Low-level design', 'Sprint review', 'Smoke testing', 'Bug triage'], 0)
   ],
   'Deployment & DevOps': [
-    basic('Deployment & DevOps: what is a production deployment?', ['Releasing tested software to users', 'Writing a class diagram', 'Creating only a Git branch', 'Closing all incidents automatically'], 0),
+    basic('Deployment & DevOps: what is a production deployment?', ['Releasing tested software to users', 'Writing a class diagram', 'Renaming a meeting note', 'Changing a logo color'], 0),
     basic('Deployment & DevOps: why is rollback planning useful?', ['It gives a way to recover if a release has problems', 'It replaces all testing', 'It deletes the backlog', 'It removes the need for approvals'], 0),
-    basic('Deployment & DevOps: what is a staging environment used for?', ['Testing a release in a production-like place', 'Storing only source code history', 'Assigning incident priority only', 'Writing constructor methods'], 0)
+    basic('Deployment & DevOps: what is a staging environment used for?', ['Testing a release in a production-like place', 'Writing lesson notes only', 'Choosing a font family', 'Drawing a class mascot'], 0)
   ],
   'Defects & Bug Tracking': [
     basic('Defects & Bug Tracking: what does severity describe?', ['Impact of the defect', 'Order of fixing work', 'Developer seniority', 'Sprint length'], 0),
