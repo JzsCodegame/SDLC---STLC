@@ -588,19 +588,36 @@ function countQuestionStyles(questions) {
   }, { scenario: 0, concept: 0 });
 }
 
+function countStyleDeficit(questions) {
+  const styles = countQuestionStyles(questions);
+  return {
+    scenario: Math.max(0, MIN_SCENARIO_QUESTIONS_PER_TOPIC - styles.scenario),
+    concept: Math.max(0, MIN_CONCEPT_QUESTIONS_PER_TOPIC - styles.concept)
+  };
+}
+
+function totalStyleDeficit(questions) {
+  const deficit = countStyleDeficit(questions);
+  return deficit.scenario + deficit.concept;
+}
+
+function selectBalancedTopicQuestions(topicQuestions) {
+  const scenarios = topicQuestions
+    .filter((question) => questionStyle(question) === 'scenario')
+    .slice(0, MIN_SCENARIO_QUESTIONS_PER_TOPIC);
+  const concepts = topicQuestions
+    .filter((question) => questionStyle(question) === 'concept')
+    .slice(0, MIN_CONCEPT_QUESTIONS_PER_TOPIC);
+  return [...scenarios, ...concepts];
+}
+
 function balanceQuestionsByTopic(questions) {
   const grouped = groupByTopic(questions);
   const balanced = [];
 
   for (const topic of REQUIRED_TOPICS) {
     const topicQuestions = grouped.get(topic) || [];
-    const scenarios = topicQuestions
-      .filter((question) => questionStyle(question) === 'scenario')
-      .slice(0, MIN_SCENARIO_QUESTIONS_PER_TOPIC);
-    const concepts = topicQuestions
-      .filter((question) => questionStyle(question) === 'concept')
-      .slice(0, MIN_CONCEPT_QUESTIONS_PER_TOPIC);
-    balanced.push(...scenarios, ...concepts);
+    balanced.push(...selectBalancedTopicQuestions(topicQuestions));
   }
 
   return balanced;
@@ -828,7 +845,7 @@ async function main() {
   for (const topic of REQUIRED_TOPICS) {
     const grouped = groupByTopic(questions);
     const existing = grouped.get(topic) || [];
-    const needed = MIN_QUESTIONS_PER_TOPIC - existing.length;
+    const needed = totalStyleDeficit(existing);
     if (needed <= 0) continue;
 
     let additions = [];
@@ -840,8 +857,11 @@ async function main() {
       console.warn(unstableReasons[unstableReasons.length - 1]);
     }
 
-    if (additions.length < needed) {
-      const fallbackNeeded = needed - additions.length;
+    const acceptedTopicQuestions = sanitizeQuestions([...existing, ...additions])
+      .filter((question) => detectTopic(question.question) === topic);
+    const balancedTopicQuestions = selectBalancedTopicQuestions(acceptedTopicQuestions);
+    const fallbackNeeded = totalStyleDeficit(balancedTopicQuestions);
+    if (fallbackNeeded > 0) {
       additions = additions.concat(fallbackQuestions(topic, fallbackNeeded, [...existing, ...additions]));
       unstableReasons.push(`Used ${fallbackNeeded} deterministic fallback question(s) for ${topic}.`);
       console.warn(unstableReasons[unstableReasons.length - 1]);
