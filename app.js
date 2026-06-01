@@ -50,8 +50,46 @@ const DEFAULT_QUIZ_SECONDS = 300;
 const JAVA_QUIZ_SECONDS = 600;
 const SCORES_REFRESH_INTERVAL = 30000; // 30 seconds
 const FIRESTORE_PROCESSING_DELAY = 1000; // 1 second
-const MAX_FLASHCARD_TOPICS = 10;
+const MAX_FLASHCARD_TOPICS = 20;
 const FLASHCARDS_PER_TOPIC = totalQuestions;
+const TOPIC_DISPLAY_ORDER = [
+  'Java',
+  'SDLC',
+  'STLC',
+  'Git',
+  'GitHub',
+  'Jenkins',
+  'Docker',
+  'ServiceNow',
+  'Testing Types',
+  'Agile & Scrum',
+  'Requirements',
+  'Design',
+  'Defects & Bug Tracking',
+  'Test Artifacts',
+  'Maintenance',
+  'Deployment & DevOps',
+  'General Concepts'
+];
+const GUARANTEED_TOPIC_FALLBACKS = ['Java', 'Git', 'GitHub', 'Jenkins', 'Docker', 'ServiceNow'];
+const TOPIC_KEYWORDS = [
+  { topic: 'ServiceNow', patterns: ['servicenow', 'service now', 'incident', 'change request', 'problem ticket', 'service catalog', 'catalog item', 'assignment group', 'sla', 'cmdb'] },
+  { topic: 'GitHub', patterns: ['github', 'pull request', 'pr review', 'repository hosting', 'fork', 'github actions'] },
+  { topic: 'Git', patterns: ['git ', 'git:', 'version control', 'commit', 'staging area', 'branch', 'merge', 'clone', 'checkout', 'git status', 'git add', 'git commit', 'git pull', 'git push'] },
+  { topic: 'Jenkins', patterns: ['jenkins', 'build job', 'pipeline job', 'console log', 'workspace', 'build trigger', 'cron trigger', 'artifact archive'] },
+  { topic: 'Docker', patterns: ['docker', 'container', 'image tag', 'dockerfile', 'port mapping', 'volume mount'] },
+  { topic: 'SDLC', patterns: ['sdlc', 'software development life cycle'] },
+  { topic: 'STLC', patterns: ['stlc', 'software testing life cycle'] },
+  { topic: 'Testing Types', patterns: ['unit test', 'integration test', 'system test', 'acceptance test', 'testing type'] },
+  { topic: 'Agile & Scrum', patterns: ['agile', 'scrum', 'sprint', 'kanban'] },
+  { topic: 'Requirements', patterns: ['requirement', 'functional', 'non-functional', 'srs'] },
+  { topic: 'Design', patterns: ['design', 'architecture', 'uml', 'prototype'] },
+  { topic: 'Defects & Bug Tracking', patterns: ['defect', 'bug', 'severity', 'priority'] },
+  { topic: 'Test Artifacts', patterns: ['test case', 'test plan', 'traceability', 'rtm'] },
+  { topic: 'Java', patterns: ['java', 'jvm', 'jdk', 'jre', 'class', 'object', 'inheritance', 'polymorphism'] },
+  { topic: 'Maintenance', patterns: ['maintenance', 'production support', 'patch'] },
+  { topic: 'Deployment & DevOps', patterns: ['deployment', 'deploy', 'release', 'rollback', 'staging', 'production environment', 'devops', 'ci/cd'] }
+];
 const JAVA_LAB_SAMPLE = {
   code: [
     'class Main {',
@@ -605,6 +643,27 @@ function getGeneralSoftwarePracticeQuestions() {
     { question: 'STLC scenario: which phase writes detailed steps and expected results?', choices: ['Environment Setup', 'Test Case Development', 'Deployment', 'Maintenance'], answer: 1 },
     { question: 'STLC scenario: which phase runs test cases and logs defects?', choices: ['Test Execution', 'Design', 'Planning', 'Requirement Gathering'], answer: 0 },
     { question: 'STLC scenario: which phase summarizes results and lessons learned?', choices: ['Test Closure', 'Coding', 'Deployment', 'Backlog Grooming'], answer: 0 },
+    { question: 'Git: which command shows changed files before a commit?', choices: ['git status', 'git clone', 'git init', 'git remote'], answer: 0 },
+    { question: 'Git: which command stages a file for the next commit?', choices: ['git add', 'git push', 'git log', 'git branch'], answer: 0 },
+    { question: 'Git: what does a branch let a team do?', choices: ['Work on changes separately', 'Delete the repository', 'Run a server', 'Create a Docker image'], answer: 0 },
+    { question: 'Git: which command records staged changes in local history?', choices: ['git commit', 'git pull', 'git clone', 'git fetch'], answer: 0 },
+    { question: 'Git: which command sends local commits to a remote repository?', choices: ['git push', 'git status', 'git add', 'git log'], answer: 0 },
+    { question: 'GitHub: what is a pull request mainly used for?', choices: ['Review and discuss changes before merging', 'Start a local server', 'Create a test case', 'Install Docker'], answer: 0 },
+    { question: 'GitHub: what does an issue usually track?', choices: ['A bug, task, or requested change', 'Only compiled code', 'Only a password', 'Only a server port'], answer: 0 },
+    { question: 'GitHub: what is a fork?', choices: ['A personal copy of a repository', 'A failed build', 'A test report', 'A production release'], answer: 0 },
+    { question: 'Jenkins: what does a build job usually do?', choices: ['Runs automated steps such as build, test, or deploy', 'Writes user stories only', 'Stores meeting notes only', 'Replaces Git'], answer: 0 },
+    { question: 'Jenkins: where would you look first to debug a failed build?', choices: ['Console log', 'Product backlog', 'Class diagram', 'RTM only'], answer: 0 },
+    { question: 'Jenkins: what does a scheduled trigger do?', choices: ['Starts a job automatically at configured times', 'Deletes source code', 'Creates a Java class', 'Changes a bug severity'], answer: 0 },
+    { question: 'Docker: what is a container?', choices: ['A runnable package of an app and its environment', 'A Git branch', 'A Jira ticket', 'A test case'], answer: 0 },
+    { question: 'Docker: what does a Dockerfile describe?', choices: ['Steps to build an image', 'Steps to write a user story', 'Steps to assign severity', 'Steps to create an RTM'], answer: 0 },
+    { question: 'Docker: why is port mapping used?', choices: ['To expose a container port on the host', 'To rename a branch', 'To close a defect', 'To write a constructor'], answer: 0 },
+    { question: 'ServiceNow: what is an incident usually used for?', choices: ['Restoring service after something is broken', 'Writing Java code', 'Creating a Docker image', 'Merging a branch'], answer: 0 },
+    { question: 'ServiceNow: what does a change request control?', choices: ['Planned changes to a service or system', 'Only local Git commits', 'Only quiz scores', 'Only CSS colors'], answer: 0 },
+    { question: 'ServiceNow: why is an assignment group useful?', choices: ['It routes work to the right support team', 'It runs unit tests', 'It builds a Docker image', 'It changes Java output'], answer: 0 },
+    { question: 'ServiceNow: what does an SLA measure?', choices: ['Expected response or resolution time', 'Number of Git branches', 'Docker image size only', 'Java class count only'], answer: 0 },
+    { question: 'Deployment & DevOps: what is a production deployment?', choices: ['Releasing tested software to users', 'Writing a class diagram', 'Creating only a Git branch', 'Closing all incidents automatically'], answer: 0 },
+    { question: 'Deployment & DevOps: why is rollback planning useful?', choices: ['It gives a way to recover if a release has problems', 'It replaces all testing', 'It deletes the backlog', 'It removes the need for approvals'], answer: 0 },
+    { question: 'Deployment & DevOps: what is a staging environment used for?', choices: ['Testing a release in a production-like place', 'Storing only source code history', 'Assigning incident priority only', 'Writing constructor methods'], answer: 0 },
     { question: 'Testing Types: which testing checks that recent changes did not break existing behavior?', choices: ['Regression testing', 'Smoke testing', 'Load testing', 'Usability testing'], answer: 0 },
     { question: 'Testing Types: which testing quickly verifies that a build is stable enough for deeper QA?', choices: ['Smoke testing', 'Acceptance testing', 'Security testing', 'Localization testing'], answer: 0 },
     { question: 'Testing Types: which testing validates a small bug fix or narrow feature change?', choices: ['Sanity testing', 'Performance testing', 'Compatibility testing', 'Exploratory testing'], answer: 0 },
@@ -911,30 +970,25 @@ function pickRandomItems(items, count) {
 
 function detectTopic(questionText = '') {
   const text = questionText.toLowerCase();
-  const topicKeywords = [
-    { topic: 'SDLC', patterns: ['sdlc', 'software development life cycle'] },
-    { topic: 'STLC', patterns: ['stlc', 'software testing life cycle'] },
-    { topic: 'Testing Types', patterns: ['unit test', 'integration test', 'system test', 'acceptance test', 'testing type'] },
-    { topic: 'Agile & Scrum', patterns: ['agile', 'scrum', 'sprint', 'kanban'] },
-    { topic: 'Requirements', patterns: ['requirement', 'functional', 'non-functional', 'srs'] },
-    { topic: 'Design', patterns: ['design', 'architecture', 'uml', 'prototype'] },
-    { topic: 'Deployment & DevOps', patterns: ['deployment', 'devops', 'ci/cd', 'jenkins', 'docker'] },
-    { topic: 'Defects & Bug Tracking', patterns: ['defect', 'bug', 'severity', 'priority'] },
-    { topic: 'Test Artifacts', patterns: ['test case', 'test plan', 'traceability', 'rtm'] },
-    { topic: 'Java', patterns: ['java', 'jvm', 'jdk', 'jre', 'class', 'object', 'inheritance', 'polymorphism'] },
-    { topic: 'Maintenance', patterns: ['maintenance', 'production support', 'patch'] }
-  ];
+  const explicitTopic = TOPIC_DISPLAY_ORDER.find((topic) =>
+    text === topic.toLowerCase()
+      || text.startsWith(`${topic.toLowerCase()}:`)
+      || text.startsWith(`${topic.toLowerCase()} `)
+  );
+  if (explicitTopic) return explicitTopic;
 
-  const found = topicKeywords.find(({ patterns }) => patterns.some((pattern) => text.includes(pattern)));
+  const found = TOPIC_KEYWORDS.find(({ patterns }) => patterns.some((pattern) => text.includes(pattern)));
   return found ? found.topic : 'General Concepts';
 }
 
 
 function ensureJavaTopic(topicMap) {
   const normalized = new Map(topicMap);
-  if (!normalized.has('Java')) {
-    normalized.set('Java', getJavaW3PracticeQuestions());
-  }
+  GUARANTEED_TOPIC_FALLBACKS.forEach((topic) => {
+    if (!normalized.has(topic)) {
+      normalized.set(topic, getTopicPracticeQuestions(topic));
+    }
+  });
 
   [...normalized.keys()].forEach((topic) => {
     normalized.set(topic, completeQuestionSet(topic, normalized.get(topic) || [], totalQuestions));
@@ -951,7 +1005,13 @@ function buildTopicMap() {
     grouped.get(topic).push(question);
   });
 
-  const sortedEntries = [...grouped.entries()].sort((a, b) => b[1].length - a[1].length);
+  const sortedEntries = [...grouped.entries()].sort((a, b) => {
+    const countDifference = b[1].length - a[1].length;
+    if (countDifference) return countDifference;
+    const aIndex = TOPIC_DISPLAY_ORDER.indexOf(a[0]);
+    const bIndex = TOPIC_DISPLAY_ORDER.indexOf(b[0]);
+    return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
+  });
   const limitedEntries = sortedEntries.slice(0, MAX_FLASHCARD_TOPICS);
   return ensureJavaTopic(new Map(limitedEntries));
 }

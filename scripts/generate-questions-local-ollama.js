@@ -20,23 +20,33 @@ const MAX_STUDY_GUIDE_CHARS = Number(process.env.MAX_STUDY_GUIDE_CHARS || 60000)
 let ollamaUsed = false;
 
 const TOPIC_KEYWORDS = [
+  { topic: 'ServiceNow', patterns: ['servicenow', 'service now', 'incident', 'change request', 'problem ticket', 'service catalog', 'catalog item', 'assignment group', 'sla', 'cmdb'] },
+  { topic: 'GitHub', patterns: ['github', 'pull request', 'pr review', 'repository hosting', 'fork', 'github actions'] },
+  { topic: 'Git', patterns: ['git ', 'git:', 'version control', 'commit', 'staging area', 'branch', 'merge', 'clone', 'checkout', 'git status', 'git add', 'git commit', 'git pull', 'git push'] },
+  { topic: 'Jenkins', patterns: ['jenkins', 'build job', 'pipeline job', 'console log', 'workspace', 'build trigger', 'cron trigger', 'artifact archive'] },
+  { topic: 'Docker', patterns: ['docker', 'container', 'image tag', 'dockerfile', 'port mapping', 'volume mount'] },
   { topic: 'SDLC', patterns: ['sdlc', 'software development life cycle'] },
   { topic: 'STLC', patterns: ['stlc', 'software testing life cycle'] },
   { topic: 'Testing Types', patterns: ['unit test', 'integration test', 'system test', 'acceptance test', 'testing type'] },
   { topic: 'Agile & Scrum', patterns: ['agile', 'scrum', 'sprint', 'kanban'] },
   { topic: 'Requirements', patterns: ['requirement', 'functional', 'non-functional', 'srs'] },
   { topic: 'Design', patterns: ['design', 'architecture', 'uml', 'prototype'] },
-  { topic: 'Deployment & DevOps', patterns: ['deployment', 'devops', 'ci/cd', 'jenkins', 'docker'] },
   { topic: 'Defects & Bug Tracking', patterns: ['defect', 'bug', 'severity', 'priority'] },
   { topic: 'Test Artifacts', patterns: ['test case', 'test plan', 'traceability', 'rtm'] },
   { topic: 'Java', patterns: ['java', 'class', 'object', 'inheritance', 'polymorphism', 'encapsulation'] },
-  { topic: 'Maintenance', patterns: ['maintenance', 'production support', 'patch'] }
+  { topic: 'Maintenance', patterns: ['maintenance', 'production support', 'patch'] },
+  { topic: 'Deployment & DevOps', patterns: ['deployment', 'deploy', 'release', 'rollback', 'staging', 'production environment', 'devops', 'ci/cd'] }
 ];
 
 const REQUIRED_TOPICS = [
   'Java',
   'SDLC',
   'STLC',
+  'Git',
+  'GitHub',
+  'Jenkins',
+  'Docker',
+  'ServiceNow',
   'Testing Types',
   'Agile & Scrum',
   'Requirements',
@@ -68,11 +78,16 @@ const TOPIC_GUIDANCE = {
   Java: 'Beginner Java OOP plus core basics only: classes, objects, constructors, methods, fields, this, encapsulation, inheritance, polymorphism, abstraction, interfaces, loops, arrays, strings, conditionals, variables, boolean logic, and simple output. Do not use blocked advanced Java topics.',
   SDLC: 'Software Development Life Cycle phases, order, purpose, artifacts, and beginner scenarios.',
   STLC: 'Software Testing Life Cycle phases, test planning, test cases, execution, closure, entry and exit criteria.',
+  Git: 'Beginner Git version control: repositories, working tree, staging area, commits, branches, merge, clone, status, add, commit, pull, push, checkout, log, and resolving simple collaboration scenarios.',
+  GitHub: 'Beginner GitHub collaboration: repositories, pull requests, issues, reviews, forks, branches, README files, and basic GitHub Actions awareness.',
+  Jenkins: 'Beginner Jenkins CI: jobs, builds, console logs, workspaces, triggers, scheduled builds, artifacts, pipeline basics, and troubleshooting a failed build.',
+  Docker: 'Beginner Docker: images, containers, Dockerfile, tags, ports, volumes, container lifecycle, and why containerized apps run consistently.',
+  ServiceNow: 'Beginner ServiceNow ITSM: incidents, change requests, problem tickets, service catalog, assignment groups, SLA, status, priority, and basic ticket workflow.',
   'Testing Types': 'Unit, integration, system, acceptance, functional, non-functional, smoke, sanity, regression, exploratory, performance, security testing.',
   'Agile & Scrum': 'Agile values, Scrum roles, Sprint events, Product Backlog, Sprint Backlog, Increment, Kanban, story points.',
   Requirements: 'Functional and non-functional requirements, SRS, user stories, use cases, acceptance criteria.',
   Design: 'UML, architecture, high-level design, low-level design, prototypes, simple design patterns.',
-  'Deployment & DevOps': 'Deployment, DevOps, CI/CD, Jenkins, Docker, release strategies, infrastructure basics.',
+  'Deployment & DevOps': 'Deployment and release basics that are not specific to Git, GitHub, Jenkins, Docker, or ServiceNow: environments, staging, production, rollback, release readiness, and basic DevOps flow.',
   'Defects & Bug Tracking': 'Defect lifecycle, severity, priority, bug reports, reproduction steps, expected vs actual results.',
   'Test Artifacts': 'Test plans, test cases, RTM, traceability, test data, test summary reports.',
   Maintenance: 'Corrective, adaptive, perfective, preventive maintenance, production support, patches, change management.',
@@ -107,6 +122,37 @@ const FALLBACK_BANKS = {
     basic('STLC scenario: which phase defines scope, resources, schedule, and risks?', ['Test Planning', 'Implementation', 'Production Support', 'Coding'], 0),
     basic('STLC scenario: which phase runs test cases and logs defects?', ['Test Execution', 'Design', 'Planning', 'Requirement Gathering'], 0)
   ],
+  Git: [
+    basic('Git: which command shows changed files before a commit?', ['git status', 'git clone', 'git init', 'git remote'], 0),
+    basic('Git: which command stages a file for the next commit?', ['git add', 'git push', 'git log', 'git branch'], 0),
+    basic('Git: what does a branch let a team do?', ['Work on changes separately', 'Delete the repository', 'Run a server', 'Create a Docker image'], 0),
+    basic('Git: which command records staged changes in local history?', ['git commit', 'git pull', 'git clone', 'git fetch'], 0),
+    basic('Git: which command sends local commits to a remote repository?', ['git push', 'git status', 'git add', 'git log'], 0)
+  ],
+  GitHub: [
+    basic('GitHub: what is a pull request mainly used for?', ['Review and discuss changes before merging', 'Start a local server', 'Create a test case', 'Install Docker'], 0),
+    basic('GitHub: what does an issue usually track?', ['A bug, task, or requested change', 'Only compiled code', 'Only a password', 'Only a server port'], 0),
+    basic('GitHub: what is a fork?', ['A personal copy of a repository', 'A failed build', 'A test report', 'A production release'], 0),
+    basic('GitHub: what does a repository usually contain?', ['Project files and change history', 'Only production passwords', 'Only browser cookies', 'Only meeting audio'], 0)
+  ],
+  Jenkins: [
+    basic('Jenkins: what does a build job usually do?', ['Runs automated steps such as build, test, or deploy', 'Writes user stories only', 'Stores meeting notes only', 'Replaces Git'], 0),
+    basic('Jenkins: where would you look first to debug a failed build?', ['Console log', 'Product backlog', 'Class diagram', 'RTM only'], 0),
+    basic('Jenkins: what does a scheduled trigger do?', ['Starts a job automatically at configured times', 'Deletes source code', 'Creates a Java class', 'Changes a bug severity'], 0),
+    basic('Jenkins: what is a workspace?', ['The folder where a job checks out and builds files', 'A Java keyword', 'A ServiceNow SLA', 'A Docker port only'], 0)
+  ],
+  Docker: [
+    basic('Docker: what is a container?', ['A runnable package of an app and its environment', 'A Git branch', 'A Jira ticket', 'A test case'], 0),
+    basic('Docker: what does a Dockerfile describe?', ['Steps to build an image', 'Steps to write a user story', 'Steps to assign severity', 'Steps to create an RTM'], 0),
+    basic('Docker: why is port mapping used?', ['To expose a container port on the host', 'To rename a branch', 'To close a defect', 'To write a constructor'], 0),
+    basic('Docker: what is an image?', ['A reusable template used to start containers', 'A Git commit message', 'A test closure report', 'A Scrum event'], 0)
+  ],
+  ServiceNow: [
+    basic('ServiceNow: what is an incident usually used for?', ['Restoring service after something is broken', 'Writing Java code', 'Creating a Docker image', 'Merging a branch'], 0),
+    basic('ServiceNow: what does a change request control?', ['Planned changes to a service or system', 'Only local Git commits', 'Only quiz scores', 'Only CSS colors'], 0),
+    basic('ServiceNow: why is an assignment group useful?', ['It routes work to the right support team', 'It runs unit tests', 'It builds a Docker image', 'It changes Java output'], 0),
+    basic('ServiceNow: what does an SLA measure?', ['Expected response or resolution time', 'Number of Git branches', 'Docker image size only', 'Java class count only'], 0)
+  ],
   'Testing Types': [
     basic('Testing Types: which testing checks that new changes did not break existing features?', ['Regression testing', 'Smoke testing', 'Load testing', 'Usability testing'], 0),
     basic('Testing Types: which testing quickly checks whether a build is stable?', ['Smoke testing', 'Acceptance testing', 'Security testing', 'Localization testing'], 0),
@@ -126,8 +172,9 @@ const FALLBACK_BANKS = {
     basic('Design: which design level describes detailed module logic?', ['Low-level design', 'Sprint review', 'Smoke testing', 'Bug triage'], 0)
   ],
   'Deployment & DevOps': [
-    basic('Deployment & DevOps: which tool can run an automated CI/CD pipeline?', ['Jenkins', 'RTM', 'Use case', 'Severity'], 0),
-    basic('Deployment & DevOps: what does Docker package with an app?', ['Runtime dependencies', 'User stories only', 'Bug priority only', 'Manual test steps only'], 0)
+    basic('Deployment & DevOps: what is a production deployment?', ['Releasing tested software to users', 'Writing a class diagram', 'Creating only a Git branch', 'Closing all incidents automatically'], 0),
+    basic('Deployment & DevOps: why is rollback planning useful?', ['It gives a way to recover if a release has problems', 'It replaces all testing', 'It deletes the backlog', 'It removes the need for approvals'], 0),
+    basic('Deployment & DevOps: what is a staging environment used for?', ['Testing a release in a production-like place', 'Storing only source code history', 'Assigning incident priority only', 'Writing constructor methods'], 0)
   ],
   'Defects & Bug Tracking': [
     basic('Defects & Bug Tracking: what does severity describe?', ['Impact of the defect', 'Order of fixing work', 'Developer seniority', 'Sprint length'], 0),
@@ -266,7 +313,9 @@ function isBeginnerJavaQuestion(question) {
 function detectTopic(questionText = '') {
   const text = questionText.toLowerCase();
   const explicitTopic = REQUIRED_TOPICS.find((topic) =>
-    text.startsWith(topic.toLowerCase()) || text.startsWith(`${topic.toLowerCase()}:`)
+    text === topic.toLowerCase()
+      || text.startsWith(`${topic.toLowerCase()}:`)
+      || text.startsWith(`${topic.toLowerCase()} `)
   );
   if (explicitTopic) return explicitTopic;
 
