@@ -3067,5 +3067,1255 @@
       "Only assigning story points"
     ],
     "answer": 0
+  },
+  {
+    "question": "Git: which command shows changed files before a commit?",
+    "choices": [
+      "git status",
+      "git clone",
+      "git init",
+      "git remote"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command stages a file for the next commit?",
+    "choices": [
+      "git add",
+      "git push",
+      "git log",
+      "git branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: what does a branch let a team do?",
+    "choices": [
+      "Work on changes separately",
+      "Delete the repository",
+      "Run a server",
+      "Create a Docker image"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command records staged changes in local history?",
+    "choices": [
+      "git commit",
+      "git pull",
+      "git clone",
+      "git fetch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command sends local commits to a remote repository?",
+    "choices": [
+      "git push",
+      "git status",
+      "git add",
+      "git log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command shows changed files before a commit? (fallback review 2)",
+    "choices": [
+      "git status",
+      "git clone",
+      "git init",
+      "git remote"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command stages a file for the next commit? (fallback review 2)",
+    "choices": [
+      "git add",
+      "git push",
+      "git log",
+      "git branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: what does a branch let a team do? (fallback review 2)",
+    "choices": [
+      "Work on changes separately",
+      "Delete the repository",
+      "Run a server",
+      "Create a Docker image"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command records staged changes in local history? (fallback review 2)",
+    "choices": [
+      "git commit",
+      "git pull",
+      "git clone",
+      "git fetch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command sends local commits to a remote repository? (fallback review 2)",
+    "choices": [
+      "git push",
+      "git status",
+      "git add",
+      "git log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command shows changed files before a commit? (fallback review 3)",
+    "choices": [
+      "git status",
+      "git clone",
+      "git init",
+      "git remote"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command stages a file for the next commit? (fallback review 3)",
+    "choices": [
+      "git add",
+      "git push",
+      "git log",
+      "git branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: what does a branch let a team do? (fallback review 3)",
+    "choices": [
+      "Work on changes separately",
+      "Delete the repository",
+      "Run a server",
+      "Create a Docker image"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command records staged changes in local history? (fallback review 3)",
+    "choices": [
+      "git commit",
+      "git pull",
+      "git clone",
+      "git fetch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command sends local commits to a remote repository? (fallback review 3)",
+    "choices": [
+      "git push",
+      "git status",
+      "git add",
+      "git log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command shows changed files before a commit? (fallback review 4)",
+    "choices": [
+      "git status",
+      "git clone",
+      "git init",
+      "git remote"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command stages a file for the next commit? (fallback review 4)",
+    "choices": [
+      "git add",
+      "git push",
+      "git log",
+      "git branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: what does a branch let a team do? (fallback review 4)",
+    "choices": [
+      "Work on changes separately",
+      "Delete the repository",
+      "Run a server",
+      "Create a Docker image"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command records staged changes in local history? (fallback review 4)",
+    "choices": [
+      "git commit",
+      "git pull",
+      "git clone",
+      "git fetch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command sends local commits to a remote repository? (fallback review 4)",
+    "choices": [
+      "git push",
+      "git status",
+      "git add",
+      "git log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command shows changed files before a commit? (fallback review 5)",
+    "choices": [
+      "git status",
+      "git clone",
+      "git init",
+      "git remote"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command stages a file for the next commit? (fallback review 5)",
+    "choices": [
+      "git add",
+      "git push",
+      "git log",
+      "git branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: what does a branch let a team do? (fallback review 5)",
+    "choices": [
+      "Work on changes separately",
+      "Delete the repository",
+      "Run a server",
+      "Create a Docker image"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command records staged changes in local history? (fallback review 5)",
+    "choices": [
+      "git commit",
+      "git pull",
+      "git clone",
+      "git fetch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Git: which command sends local commits to a remote repository? (fallback review 5)",
+    "choices": [
+      "git push",
+      "git status",
+      "git add",
+      "git log"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a pull request mainly used for?",
+    "choices": [
+      "Review and discuss changes before merging",
+      "Start a local server",
+      "Create a test case",
+      "Install Docker"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does an issue usually track?",
+    "choices": [
+      "A bug, task, or requested change",
+      "Only compiled code",
+      "Only a password",
+      "Only a server port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a fork?",
+    "choices": [
+      "A personal copy of a repository",
+      "A failed build",
+      "A test report",
+      "A production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does a repository usually contain?",
+    "choices": [
+      "Project files and change history",
+      "Only production passwords",
+      "Only browser cookies",
+      "Only meeting audio"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a pull request mainly used for? (fallback review 2)",
+    "choices": [
+      "Review and discuss changes before merging",
+      "Start a local server",
+      "Create a test case",
+      "Install Docker"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does an issue usually track? (fallback review 2)",
+    "choices": [
+      "A bug, task, or requested change",
+      "Only compiled code",
+      "Only a password",
+      "Only a server port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a fork? (fallback review 2)",
+    "choices": [
+      "A personal copy of a repository",
+      "A failed build",
+      "A test report",
+      "A production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does a repository usually contain? (fallback review 2)",
+    "choices": [
+      "Project files and change history",
+      "Only production passwords",
+      "Only browser cookies",
+      "Only meeting audio"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a pull request mainly used for? (fallback review 3)",
+    "choices": [
+      "Review and discuss changes before merging",
+      "Start a local server",
+      "Create a test case",
+      "Install Docker"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does an issue usually track? (fallback review 3)",
+    "choices": [
+      "A bug, task, or requested change",
+      "Only compiled code",
+      "Only a password",
+      "Only a server port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a fork? (fallback review 3)",
+    "choices": [
+      "A personal copy of a repository",
+      "A failed build",
+      "A test report",
+      "A production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does a repository usually contain? (fallback review 3)",
+    "choices": [
+      "Project files and change history",
+      "Only production passwords",
+      "Only browser cookies",
+      "Only meeting audio"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a pull request mainly used for? (fallback review 4)",
+    "choices": [
+      "Review and discuss changes before merging",
+      "Start a local server",
+      "Create a test case",
+      "Install Docker"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does an issue usually track? (fallback review 4)",
+    "choices": [
+      "A bug, task, or requested change",
+      "Only compiled code",
+      "Only a password",
+      "Only a server port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a fork? (fallback review 4)",
+    "choices": [
+      "A personal copy of a repository",
+      "A failed build",
+      "A test report",
+      "A production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does a repository usually contain? (fallback review 4)",
+    "choices": [
+      "Project files and change history",
+      "Only production passwords",
+      "Only browser cookies",
+      "Only meeting audio"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a pull request mainly used for? (fallback review 5)",
+    "choices": [
+      "Review and discuss changes before merging",
+      "Start a local server",
+      "Create a test case",
+      "Install Docker"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does an issue usually track? (fallback review 5)",
+    "choices": [
+      "A bug, task, or requested change",
+      "Only compiled code",
+      "Only a password",
+      "Only a server port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a fork? (fallback review 5)",
+    "choices": [
+      "A personal copy of a repository",
+      "A failed build",
+      "A test report",
+      "A production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does a repository usually contain? (fallback review 5)",
+    "choices": [
+      "Project files and change history",
+      "Only production passwords",
+      "Only browser cookies",
+      "Only meeting audio"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a pull request mainly used for? (fallback review 6)",
+    "choices": [
+      "Review and discuss changes before merging",
+      "Start a local server",
+      "Create a test case",
+      "Install Docker"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does an issue usually track? (fallback review 6)",
+    "choices": [
+      "A bug, task, or requested change",
+      "Only compiled code",
+      "Only a password",
+      "Only a server port"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a fork? (fallback review 6)",
+    "choices": [
+      "A personal copy of a repository",
+      "A failed build",
+      "A test report",
+      "A production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what does a repository usually contain? (fallback review 6)",
+    "choices": [
+      "Project files and change history",
+      "Only production passwords",
+      "Only browser cookies",
+      "Only meeting audio"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "GitHub: what is a pull request mainly used for? (fallback review 7)",
+    "choices": [
+      "Review and discuss changes before merging",
+      "Start a local server",
+      "Create a test case",
+      "Install Docker"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a build job usually do?",
+    "choices": [
+      "Runs automated steps such as build, test, or deploy",
+      "Writes user stories only",
+      "Stores meeting notes only",
+      "Replaces Git"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: where would you look first to debug a failed build?",
+    "choices": [
+      "Console log",
+      "Product backlog",
+      "Class diagram",
+      "RTM only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a scheduled trigger do?",
+    "choices": [
+      "Starts a job automatically at configured times",
+      "Deletes source code",
+      "Creates a Java class",
+      "Changes a bug severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what is a workspace?",
+    "choices": [
+      "The folder where a job checks out and builds files",
+      "A Java keyword",
+      "A ServiceNow SLA",
+      "A Docker port only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a build job usually do? (fallback review 2)",
+    "choices": [
+      "Runs automated steps such as build, test, or deploy",
+      "Writes user stories only",
+      "Stores meeting notes only",
+      "Replaces Git"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: where would you look first to debug a failed build? (fallback review 2)",
+    "choices": [
+      "Console log",
+      "Product backlog",
+      "Class diagram",
+      "RTM only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a scheduled trigger do? (fallback review 2)",
+    "choices": [
+      "Starts a job automatically at configured times",
+      "Deletes source code",
+      "Creates a Java class",
+      "Changes a bug severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what is a workspace? (fallback review 2)",
+    "choices": [
+      "The folder where a job checks out and builds files",
+      "A Java keyword",
+      "A ServiceNow SLA",
+      "A Docker port only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a build job usually do? (fallback review 3)",
+    "choices": [
+      "Runs automated steps such as build, test, or deploy",
+      "Writes user stories only",
+      "Stores meeting notes only",
+      "Replaces Git"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: where would you look first to debug a failed build? (fallback review 3)",
+    "choices": [
+      "Console log",
+      "Product backlog",
+      "Class diagram",
+      "RTM only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a scheduled trigger do? (fallback review 3)",
+    "choices": [
+      "Starts a job automatically at configured times",
+      "Deletes source code",
+      "Creates a Java class",
+      "Changes a bug severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what is a workspace? (fallback review 3)",
+    "choices": [
+      "The folder where a job checks out and builds files",
+      "A Java keyword",
+      "A ServiceNow SLA",
+      "A Docker port only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a build job usually do? (fallback review 4)",
+    "choices": [
+      "Runs automated steps such as build, test, or deploy",
+      "Writes user stories only",
+      "Stores meeting notes only",
+      "Replaces Git"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: where would you look first to debug a failed build? (fallback review 4)",
+    "choices": [
+      "Console log",
+      "Product backlog",
+      "Class diagram",
+      "RTM only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a scheduled trigger do? (fallback review 4)",
+    "choices": [
+      "Starts a job automatically at configured times",
+      "Deletes source code",
+      "Creates a Java class",
+      "Changes a bug severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what is a workspace? (fallback review 4)",
+    "choices": [
+      "The folder where a job checks out and builds files",
+      "A Java keyword",
+      "A ServiceNow SLA",
+      "A Docker port only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a build job usually do? (fallback review 5)",
+    "choices": [
+      "Runs automated steps such as build, test, or deploy",
+      "Writes user stories only",
+      "Stores meeting notes only",
+      "Replaces Git"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: where would you look first to debug a failed build? (fallback review 5)",
+    "choices": [
+      "Console log",
+      "Product backlog",
+      "Class diagram",
+      "RTM only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a scheduled trigger do? (fallback review 5)",
+    "choices": [
+      "Starts a job automatically at configured times",
+      "Deletes source code",
+      "Creates a Java class",
+      "Changes a bug severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what is a workspace? (fallback review 5)",
+    "choices": [
+      "The folder where a job checks out and builds files",
+      "A Java keyword",
+      "A ServiceNow SLA",
+      "A Docker port only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a build job usually do? (fallback review 6)",
+    "choices": [
+      "Runs automated steps such as build, test, or deploy",
+      "Writes user stories only",
+      "Stores meeting notes only",
+      "Replaces Git"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: where would you look first to debug a failed build? (fallback review 6)",
+    "choices": [
+      "Console log",
+      "Product backlog",
+      "Class diagram",
+      "RTM only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a scheduled trigger do? (fallback review 6)",
+    "choices": [
+      "Starts a job automatically at configured times",
+      "Deletes source code",
+      "Creates a Java class",
+      "Changes a bug severity"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what is a workspace? (fallback review 6)",
+    "choices": [
+      "The folder where a job checks out and builds files",
+      "A Java keyword",
+      "A ServiceNow SLA",
+      "A Docker port only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Jenkins: what does a build job usually do? (fallback review 7)",
+    "choices": [
+      "Runs automated steps such as build, test, or deploy",
+      "Writes user stories only",
+      "Stores meeting notes only",
+      "Replaces Git"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is a container?",
+    "choices": [
+      "A runnable package of an app and its environment",
+      "A Git branch",
+      "A Jira ticket",
+      "A test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what does a Dockerfile describe?",
+    "choices": [
+      "Steps to build an image",
+      "Steps to write a user story",
+      "Steps to assign severity",
+      "Steps to create an RTM"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: why is port mapping used?",
+    "choices": [
+      "To expose a container port on the host",
+      "To rename a branch",
+      "To close a defect",
+      "To write a constructor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is an image?",
+    "choices": [
+      "A reusable template used to start containers",
+      "A Git commit message",
+      "A test closure report",
+      "A Scrum event"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is a container? (fallback review 2)",
+    "choices": [
+      "A runnable package of an app and its environment",
+      "A Git branch",
+      "A Jira ticket",
+      "A test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what does a Dockerfile describe? (fallback review 2)",
+    "choices": [
+      "Steps to build an image",
+      "Steps to write a user story",
+      "Steps to assign severity",
+      "Steps to create an RTM"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: why is port mapping used? (fallback review 2)",
+    "choices": [
+      "To expose a container port on the host",
+      "To rename a branch",
+      "To close a defect",
+      "To write a constructor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is an image? (fallback review 2)",
+    "choices": [
+      "A reusable template used to start containers",
+      "A Git commit message",
+      "A test closure report",
+      "A Scrum event"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is a container? (fallback review 3)",
+    "choices": [
+      "A runnable package of an app and its environment",
+      "A Git branch",
+      "A Jira ticket",
+      "A test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what does a Dockerfile describe? (fallback review 3)",
+    "choices": [
+      "Steps to build an image",
+      "Steps to write a user story",
+      "Steps to assign severity",
+      "Steps to create an RTM"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: why is port mapping used? (fallback review 3)",
+    "choices": [
+      "To expose a container port on the host",
+      "To rename a branch",
+      "To close a defect",
+      "To write a constructor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is an image? (fallback review 3)",
+    "choices": [
+      "A reusable template used to start containers",
+      "A Git commit message",
+      "A test closure report",
+      "A Scrum event"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is a container? (fallback review 4)",
+    "choices": [
+      "A runnable package of an app and its environment",
+      "A Git branch",
+      "A Jira ticket",
+      "A test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what does a Dockerfile describe? (fallback review 4)",
+    "choices": [
+      "Steps to build an image",
+      "Steps to write a user story",
+      "Steps to assign severity",
+      "Steps to create an RTM"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: why is port mapping used? (fallback review 4)",
+    "choices": [
+      "To expose a container port on the host",
+      "To rename a branch",
+      "To close a defect",
+      "To write a constructor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is an image? (fallback review 4)",
+    "choices": [
+      "A reusable template used to start containers",
+      "A Git commit message",
+      "A test closure report",
+      "A Scrum event"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is a container? (fallback review 5)",
+    "choices": [
+      "A runnable package of an app and its environment",
+      "A Git branch",
+      "A Jira ticket",
+      "A test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what does a Dockerfile describe? (fallback review 5)",
+    "choices": [
+      "Steps to build an image",
+      "Steps to write a user story",
+      "Steps to assign severity",
+      "Steps to create an RTM"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: why is port mapping used? (fallback review 5)",
+    "choices": [
+      "To expose a container port on the host",
+      "To rename a branch",
+      "To close a defect",
+      "To write a constructor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is an image? (fallback review 5)",
+    "choices": [
+      "A reusable template used to start containers",
+      "A Git commit message",
+      "A test closure report",
+      "A Scrum event"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is a container? (fallback review 6)",
+    "choices": [
+      "A runnable package of an app and its environment",
+      "A Git branch",
+      "A Jira ticket",
+      "A test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what does a Dockerfile describe? (fallback review 6)",
+    "choices": [
+      "Steps to build an image",
+      "Steps to write a user story",
+      "Steps to assign severity",
+      "Steps to create an RTM"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: why is port mapping used? (fallback review 6)",
+    "choices": [
+      "To expose a container port on the host",
+      "To rename a branch",
+      "To close a defect",
+      "To write a constructor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is an image? (fallback review 6)",
+    "choices": [
+      "A reusable template used to start containers",
+      "A Git commit message",
+      "A test closure report",
+      "A Scrum event"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Docker: what is a container? (fallback review 7)",
+    "choices": [
+      "A runnable package of an app and its environment",
+      "A Git branch",
+      "A Jira ticket",
+      "A test case"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what is an incident usually used for?",
+    "choices": [
+      "Restoring service after something is broken",
+      "Writing Java code",
+      "Creating a Docker image",
+      "Merging a branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does a change request control?",
+    "choices": [
+      "Planned changes to a service or system",
+      "Only local Git commits",
+      "Only quiz scores",
+      "Only CSS colors"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: why is an assignment group useful?",
+    "choices": [
+      "It routes work to the right support team",
+      "It runs unit tests",
+      "It builds a Docker image",
+      "It changes Java output"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does an SLA measure?",
+    "choices": [
+      "Expected response or resolution time",
+      "Number of Git branches",
+      "Docker image size only",
+      "Java class count only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what is an incident usually used for? (fallback review 2)",
+    "choices": [
+      "Restoring service after something is broken",
+      "Writing Java code",
+      "Creating a Docker image",
+      "Merging a branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does a change request control? (fallback review 2)",
+    "choices": [
+      "Planned changes to a service or system",
+      "Only local Git commits",
+      "Only quiz scores",
+      "Only CSS colors"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: why is an assignment group useful? (fallback review 2)",
+    "choices": [
+      "It routes work to the right support team",
+      "It runs unit tests",
+      "It builds a Docker image",
+      "It changes Java output"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does an SLA measure? (fallback review 2)",
+    "choices": [
+      "Expected response or resolution time",
+      "Number of Git branches",
+      "Docker image size only",
+      "Java class count only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what is an incident usually used for? (fallback review 3)",
+    "choices": [
+      "Restoring service after something is broken",
+      "Writing Java code",
+      "Creating a Docker image",
+      "Merging a branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does a change request control? (fallback review 3)",
+    "choices": [
+      "Planned changes to a service or system",
+      "Only local Git commits",
+      "Only quiz scores",
+      "Only CSS colors"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: why is an assignment group useful? (fallback review 3)",
+    "choices": [
+      "It routes work to the right support team",
+      "It runs unit tests",
+      "It builds a Docker image",
+      "It changes Java output"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does an SLA measure? (fallback review 3)",
+    "choices": [
+      "Expected response or resolution time",
+      "Number of Git branches",
+      "Docker image size only",
+      "Java class count only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what is an incident usually used for? (fallback review 4)",
+    "choices": [
+      "Restoring service after something is broken",
+      "Writing Java code",
+      "Creating a Docker image",
+      "Merging a branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does a change request control? (fallback review 4)",
+    "choices": [
+      "Planned changes to a service or system",
+      "Only local Git commits",
+      "Only quiz scores",
+      "Only CSS colors"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: why is an assignment group useful? (fallback review 4)",
+    "choices": [
+      "It routes work to the right support team",
+      "It runs unit tests",
+      "It builds a Docker image",
+      "It changes Java output"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does an SLA measure? (fallback review 4)",
+    "choices": [
+      "Expected response or resolution time",
+      "Number of Git branches",
+      "Docker image size only",
+      "Java class count only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what is an incident usually used for? (fallback review 5)",
+    "choices": [
+      "Restoring service after something is broken",
+      "Writing Java code",
+      "Creating a Docker image",
+      "Merging a branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does a change request control? (fallback review 5)",
+    "choices": [
+      "Planned changes to a service or system",
+      "Only local Git commits",
+      "Only quiz scores",
+      "Only CSS colors"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: why is an assignment group useful? (fallback review 5)",
+    "choices": [
+      "It routes work to the right support team",
+      "It runs unit tests",
+      "It builds a Docker image",
+      "It changes Java output"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does an SLA measure? (fallback review 5)",
+    "choices": [
+      "Expected response or resolution time",
+      "Number of Git branches",
+      "Docker image size only",
+      "Java class count only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what is an incident usually used for? (fallback review 6)",
+    "choices": [
+      "Restoring service after something is broken",
+      "Writing Java code",
+      "Creating a Docker image",
+      "Merging a branch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does a change request control? (fallback review 6)",
+    "choices": [
+      "Planned changes to a service or system",
+      "Only local Git commits",
+      "Only quiz scores",
+      "Only CSS colors"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: why is an assignment group useful? (fallback review 6)",
+    "choices": [
+      "It routes work to the right support team",
+      "It runs unit tests",
+      "It builds a Docker image",
+      "It changes Java output"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what does an SLA measure? (fallback review 6)",
+    "choices": [
+      "Expected response or resolution time",
+      "Number of Git branches",
+      "Docker image size only",
+      "Java class count only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow: what is an incident usually used for? (fallback review 7)",
+    "choices": [
+      "Restoring service after something is broken",
+      "Writing Java code",
+      "Creating a Docker image",
+      "Merging a branch"
+    ],
+    "answer": 0
   }
 ]
