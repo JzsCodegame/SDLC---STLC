@@ -1,4 +1,29 @@
-# Mini Quiz Academy
+# Mini Quiz Tech & AI Academy
+
+## Student learning hub
+
+The homepage connects the existing quizzes with self-contained concept lessons
+and the curriculum. Open `index.html` through a web server or the published
+GitHub Pages site.
+
+- `learn.html`: 58 concept cards across 10 sections, with a copyable technical
+  wiki, concept diagram, relationship mind map, and interactive explanation.
+- `learn.html?class=1`: the two-hour recap route, with 22 focus cards and 10
+  knowledge checks leading to UI and API automation.
+- `curriculum.html`: the searchable curriculum, a 54-page preview, and Word/PDF
+  downloads (Version 1, September 28, 2026).
+- The lesson whiteboard supports drawing, erasing, undo/redo, and PNG export.
+  Drawings and lesson progress are stored in the current browser.
+
+The API architecture and scoring examples in lessons are illustrative. This
+static release does not implement a scoring API or a shared whiteboard service.
+The existing Firebase quiz score integration remains unchanged.
+
+All lesson assets use relative URLs so the app works under the GitHub Pages
+project path `/SDLC---STLC/`. Pages publishes `main` at the repository root;
+`.nojekyll` keeps the release as plain static files.
+
+## Original quiz and publishing documentation
 
 This is a starter static quiz site built for GitHub Pages with Firebase Firestore integration.
 

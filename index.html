@@ -1,92 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mini Quiz Academy</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <div class="app">
-      <header>
-        <h1>Mini Quiz Academy</h1>
-        <p class="subtitle">Quick quizzes from your class notes</p>
-      </header>
-
-      <section id="start-screen" class="card">
-        <label for="student-name">Student name</label>
-        <input id="student-name" type="text" placeholder="Enter your name" />
-        <label for="quiz-topic">Quiz topic</label>
-        <select id="quiz-topic"></select>
-        <section id="java-practice-lab" class="java-practice-lab hidden" aria-label="Java practice lab">
-          <div class="java-lab-header">
-            <h3>Java Practice Lab</h3>
-            <span>W3-style</span>
-          </div>
-          <label for="java-editor">Code sample</label>
-          <textarea id="java-editor" spellcheck="false"></textarea>
-          <div class="java-lab-actions">
-            <button id="java-reset-btn" class="secondary" type="button">Reset</button>
-            <button id="java-output-btn" class="secondary" type="button">Run Sample</button>
-          </div>
-          <pre id="java-output" class="java-output" aria-live="polite"></pre>
-        </section>
-        <button id="start-btn" class="primary">Start Quiz</button>
-        <p class="hint">Java quizzes have 10 minutes for coding questions. Other topics stay at 5 minutes.</p>
-
-        <div id="flashcard-list" class="flashcard-list">
-          <h3>Flashcards by Topic</h3>
-          <p class="sidebar-hint">Select a study-guide topic to review 25 prep flashcards that match the current quiz set.</p>
-          <label for="flashcard-topic">Choose a topic</label>
-          <select id="flashcard-topic"></select>
-          <div id="flashcard-topic-count" class="flashcard-topic-count"></div>
-          <div id="flashcard-carousel" class="flashcard-carousel" aria-live="polite">
-            <button id="flashcard-prev" class="flashcard-nav" type="button" aria-label="Previous flashcard">&lt;</button>
-            <article id="flashcard-card" class="flashcard-item flashcard-carousel-card"></article>
-            <button id="flashcard-next" class="flashcard-nav" type="button" aria-label="Next flashcard">&gt;</button>
-          </div>
-          <div id="flashcard-position" class="flashcard-position"></div>
-        </div>
-      </section>
-
-      <section id="quiz-screen" class="card hidden">
-        <div class="quiz-meta">
-          <span id="student-display"></span>
-          <span id="timer">05:00</span>
-        </div>
-
-        <div id="progress" class="progress"></div>
-
-        <h2 id="question-text"></h2>
-        <pre id="question-code" class="question-code hidden"></pre>
-        <form id="choices" class="choices"></form>
-
-        <button id="next-btn" class="primary">Next</button>
-      </section>
-
-
-
-      
-
-      <section id="result-screen" class="card hidden">
-        <h2>Results</h2>
-        <p id="result-summary"></p>
-        <button id="restart-btn" class="secondary">Take Again</button>
-      </section>
-    </div>
-
-    <aside class="sidebar">
-      <div class="card">
-        <h3>Recent Scores</h3>
-        <p class="sidebar-hint">Last 24 hours</p>
-        <div id="recent-scores">
-          <p class="no-scores">No recent scores yet</p>
-        </div>
-      </div>
-    </aside>
-  </div>
-
-  <script type="module" src="app.js"></script>
-</body>
-</html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mini Quiz Tech &amp; AI Academy</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="academy-shell.css"><link rel="stylesheet" href="academy-theme.css"></head>
+<body class="academy-home">
+<a class="skip" href="#start-screen">Skip to learning focus</a>
+<div class="academy-nav"><a class="academy-name" href="index.html"><span class="academy-symbol" aria-hidden="true">mq</span>Mini Quiz <strong>Tech &amp; AI Academy</strong></a><nav aria-label="Academy"><a href="index.html" aria-current="page">Quiz &amp; flashcards</a><a id="academy-learning-link" href="learn.html#sdlc/lifecycle">Visual lessons</a><a href="curriculum.html">Curriculum</a></nav></div>
+<section class="welcome"><div><p class="eyebrow">A LITTLE CURIOSITY GOES A LONG WAY</p><h1>Big ideas.<br><span>One small discovery at a time.</span></h1><p class="welcome-copy">Explore software quality, automation, and AI through focused cards, visual stories, and quick quizzes. Start with one concept. Build from there.</p><ol class="welcome-path"><li><b>01</b> Learn a concept</li><li><b>02</b> Explore it visually</li><li><b>03</b> Check your understanding</li></ol></div><div class="discovery-art" aria-label="One concept connects to reading notes, a diagram, an interactive lesson, and a mind map"><span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span><div class="art-core">One concept<span>Read, see, explore</span></div><div class="art-tile tile-one"><span aria-hidden="true">◇</span>Diagram</div><div class="art-tile tile-two"><span aria-hidden="true">↗</span>Interactive</div><div class="art-tile tile-three"><span aria-hidden="true">✳</span>Mind map</div><span class="art-note">Small steps. Real understanding.</span></div></section>
+<div class="container"><div class="app">
+<section id="start-screen" class="card"><header class="focus-header"><p class="eyebrow">YOUR NEXT SMALL STEP</p><h2>What will you explore?</h2><p>Choose a topic. Review one idea, then put it into practice.</p></header>
+<label for="quiz-topic">Learning focus</label><select id="quiz-topic"></select>
+<section id="topic-lesson" class="topic-lesson" aria-label="Learn the selected topic"><h3>Visual lessons</h3><p>Loading your topic…</p><div class="material-pills"><span>Read &amp; copy</span><span>Concept diagram</span><span>Mind map</span><span>Interactive</span></div><a href="learn.html#sdlc/lifecycle">Open visual lessons →</a></section>
+<div id="flashcard-list" class="flashcard-list"><div class="section-heading"><span class="section-step">01</span><div><h3>A little review goes a long way</h3><p class="sidebar-hint">Move through the topic flashcards at your own pace.</p></div></div><div class="flashcard-topic-control"><label for="flashcard-topic">Flashcard topic</label><select id="flashcard-topic"></select></div><div id="flashcard-topic-count" class="flashcard-topic-count"></div><div id="flashcard-carousel" class="flashcard-carousel" aria-live="polite"><button id="flashcard-prev" class="flashcard-nav" type="button" aria-label="Previous flashcard">←</button><article id="flashcard-card" class="flashcard-item flashcard-carousel-card"></article><button id="flashcard-next" class="flashcard-nav" type="button" aria-label="Next flashcard">→</button></div><div id="flashcard-position" class="flashcard-position"></div></div>
+<section id="java-practice-lab" class="java-practice-lab hidden" aria-label="Java practice lab"><div class="java-lab-header"><h3>Java Practice Lab</h3><span>W3-style</span></div><label for="java-editor">Code sample</label><textarea id="java-editor" spellcheck="false"></textarea><div class="java-lab-actions"><button id="java-reset-btn" class="secondary" type="button">Reset</button><button id="java-output-btn" class="secondary" type="button">Run Sample</button></div><pre id="java-output" class="java-output" aria-live="polite"></pre></section>
+<div class="practice-entry"><div class="section-heading"><span class="section-step">02</span><div><h3>Ready to check your understanding?</h3><p class="sidebar-hint">Use what you have learned in the topic quiz.</p></div></div><label for="student-name">Student name</label><input id="student-name" type="text" placeholder="Your name" autocomplete="given-name"><button id="start-btn" class="primary">Start topic quiz →</button><p class="hint">25 questions · 5 minutes. Java coding quizzes allow 10 minutes.</p></div></section>
+<section id="quiz-screen" class="card hidden"><div class="quiz-meta"><span id="student-display"></span><span id="timer">05:00</span></div><div id="progress" class="progress"></div><h2 id="question-text"></h2><pre id="question-code" class="question-code hidden"></pre><form id="choices" class="choices"></form><button id="next-btn" class="primary">Next</button></section>
+<section id="result-screen" class="card hidden"><h2>Results</h2><p id="result-summary"></p><button id="restart-btn" class="secondary">Take Again</button></section>
+</div><aside class="sidebar"><div class="card learning-compass"><p class="eyebrow">THE LEARNING JOURNEY</p><h3>Quality starts early.</h3><p>Connect the foundations before choosing the tools.</p><ol><li>SDLC &amp; requirements</li><li>STLC &amp; regression</li><li>Automation &amp; AI assistance</li><li>UI &amp; API checks</li></ol><a href="learn.html?topic=SDLC#sdlc/lifecycle">See the learning path →</a><a class="curriculum-home-link" href="learn.html?class=1#sdlc/lifecycle">Class 1: recap to automation →</a><a class="curriculum-home-link" href="curriculum.html">View the full curriculum →</a></div><div class="card scores-card"><h3>Recent Scores</h3><p class="sidebar-hint">Last 24 hours</p><div id="recent-scores"><p class="no-scores">No recent scores yet</p></div></div><p class="sidebar-note">Stay curious. Take your time with each idea. The diagrams and explanations are here whenever you need another look.</p></aside></div>
+<footer class="academy-footer">Mini Quiz Tech &amp; AI Academy <span>Learn a little. Connect a lot.</span></footer>
+<script type="module" src="app.js"></script><script type="module" src="academy-integration.js"></script></body></html>

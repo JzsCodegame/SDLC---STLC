@@ -1,0 +1,23 @@
+.material-content .visual-diagram{max-width:none;padding:8px;background:#fff}
+.material-content .concept-svg{display:block;width:100%;min-width:780px;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.study-caption{font-size:14px;line-height:1.7;color:#49616b;margin:15px 0 24px}
+.study-notes{padding:5px 22px;background:white;border:1px solid #d2ded9;border-radius:12px}
+.study-notes li{margin:18px 0;line-height:1.75}
+.study-wiki{user-select:text;background:white;border:1px solid #d2ded9;border-radius:14px;padding:8px 28px 24px;margin-top:22px}
+.study-wiki section{padding:24px 0;border-bottom:1px solid #e2e9e5}
+.study-wiki section:last-child{border-bottom:0;padding-bottom:0}
+.study-wiki h3{font-size:21px;line-height:1.4;margin:0 0 20px;color:#173e49}
+.study-wiki ol{padding-left:31px;margin:0;list-style-type:lower-alpha}
+.study-wiki li{padding-left:8px;margin:0 0 16px;font-size:17px;line-height:1.85;overflow-wrap:anywhere}
+.study-wiki li:last-child{margin-bottom:0}.study-wiki li::marker{font-weight:650;color:#00746b}
+.wiki-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:8px 0}
+.wiki-tools button{min-height:44px}.wiki-tools #copy-wiki{background:#006e66;color:white}.wiki-tools [role=status]{flex-basis:100%;font-size:14px;color:#335d51}
+.wiki-plain{margin-top:22px}.wiki-plain label{display:block;font-size:14px;margin-bottom:12px}
+.wiki-plain textarea{box-sizing:border-box;width:100%;min-height:290px;border:1px solid #8da7a0;border-radius:10px;padding:18px;font:15px/1.7 ui-monospace,monospace;background:#fff;color:#183843}
+.concept-links{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+.concept-links li{display:flex;flex-direction:column;gap:9px;padding:18px;background:white;border:1px solid #d2ded9;border-radius:10px;line-height:1.6}
+.concept-links span{font-size:13px;color:#526b74}.concept-links a{font-weight:600;color:#006960;text-decoration:underline;text-underline-offset:4px}
+.whimsical-overview{background:#fff;border:1px solid #d2ded9;border-radius:12px;padding:20px;margin:24px 0}
+.whimsical-overview summary{font-weight:650;cursor:pointer;line-height:1.6}.whimsical-overview summary small{display:block;font-weight:400;color:#526b74;margin-top:6px}
+.material-tabs button{min-height:44px}.diagram-text summary{cursor:pointer;font-weight:600}.diagram-text li{line-height:1.8;margin:14px 0}
+@media(max-width:650px){.study-wiki{padding:0 17px 20px}.study-wiki section{padding:22px 0}.study-wiki h3{font-size:19px}.study-wiki li{font-size:16px;padding-left:3px}.study-wiki ol{padding-left:25px}.concept-links{grid-template-columns:1fr}.whimsical-overview{padding:14px}.material-tabs{display:grid;grid-template-columns:1fr 1fr}.material-tabs button{text-align:left}.wiki-tools button{font-size:13px}}
