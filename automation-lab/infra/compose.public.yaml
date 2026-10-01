@@ -1,0 +1,6 @@
+# Use only after the admin account exists, DNS/cert checks pass, and smoke tests pass.
+services:
+  caddy:
+    ports:
+      - '80:80'
+      - '443:443'

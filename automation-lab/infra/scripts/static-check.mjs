@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+const root = resolve(import.meta.dirname, '..');
+const read = path => readFileSync(resolve(root, path), 'utf8');
+const compose = read('compose.yaml');
+const publicCompose = read('compose.public.yaml');
+const tf = read('template/main.tf');
+const cloud = read('template/cloud-config.yaml.tftpl');
+const bootstrap = read('template/bootstrap.sh');
+assert(!/ports:\s*\n\s*- ['"]?(80|443):/m.test(compose), 'base compose must stay private');
+assert.match(publicCompose, /- '443:443'/);
+assert.match(compose, /CODER_DISABLE_PATH_APPS: 'true'/);
+assert.match(compose, /CODER_DISABLE_WORKSPACE_SHARING: 'true'/);
+assert.match(compose, /coder_home:\/home\/coder/);
+assert.match(tf, /depends_on\s*=\s*\[digitalocean_firewall\.student\]/);
+assert.match(tf, /resource "digitalocean_volume" "home"/);
+assert.match(tf, /share\s*=\s*"owner"/);
+assert.match(cloud, /CODE_SERVER_SHA256=53029be6c5781b7bca49b815fcc9a2a3fc111813ad8c9965b2c0f0d2985a0674/);
+assert.match(bootstrap, /RequiresMountsFor=\/home\/coder/);
+assert.match(bootstrap, /mountpoint -q \/home\/coder/);
+assert.match(bootstrap, /LAB_MODE=true/);
+assert.match(bootstrap, /terminal\.integrated\.defaultProfile\.linux/);
+assert.match(bootstrap, /npx playwright install-deps chromium/);
+assert.match(bootstrap, /npx cypress verify/);
+console.log('Infra static gates passed');

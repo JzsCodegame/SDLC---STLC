@@ -1,0 +1,9 @@
+https://{$LAB_DOMAIN}, https://*.{$LAB_DOMAIN} {
+    tls /certs/fullchain.pem /certs/privkey.pem
+    encode zstd gzip
+    reverse_proxy coder:7080
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options nosniff
+    }
+}

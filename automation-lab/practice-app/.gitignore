@@ -1,0 +1,11 @@
+node_modules/
+.cache/
+dist/
+data/
+.test-data/
+playwright-report/
+test-results/
+cypress/screenshots/
+cypress/videos/
+.env
+*.tsbuildinfo

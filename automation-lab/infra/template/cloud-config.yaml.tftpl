@@ -1,0 +1,23 @@
+#cloud-config
+package_update: true
+write_files:
+  - path: /usr/local/sbin/quiz-lab-bootstrap
+    encoding: b64
+    permissions: '0700'
+    content: ${bootstrap_b64}
+  - path: /usr/local/lib/coder-agent-init
+    encoding: b64
+    permissions: '0755'
+    content: ${agent_init_b64}
+  - path: /etc/quiz-lab.env
+    permissions: '0600'
+    content: |
+      APP_GIT_URL=${app_git_url}
+      APP_GIT_COMMIT=${app_git_commit}
+      CODE_SERVER_SHA256=53029be6c5781b7bca49b815fcc9a2a3fc111813ad8c9965b2c0f0d2985a0674
+  - path: /etc/coder-agent.env
+    permissions: '0600'
+    content: |
+      CODER_AGENT_TOKEN=${agent_token}
+runcmd:
+  - [ bash, /usr/local/sbin/quiz-lab-bootstrap ]

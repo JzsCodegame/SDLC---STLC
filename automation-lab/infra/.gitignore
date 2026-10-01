@@ -1,0 +1,7 @@
+.env
+certs/
+evidence/private/
+tools/
+template/.terraform/
+template/*.tfvars
+template/terraform.tfstate*
