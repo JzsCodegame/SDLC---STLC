@@ -1,11 +1,16 @@
 https://{$LAB_DOMAIN}, https://*.{$LAB_DOMAIN} {
-    tls /certs/fullchain.pem /certs/privkey.pem
+    tls {
+        dns digitalocean {env.DIGITALOCEAN_TOKEN}
+    }
     encode zstd gzip
+    # Debian noVNC ships vnc.html rather than a root index page.
     @novncLanding {
         path /
         expression `{http.request.host}.startsWith("browser--")`
     }
     redir @novncLanding /vnc.html?autoconnect=1&resize=remote 302
+    # Pilot policy: sharing changes are blocked at the only public API ingress.
+    # Coder OSS does not enforce the Enterprise max_port_share_level setting.
     @sharingMutation {
         method POST PATCH PUT
         path_regexp sharing ^/api/v2/workspaces/[^/]+/(port-share|acl)/?$

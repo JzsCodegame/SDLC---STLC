@@ -16,7 +16,7 @@ services:
       timeout: 5s
       retries: 10
   coder:
-    image: ghcr.io/coder/coder:2.36.6
+    image: ghcr.io/coder/coder:v2.36.6
     restart: unless-stopped
     depends_on:
       postgres:
@@ -30,6 +30,9 @@ services:
       CODER_DISABLE_WORKSPACE_SHARING: 'true'
       CODER_DISABLE_OWNER_WORKSPACE_ACCESS: 'true'
       CODER_TELEMETRY_ENABLE: 'false'
+      CODER_OAUTH2_GITHUB_DEFAULT_PROVIDER_ENABLE: 'false'
+      CODER_OAUTH2_GITHUB_ALLOW_SIGNUPS: 'false'
+      CODER_OIDC_ALLOW_SIGNUPS: 'false'
       DIGITALOCEAN_TOKEN: ${DIGITALOCEAN_TOKEN:?set DIGITALOCEAN_TOKEN}
     networks: [backend]
     read_only: true
@@ -48,6 +51,8 @@ services:
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - ./certs:/certs:ro
+      - caddy_data:/data
+      - caddy_config:/config
     networks: [backend]
     security_opt:
       - no-new-privileges:true
@@ -57,3 +62,5 @@ networks:
 volumes:
   postgres_data:
   coder_home:
+  caddy_data:
+  caddy_config:

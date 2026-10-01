@@ -19,10 +19,13 @@ chown coder:coder /home/coder
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get install -y --no-install-recommends \
-  ca-certificates curl git xz-utils chromium xvfb fluxbox x11vnc \
-  novnc websockify nftables libicu72 libssl3 libatomic1 \
-  libgtk-3-0 libgbm1 libnss3 libasound2 libxss1 libxtst6 libatk-bridge2.0-0
+packages=()
+while IFS= read -r package; do
+  [[ -z "$package" || "$package" == \#* ]] && continue
+  [[ "$package" =~ ^[a-z0-9+.-]+$ ]] || { echo "Bad package name in trusted manifest" >&2; exit 1; }
+  packages+=("$package")
+done </etc/quiz-worker-packages.txt
+apt-get install -y --no-install-recommends "${packages[@]}"
 
 # A student's processes cannot query the Droplet metadata service.
 cat >/etc/nftables.conf <<'NFT'
@@ -92,6 +95,11 @@ NoNewPrivileges=true
 [Install]
 WantedBy=multi-user.target
 UNIT
+
+# Make the mounted workspace inspectable through Coder while later student
+# dependency downloads/builds run. The app health check remains not-ready.
+systemctl daemon-reload
+systemctl enable --now quiz-coder-agent
 
 cat >/etc/systemd/system/quiz-ide.service <<'UNIT'
 [Unit]
@@ -201,7 +209,6 @@ app="$repo/automation-lab/practice-app"
 test -f "$app/package-lock.json"
 cd "$app"
 runuser -u coder -- npm ci
-npx playwright install-deps chromium
 runuser -u coder -- npm run build
 runuser -u coder -- npx playwright install chromium
 runuser -u coder -- npx cypress install

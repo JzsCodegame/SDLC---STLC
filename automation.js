@@ -24,8 +24,8 @@ render();
 document.querySelectorAll('[data-framework]').forEach(button=>button.addEventListener('click',()=>{
   document.querySelectorAll('[data-framework]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
   const framework=button.dataset.framework;
-  document.querySelector('#lab-command').textContent=`npm run test:${framework}`;
-  document.querySelector('#lab-command-help').textContent=framework==='playwright'?'Run the Playwright browser checks and inspect their result.':'Run the Cypress browser checks and inspect their result.';
+  document.querySelector('#lab-command').textContent=framework==='playwright'?'npm run test:playwright:headed':'npm run test:cypress:open';
+  document.querySelector('#lab-command-help').textContent=framework==='playwright'?'Open Live Browser to watch the Playwright checks. Read the pass/fail results in PowerShell.':'Open Live Browser. In Cypress, choose E2E Testing, Chromium, and help-desk.cy.ts. Press Ctrl+C in PowerShell when finished.';
   document.querySelector('#copy-lab-status').textContent='';
 }));
 document.querySelector('#copy-lab-command').addEventListener('click',async()=>{
@@ -40,10 +40,10 @@ try{
     const url=new URL(config.workspaceUrl);
     if(url.protocol!=='https:'||url.username||url.password)throw new Error('Invalid workspace URL');
     const launch=document.querySelector('#workspace-launch');launch.href=url.href;launch.hidden=false;
-    status.textContent='Sign in with your class workspace account. Open the Automation testing workspace to begin.';
+    status.textContent=config.status||'Sign in with your class workspace account. Open your UI Automation Lab workspace to begin.';
   }else status.textContent=config.status||'Student workspaces are not connected yet.';
 }catch{status.textContent='Student workspaces are not connected yet. Your lesson cards are available below.'}
 if(['127.0.0.1','localhost','[::1]'].includes(location.hostname)){
   const local=document.querySelector('#local-practice');local.href=`http://${location.hostname}:4173/`;local.hidden=false;
-  status.textContent='Local instructor preview. The practice app runs on this computer; cloud sign-in, editor, and terminal are not connected yet.';
+  status.textContent+=' The local practice button opens the app on this computer.';
 }

@@ -1,4 +1,5 @@
 .env
+.admin-created
 certs/
 evidence/private/
 tools/

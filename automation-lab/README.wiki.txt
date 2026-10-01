@@ -1,6 +1,6 @@
 # Mini Quiz Academy automation lab
 
-The academy opens a focused Class 2 guide and a real Help Desk practice application. Students can create, search, filter, and update records. Playwright and Cypress test the same six workflows. The cloud workspace configuration is authored and passes Compose parsing, shell parsing, and Terraform schema validation; it has not been deployed or proven for 50 concurrent students.
+The academy opens a focused Class 2 guide and a real Help Desk practice application. Students can create, search, filter, and update records. Playwright and Cypress test the same six workflows. A dedicated cloud pilot is deployed at https://lab.kfk-786.com with instructor sign-in, a browser IDE, PowerShell, a practice app, and a live browser. The initial cloud run passed 3 API, 6 Playwright, and 6 Cypress checks. Fifty concurrent students remain a capacity target, not a verified result.
 
 ## Local preview
 
@@ -18,23 +18,23 @@ The existing academy's lesson, curriculum, quiz, whiteboard, diagram, and Fireba
 
 | Component | Role | Current evidence |
 | --- | --- | --- |
-| Academy / GitHub Pages | Lessons, curriculum, quizzes, and lab entry | Existing public site; lab entry verified locally |
-| React and Node practice app | Actual UI and ticket API under test | Build, API, Playwright, and Cypress checks pass locally |
-| Coder | Student sign-in, browser editor, terminal, private app links | Configuration work; cloud runtime unverified |
-| DigitalOcean | Student workspace compute and persistent storage | Registered credential missing; account/quota unknown |
-| Cloudflare | Domain and DNS routing | Historical domain `kfk-786.com`; current zone access unverified |
+| Academy / GitHub Pages | Lessons, curriculum, quizzes, and lab entry | Existing public site; lab entry links to the authenticated cloud pilot |
+| React and Node practice app | Actual UI and ticket API under test | Build and test checks pass locally and on the cloud pilot |
+| Coder | Student sign-in, browser editor, terminal, private app links | Instructor login and initial cloud workspace verified |
+| DigitalOcean | Student workspace compute and persistent storage | Dedicated controller and one workspace; account limit 10 Droplets |
+| Cloudflare | Domain and DNS routing | Only `lab.kfk-786.com` delegated to DigitalOcean; HTTPS verified |
 | Firebase | Existing academy question/score integration | Preserved; no new authentication, rules, or score writes |
 
 The initial workspace design uses invited Coder accounts. Existing Firebase score storage does not automatically provide Coder sign-in. Student workspaces must not receive DigitalOcean or Firebase administrative credentials. No Render migration or shutdown has occurred.
 
 ## Release boundaries
 
-1. The local practice app is usable and its exercises are executed tests.
-2. Cloud workspaces are not connected: `lab-config.json` deliberately has a null workspace URL. Do not publish a working-cloud claim or enable this link before authenticated acceptance checks pass.
-3. Docker is unavailable locally, so the container and VM boot sequence need runtime verification.
-4. Resolve DigitalOcean access, inventory current resources and quotas, and verify the chosen subdomain before provisioning.
-5. Review the concrete provisioning cost, then deploy a one-student pilot. Verify invitation/sign-in, repository, PowerShell/Git/npm, browser view, persistence, and denial of access from another student account.
-6. Rehearse with 10 and then 50 active student sessions running browser tests. Record startup time, memory/CPU, failures, responsiveness, stop/resume, and isolation. Fifty is a minimum capacity target, not an achieved result or an enrollment cap.
+1. The instructor pilot is available through the Academy automation guide. Accounts are issued by the instructor; public self-signup is disabled.
+2. A separate authenticated member was denied the instructor workspace and IDE, preview, and live-browser apps. The temporary test account was suspended afterward.
+3. Stopping removed the pilot VM and retained its 25 GiB volume. Restarting restored the saved file, local Git branch, and exact Git commit; their hashes matched.
+4. Coder OSS rejects its Enterprise-only port-sharing ceiling. The pilot proxy blocks sharing mutations; owner-only app configuration and cross-account denials were tested. This is not a claim that paid Coder controls are enabled.
+5. The approved pilot is approximately $50.50/month base if both VMs remain allocated. Stopping the student workspace deletes its VM; the controller and retained volume continue billing.
+6. Before class-wide use, arrange student accounts, raise the account quota, approve the larger operating budget, and rehearse 10 then at least 50 simultaneous sessions. Measure startup time, responsiveness, errors, isolation, and real browser-test load. No 50-student claim is made.
 
 ## Cost context, not an account quote
 
@@ -50,4 +50,4 @@ Source: [DigitalOcean Droplet pricing](https://www.digitalocean.com/pricing/drop
 
 Process flow: academy -> automation guide -> authenticated student workspace -> edit a test -> run Playwright or Cypress -> inspect browser and assertions -> retain work -> stop workspace.
 
-Current verified local flow: academy -> automation guide -> local practice app -> create/search/update tickets -> run framework suites -> inspect actual results.
+Verified pilot flow: HTTPS sign-in -> private workspace -> repository and PowerShell -> Help Desk and browser checks -> owner-only app access. Stop/resume results are recorded separately.

@@ -64,7 +64,7 @@ resource "digitalocean_tag" "student" {
 
 resource "digitalocean_droplet" "student" {
   count      = data.coder_workspace.me.start_count
-  image      = "debian-12-x64"
+  image      = "debian-13-x64"
   name       = "quiz-${substr(data.coder_workspace.me.id, 0, 8)}"
   region     = "nyc3"
   size       = "s-2vcpu-4gb"
@@ -76,6 +76,7 @@ resource "digitalocean_droplet" "student" {
     agent_token    = coder_agent.main.token
     agent_init_b64 = base64encode(coder_agent.main.init_script)
     bootstrap_b64  = filebase64("${path.module}/bootstrap.sh")
+    packages_b64   = filebase64("${path.module}/worker-packages.txt")
     app_git_url    = var.app_git_url
     app_git_commit = var.app_git_commit
   })
@@ -116,7 +117,7 @@ resource "coder_app" "ide" {
   agent_id     = coder_agent.main.id
   slug         = "ide"
   display_name = "Browser IDE"
-  url          = "http://127.0.0.1:13337/?folder=/home/coder"
+  url          = "http://127.0.0.1:13337/?folder=/home/coder/academy/automation-lab/practice-app"
   subdomain    = true
   share        = "owner"
   healthcheck {
@@ -130,7 +131,8 @@ resource "coder_app" "browser" {
   agent_id     = coder_agent.main.id
   slug         = "browser"
   display_name = "Live Browser"
-  url          = "http://127.0.0.1:6080/vnc.html?autoconnect=1&resize=remote"
+  # Coder joins the incoming path to this URL; use an origin, not a filename.
+  url          = "http://127.0.0.1:6080"
   subdomain    = true
   share        = "owner"
 }
