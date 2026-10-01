@@ -1,0 +1,6 @@
+# Bind Coder only to control-host loopback for SSH-tunnel verification.
+# Never publish this port on a public interface.
+services:
+  coder:
+    ports:
+      - '127.0.0.1:7080:7080'

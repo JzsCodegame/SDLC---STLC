@@ -1,0 +1,51 @@
+MINI QUIZ LAB CONTROL VM PILOT
+==============================
+
+Dedicated Debian 13 control VM: 2 vCPU, 4 GiB. Cloud-init installs pinned
+Docker 29.8.2, containerd 2.3.6, Buildx 0.37.1, Compose 5.5.1. Its SHA256 is
+DD7730317F52DDC4DBA6D0AC618F49567827E56DE2F9ABA90A88F1F04A976A13.
+Cloud-init does not carry secrets or open public lab web ports.
+
+FLOW
+  cloud-init Docker install
+    -> upload reviewed infra and create root-only .env
+    -> start Postgres and create administrator privately
+    -> verify admin login/Owner role through SSH tunnel
+    -> verify DNS delegation and wildcard TLS
+    -> enable public Caddy 80/443
+    -> start one student VM and verify isolation/persistence
+
+Run on the new controller only:
+  cloud-init status --wait
+  docker version
+  docker compose version
+  cd /opt/mini-quiz-lab/infra
+  docker compose -f compose.yaml -f compose.private.yaml config --quiet
+  bash scripts/bootstrap-control-private.sh ADMIN_USERNAME ADMIN_EMAIL
+
+Before public ingress, only 127.0.0.1:7080 should serve Coder. Password input
+is interactive; never put it in a CLI argument, cloud-init, or logs. An
+authenticated first-user API call is also viable through a private SSH tunnel,
+but login and Owner-role readback are required before 80/443 opens.
+
+Optional DigitalOcean DNS TLS uses compose.autotls.yaml and Caddyfile.autotls.
+It pins Caddy 2.10.2 and DNS module commit 04bde2867106aa1b44c2f9da41a285fa02e629c5.
+Caddy /data and /config persist ACME state. After NS, A, wildcard A, firewall,
+and admin checks:
+  docker compose -f compose.yaml -f compose.autotls.yaml -f compose.public.yaml config --quiet
+  docker compose -f compose.yaml -f compose.autotls.yaml -f compose.public.yaml up -d --build caddy
+  curl --fail https://lab.kfk-786.com/api/v2/buildinfo
+
+The Debian 13 worker installs browser OS packages from a root-owned manifest.
+Student Git code runs as coder, never as root. The Coder agent starts before
+npm and browser setup, but app health checks remain not-ready until complete.
+
+Coder OSS rejects Enterprise max_port_share_level=owner. The pilot uses
+owner-only coder_app declarations, disabled workspace sharing/signups, and
+Caddy denial for public workspace port-share/acl mutations. Verify actual
+second-account denial before inviting students. One student pilot is not
+evidence for 10 or 50 concurrent students.
+
+Primary sources are linked in CONTROL-RUNTIME.md.
+
+The Live Browser app URL must be the noVNC origin (http://127.0.0.1:6080), not a filename. Coder joins incoming paths onto that URL. Both Caddy configurations redirect only the browser app landing path to /vnc.html?autoconnect=1&resize=remote; the owner-only Coder authentication gate still handles the application and WebSocket requests. Validate the actual browser view, not only an HTTP 200.

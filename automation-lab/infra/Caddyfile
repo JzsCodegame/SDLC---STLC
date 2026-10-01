@@ -1,0 +1,19 @@
+https://{$LAB_DOMAIN}, https://*.{$LAB_DOMAIN} {
+    tls /certs/fullchain.pem /certs/privkey.pem
+    encode zstd gzip
+    @novncLanding {
+        path /
+        expression `{http.request.host}.startsWith("browser--")`
+    }
+    redir @novncLanding /vnc.html?autoconnect=1&resize=remote 302
+    @sharingMutation {
+        method POST PATCH PUT
+        path_regexp sharing ^/api/v2/workspaces/[^/]+/(port-share|acl)/?$
+    }
+    respond @sharingMutation "Workspace sharing is disabled for this lab pilot." 403
+    reverse_proxy coder:7080
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options nosniff
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "academy-help-desk-practice",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "start": "node server/index.js",
+    "test:api": "node --test test/api.test.js",
+    "test:playwright": "playwright test",
+    "test:playwright:headed": "playwright test --headed",
+    "test:playwright:ui": "playwright test --ui --ui-host 127.0.0.1 --ui-port 8082",
+    "test:cypress": "node scripts/run-cypress.mjs",
+    "test:cypress:open": "node scripts/run-cypress.mjs --open",
+    "report:playwright": "playwright show-report --host 127.0.0.1 --port 8083",
+    "test": "npm run test:api"
+  },
+  "dependencies": { "react": "19.3.0", "react-dom": "19.3.0" },
+  "devDependencies": { "@vitejs/plugin-react": "6.1.1", "vite": "8.3.2", "@playwright/test": "1.63.0", "cypress": "16.1.1", "typescript": "7.0.2", "@types/react": "19.3.0", "@types/react-dom": "19.3.0" }
+}

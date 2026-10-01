@@ -1,0 +1,10 @@
+# Optional after the delegated DigitalOcean DNS zone and admin bootstrap work.
+services:
+  caddy:
+    image: mini-quiz-caddy-do:2.10.2-04bde28
+    build:
+      context: ./caddy-dns
+    environment:
+      DIGITALOCEAN_TOKEN: ${DIGITALOCEAN_TOKEN:?set DIGITALOCEAN_TOKEN}
+    volumes:
+      - ./Caddyfile.autotls:/etc/caddy/Caddyfile:ro
