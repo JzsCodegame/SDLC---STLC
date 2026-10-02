@@ -383,6 +383,12 @@ button {
   font-size: 1rem;
 }
 
+.java-lab-header p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .java-lab-header span {
   padding: 4px 8px;
   border-radius: 999px;
@@ -401,4 +407,96 @@ button {
 .java-output {
   min-height: 48px;
   margin: 12px 0 0;
+}
+
+.java-practice-open {
+  overflow: hidden;
+}
+
+.java-practice-dialog {
+  width: min(850px, calc(100% - 40px));
+  max-width: none;
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 0;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 24px 100px #001a2955;
+  overflow: auto;
+}
+
+.java-practice-dialog::backdrop {
+  background: #172d368f;
+  backdrop-filter: blur(3px);
+}
+
+.java-practice-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 28px 20px;
+  border-bottom: 1px solid var(--border);
+  background: #f6f8ef;
+}
+
+.java-practice-dialog-header .eyebrow {
+  margin-bottom: 8px;
+}
+
+.java-practice-dialog-header h2 {
+  margin: 0 0 8px;
+  font-size: 1.65rem;
+}
+
+.java-practice-dialog-header p:last-child,
+.java-output-caption {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.java-practice-dialog-body {
+  padding: 25px 28px 28px;
+}
+
+.java-practice-dialog #java-editor {
+  min-height: 280px;
+  width: 100%;
+  margin: 8px 0 16px;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.java-output-caption {
+  margin-top: 16px;
+}
+
+.java-practice-dialog :focus-visible {
+  outline: 3px solid #bd642d;
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  .java-practice-dialog {
+    width: calc(100% - 20px);
+    max-height: calc(100dvh - 24px);
+    border-radius: 14px;
+  }
+
+  .java-practice-dialog-header,
+  .java-practice-dialog-body {
+    padding: 20px 16px;
+  }
+
+  .java-practice-dialog-header {
+    gap: 12px;
+  }
+
+  .java-practice-dialog #java-editor {
+    min-height: 220px;
+  }
 }
