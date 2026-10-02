@@ -53,3 +53,10 @@ test('rejects invalid input, forces new tickets open, filters and updates valid 
   assert.equal(update.body.ticket.status, 'resolved');
   assert.equal((await request(app.base, '/api/health')).body.labMode, false);
 });
+
+// TEST ONLY: this branch is a release-gate failure rehearsal and must never merge.
+test('TEST ONLY: deliberately wrong healthy API status blocks release packaging', async () => {
+  const app = await start();
+  const result = await request(app.base, '/api/health');
+  assert.equal(result.response.status, 503, 'Deliberate failure: the healthy API returns 200');
+});
