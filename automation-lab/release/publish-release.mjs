@@ -16,6 +16,19 @@ async function api(url, method = 'GET', body) {
   if (!response.ok) throw new Error(`GitHub ${method} failed with HTTP ${response.status}`);
   return response.json();
 }
+async function verifyTag(allowMissing) {
+  const response = await fetch(`${base}/git/ref/tags/${encodeURIComponent(proof.tag)}`, {headers});
+  if (response.status === 404 && allowMissing) return null;
+  assert.equal(response.status, 200, 'Release tag could not be verified');
+  let object = (await response.json()).object;
+  for (let depth = 0; object.type === 'tag' && depth < 4; depth++) {
+    object = (await api(`${base}/git/tags/${object.sha}`)).object;
+  }
+  assert.equal(object.type, 'commit', 'Release tag does not resolve to a commit');
+  assert.equal(object.sha, proof.sourceCommit, 'Existing Git tag points to different source; use a new version');
+  return object.sha;
+}
+await verifyTag(true);
 const existing = await fetch(`${base}/releases/tags/${proof.tag}`, {headers});
 let release;
 if (existing.status === 404) {
@@ -47,6 +60,7 @@ for (const asset of proof.assets) {
   results.push({name: asset.name, url: published.browser_download_url, sha256: asset.sha256, bytes: asset.bytes});
 }
 if (release.draft) release = await api(`${base}/releases/${release.id}`, 'PATCH', {draft: false});
+await verifyTag(false);
 for (const asset of results) {
   const response = await fetch(asset.url);
   assert.ok(response.ok, `Public asset is not available: HTTP ${response.status}`);
