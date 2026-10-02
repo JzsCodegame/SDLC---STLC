@@ -1,4 +1,6 @@
 {
-  "workspaceUrl": "",
-  "status": "The cloud lab is unavailable while we move practice to students’ computers. A downloadable local package is not available yet. You can use the lesson cards below."
+  "schemaVersion": 1,
+  "release": {
+    "status": "pending"
+  }
 }
