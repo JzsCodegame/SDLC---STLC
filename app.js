@@ -28,6 +28,10 @@ const flashcardNextBtn = document.getElementById('flashcard-next');
 const flashcardPosition = document.getElementById('flashcard-position');
 const quizTopicSelect = document.getElementById('quiz-topic');
 const javaPracticeLab = document.getElementById('java-practice-lab');
+const javaLabLaunch = document.getElementById('java-lab-launch');
+const javaPracticeDialog = document.getElementById('java-practice-dialog');
+const javaPracticeTitle = document.getElementById('java-practice-title');
+const javaLabClose = document.getElementById('java-lab-close');
 const javaEditor = document.getElementById('java-editor');
 const javaOutput = document.getElementById('java-output');
 const javaResetBtn = document.getElementById('java-reset-btn');
@@ -102,6 +106,7 @@ const JAVA_LAB_SAMPLE = {
   ].join('\n'),
   output: 'pass'
 };
+let restoreJavaLabFocus = true;
 
 // Helper functions to prevent copy/paste during quiz
 function preventCopyPaste(event) {
@@ -305,6 +310,11 @@ function syncJavaPracticeLab() {
   const isJavaTopic = (quizTopicSelect?.value || 'Java') === 'Java';
   javaPracticeLab.classList.toggle('hidden', !isJavaTopic);
 
+  if (!isJavaTopic && javaPracticeDialog?.open) {
+    restoreJavaLabFocus = false;
+    javaPracticeDialog.close();
+  }
+
   if (isJavaTopic && javaEditor && !javaEditor.value.trim()) {
     javaEditor.value = JAVA_LAB_SAMPLE.code;
   }
@@ -334,6 +344,30 @@ function syncFlashcardsToQuizTopic() {
 quizTopicSelect?.addEventListener('change', syncFlashcardsToQuizTopic);
 javaResetBtn?.addEventListener('click', resetJavaPracticeLab);
 javaOutputBtn?.addEventListener('click', showJavaPracticeOutput);
+javaLabLaunch?.addEventListener('click', () => {
+  restoreJavaLabFocus = true;
+  javaPracticeDialog?.showModal();
+  document.documentElement.classList.add('java-practice-open');
+  javaPracticeTitle?.focus({ preventScroll: true });
+});
+javaLabClose?.addEventListener('click', () => javaPracticeDialog?.close());
+javaPracticeDialog?.addEventListener('close', () => {
+  document.documentElement.classList.remove('java-practice-open');
+  if (restoreJavaLabFocus) javaLabLaunch?.focus({ preventScroll: true });
+  restoreJavaLabFocus = true;
+});
+javaPracticeDialog?.addEventListener('keydown', event => {
+  if (event.key !== 'Tab') return;
+  const controls = [...javaPracticeDialog.querySelectorAll('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(element => element.getClientRects().length > 0);
+  const first = controls[0], last = controls.at(-1);
+  if (event.shiftKey && (document.activeElement === first || document.activeElement === javaPracticeTitle)) {
+    event.preventDefault();
+    last?.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first?.focus();
+  }
+});
 
 
 
