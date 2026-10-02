@@ -1,6 +1,20 @@
 {
   "schemaVersion": 1,
   "release": {
-    "status": "pending"
+    "status": "verified",
+    "version": "1.0.0",
+    "sourceCommit": "ddb16c3838a7ef404a16fc2f26b8142b207fed70",
+    "filename": "mini-quiz-lab-1.0.0-windows.zip",
+    "bytes": 65670,
+    "sha256": "3bb482ad45a4c9cbc2a30021323c6e6d5baedd26f5f6db0c38854251e8a815e7",
+    "downloadUrl": "https://github.com/JzsCodegame/SDLC---STLC/releases/download/local-lab-v1.0.0/mini-quiz-lab-1.0.0-windows.zip",
+    "releaseUrl": "https://github.com/JzsCodegame/SDLC---STLC/releases/download/local-lab-v1.0.0/release.json",
+    "checksumsUrl": "https://github.com/JzsCodegame/SDLC---STLC/releases/download/local-lab-v1.0.0/SHA256SUMS",
+    "prerequisites": {
+      "node": "24.x",
+      "git": "2.x",
+      "browser": "Microsoft Edge or Google Chrome",
+      "internetForInitialInstall": true
+    }
   }
 }
