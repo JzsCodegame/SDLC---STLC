@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    ["automation-lab/student-kit/Lab.cmd", "Lab.cmd"],
+    ["automation-lab/student-kit/Lab.ps1", "Lab.ps1"],
+    ["automation-lab/student-kit/lab.mjs", "lab.mjs"],
+    ["automation-lab/student-kit/lib.mjs", "lib.mjs"],
+    ["automation-lab/student-kit/README.md", "README.md"],
+    ["automation-lab/student-kit/README.wiki.txt", "README.wiki.txt"],
+    ["automation-lab/student-kit/EXERCISES.md", "EXERCISES.md"],
+    ["automation-lab/student-kit/EXERCISES.wiki.txt", "EXERCISES.wiki.txt"],
+    ["automation-lab/practice-app/.gitignore", "practice-app/.gitignore"],
+    ["automation-lab/practice-app/package.json", "practice-app/package.json"],
+    ["automation-lab/practice-app/package-lock.json", "practice-app/package-lock.json"],
+    ["automation-lab/practice-app/index.html", "practice-app/index.html"],
+    ["automation-lab/practice-app/vite.config.ts", "practice-app/vite.config.ts"],
+    ["automation-lab/practice-app/tsconfig.json", "practice-app/tsconfig.json"],
+    ["automation-lab/practice-app/playwright.config.ts", "practice-app/playwright.config.ts"],
+    ["automation-lab/practice-app/cypress.config.ts", "practice-app/cypress.config.ts"],
+    ["automation-lab/practice-app/src/main.tsx", "practice-app/src/main.tsx"],
+    ["automation-lab/practice-app/src/style.css", "practice-app/src/style.css"],
+    ["automation-lab/practice-app/src/vite-env.d.ts", "practice-app/src/vite-env.d.ts"],
+    ["automation-lab/practice-app/server/app.js", "practice-app/server/app.js"],
+    ["automation-lab/practice-app/server/index.js", "practice-app/server/index.js"],
+    ["automation-lab/practice-app/server/store.js", "practice-app/server/store.js"],
+    ["automation-lab/practice-app/scripts/run-cypress.mjs", "practice-app/scripts/run-cypress.mjs"],
+    ["automation-lab/practice-app/test/api.test.js", "practice-app/test/api.test.js"],
+    ["automation-lab/practice-app/tests/playwright/help-desk.spec.ts", "practice-app/tests/playwright/help-desk.spec.ts"],
+    ["automation-lab/practice-app/cypress/e2e/help-desk.cy.ts", "practice-app/cypress/e2e/help-desk.cy.ts"]
+  ]
+}

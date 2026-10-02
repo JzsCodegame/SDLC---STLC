@@ -1,0 +1,74 @@
+pipeline {
+  agent { label 'built-in' }
+  options {
+    disableConcurrentBuilds()
+    skipDefaultCheckout(true)
+    timeout(time: 45, unit: 'MINUTES')
+    buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '5'))
+  }
+  parameters {
+    string(name: 'SOURCE_COMMIT', defaultValue: '', description: 'Reviewed 40-character app Git commit; no branch names.')
+    string(name: 'PACKAGE_VERSION', defaultValue: '1.0.0', description: 'Version for a candidate Windows student package.')
+  }
+  environment {
+    LAB_CI_IMAGE = 'cypress/included@sha256:ff49cf81f9c50372b9281235d20ed2793e5424dd1b93f5cfbaad9a57c1ff30be'
+  }
+  stages {
+    stage('Validate request') {
+      steps {
+        script {
+          if (!(params.SOURCE_COMMIT ==~ /[0-9a-f]{40}/)) { error('SOURCE_COMMIT must be an exact lowercase Git SHA.') }
+          if (!(params.PACKAGE_VERSION ==~ /(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)/)) { error('PACKAGE_VERSION must be a numeric semantic version such as 1.0.0.') }
+          env.LAB_CONTAINER = "mqa-local-lab-${env.BUILD_NUMBER}"
+        }
+      }
+    }
+    stage('Checkout exact source') {
+      steps {
+        deleteDir()
+        checkout([$class: 'GitSCM', branches: [[name: params.SOURCE_COMMIT]], userRemoteConfigs: [[url: 'https://github.com/JzsCodegame/SDLC---STLC.git']], extensions: [[$class: 'CloneOption', noTags: true, shallow: false]]])
+        sh 'test "$(git rev-parse HEAD)" = "$SOURCE_COMMIT"'
+      }
+    }
+    stage('Build, test and package in isolated container') {
+      steps {
+        sh '''
+          set -eu
+          docker image inspect "$LAB_CI_IMAGE" >/dev/null
+          docker create --name "$LAB_CONTAINER" --cpus 4 --memory 4g --shm-size 1g \
+            --cap-drop ALL --security-opt no-new-privileges --pids-limit 512 \
+            --workdir /workspace --entrypoint node \
+            -e CI=1 -e PLAYWRIGHT_CHANNEL=chrome -e CYPRESS_BROWSER=chrome \
+            -e CYPRESS_INSTALL_BINARY=0 -e LAB_CI_IMAGE="$LAB_CI_IMAGE" \
+            "$LAB_CI_IMAGE" automation-lab/release/run-ci.mjs \
+            --source "$SOURCE_COMMIT" --version "$PACKAGE_VERSION" --output /output
+          docker cp . "$LAB_CONTAINER:/workspace/"
+          docker start --attach "$LAB_CONTAINER"
+          exit_code=$(docker inspect --format '{{.State.ExitCode}}' "$LAB_CONTAINER")
+          test "$exit_code" = 0
+        '''
+      }
+      post {
+        always {
+          sh '''
+            set -eu
+            mkdir -p artifacts
+            if docker inspect "$LAB_CONTAINER" >/dev/null 2>&1; then
+              docker cp "$LAB_CONTAINER:/output/." artifacts/ || true
+              docker rm -f "$LAB_CONTAINER" >/dev/null
+            fi
+          '''
+          archiveArtifacts artifacts: 'artifacts/**/*', allowEmptyArchive: true, fingerprint: true
+        }
+      }
+    }
+  }
+  post {
+    success {
+      echo 'Candidate package passed local Linux CI. Publication still requires matching Windows fresh-install and visible-browser evidence.'
+    }
+    failure {
+      echo 'Candidate failed. Do not publish or change the Academy current-download manifest.'
+    }
+  }
+}
