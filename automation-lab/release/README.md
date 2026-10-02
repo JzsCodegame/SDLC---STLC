@@ -33,6 +33,22 @@ Do not give pull-request source access to publishing credentials.
    instructor GitHub release procedure, then update the Academy download descriptor.
 6. Verify the public ZIP hash and Pages descriptor before recording success.
 
+The operator must run `verify-release.mjs --artifacts DIRECTORY --ci RECEIPT
+--windows RECEIPT`. It fails closed for missing or failed checks, differing source
+commits, versions, byte lengths or hashes. `publish-release.mjs` accepts the same
+arguments and runs that gate before any GitHub mutation. Resolve the existing
+instructor GitHub credential into process-only `GITHUB_TOKEN`; never put it in a
+command argument, repository file, Jenkins job or student package. Publication
+creates a draft, verifies each uploaded asset, publishes it, and verifies public
+bytes. It never changes the Academy descriptor; that follows through a reviewed PR.
+
+Windows receipt schema: schemaVersion 1, platform `win32`, passed true,
+sourceCommit, version, artifact {filename, bytes, sha256}, environment, cleanMachine,
+and checks. Required true checks are freshExtraction, integrity, prerequisites,
+install, appUi, api, playwright, cypress, playwrightHeaded, cypressVisible,
+preservation and secondInstanceRefused. A receipt records observed results, never
+assumed success. Linux CI supplies its separate receipt and every named phase.
+
 If any gate fails, keep the preceding Academy download current. A partial release
 upload is not promotion. Never overwrite a version with different bytes. Roll back
 the current-download descriptor through a reviewed follow-up commit, preserving

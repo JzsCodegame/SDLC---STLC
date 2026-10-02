@@ -19,7 +19,7 @@ pipeline {
       steps {
         script {
           if (!(params.SOURCE_COMMIT ==~ /[0-9a-f]{40}/)) { error('SOURCE_COMMIT must be an exact lowercase Git SHA.') }
-          if (!(params.PACKAGE_VERSION ==~ /(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?/)) { error('PACKAGE_VERSION must be a semantic version.') }
+          if (!(params.PACKAGE_VERSION ==~ /(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)/)) { error('PACKAGE_VERSION must be a numeric semantic version such as 1.0.0.') }
           env.LAB_CONTAINER = "mqa-local-lab-${env.BUILD_NUMBER}"
         }
       }

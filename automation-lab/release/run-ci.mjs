@@ -9,7 +9,7 @@ const source = args['--source'];
 const version = args['--version'];
 const output = path.resolve(args['--output'] || 'artifacts');
 assert.match(source || '', /^[0-9a-f]{40}$/);
-assert.match(version || '', /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-[0-9A-Za-z.-]+)?$/);
+assert.match(version || '', /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/);
 const repository = process.cwd();
 const app = path.join(repository, 'automation-lab/practice-app');
 fs.mkdirSync(output, {recursive: true});
@@ -30,7 +30,7 @@ try {
   const tracked = spawnSync('git', ['status', '--porcelain', '--untracked-files=no'], {encoding: 'utf8'});
   assert.equal(tracked.status, 0);
   assert.equal(tracked.stdout.trim(), '', 'Tracked source must be clean');
-  command('Package and download-descriptor safety tests', process.execPath, ['--test', 'automation-lab/student-kit/package.test.mjs', 'tests/automation-release.test.mjs'], repository);
+  command('Package and download-descriptor safety tests', process.execPath, ['--test', 'automation-lab/student-kit/package.test.mjs', 'tests/automation-release.test.mjs', 'automation-lab/release/verify-release.test.mjs'], repository);
   command('Install pinned dependencies', 'npm', ['ci']);
   command('Build the application', 'npm', ['run', 'build']);
   command('API tests', 'npm', ['run', 'test:api']);
