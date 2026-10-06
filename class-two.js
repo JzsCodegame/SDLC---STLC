@@ -1,5 +1,7 @@
 import {sections,flashcards,quiz} from './class-two-content.js';
 import {examples,setup,starter,reference} from './class-two-examples.js';
+import {modules as conceptLibrary} from './learning-content.js';
+import {openVisualLesson} from './visual-lessons.js';
 const $=id=>document.getElementById(id);
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let sectionIndex=0,cardIndex=0,flashIndex=0;
@@ -9,6 +11,11 @@ function renderLesson(){
  const section=sections[sectionIndex],card=section.cards[cardIndex];
  $('section-nav').innerHTML=sections.map((s,i)=>`<button type="button" data-section="${i}" ${i===sectionIndex?'aria-current="step"':''}>${i+1}. ${escape(s.title)} · ${s.minutes} min</button>`).join('');
  $('lesson-card').innerHTML=`<div><p class="eyebrow">${sectionIndex+1} / ${escape(section.title)}</p><h3>${escape(card.title)}</h3><p>${escape(card.text)}</p></div><div class="lesson-case"><p class="eyebrow">MAKE IT CONCRETE</p><pre><code>${escape(card.example)}</code></pre><details><summary>${escape(card.question)}</summary><p>${escape(card.answer)}</p></details></div>`;
+ const relatedIds=['requirements','tools','ui','assertions','automation','regression','ui','regression'];
+ const mod=conceptLibrary.find(x=>x.id===relatedIds[sectionIndex]);
+ const materialButton=document.createElement('button');materialButton.type='button';materialButton.className='visual-open';materialButton.textContent='Open related study material →';
+ materialButton.onclick=()=>openVisualLesson(mod,mod.cards[0],materialButton);
+ $('lesson-card').append(materialButton);
  $('card-position').textContent=`Part ${sectionIndex+1} of ${sections.length} · Card ${cardIndex+1} of ${section.cards.length}`;
  $('previous-card').disabled=sectionIndex===0&&cardIndex===0;
  $('next-card').disabled=sectionIndex===sections.length-1&&cardIndex===section.cards.length-1;
