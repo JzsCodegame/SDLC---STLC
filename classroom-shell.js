@@ -2,7 +2,11 @@
 const isTwo=document.body.classList.contains('class-two-page');
 document.body.classList.add('classroom-page');
 const nav=document.querySelector('.academy-nav nav');
-nav.innerHTML=`<a href="learn.html?class=1#sdlc/lifecycle" ${!isTwo?'aria-current="page"':''}>Class One</a><a href="class-two.html" ${isTwo?'aria-current="page"':''}>Class Two</a><a href="index.html?topic=SDLC">Quiz &amp; flashcards</a><a href="automation.html">Automation lab</a><a href="curriculum.html">Curriculum</a>`;
+nav.innerHTML=`<details class="class-picker"><summary>${isTwo?'Class Two':'Class One'} <span aria-hidden="true">▾</span></summary><div class="class-picker-panel"><button type="button" data-class-scroll="-1" aria-label="Scroll classes up">▲</button><nav aria-label="Choose a class" class="class-picker-list"><a href="learn.html?class=1#sdlc/lifecycle" ${!isTwo?'aria-current="page"':''}>Class One</a><a href="class-two.html" ${isTwo?'aria-current="page"':''}>Class Two</a></nav><button type="button" data-class-scroll="1" aria-label="Scroll classes down">▼</button></div></details><a href="index.html?topic=SDLC">Quiz &amp; flashcards</a><a href="automation.html">Automation lab</a><a href="curriculum.html">Curriculum</a>`;
+const picker=nav.querySelector('.class-picker');
+picker.querySelectorAll('[data-class-scroll]').forEach(button=>button.onclick=()=>picker.querySelector('.class-picker-list').scrollBy({top:Number(button.dataset.classScroll)*80,behavior:'smooth'}));
+document.addEventListener('click',event=>{if(!picker.contains(event.target))picker.open=false;});
+picker.addEventListener('keydown',event=>{if(event.key==='Escape'){picker.open=false;picker.querySelector('summary').focus();}});
 if(isTwo){
  const main=document.querySelector('main');
  const shell=document.createElement('div');shell.className='shell classroom-shell';
@@ -27,3 +31,4 @@ if(isTwo){
  document.querySelector('.class-routes').insertAdjacentHTML('beforeend','<a href="class-two.html">Continue to Class Two →</a><a href="automation.html">Automation workspace</a>');
 }
 await import('./whiteboard.js');
+await import('./class-session-notes.js');
