@@ -1,0 +1,886 @@
+{
+  "schemaVersion": 1,
+  "series": [
+    {
+      "id": "automation",
+      "title": "QA Automation"
+    },
+    {
+      "id": "interview-prep",
+      "title": "Interview Prep Series"
+    }
+  ],
+  "sessions": [
+    {
+      "key": "automation/1",
+      "series": "automation",
+      "classId": "1",
+      "date": "2026-10-05",
+      "title": "UI foundations and the purpose of automation",
+      "instructor": "Javid Zaman",
+      "summary": "This session introduced the Academy learning routine and connected browser structure to UI test automation. The instructor demonstrated how HTML and CSS shape a page, why repeatable checks benefit from automation, and why testers must understand and verify AI-assisted test code.",
+      "keyConcepts": [
+        "HTML and inspection",
+        "CSS and presentation",
+        "Why automate repeatable checks",
+        "Timeouts and review of generated code"
+      ],
+      "sections": [
+        {
+          "title": "HTML and inspection",
+          "text": "HTML describes the elements and structure of a web page. Browser inspection helps connect a visible control to the element that a test must find and interact with; understanding the structure comes before writing a reliable automation script.",
+          "timestamp": "58:37"
+        },
+        {
+          "title": "CSS and presentation",
+          "text": "CSS controls presentation such as layout, size and styling. The session compared different practice-site domains to show that a similar user task can have different visual designs. Test the required behavior as well as the visible interface.",
+          "timestamp": "1:18:27"
+        },
+        {
+          "title": "Why automate repeatable checks",
+          "text": "The discussion framed automation as a way to repeat checks efficiently and expand coverage. Automation still needs meaningful scenarios, expected outcomes, test data and a tester who investigates failures; it does not remove responsibility for quality.",
+          "timestamp": "1:38:06"
+        },
+        {
+          "title": "Timeouts and review of generated code",
+          "text": "The instructor emphasized understanding timeouts and parameterization even when AI helps write tests. A generated script must be reviewed and run against the intended application; receiving code is not evidence that the check works.",
+          "timestamp": "2:28:10"
+        }
+      ],
+      "practice": [
+        "Inspect one practice-page button and explain its purpose and markup.",
+        "Describe a repeatable user journey and its expected outcome before writing code.",
+        "Review generated test code and identify what each action and assertion is intended to prove."
+      ],
+      "terms": [
+        {
+          "term": "HTML and inspection",
+          "definition": "HTML: the markup that describes page elements and structure."
+        },
+        {
+          "term": "CSS and presentation",
+          "definition": "CSS: rules that control page presentation."
+        },
+        {
+          "term": "Why automate repeatable checks",
+          "definition": "Automation: executable checks that can be repeated consistently."
+        },
+        {
+          "term": "Timeouts and review of generated code",
+          "definition": "Timeout: the allowed waiting period before an operation is reported as unsuccessful."
+        }
+      ],
+      "review": [
+        {
+          "question": "Why inspect the page before automating it?",
+          "answer": "Inspection helps identify the real element and the attributes a test can use to locate it."
+        },
+        {
+          "question": "What is the difference between HTML and CSS?",
+          "answer": "HTML describes structure and elements; CSS controls how they are presented."
+        },
+        {
+          "question": "Does automation eliminate the tester’s role?",
+          "answer": "No. Testers choose scenarios, check outcomes and investigate failures."
+        },
+        {
+          "question": "Why review AI-generated tests?",
+          "answer": "Generated code may select the wrong element, use unsuitable data or assert the wrong outcome."
+        },
+        {
+          "question": "What should you investigate after a timeout?",
+          "answer": "Check the application state, the target element and the waiting condition before changing the timeout."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "automation/2",
+      "series": "automation",
+      "classId": "2",
+      "date": "2026-09-30",
+      "title": "Course foundations, AI assistance and the testing journey",
+      "instructor": "Javid Zaman",
+      "summary": "This supplied session connects SDLC concepts and testability to the planned hands-on automation course. It introduces the distinction between UI and API checks, AI-assisted authoring, and the runtime needed to execute test scripts. Hosting and future-tool promises in the recording describe plans at the time, not current service availability.",
+      "keyConcepts": [
+        "SDLC and testability",
+        "API checks and request/response",
+        "AI assistance and agents",
+        "Node and package execution"
+      ],
+      "sections": [
+        {
+          "title": "SDLC and testability",
+          "text": "Requirements should be understood and testable before execution begins. The discussion connected requirement review, design, development and testing so learners can explain where a check fits within the wider software lifecycle.",
+          "timestamp": "54:30"
+        },
+        {
+          "title": "API checks and request/response",
+          "text": "The course introduced API testing as a separate practice area alongside UI automation. A UI action may call an endpoint, but checking only the page does not by itself verify all request, response or data behavior.",
+          "timestamp": "1:22:44"
+        },
+        {
+          "title": "AI assistance and agents",
+          "text": "AI can assist with authoring repetitive test work, while tools and agents provide ways to act on a system. The tester must still supply context, verify the output and respect organizational data boundaries.",
+          "timestamp": "1:38:57"
+        },
+        {
+          "title": "Node and package execution",
+          "text": "The instructor discussed packaging test scripts and running them with Node and NPM. Reading a script or preparing code in an editor is distinct from executing it and collecting a test result.",
+          "timestamp": "1:41:52"
+        }
+      ],
+      "practice": [
+        "Map one requirement to a visible outcome and identify a related API check.",
+        "Explain the difference between an editor, a runtime and a test result.",
+        "Use approved practice data when discussing or generating examples."
+      ],
+      "terms": [
+        {
+          "term": "SDLC and testability",
+          "definition": "Testability: how clearly a requirement can be checked through observable outcomes."
+        },
+        {
+          "term": "API checks and request/response",
+          "definition": "API testing: checking the behavior of an interface through requests and responses."
+        },
+        {
+          "term": "AI assistance and agents",
+          "definition": "AI assistance: support for producing or explaining work that still requires review."
+        },
+        {
+          "term": "Node and package execution",
+          "definition": "Runtime: the environment that actually executes a program."
+        }
+      ],
+      "review": [
+        {
+          "question": "Why does requirement review matter before test execution?",
+          "answer": "It clarifies the intended behavior and whether it can be checked."
+        },
+        {
+          "question": "Are UI and API tests interchangeable?",
+          "answer": "No. They observe different interfaces and may reveal different failures."
+        },
+        {
+          "question": "What context should accompany AI-assisted test authoring?",
+          "answer": "The intended application behavior, scenario, allowed data and expected outcomes."
+        },
+        {
+          "question": "Does preparing code prove that a test passes?",
+          "answer": "No. The code must execute against the intended environment and produce reviewed evidence."
+        },
+        {
+          "question": "What should a tester protect when using AI tools?",
+          "answer": "Sensitive test data, organizational information and credentials."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/1",
+      "series": "interview-prep",
+      "classId": "1",
+      "date": "2026-08-18",
+      "title": "SDLC, STLC and writing test cases",
+      "instructor": "Mehaq",
+      "summary": "This session introduced the tester’s place in the software lifecycle, the testing-specific activities within it, and the documents used to plan and execute checks. It also connected test cases to user stories and discussed how testing work is organized in an Agile team.",
+      "keyConcepts": [
+        "Software development lifecycle",
+        "Software testing lifecycle",
+        "Test planning",
+        "Test case evidence",
+        "Sprints and team workflow"
+      ],
+      "sections": [
+        {
+          "title": "Software development lifecycle",
+          "text": "SDLC describes the wider process of developing and maintaining software. In the class example, testers reviewed requirements, prepared checks, reported defects and supported later verification; the exact phase names and team responsibilities can vary by organization.",
+          "timestamp": "1:11:40"
+        },
+        {
+          "title": "Software testing lifecycle",
+          "text": "STLC organizes testing activities such as understanding requirements, planning, designing cases, executing checks and reporting results. Explain it as the testing work within the broader development lifecycle rather than a second unrelated project.",
+          "timestamp": "1:32:32"
+        },
+        {
+          "title": "Test planning",
+          "text": "A test plan describes the testing scope, approach, environment, responsibilities, risks and completion criteria. The session emphasized using the organization’s existing template and understanding the plan before executing tests.",
+          "timestamp": "1:10:06"
+        },
+        {
+          "title": "Test case evidence",
+          "text": "A test case connects an action or sequence of actions to an expected result. During execution, record the actual result and status so another person can understand what was checked and why it passed or failed.",
+          "timestamp": "1:40:18"
+        },
+        {
+          "title": "Sprints and team workflow",
+          "text": "The instructor used a two-week sprint example to explain iterative work and ceremonies. Treat that cadence as the class example rather than a universal release schedule; explain what the team does during planning, daily coordination, review and improvement.",
+          "timestamp": "2:16:34"
+        }
+      ],
+      "practice": [
+        "Describe one requirement and write an action, expected result and actual-result field.",
+        "Explain your testing contribution at each relevant lifecycle stage.",
+        "Practice a brief interview answer that connects planning, execution and reporting."
+      ],
+      "terms": [
+        {
+          "term": "Software development lifecycle",
+          "definition": "SDLC: the wider lifecycle of software development and maintenance."
+        },
+        {
+          "term": "Software testing lifecycle",
+          "definition": "STLC: the lifecycle of testing activities."
+        },
+        {
+          "term": "Test planning",
+          "definition": "Test plan: an agreed description of how testing will be organized."
+        },
+        {
+          "term": "Test case evidence",
+          "definition": "Test case: documented steps, expected results and execution evidence."
+        },
+        {
+          "term": "Sprints and team workflow",
+          "definition": "Sprint: a bounded period of iterative team work."
+        }
+      ],
+      "review": [
+        {
+          "question": "How do SDLC and STLC relate?",
+          "answer": "SDLC covers the wider product lifecycle; STLC organizes the testing activities within it."
+        },
+        {
+          "question": "What does a test plan provide?",
+          "answer": "Scope, approach, resources, risks and criteria that guide testing."
+        },
+        {
+          "question": "How do expected and actual results differ?",
+          "answer": "Expected describes the intended outcome; actual records what happened during execution."
+        },
+        {
+          "question": "Why link a test case to a user story?",
+          "answer": "The link shows which requirement the check covers."
+        },
+        {
+          "question": "Must every team use the sprint cadence shown in class?",
+          "answer": "No. The cadence was an example and team arrangements may differ."
+        }
+      ],
+      "recording": {
+        "availablePrivately": false
+      }
+    },
+    {
+      "key": "interview-prep/2",
+      "series": "interview-prep",
+      "classId": "2",
+      "date": "2026-09-03",
+      "title": "ServiceNow workflows and core QA interview concepts",
+      "instructor": "Mehaq",
+      "summary": "This session combined a ServiceNow demonstration with interview practice on verification, validation and defect reporting. It followed a requester action through backend workflow checks and emphasized role-based testing and clear test evidence.",
+      "keyConcepts": [
+        "Role-based testing",
+        "ServiceNow workflow checks",
+        "Verification and validation",
+        "Severity and priority"
+      ],
+      "sections": [
+        {
+          "title": "Role-based testing",
+          "text": "The demonstration used impersonation to check behavior as a designated test user. Verify the intended requester or fulfiller role in an approved test environment instead of assuming an administrator’s experience represents the user’s experience.",
+          "timestamp": "19:10"
+        },
+        {
+          "title": "ServiceNow workflow checks",
+          "text": "ServiceNow was used to demonstrate requests, incidents and problems. A useful end-to-end check follows the submitted request through its records and tasks, not just the success message shown on the portal.",
+          "timestamp": "15:24"
+        },
+        {
+          "title": "Verification and validation",
+          "text": "Verification examines requirements, documents and work products for correctness early in the process. Validation checks the implemented behavior against intended user needs; the session discussed how both contribute to finding and preventing problems.",
+          "timestamp": "51:58"
+        },
+        {
+          "title": "Severity and priority",
+          "text": "Severity describes the impact of an issue on functionality or users. Priority describes the urgency or order of fixing it. Keep the two fields distinct and explain the business context behind a proposed priority.",
+          "timestamp": "1:09:32"
+        }
+      ],
+      "practice": [
+        "Write a portal-to-backend test using approved requester and fulfiller roles.",
+        "Explain one verification activity and one validation activity.",
+        "Describe an issue’s impact separately from the urgency of fixing it."
+      ],
+      "terms": [
+        {
+          "term": "Role-based testing",
+          "definition": "Impersonation: testing a workflow using an authorized user role."
+        },
+        {
+          "term": "ServiceNow workflow checks",
+          "definition": "Workflow: the connected steps and state changes that fulfill a request."
+        },
+        {
+          "term": "Verification and validation",
+          "definition": "Verification: checking work products; validation: checking intended product behavior."
+        },
+        {
+          "term": "Severity and priority",
+          "definition": "Severity: impact. Priority: urgency of resolution."
+        }
+      ],
+      "review": [
+        {
+          "question": "Why test with a requester role?",
+          "answer": "The requester’s permissions and experience may differ from an administrator’s."
+        },
+        {
+          "question": "Why inspect backend tasks after submission?",
+          "answer": "They show whether the request progressed through the intended workflow."
+        },
+        {
+          "question": "How do verification and validation differ?",
+          "answer": "Verification checks work products; validation checks implemented behavior against intended needs."
+        },
+        {
+          "question": "Can a low-severity issue have high priority?",
+          "answer": "Yes, business timing or visibility can make its resolution urgent."
+        },
+        {
+          "question": "What belongs in a useful defect report?",
+          "answer": "Clear steps, expected and actual behavior, evidence and the relevant environment."
+        }
+      ],
+      "recording": {
+        "availablePrivately": false
+      }
+    },
+    {
+      "key": "interview-prep/3",
+      "series": "interview-prep",
+      "classId": "3",
+      "date": "2026-09-10",
+      "title": "Agile workflow and selecting useful test types",
+      "instructor": "Mehaq",
+      "summary": "This session revisited Agile coordination and then compared regression, smoke, negative, boundary and performance testing. The central interview skill is to explain why a particular check is appropriate and give a concrete example.",
+      "keyConcepts": [
+        "Agile coordination",
+        "Regression testing",
+        "Smoke testing",
+        "Positive and negative checks",
+        "Boundary and performance checks"
+      ],
+      "sections": [
+        {
+          "title": "Agile coordination",
+          "text": "The class reviewed story refinement, planning, stand-ups and review activities. Explain the purpose and your QA contribution rather than memorizing one team’s meeting calendar or assignment rules.",
+          "timestamp": "14:36"
+        },
+        {
+          "title": "Regression testing",
+          "text": "Regression checks look for unintended effects after a change. Select relevant existing behavior based on the affected features and risk; a defect fix should also be checked directly to confirm the original problem is resolved.",
+          "timestamp": "1:27:02"
+        },
+        {
+          "title": "Smoke testing",
+          "text": "Smoke testing provides a quick check that a build or application is stable enough for deeper testing. Opening the application is one example, but the selected smoke checks should cover the critical starting paths for the system.",
+          "timestamp": "1:36:00"
+        },
+        {
+          "title": "Positive and negative checks",
+          "text": "Positive checks use valid actions or data to confirm expected success. Negative checks use invalid or disallowed inputs and verify that the application handles them correctly instead of accepting them or failing unexpectedly.",
+          "timestamp": "1:41:46"
+        },
+        {
+          "title": "Boundary and performance checks",
+          "text": "Boundary testing focuses on the edges of permitted ranges. The session also introduced performance testing, where workload and response behavior matter; keep a boundary-value example separate from a performance scenario.",
+          "timestamp": "1:46:38"
+        }
+      ],
+      "practice": [
+        "For a form rule, propose valid, invalid and boundary cases.",
+        "Choose a small smoke set for a newly delivered build.",
+        "Explain how a changed feature could affect an existing workflow."
+      ],
+      "terms": [
+        {
+          "term": "Agile coordination",
+          "definition": "Agile coordination: iterative planning, feedback and team communication."
+        },
+        {
+          "term": "Regression testing",
+          "definition": "Regression: checking existing behavior after a change."
+        },
+        {
+          "term": "Smoke testing",
+          "definition": "Smoke test: a small set of critical stability checks."
+        },
+        {
+          "term": "Positive and negative checks",
+          "definition": "Negative testing: checking the handling of invalid or disallowed behavior."
+        },
+        {
+          "term": "Boundary and performance checks",
+          "definition": "Boundary: an edge of an allowed range. Performance: behavior under workload."
+        }
+      ],
+      "review": [
+        {
+          "question": "What is the purpose of regression testing?",
+          "answer": "To detect unintended effects in existing behavior after a change."
+        },
+        {
+          "question": "How is confirming a fix different from regression?",
+          "answer": "Confirmation checks the original defect; regression checks related existing behavior."
+        },
+        {
+          "question": "Why run smoke checks early?",
+          "answer": "They can reveal a build that is not ready for detailed testing."
+        },
+        {
+          "question": "What should a negative test assert?",
+          "answer": "The intended rejection or safe handling of invalid input."
+        },
+        {
+          "question": "Where should boundary values be selected?",
+          "answer": "At the stated edges and just inside or outside the permitted range."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/4",
+      "series": "interview-prep",
+      "classId": "4",
+      "date": "2026-09-17",
+      "title": "Agile interview answers and constructive retrospectives",
+      "instructor": "Mehaq",
+      "summary": "This coaching session reviewed how testers describe their Agile work, communicate test status and blockers, and suggest improvements. It also discussed identifying repetitive work that could benefit from automation.",
+      "keyConcepts": [
+        "Daily test status",
+        "Blocker communication",
+        "Constructive retrospectives",
+        "Automation candidates"
+      ],
+      "sections": [
+        {
+          "title": "Daily test status",
+          "text": "Give a short, concrete update about completed testing, planned work and impediments. Useful status describes evidence and what is needed next, so the team can respond to a blocker.",
+          "timestamp": "13:24"
+        },
+        {
+          "title": "Blocker communication",
+          "text": "A blocker should be explained with its effect on testing and the help needed to move forward. Keep the discussion focused on the work and recovery rather than blaming a colleague or listing activity without outcomes.",
+          "timestamp": "13:34"
+        },
+        {
+          "title": "Constructive retrospectives",
+          "text": "The class discussed what went well, what did not and how to improve communication or availability. In an interview, describe the problem, the improvement suggested and the result honestly; do not present a class example as personal project experience.",
+          "timestamp": "15:05"
+        },
+        {
+          "title": "Automation candidates",
+          "text": "Repeated, high-volume scenarios can be candidates for automation. Explain the stable workflow and expected outcome first, then discuss how automation could reduce repeated effort while keeping result review.",
+          "timestamp": "1:12:07"
+        }
+      ],
+      "practice": [
+        "Prepare a one-minute testing status update.",
+        "Turn a process problem into a constructive improvement suggestion.",
+        "Describe one repeated check that could be automated and why."
+      ],
+      "terms": [
+        {
+          "term": "Daily test status",
+          "definition": "Stand-up: short team coordination around progress and impediments."
+        },
+        {
+          "term": "Blocker communication",
+          "definition": "Blocker: an impediment that prevents planned work from progressing."
+        },
+        {
+          "term": "Constructive retrospectives",
+          "definition": "Retrospective: team reflection that identifies practical improvements."
+        },
+        {
+          "term": "Automation candidates",
+          "definition": "Automation candidate: a repeatable check with a clear purpose and outcome."
+        }
+      ],
+      "review": [
+        {
+          "question": "What makes a QA status update useful?",
+          "answer": "It states outcomes, the next work and any impediment needing action."
+        },
+        {
+          "question": "How should a blocker be communicated?",
+          "answer": "Explain its impact and the specific support or decision needed."
+        },
+        {
+          "question": "What is the purpose of a retrospective?",
+          "answer": "To learn from the iteration and agree practical improvements."
+        },
+        {
+          "question": "Which tests may be good automation candidates?",
+          "answer": "Stable, repeated checks with meaningful expected outcomes."
+        },
+        {
+          "question": "How should training examples be used in interviews?",
+          "answer": "Use them to explain understanding, while distinguishing training from personal work experience."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/5",
+      "series": "interview-prep",
+      "classId": "5",
+      "date": "2026-09-17",
+      "title": "Agile interview answers and constructive retrospectives",
+      "instructor": "Mehaq",
+      "duplicateOf": "interview-prep/4",
+      "summary": "This coaching session reviewed how testers describe their Agile work, communicate test status and blockers, and suggest improvements. It also discussed identifying repetitive work that could benefit from automation.",
+      "keyConcepts": [
+        "Daily test status",
+        "Blocker communication",
+        "Constructive retrospectives",
+        "Automation candidates"
+      ],
+      "sections": [
+        {
+          "title": "Daily test status",
+          "text": "Give a short, concrete update about completed testing, planned work and impediments. Useful status describes evidence and what is needed next, so the team can respond to a blocker.",
+          "timestamp": "13:24"
+        },
+        {
+          "title": "Blocker communication",
+          "text": "A blocker should be explained with its effect on testing and the help needed to move forward. Keep the discussion focused on the work and recovery rather than blaming a colleague or listing activity without outcomes.",
+          "timestamp": "13:34"
+        },
+        {
+          "title": "Constructive retrospectives",
+          "text": "The class discussed what went well, what did not and how to improve communication or availability. In an interview, describe the problem, the improvement suggested and the result honestly; do not present a class example as personal project experience.",
+          "timestamp": "15:05"
+        },
+        {
+          "title": "Automation candidates",
+          "text": "Repeated, high-volume scenarios can be candidates for automation. Explain the stable workflow and expected outcome first, then discuss how automation could reduce repeated effort while keeping result review.",
+          "timestamp": "1:12:07"
+        }
+      ],
+      "practice": [
+        "Prepare a one-minute testing status update.",
+        "Turn a process problem into a constructive improvement suggestion.",
+        "Describe one repeated check that could be automated and why."
+      ],
+      "terms": [
+        {
+          "term": "Daily test status",
+          "definition": "Stand-up: short team coordination around progress and impediments."
+        },
+        {
+          "term": "Blocker communication",
+          "definition": "Blocker: an impediment that prevents planned work from progressing."
+        },
+        {
+          "term": "Constructive retrospectives",
+          "definition": "Retrospective: team reflection that identifies practical improvements."
+        },
+        {
+          "term": "Automation candidates",
+          "definition": "Automation candidate: a repeatable check with a clear purpose and outcome."
+        }
+      ],
+      "review": [
+        {
+          "question": "What makes a QA status update useful?",
+          "answer": "It states outcomes, the next work and any impediment needing action."
+        },
+        {
+          "question": "How should a blocker be communicated?",
+          "answer": "Explain its impact and the specific support or decision needed."
+        },
+        {
+          "question": "What is the purpose of a retrospective?",
+          "answer": "To learn from the iteration and agree practical improvements."
+        },
+        {
+          "question": "Which tests may be good automation candidates?",
+          "answer": "Stable, repeated checks with meaningful expected outcomes."
+        },
+        {
+          "question": "How should training examples be used in interviews?",
+          "answer": "Use them to explain understanding, while distinguishing training from personal work experience."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/6",
+      "series": "interview-prep",
+      "classId": "6",
+      "date": "2026-09-30",
+      "title": "Acceptance criteria and ServiceNow end-to-end testing",
+      "instructor": "Mehaq",
+      "summary": "This practical session followed a catalog request from its acceptance criteria through requester submission and backend task handling. It also compared incident, problem and change workflows in service management.",
+      "keyConcepts": [
+        "Environment awareness",
+        "Acceptance criteria to tests",
+        "Requester and backend evidence",
+        "Incident, problem and change"
+      ],
+      "sections": [
+        {
+          "title": "Environment awareness",
+          "text": "Identify the environment before interacting with a ServiceNow instance. Confirm that the account and data are approved for testing; development, test, UAT and production have different purposes and access expectations.",
+          "timestamp": "5:19"
+        },
+        {
+          "title": "Acceptance criteria to tests",
+          "text": "Read the story’s acceptance criteria and turn each observable rule into a check. The lane-closure example included catalog details, required fields and workflow results; ask for clarification when a rule is ambiguous.",
+          "timestamp": "20:02"
+        },
+        {
+          "title": "Requester and backend evidence",
+          "text": "Follow the portal submission into the generated request item and related tasks. Verify the intended assignment and state changes with approved test roles instead of ending the test at the first confirmation message.",
+          "timestamp": "48:29"
+        },
+        {
+          "title": "Incident, problem and change",
+          "text": "Incident handling restores service; problem management investigates underlying causes; change management organizes approved modifications. The class used these related workflows to show why a tester must understand the purpose of each record and its transitions.",
+          "timestamp": "1:15:36"
+        }
+      ],
+      "practice": [
+        "Break a catalog requirement into field and workflow checks.",
+        "Trace one request through its backend records using approved test roles.",
+        "Explain the purpose of an incident, a problem and a change record."
+      ],
+      "terms": [
+        {
+          "term": "Environment awareness",
+          "definition": "Environment: the system instance and configuration in which work runs."
+        },
+        {
+          "term": "Acceptance criteria to tests",
+          "definition": "Acceptance criteria: conditions that describe acceptable story behavior."
+        },
+        {
+          "term": "Requester and backend evidence",
+          "definition": "Request item: the backend record associated with the requested catalog item."
+        },
+        {
+          "term": "Incident, problem and change",
+          "definition": "Problem management: investigation and management of underlying incident causes."
+        }
+      ],
+      "review": [
+        {
+          "question": "Why identify the environment before testing?",
+          "answer": "To use the correct instance, approved data and permissions."
+        },
+        {
+          "question": "How do acceptance criteria guide test design?",
+          "answer": "They describe the observable rules and outcomes that checks must cover."
+        },
+        {
+          "question": "Why verify a request item and its tasks?",
+          "answer": "They provide evidence that the submitted request entered and progressed through the workflow."
+        },
+        {
+          "question": "How do incident and problem management differ?",
+          "answer": "Incident handling restores service; problem management addresses underlying causes."
+        },
+        {
+          "question": "What should happen before a change is implemented?",
+          "answer": "The required approval and workflow conditions should be satisfied."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/7",
+      "series": "interview-prep",
+      "classId": "7",
+      "date": "2026-09-28",
+      "title": "STLC, defect evidence and requirement traceability",
+      "instructor": "Mehaq",
+      "summary": "This interview-preparation session reviewed the sequence from requirement analysis through planning, test execution and defect handling. It emphasized clear test-case evidence, examples of test types and links between requirements and coverage.",
+      "keyConcepts": [
+        "Planning the testing work",
+        "Action, expected and actual result",
+        "Defect lifecycle",
+        "Requirement traceability"
+      ],
+      "sections": [
+        {
+          "title": "Planning the testing work",
+          "text": "The test plan describes what, how and when to test and provides context for execution. Test analysis identifies the appropriate checks, data and risks before individual cases are executed.",
+          "timestamp": "32:36"
+        },
+        {
+          "title": "Action, expected and actual result",
+          "text": "A useful test case records user actions and expected outcomes; execution adds actual results and status. Keep the observations clear enough that another tester can repeat the check and understand a mismatch.",
+          "timestamp": "37:23"
+        },
+        {
+          "title": "Defect lifecycle",
+          "text": "When behavior differs from the requirement, record a reproducible defect with evidence. After a fix, verify the original issue and assess related regression risk; reopening and deferred states should reflect the team’s agreed process.",
+          "timestamp": "41:29"
+        },
+        {
+          "title": "Requirement traceability",
+          "text": "A requirement traceability matrix connects requirements to tests and their coverage. It helps identify missing checks and explain how a requirement was verified; it does not replace the underlying test evidence.",
+          "timestamp": "1:28:29"
+        }
+      ],
+      "practice": [
+        "Write one test case and a linked requirement identifier.",
+        "Explain a defect’s path from discovery to confirmation of a fix.",
+        "Create a small requirement-to-test coverage table."
+      ],
+      "terms": [
+        {
+          "term": "Planning the testing work",
+          "definition": "Test planning: defining the approach, scope and resources for testing."
+        },
+        {
+          "term": "Action, expected and actual result",
+          "definition": "Actual result: the observed outcome when a test is executed."
+        },
+        {
+          "term": "Defect lifecycle",
+          "definition": "Defect lifecycle: the recorded progression of an issue through investigation and resolution."
+        },
+        {
+          "term": "Requirement traceability",
+          "definition": "RTM: a mapping between requirements and their test coverage."
+        }
+      ],
+      "review": [
+        {
+          "question": "What does the test plan explain?",
+          "answer": "What will be tested, the approach, timing, resources and relevant criteria."
+        },
+        {
+          "question": "When is the actual result recorded?",
+          "answer": "During execution, based on observed behavior."
+        },
+        {
+          "question": "What should accompany a defect?",
+          "answer": "Reproduction steps, expected and actual behavior, environment and evidence."
+        },
+        {
+          "question": "Why assess regression after a fix?",
+          "answer": "The change may affect related behavior beyond the original defect."
+        },
+        {
+          "question": "What question does an RTM help answer?",
+          "answer": "Which tests cover a requirement and where coverage may be missing."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/8",
+      "series": "interview-prep",
+      "classId": "8",
+      "date": "2026-09-30",
+      "title": "ServiceNow roles, catalog testing and negative checks",
+      "instructor": "Mehaq",
+      "summary": "This session introduced ServiceNow interfaces and then followed a catalog-item testing example through story review, requester impersonation, request submission and workflow validation. It also discussed negative date checks and service-level behavior.",
+      "keyConcepts": [
+        "Environments and roles",
+        "Preparing cases before execution",
+        "Role-based catalog request",
+        "Negative tests and SLA scope"
+      ],
+      "sections": [
+        {
+          "title": "Environments and roles",
+          "text": "The session distinguished development, test and UAT contexts and the portal from backend navigation. Confirm the intended environment and role before testing so observations represent the approved workflow.",
+          "timestamp": "6:28"
+        },
+        {
+          "title": "Preparing cases before execution",
+          "text": "A tester can prepare cases from a story’s acceptance criteria while development is underway. Execution begins when the required readiness conditions are met; the demonstrated board lanes are a team workflow example.",
+          "timestamp": "15:57"
+        },
+        {
+          "title": "Role-based catalog request",
+          "text": "The demonstration used a requester role for submission and backend views for subsequent checks. Verify the generated records, assignment and closure behavior across the workflow using authorized test roles.",
+          "timestamp": "42:19"
+        },
+        {
+          "title": "Negative tests and SLA scope",
+          "text": "The class discussed invalid date behavior as a negative-test example and separately introduced SLA checks. Verify that disallowed input is handled correctly, and include SLA behavior when it belongs to the requirement or agreed test scope.",
+          "timestamp": "52:01"
+        }
+      ],
+      "practice": [
+        "Write a requester-to-backend workflow check from acceptance criteria.",
+        "Add an invalid-input case alongside the valid request path.",
+        "State explicitly whether SLA behavior is inside or outside your test scope."
+      ],
+      "terms": [
+        {
+          "term": "Environments and roles",
+          "definition": "UAT: user acceptance testing in the agreed acceptance context."
+        },
+        {
+          "term": "Preparing cases before execution",
+          "definition": "Ready for testing: a workflow state indicating that a story can proceed to testing."
+        },
+        {
+          "term": "Role-based catalog request",
+          "definition": "Requester: the role submitting a service or catalog request."
+        },
+        {
+          "term": "Negative tests and SLA scope",
+          "definition": "SLA: a service-level agreement defining relevant service targets."
+        }
+      ],
+      "review": [
+        {
+          "question": "Why distinguish portal and backend checks?",
+          "answer": "They expose different stages and evidence of the same request workflow."
+        },
+        {
+          "question": "Can case preparation start before development finishes?",
+          "answer": "Yes, when requirements are available; execution still needs readiness."
+        },
+        {
+          "question": "Why use authorized test roles for impersonation?",
+          "answer": "To verify the intended permissions and user experience safely."
+        },
+        {
+          "question": "What should an invalid-date test prove?",
+          "answer": "That the application handles the invalid date according to the intended rule."
+        },
+        {
+          "question": "Should every catalog test include an SLA check?",
+          "answer": "Only when SLA behavior is part of the relevant requirement or agreed scope."
+        }
+      ],
+      "recording": {
+        "availablePrivately": true
+      }
+    }
+  ]
+}

@@ -1,4 +1,105 @@
 {
   "schemaVersion": 1,
-  "sessions": []
+  "sessions": [
+    {
+      "id": "1",
+      "title": "UI foundations and the purpose of automation",
+      "date": "2026-10-05",
+      "summary": "This session introduced the Academy learning routine and connected browser structure to UI test automation. The instructor demonstrated how HTML and CSS shape a page, why repeatable checks benefit from automation, and why testers must understand and verify AI-assisted test code.",
+      "sections": [
+        {
+          "title": "HTML and inspection",
+          "text": "HTML describes the elements and structure of a web page. Browser inspection helps connect a visible control to the element that a test must find and interact with; understanding the structure comes before writing a reliable automation script.",
+          "timestamp": "58:37"
+        },
+        {
+          "title": "CSS and presentation",
+          "text": "CSS controls presentation such as layout, size and styling. The session compared different practice-site domains to show that a similar user task can have different visual designs. Test the required behavior as well as the visible interface.",
+          "timestamp": "1:18:27"
+        },
+        {
+          "title": "Why automate repeatable checks",
+          "text": "The discussion framed automation as a way to repeat checks efficiently and expand coverage. Automation still needs meaningful scenarios, expected outcomes, test data and a tester who investigates failures; it does not remove responsibility for quality.",
+          "timestamp": "1:38:06"
+        },
+        {
+          "title": "Timeouts and review of generated code",
+          "text": "The instructor emphasized understanding timeouts and parameterization even when AI helps write tests. A generated script must be reviewed and run against the intended application; receiving code is not evidence that the check works.",
+          "timestamp": "2:28:10"
+        }
+      ],
+      "review": [
+        {
+          "question": "Why inspect the page before automating it?",
+          "answer": "Inspection helps identify the real element and the attributes a test can use to locate it."
+        },
+        {
+          "question": "What is the difference between HTML and CSS?",
+          "answer": "HTML describes structure and elements; CSS controls how they are presented."
+        },
+        {
+          "question": "Does automation eliminate the tester’s role?",
+          "answer": "No. Testers choose scenarios, check outcomes and investigate failures."
+        },
+        {
+          "question": "Why review AI-generated tests?",
+          "answer": "Generated code may select the wrong element, use unsuitable data or assert the wrong outcome."
+        },
+        {
+          "question": "What should you investigate after a timeout?",
+          "answer": "Check the application state, the target element and the waiting condition before changing the timeout."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Course foundations, AI assistance and the testing journey",
+      "date": "2026-09-30",
+      "summary": "This supplied session connects SDLC concepts and testability to the planned hands-on automation course. It introduces the distinction between UI and API checks, AI-assisted authoring, and the runtime needed to execute test scripts. Hosting and future-tool promises in the recording describe plans at the time, not current service availability.",
+      "sections": [
+        {
+          "title": "SDLC and testability",
+          "text": "Requirements should be understood and testable before execution begins. The discussion connected requirement review, design, development and testing so learners can explain where a check fits within the wider software lifecycle.",
+          "timestamp": "54:30"
+        },
+        {
+          "title": "API checks and request/response",
+          "text": "The course introduced API testing as a separate practice area alongside UI automation. A UI action may call an endpoint, but checking only the page does not by itself verify all request, response or data behavior.",
+          "timestamp": "1:22:44"
+        },
+        {
+          "title": "AI assistance and agents",
+          "text": "AI can assist with authoring repetitive test work, while tools and agents provide ways to act on a system. The tester must still supply context, verify the output and respect organizational data boundaries.",
+          "timestamp": "1:38:57"
+        },
+        {
+          "title": "Node and package execution",
+          "text": "The instructor discussed packaging test scripts and running them with Node and NPM. Reading a script or preparing code in an editor is distinct from executing it and collecting a test result.",
+          "timestamp": "1:41:52"
+        }
+      ],
+      "review": [
+        {
+          "question": "Why does requirement review matter before test execution?",
+          "answer": "It clarifies the intended behavior and whether it can be checked."
+        },
+        {
+          "question": "Are UI and API tests interchangeable?",
+          "answer": "No. They observe different interfaces and may reveal different failures."
+        },
+        {
+          "question": "What context should accompany AI-assisted test authoring?",
+          "answer": "The intended application behavior, scenario, allowed data and expected outcomes."
+        },
+        {
+          "question": "Does preparing code prove that a test passes?",
+          "answer": "No. The code must execute against the intended environment and produce reviewed evidence."
+        },
+        {
+          "question": "What should a tester protect when using AI tools?",
+          "answer": "Sensitive test data, organizational information and credentials."
+        }
+      ]
+    }
+  ]
 }
