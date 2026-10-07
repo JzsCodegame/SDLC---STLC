@@ -289,106 +289,6 @@
     "aiGenerated": true
   },
   {
-    "question": "SDLC scenario: a team is defining scope, timeline, and resources. Which phase is this?",
-    "choices": [
-      "Planning phase",
-      "Requirement analysis phase",
-      "Design phase",
-      "Deployment phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: stakeholders explain what the app must do. Which phase fits best?",
-    "choices": [
-      "Requirement analysis phase",
-      "Design phase",
-      "Testing phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: architects map screens and modules before coding. Which phase is this?",
-    "choices": [
-      "Design phase",
-      "Implementation phase",
-      "Deployment phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: a team is defining scope, timeline, and resources. Which phase is this? (fallback review 2)",
-    "choices": [
-      "Planning phase",
-      "Requirement analysis phase",
-      "Design phase",
-      "Deployment phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: stakeholders explain what the app must do. Which phase fits best? (fallback review 2)",
-    "choices": [
-      "Requirement analysis phase",
-      "Design phase",
-      "Testing phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: architects map screens and modules before coding. Which phase is this? (fallback review 2)",
-    "choices": [
-      "Design phase",
-      "Implementation phase",
-      "Deployment phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: a team is defining scope, timeline, and resources. Which phase is this? (fallback review 3)",
-    "choices": [
-      "Planning phase",
-      "Requirement analysis phase",
-      "Design phase",
-      "Deployment phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: stakeholders explain what the app must do. Which phase fits best? (fallback review 3)",
-    "choices": [
-      "Requirement analysis phase",
-      "Design phase",
-      "Testing phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: architects map screens and modules before coding. Which phase is this? (fallback review 3)",
-    "choices": [
-      "Design phase",
-      "Implementation phase",
-      "Deployment phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: a team is defining scope, timeline, and resources. Which phase is this? (fallback review 4)",
-    "choices": [
-      "Planning phase",
-      "Requirement analysis phase",
-      "Design phase",
-      "Deployment phase"
-    ],
-    "answer": 0
-  },
-  {
     "question": "In which SDLC phase would you create this Java class structure? public class User { private String name; private int id; public User(String name, int id) { this.name = name; this.id = id; } }",
     "choices": [
       "Planning phase",
@@ -444,206 +344,6 @@
     "aiGenerated": true
   },
   {
-    "question": "SDLC concept: which phase checks the built product against requirements? (fallback review 4)",
-    "choices": [
-      "Testing phase",
-      "Design phase",
-      "Planning phase",
-      "Deployment phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC concept: which phase releases the tested product to users? (fallback review 4)",
-    "choices": [
-      "Deployment phase",
-      "Requirement analysis phase",
-      "Design phase",
-      "Implementation phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC concept: which phase writes and builds the software? (fallback review 5)",
-    "choices": [
-      "Implementation phase",
-      "Planning phase",
-      "Testing phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC concept: which phase checks the built product against requirements? (fallback review 5)",
-    "choices": [
-      "Testing phase",
-      "Design phase",
-      "Planning phase",
-      "Deployment phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC concept: which phase releases the tested product to users? (fallback review 5)",
-    "choices": [
-      "Deployment phase",
-      "Requirement analysis phase",
-      "Design phase",
-      "Implementation phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC concept: which phase writes and builds the software? (fallback review 6)",
-    "choices": [
-      "Implementation phase",
-      "Planning phase",
-      "Testing phase",
-      "Maintenance phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC concept: which phase checks the built product against requirements? (fallback review 6)",
-    "choices": [
-      "Testing phase",
-      "Design phase",
-      "Planning phase",
-      "Deployment phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC concept: which phase releases the tested product to users? (fallback review 6)",
-    "choices": [
-      "Deployment phase",
-      "Requirement analysis phase",
-      "Design phase",
-      "Implementation phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA reviews requirements for testability. Which phase is this?",
-    "choices": [
-      "Requirement analysis phase",
-      "Test planning phase",
-      "Test execution phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA estimates effort, schedule, risks, and resources. Which phase is this?",
-    "choices": [
-      "Test planning phase",
-      "Test case design phase",
-      "Defect retest phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: testers run cases and log defects. Which phase is this?",
-    "choices": [
-      "Test execution phase",
-      "Requirement analysis phase",
-      "Test environment setup phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA reviews requirements for testability. Which phase is this? (fallback review 2)",
-    "choices": [
-      "Requirement analysis phase",
-      "Test planning phase",
-      "Test execution phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA estimates effort, schedule, risks, and resources. Which phase is this? (fallback review 2)",
-    "choices": [
-      "Test planning phase",
-      "Test case design phase",
-      "Defect retest phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: testers run cases and log defects. Which phase is this? (fallback review 2)",
-    "choices": [
-      "Test execution phase",
-      "Requirement analysis phase",
-      "Test environment setup phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA reviews requirements for testability. Which phase is this? (fallback review 3)",
-    "choices": [
-      "Requirement analysis phase",
-      "Test planning phase",
-      "Test execution phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA estimates effort, schedule, risks, and resources. Which phase is this? (fallback review 3)",
-    "choices": [
-      "Test planning phase",
-      "Test case design phase",
-      "Defect retest phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: testers run cases and log defects. Which phase is this? (fallback review 3)",
-    "choices": [
-      "Test execution phase",
-      "Requirement analysis phase",
-      "Test environment setup phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA reviews requirements for testability. Which phase is this? (fallback review 4)",
-    "choices": [
-      "Requirement analysis phase",
-      "Test planning phase",
-      "Test execution phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: QA estimates effort, schedule, risks, and resources. Which phase is this? (fallback review 4)",
-    "choices": [
-      "Test planning phase",
-      "Test case design phase",
-      "Defect retest phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: testers run cases and log defects. Which phase is this? (fallback review 4)",
-    "choices": [
-      "Test execution phase",
-      "Requirement analysis phase",
-      "Test environment setup phase",
-      "Test closure phase"
-    ],
-    "answer": 0
-  },
-  {
     "question": "What is the first stage of STLC (Software Testing Life Cycle)?",
     "choices": [
       "Test Planning",
@@ -696,86 +396,6 @@
     ],
     "answer": 2,
     "aiGenerated": true
-  },
-  {
-    "question": "STLC concept: which item defines when testing can start? (fallback review 5)",
-    "choices": [
-      "Entry criteria",
-      "Exit criteria",
-      "Defect status",
-      "Test summary"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC concept: which item defines when testing can stop? (fallback review 5)",
-    "choices": [
-      "Exit criteria",
-      "Entry criteria",
-      "Defect priority",
-      "Test environment"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC concept: which phase summarizes results and lessons learned? (fallback review 5)",
-    "choices": [
-      "Test closure phase",
-      "Requirement analysis phase",
-      "Test planning phase",
-      "Test execution phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC concept: which item defines when testing can start? (fallback review 6)",
-    "choices": [
-      "Entry criteria",
-      "Exit criteria",
-      "Defect status",
-      "Test summary"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC concept: which item defines when testing can stop? (fallback review 6)",
-    "choices": [
-      "Exit criteria",
-      "Entry criteria",
-      "Defect priority",
-      "Test environment"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC concept: which phase summarizes results and lessons learned? (fallback review 6)",
-    "choices": [
-      "Test closure phase",
-      "Requirement analysis phase",
-      "Test planning phase",
-      "Test execution phase"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC concept: which item defines when testing can start? (fallback review 7)",
-    "choices": [
-      "Entry criteria",
-      "Exit criteria",
-      "Defect status",
-      "Test summary"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC concept: which item defines when testing can stop? (fallback review 7)",
-    "choices": [
-      "Exit criteria",
-      "Entry criteria",
-      "Defect priority",
-      "Test environment"
-    ],
-    "answer": 0
   },
   {
     "question": "Git scenario: a developer wants to see changed files before committing. Which command fits?",
@@ -4279,5 +3899,505 @@
       "Only assigning story points"
     ],
     "answer": 0
+  },
+  {
+    "question": "SDLC scenario: A school requests a dashboard before explaining the difficulty it should solve. What should the team establish first?",
+    "choices": [
+      "The user problem and intended benefit",
+      "The dashboard color palette",
+      "The release announcement wording",
+      "The number of automated test files"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: A proposed attendance feature needs hardware the school may not afford. Which action belongs in feasibility planning?",
+    "choices": [
+      "Assume the hardware will become available",
+      "Skip estimation until after release",
+      "Treat a successful unit test as proof of affordability",
+      "Assess cost, resources, scope, and risks"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: Two teachers disagree about what counts as a late submission. What should happen before implementing that rule?",
+    "choices": [
+      "Copy the current defect as the expected rule",
+      "Let each test invent its own cutoff",
+      "Clarify and validate the rule with stakeholders",
+      "Choose whichever rule is easiest to code"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: Requirements are agreed, but the team has not decided how screens communicate with the results service. What design work is needed?",
+    "choices": [
+      "Remove the testing activity",
+      "Define interfaces, data flow, and architecture",
+      "Declare deployment complete",
+      "Record actual behavior as the requirement"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A developer implements the agreed scoring design. Which accompanying activity fits development?",
+    "choices": [
+      "Perform developer checks on the implementation",
+      "Replace stakeholder agreement with a guess",
+      "Announce production availability without releasing",
+      "Ignore the design until maintenance"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: Coding has not started, but QA discovers an acceptance rule cannot be measured. Which response best supports early testing?",
+    "choices": [
+      "Wait until production before discussing it",
+      "Assume testing can only begin after coding",
+      "Delete the rule without stakeholder review",
+      "Review and clarify the requirement now"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: The quiz passes locally. What is still needed to release it responsibly to the intended environment?",
+    "choices": [
+      "Skip environment configuration review",
+      "Call the change maintenance without deploying it",
+      "Use a controlled release process and verify that environment",
+      "Treat local passing checks as proof of release"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: After release, a school changes its attendance policy. What lifecycle activity handles adapting the released software?",
+    "choices": [
+      "Reclassifying the policy as a browser color setting",
+      "Maintenance of the released product",
+      "Initial planning of an unrelated product",
+      "Declaring all future testing unnecessary"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A team shortens releases using automated delivery. How should it treat lifecycle activities?",
+    "choices": [
+      "Keep the activities with collaboration and shorter feedback cycles",
+      "Remove requirements because delivery is automated",
+      "Replace testing with deployment speed alone",
+      "Stop collecting feedback after the first release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: Students report a confusing results screen after release. What should the team do with that information?",
+    "choices": [
+      "Ignore it because deployment ends all learning",
+      "Change unrelated code without understanding the issue",
+      "Erase the original requirements immediately",
+      "Use the feedback to inform another improvement cycle"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: Repeated unclear requirements cause preventable defects. Which action best illustrates quality assurance?",
+    "choices": [
+      "Treat every screenshot as proof of correctness",
+      "Skip reviews to increase defect discovery later",
+      "Improve requirement reviews and team standards",
+      "Only count failures after release"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: A story says the score screen should work well. Which refinement makes acceptance more testable?",
+    "choices": [
+      "Replace the story with a preferred font",
+      "Specify inputs, action, and an exact expected outcome",
+      "Keep the outcome subjective for every tester",
+      "Use the current result regardless of the rule"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: The scoring rule describes normal input but says nothing about no answers. What should the team do?",
+    "choices": [
+      "Clarify the missing-input behavior with stakeholders",
+      "Invent a passing score for empty input",
+      "Assume every tester may choose a different rule",
+      "Ignore empty input because normal input works"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: A scoring change affects a shared calculation component. What helps identify existing behavior needing checks?",
+    "choices": [
+      "Test only the new screen title",
+      "Assume a small edit cannot affect other features",
+      "Discard existing tests automatically",
+      "Analyze affected behaviors and component dependencies"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A release candidate passes the selected checks. Which conclusion is justified?",
+    "choices": [
+      "Every possible user environment was verified",
+      "Future changes cannot introduce defects",
+      "Those tested cases provide evidence, but untested defects may remain",
+      "The software contains no defects anywhere"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: A project lead agrees the release scope, schedule, staffing, and risks. Which SDLC phase is being emphasized?",
+    "choices": [
+      "Deployment",
+      "Planning",
+      "Requirement analysis",
+      "Design"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A teacher describes the required scoring rules and the team validates them. Which SDLC phase fits?",
+    "choices": [
+      "Requirement analysis",
+      "Design",
+      "Testing",
+      "Maintenance"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: An architect maps modules and screen interactions before coding begins. Which SDLC phase fits?",
+    "choices": [
+      "Implementation",
+      "Deployment",
+      "Maintenance",
+      "Design"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: The team checks whether the built quiz follows its agreed requirements. Which SDLC phase fits?",
+    "choices": [
+      "Planning",
+      "Deployment",
+      "Testing",
+      "Design"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: A tested attendance release is delivered to its intended users. Which SDLC phase fits?",
+    "choices": [
+      "Implementation",
+      "Deployment",
+      "Requirement analysis",
+      "Design"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: Programmers write and build the agreed results-screen code. Which SDLC phase fits?",
+    "choices": [
+      "Implementation",
+      "Planning",
+      "Testing",
+      "Maintenance"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: Before committing to a change, the team sets its scope and resource estimate. Which SDLC phase fits?",
+    "choices": [
+      "Requirement analysis",
+      "Design",
+      "Deployment",
+      "Planning"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: Stakeholders specify what a new submission feature must do. Which SDLC phase fits?",
+    "choices": [
+      "Testing",
+      "Maintenance",
+      "Requirement analysis",
+      "Design"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: Before implementation, the team sketches the application architecture and screens. Which SDLC phase fits?",
+    "choices": [
+      "Maintenance",
+      "Design",
+      "Implementation",
+      "Deployment"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A tester compares completed feature behavior with the validated requirement. Which SDLC phase fits?",
+    "choices": [
+      "Testing",
+      "Design",
+      "Planning",
+      "Deployment"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: A teammate must repeat a test tomorrow. What information makes its test case reproducible?",
+    "choices": [
+      "Only the final screenshot",
+      "Only the tester name",
+      "Only the application logo",
+      "Setup, inputs, actions, and expected results"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: Five equally weighted answers contain three correct responses. The agreed score rule is percentage correct. What is the expected score?",
+    "choices": [
+      "30%",
+      "100%",
+      "60%",
+      "80%"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A test needs a fresh quiz before answering questions. Which step should come before the actions?",
+    "choices": [
+      "Collect unrelated release metrics",
+      "Prepare the required starting state",
+      "Record a passing result immediately",
+      "Delete the expected result"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: A test creates temporary data that could affect later tests. What should happen when appropriate after checking the result?",
+    "choices": [
+      "Remove the data created by that test",
+      "Keep all temporary data forever",
+      "Change later expectations to match leftovers",
+      "Skip the assertion to save time"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: A score is incorrect. Which report best supports investigation?",
+    "choices": [
+      "Only a message saying broken",
+      "Only a list of unrelated features",
+      "Only a request to rewrite the application",
+      "Environment, steps, expected and actual results, and run evidence"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: The documented rule expects 60%, but the screen shows 80%. What should the tester do?",
+    "choices": [
+      "Mark the case passed without investigation",
+      "Remove the requirement from the report",
+      "Report the mismatch using the agreed expected result",
+      "Change the expected result to 80% because the screen says so"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A new score display is added. Why check existing answer submission behavior?",
+    "choices": [
+      "To measure the number of developers",
+      "To detect adverse effects of the change on existing behavior",
+      "To prove no future defect can exist",
+      "To replace all requirement reviews"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: A fix targets the exact scoring case that previously failed. What is the purpose of rerunning that failing case?",
+    "choices": [
+      "Confirm that the reported defect was fixed",
+      "Prove every unrelated feature works",
+      "Replace the release plan",
+      "Determine all missing requirements"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: Time allows only a few checks after a shared scoring change. How should QA prioritize?",
+    "choices": [
+      "Choose only the shortest test names",
+      "Avoid checks on affected components",
+      "Pick cases by alphabetical order alone",
+      "Use failure likelihood, impact, dependencies, and available time"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A shared sign-in component changes. What should guide selection of regression checks?",
+    "choices": [
+      "Assume untouched screens cannot be affected",
+      "Delete all checks using the component",
+      "Identify dependent behaviors the change could affect",
+      "Check only the changed file name"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: Ten selected checks pass on one environment. What can QA honestly report?",
+    "choices": [
+      "Testing is permanently complete",
+      "The selected cases passed under those tested conditions",
+      "All environments and cases are guaranteed correct",
+      "No further defect is possible"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: A results panel appears, but its score might be wrong. What assertion best checks scoring correctness?",
+    "choices": [
+      "Compare the displayed score with the requirement-based expected value",
+      "Check only that the panel exists",
+      "Check only that the page has a title",
+      "Check only that a browser opened"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: Each browser test starts a fresh browser context but uses shared backend data. What else may be needed for independence?",
+    "choices": [
+      "Assume browser isolation resets all shared backend data",
+      "Make tests rely on the previous test passing",
+      "Remove all setup steps",
+      "Prepare the backend state required by each test"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A results panel becomes ready at variable times. Which synchronization approach best follows the taught rule?",
+    "choices": [
+      "Assert before the action starts",
+      "Treat any delay as proof of failure",
+      "Wait for the relevant readiness condition",
+      "Always wait a fixed ten seconds regardless of readiness"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: Two test runs produce different scoring results. Which evidence is most useful for the failed run?",
+    "choices": [
+      "A browser logo without run context",
+      "Its own inputs, logs, screenshots, or trace",
+      "An unrelated screenshot from last month",
+      "Only the passing run title"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: QA reviews whether an attendance requirement is clear and testable. Which STLC phase fits?",
+    "choices": [
+      "Requirement analysis",
+      "Test planning",
+      "Test execution",
+      "Test closure"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: QA estimates staffing, effort, schedule, and testing risks for a release. Which STLC phase fits?",
+    "choices": [
+      "Test case design",
+      "Defect retest",
+      "Test closure",
+      "Test planning"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: Testers run prepared cases and record observed defects. Which STLC phase fits?",
+    "choices": [
+      "Test environment setup",
+      "Test closure",
+      "Test execution",
+      "Requirement analysis"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: Before writing cases, QA checks requirements for testability and ambiguity. Which STLC phase fits?",
+    "choices": [
+      "Test closure",
+      "Requirement analysis",
+      "Test planning",
+      "Test execution"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: The test lead allocates resources and estimates the testing schedule. Which STLC phase fits?",
+    "choices": [
+      "Test planning",
+      "Test case design",
+      "Defect retest",
+      "Test closure"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: QA performs test steps, compares results, and logs failures. Which STLC phase fits?",
+    "choices": [
+      "Requirement analysis",
+      "Test environment setup",
+      "Test closure",
+      "Test execution"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: QA examines a new scoring requirement to see whether it can be tested. Which STLC phase fits?",
+    "choices": [
+      "Test execution",
+      "Test closure",
+      "Requirement analysis",
+      "Test planning"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: The test team estimates effort and identifies testing risks before the run. Which STLC phase fits?",
+    "choices": [
+      "Test closure",
+      "Test planning",
+      "Test case design",
+      "Defect retest"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: During a test run, a tester executes cases and creates defect reports. Which STLC phase fits?",
+    "choices": [
+      "Test execution",
+      "Requirement analysis",
+      "Test environment setup",
+      "Test closure"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: After testing, QA summarizes results and lessons learned. Which STLC phase fits?",
+    "choices": [
+      "Requirement analysis",
+      "Test planning",
+      "Test execution",
+      "Test closure"
+    ],
+    "answer": 3
   }
 ]
