@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 31122)
-Total output lines: 4403
-
 [
   {
     "question": "Java scenario: a student creates two Car objects. What prints for car2?",
@@ -1471,7 +1468,1622 @@ Total output lines: 4403
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: a planned firewall update needs approval before re…11122 tokens truncated…he bug",
+    "question": "ServiceNow scenario: a planned firewall update needs approval before release. Which record fits? (fallback review 3)",
+    "choices": [
+      "Change request",
+      "Incident",
+      "Problem ticket",
+      "Service catalog request"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: repeated outages need root cause investigation. Which record fits? (fallback review 3)",
+    "choices": [
+      "Problem ticket",
+      "Incident",
+      "Change task",
+      "Service request"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: a user cannot access email and needs service restored. Which record fits? (fallback review 4)",
+    "choices": [
+      "Incident",
+      "Problem ticket",
+      "Change request",
+      "Service catalog request"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: a planned firewall update needs approval before release. Which record fits? (fallback review 4)",
+    "choices": [
+      "Change request",
+      "Incident",
+      "Problem ticket",
+      "Service catalog request"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: repeated outages need root cause investigation. Which record fits? (fallback review 4)",
+    "choices": [
+      "Problem ticket",
+      "Incident",
+      "Change task",
+      "Service request"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an SLA measure? (fallback review 5)",
+    "choices": [
+      "Response or resolution target",
+      "Incident category only",
+      "Change approval group",
+      "Problem root cause note"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an assignment group do? (fallback review 5)",
+    "choices": [
+      "Routes work to a support team",
+      "Sets incident priority only",
+      "Approves every change request",
+      "Closes every problem ticket"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 5)",
+    "choices": [
+      "Requesting approved services",
+      "Investigating problem tickets",
+      "Measuring SLA breach time",
+      "Assigning incident priority"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an SLA measure? (fallback review 6)",
+    "choices": [
+      "Response or resolution target",
+      "Incident category only",
+      "Change approval group",
+      "Problem root cause note"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an assignment group do? (fallback review 6)",
+    "choices": [
+      "Routes work to a support team",
+      "Sets incident priority only",
+      "Approves every change request",
+      "Closes every problem ticket"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 6)",
+    "choices": [
+      "Requesting approved services",
+      "Investigating problem tickets",
+      "Measuring SLA breach time",
+      "Assigning incident priority"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an SLA measure? (fallback review 7)",
+    "choices": [
+      "Response or resolution target",
+      "Incident category only",
+      "Change approval group",
+      "Problem root cause note"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an assignment group do? (fallback review 7)",
+    "choices": [
+      "Routes work to a support team",
+      "Sets incident priority only",
+      "Approves every change request",
+      "Closes every problem ticket"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 7)",
+    "choices": [
+      "Requesting approved services",
+      "Investigating problem tickets",
+      "Measuring SLA breach time",
+      "Assigning incident priority"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an SLA measure? (fallback review 8)",
+    "choices": [
+      "Response or resolution target",
+      "Incident category only",
+      "Change approval group",
+      "Problem root cause note"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an assignment group do? (fallback review 8)",
+    "choices": [
+      "Routes work to a support team",
+      "Sets incident priority only",
+      "Approves every change request",
+      "Closes every problem ticket"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 8)",
+    "choices": [
+      "Requesting approved services",
+      "Investigating problem tickets",
+      "Measuring SLA breach time",
+      "Assigning incident priority"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow concept: what does an SLA measure? (fallback review 9)",
+    "choices": [
+      "Response or resolution target",
+      "Incident category only",
+      "Change approval group",
+      "Problem root cause note"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks whether a new login change broke checkout. Which testing type fits?",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Usability testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA quickly checks if a new build is stable enough for more testing. Which type fits?",
+    "choices": [
+      "Smoke testing",
+      "Regression testing",
+      "Performance testing",
+      "Acceptance testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks how modules work together after integration. Which type fits?",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Exploratory testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks whether a new login change broke checkout. Which testing type fits? (fallback review 2)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Usability testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA quickly checks if a new build is stable enough for more testing. Which type fits? (fallback review 2)",
+    "choices": [
+      "Smoke testing",
+      "Regression testing",
+      "Performance testing",
+      "Acceptance testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks how modules work together after integration. Which type fits? (fallback review 2)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Exploratory testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks whether a new login change broke checkout. Which testing type fits? (fallback review 3)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Usability testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA quickly checks if a new build is stable enough for more testing. Which type fits? (fallback review 3)",
+    "choices": [
+      "Smoke testing",
+      "Regression testing",
+      "Performance testing",
+      "Acceptance testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks how modules work together after integration. Which type fits? (fallback review 3)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Exploratory testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks whether a new login change broke checkout. Which testing type fits? (fallback review 4)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Usability testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA quickly checks if a new build is stable enough for more testing. Which type fits? (fallback review 4)",
+    "choices": [
+      "Smoke testing",
+      "Regression testing",
+      "Performance testing",
+      "Acceptance testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types scenario: QA checks how modules work together after integration. Which type fits? (fallback review 4)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Exploratory testing",
+      "Security testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is a Non-Functional Testing type?",
+    "choices": [
+      "A. Unit Testing",
+      "B. Integration Testing",
+      "C. Performance Testing",
+      "D. System Testing"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Which of the following is a Functional Testing type?",
+    "choices": [
+      "A. Performance Testing",
+      "B. Security Testing",
+      "C. Boundary Testing",
+      "D. Load Testing"
+    ],
+    "answer": 2,
+    "aiGenerated": true
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features?",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable?",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together?",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 2)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 2)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 2)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 3)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 3)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks modules working together? (fallback review 3)",
+    "choices": [
+      "Integration testing",
+      "Unit testing",
+      "Static testing",
+      "Alpha testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing checks that new changes did not break existing features? (fallback review 4)",
+    "choices": [
+      "Regression testing",
+      "Smoke testing",
+      "Load testing",
+      "Usability testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Testing Types: which testing quickly checks whether a build is stable? (fallback review 4)",
+    "choices": [
+      "Smoke testing",
+      "Acceptance testing",
+      "Security testing",
+      "Localization testing"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team chooses work for the next Sprint. Which event is this?",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team inspects the increment with stakeholders. Which event is this?",
+    "choices": [
+      "Sprint Review",
+      "Sprint Planning",
+      "Daily Scrum",
+      "Backlog refinement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team discusses how to improve its process. Which event is this?",
+    "choices": [
+      "Sprint Retrospective",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Planning"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team chooses work for the next Sprint. Which event is this? (fallback review 2)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team inspects the increment with stakeholders. Which event is this? (fallback review 2)",
+    "choices": [
+      "Sprint Review",
+      "Sprint Planning",
+      "Daily Scrum",
+      "Backlog refinement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team discusses how to improve its process. Which event is this? (fallback review 2)",
+    "choices": [
+      "Sprint Retrospective",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Planning"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team chooses work for the next Sprint. Which event is this? (fallback review 3)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team inspects the increment with stakeholders. Which event is this? (fallback review 3)",
+    "choices": [
+      "Sprint Review",
+      "Sprint Planning",
+      "Daily Scrum",
+      "Backlog refinement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team discusses how to improve its process. Which event is this? (fallback review 3)",
+    "choices": [
+      "Sprint Retrospective",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Planning"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team chooses work for the next Sprint. Which event is this? (fallback review 4)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team inspects the increment with stakeholders. Which event is this? (fallback review 4)",
+    "choices": [
+      "Sprint Review",
+      "Sprint Planning",
+      "Daily Scrum",
+      "Backlog refinement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum scenario: the team discusses how to improve its process. Which event is this? (fallback review 4)",
+    "choices": [
+      "Sprint Retrospective",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Planning"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint?",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 2)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 3)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 4)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 5)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 6)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum: which event plans the work for the next Sprint? (fallback review 7)",
+    "choices": [
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Retrospective"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is a correct statement about the Agile framework?",
+    "choices": [
+      "A. Agile is a linear process that follows a fixed sequence of phases.",
+      "B. Agile emphasizes collaboration between cross-functional teams.",
+      "C. Agile requires all requirements to be defined upfront before development begins.",
+      "D. Agile does not allow for changes in requirements once the project has started."
+    ],
+    "answer": 1,
+    "aiGenerated": true
+  },
+  {
+    "question": "Agile & Scrum concept: who owns product priority? (fallback review 5)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "Development Team",
+      "Stakeholder"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum concept: what lists ordered product work? (fallback review 5)",
+    "choices": [
+      "Product Backlog",
+      "Sprint Backlog",
+      "Increment",
+      "Burndown Chart"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum concept: what is delivered at the end of a Sprint? (fallback review 5)",
+    "choices": [
+      "Increment",
+      "Product Backlog",
+      "Daily Scrum",
+      "Story point estimate"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum concept: who owns product priority? (fallback review 6)",
+    "choices": [
+      "Product Owner",
+      "Scrum Master",
+      "Development Team",
+      "Stakeholder"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Agile & Scrum concept: what lists ordered product work? (fallback review 6)",
+    "choices": [
+      "Product Backlog",
+      "Sprint Backlog",
+      "Increment",
+      "Burndown Chart"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: a user says they must reset a password by email. What type is this?",
+    "choices": [
+      "Functional requirement",
+      "Non-functional requirement",
+      "Business rule",
+      "Acceptance criteria"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: the app must support 500 users at once. What type is this?",
+    "choices": [
+      "Non-functional requirement",
+      "Functional requirement",
+      "Use case",
+      "User story"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: QA needs pass/fail details for a story. What should they review?",
+    "choices": [
+      "Acceptance criteria",
+      "SRS glossary",
+      "Business rule",
+      "Use case actor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a user story?",
+    "choices": [
+      "Requirement written from user value",
+      "Non-functional performance target",
+      "SRS table of contents",
+      "Business rule exception only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: a user says they must reset a password by email. What type is this? (fallback review 2)",
+    "choices": [
+      "Functional requirement",
+      "Non-functional requirement",
+      "Business rule",
+      "Acceptance criteria"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: the app must support 500 users at once. What type is this? (fallback review 2)",
+    "choices": [
+      "Non-functional requirement",
+      "Functional requirement",
+      "Use case",
+      "User story"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: QA needs pass/fail details for a story. What should they review? (fallback review 2)",
+    "choices": [
+      "Acceptance criteria",
+      "SRS glossary",
+      "Business rule",
+      "Use case actor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a user story? (fallback review 2)",
+    "choices": [
+      "Requirement written from user value",
+      "Non-functional performance target",
+      "SRS table of contents",
+      "Business rule exception only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: a user says they must reset a password by email. What type is this? (fallback review 3)",
+    "choices": [
+      "Functional requirement",
+      "Non-functional requirement",
+      "Business rule",
+      "Acceptance criteria"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: the app must support 500 users at once. What type is this? (fallback review 3)",
+    "choices": [
+      "Non-functional requirement",
+      "Functional requirement",
+      "Use case",
+      "User story"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements scenario: QA needs pass/fail details for a story. What should they review? (fallback review 3)",
+    "choices": [
+      "Acceptance criteria",
+      "SRS glossary",
+      "Business rule",
+      "Use case actor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a user story? (fallback review 3)",
+    "choices": [
+      "Requirement written from user value",
+      "Non-functional performance target",
+      "SRS table of contents",
+      "Business rule exception only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what does an SRS document contain? (fallback review 7)",
+    "choices": [
+      "Requirement details and scope",
+      "Use case actors only",
+      "Acceptance criteria only",
+      "Business rule names only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a use case focused on? (fallback review 7)",
+    "choices": [
+      "User-system interaction",
+      "Requirement priority only",
+      "SRS version history",
+      "Acceptance criteria wording"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what does an SRS document contain? (fallback review 8)",
+    "choices": [
+      "Requirement details and scope",
+      "Use case actors only",
+      "Acceptance criteria only",
+      "Business rule names only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a use case focused on? (fallback review 8)",
+    "choices": [
+      "User-system interaction",
+      "Requirement priority only",
+      "SRS version history",
+      "Acceptance criteria wording"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what does an SRS document contain? (fallback review 9)",
+    "choices": [
+      "Requirement details and scope",
+      "Use case actors only",
+      "Acceptance criteria only",
+      "Business rule names only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a use case focused on? (fallback review 9)",
+    "choices": [
+      "User-system interaction",
+      "Requirement priority only",
+      "SRS version history",
+      "Acceptance criteria wording"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what does an SRS document contain? (fallback review 10)",
+    "choices": [
+      "Requirement details and scope",
+      "Use case actors only",
+      "Acceptance criteria only",
+      "Business rule names only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a use case focused on? (fallback review 10)",
+    "choices": [
+      "User-system interaction",
+      "Requirement priority only",
+      "SRS version history",
+      "Acceptance criteria wording"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what does an SRS document contain? (fallback review 11)",
+    "choices": [
+      "Requirement details and scope",
+      "Use case actors only",
+      "Acceptance criteria only",
+      "Business rule names only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a use case focused on? (fallback review 11)",
+    "choices": [
+      "User-system interaction",
+      "Requirement priority only",
+      "SRS version history",
+      "Acceptance criteria wording"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what does an SRS document contain? (fallback review 12)",
+    "choices": [
+      "Requirement details and scope",
+      "Use case actors only",
+      "Acceptance criteria only",
+      "Business rule names only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what is a use case focused on? (fallback review 12)",
+    "choices": [
+      "User-system interaction",
+      "Requirement priority only",
+      "SRS version history",
+      "Acceptance criteria wording"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Requirements concept: what does an SRS document contain? (fallback review 13)",
+    "choices": [
+      "Requirement details and scope",
+      "Use case actors only",
+      "Acceptance criteria only",
+      "Business rule names only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: architects show system layers and major components. Which artifact fits?",
+    "choices": [
+      "Architecture diagram",
+      "UML class diagram",
+      "Prototype screen",
+      "Sequence diagram"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a team shows classes and relationships for an object model. Which diagram fits?",
+    "choices": [
+      "UML class diagram",
+      "Sequence diagram",
+      "Wireframe prototype",
+      "High-level design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a designer wants early feedback on screen layout. Which artifact fits?",
+    "choices": [
+      "Prototype",
+      "Architecture diagram",
+      "Low-level design",
+      "Module design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: architects show system layers and major components. Which artifact fits? (fallback review 2)",
+    "choices": [
+      "Architecture diagram",
+      "UML class diagram",
+      "Prototype screen",
+      "Sequence diagram"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a team shows classes and relationships for an object model. Which diagram fits? (fallback review 2)",
+    "choices": [
+      "UML class diagram",
+      "Sequence diagram",
+      "Wireframe prototype",
+      "High-level design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a designer wants early feedback on screen layout. Which artifact fits? (fallback review 2)",
+    "choices": [
+      "Prototype",
+      "Architecture diagram",
+      "Low-level design",
+      "Module design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: architects show system layers and major components. Which artifact fits? (fallback review 3)",
+    "choices": [
+      "Architecture diagram",
+      "UML class diagram",
+      "Prototype screen",
+      "Sequence diagram"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a team shows classes and relationships for an object model. Which diagram fits? (fallback review 3)",
+    "choices": [
+      "UML class diagram",
+      "Sequence diagram",
+      "Wireframe prototype",
+      "High-level design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a designer wants early feedback on screen layout. Which artifact fits? (fallback review 3)",
+    "choices": [
+      "Prototype",
+      "Architecture diagram",
+      "Low-level design",
+      "Module design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: architects show system layers and major components. Which artifact fits? (fallback review 4)",
+    "choices": [
+      "Architecture diagram",
+      "UML class diagram",
+      "Prototype screen",
+      "Sequence diagram"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a team shows classes and relationships for an object model. Which diagram fits? (fallback review 4)",
+    "choices": [
+      "UML class diagram",
+      "Sequence diagram",
+      "Wireframe prototype",
+      "High-level design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design scenario: a designer wants early feedback on screen layout. Which artifact fits? (fallback review 4)",
+    "choices": [
+      "Prototype",
+      "Architecture diagram",
+      "Low-level design",
+      "Module design"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does high-level design describe? (fallback review 5)",
+    "choices": [
+      "Architecture and major modules",
+      "Module logic details",
+      "Prototype colors only",
+      "Sequence message timing only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does low-level design describe? (fallback review 5)",
+    "choices": [
+      "Detailed module logic",
+      "Architecture overview",
+      "Wireframe layout only",
+      "Class diagram title only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does a sequence diagram show? (fallback review 5)",
+    "choices": [
+      "Object message order",
+      "Architecture layers",
+      "Prototype navigation",
+      "Module database fields"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does high-level design describe? (fallback review 6)",
+    "choices": [
+      "Architecture and major modules",
+      "Module logic details",
+      "Prototype colors only",
+      "Sequence message timing only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does low-level design describe? (fallback review 6)",
+    "choices": [
+      "Detailed module logic",
+      "Architecture overview",
+      "Wireframe layout only",
+      "Class diagram title only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does a sequence diagram show? (fallback review 6)",
+    "choices": [
+      "Object message order",
+      "Architecture layers",
+      "Prototype navigation",
+      "Module database fields"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does high-level design describe? (fallback review 7)",
+    "choices": [
+      "Architecture and major modules",
+      "Module logic details",
+      "Prototype colors only",
+      "Sequence message timing only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does low-level design describe? (fallback review 7)",
+    "choices": [
+      "Detailed module logic",
+      "Architecture overview",
+      "Wireframe layout only",
+      "Class diagram title only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does a sequence diagram show? (fallback review 7)",
+    "choices": [
+      "Object message order",
+      "Architecture layers",
+      "Prototype navigation",
+      "Module database fields"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does high-level design describe? (fallback review 8)",
+    "choices": [
+      "Architecture and major modules",
+      "Module logic details",
+      "Prototype colors only",
+      "Sequence message timing only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does low-level design describe? (fallback review 8)",
+    "choices": [
+      "Detailed module logic",
+      "Architecture overview",
+      "Wireframe layout only",
+      "Class diagram title only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does a sequence diagram show? (fallback review 8)",
+    "choices": [
+      "Object message order",
+      "Architecture layers",
+      "Prototype navigation",
+      "Module database fields"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Design concept: what does high-level design describe? (fallback review 9)",
+    "choices": [
+      "Architecture and major modules",
+      "Module logic details",
+      "Prototype colors only",
+      "Sequence message timing only"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a tested release is moved to users. Which activity is this?",
+    "choices": [
+      "Production deployment",
+      "Staging validation",
+      "Rollback planning",
+      "Release readiness review"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a release has a severe issue and must return to the previous version. What is needed?",
+    "choices": [
+      "Rollback plan",
+      "Staging environment",
+      "Deployment window",
+      "Release checklist"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a team tests a release in a production-like place. Which environment is this?",
+    "choices": [
+      "Staging environment",
+      "Production environment",
+      "Rollback environment",
+      "Release window"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a tested release is moved to users. Which activity is this? (fallback review 2)",
+    "choices": [
+      "Production deployment",
+      "Staging validation",
+      "Rollback planning",
+      "Release readiness review"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a release has a severe issue and must return to the previous version. What is needed? (fallback review 2)",
+    "choices": [
+      "Rollback plan",
+      "Staging environment",
+      "Deployment window",
+      "Release checklist"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a team tests a release in a production-like place. Which environment is this? (fallback review 2)",
+    "choices": [
+      "Staging environment",
+      "Production environment",
+      "Rollback environment",
+      "Release window"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a tested release is moved to users. Which activity is this? (fallback review 3)",
+    "choices": [
+      "Production deployment",
+      "Staging validation",
+      "Rollback planning",
+      "Release readiness review"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a release has a severe issue and must return to the previous version. What is needed? (fallback review 3)",
+    "choices": [
+      "Rollback plan",
+      "Staging environment",
+      "Deployment window",
+      "Release checklist"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a team tests a release in a production-like place. Which environment is this? (fallback review 3)",
+    "choices": [
+      "Staging environment",
+      "Production environment",
+      "Rollback environment",
+      "Release window"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a tested release is moved to users. Which activity is this? (fallback review 4)",
+    "choices": [
+      "Production deployment",
+      "Staging validation",
+      "Rollback planning",
+      "Release readiness review"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a release has a severe issue and must return to the previous version. What is needed? (fallback review 4)",
+    "choices": [
+      "Rollback plan",
+      "Staging environment",
+      "Deployment window",
+      "Release checklist"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps scenario: a team tests a release in a production-like place. Which environment is this? (fallback review 4)",
+    "choices": [
+      "Staging environment",
+      "Production environment",
+      "Rollback environment",
+      "Release window"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is release readiness? (fallback review 5)",
+    "choices": [
+      "Confirmation that deployment conditions are met",
+      "Production users receiving a release",
+      "Rollback after a failed release",
+      "Staging environment naming"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is a deployment window? (fallback review 5)",
+    "choices": [
+      "Approved time for release activity",
+      "Production support ticket status",
+      "Rollback checklist owner",
+      "Staging test account"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is rollback? (fallback review 5)",
+    "choices": [
+      "Returning to a previous stable release",
+      "Approving a deployment window",
+      "Validating a staging release",
+      "Starting a production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is release readiness? (fallback review 6)",
+    "choices": [
+      "Confirmation that deployment conditions are met",
+      "Production users receiving a release",
+      "Rollback after a failed release",
+      "Staging environment naming"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is a deployment window? (fallback review 6)",
+    "choices": [
+      "Approved time for release activity",
+      "Production support ticket status",
+      "Rollback checklist owner",
+      "Staging test account"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is rollback? (fallback review 6)",
+    "choices": [
+      "Returning to a previous stable release",
+      "Approving a deployment window",
+      "Validating a staging release",
+      "Starting a production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is release readiness? (fallback review 7)",
+    "choices": [
+      "Confirmation that deployment conditions are met",
+      "Production users receiving a release",
+      "Rollback after a failed release",
+      "Staging environment naming"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is a deployment window? (fallback review 7)",
+    "choices": [
+      "Approved time for release activity",
+      "Production support ticket status",
+      "Rollback checklist owner",
+      "Staging test account"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is rollback? (fallback review 7)",
+    "choices": [
+      "Returning to a previous stable release",
+      "Approving a deployment window",
+      "Validating a staging release",
+      "Starting a production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is release readiness? (fallback review 8)",
+    "choices": [
+      "Confirmation that deployment conditions are met",
+      "Production users receiving a release",
+      "Rollback after a failed release",
+      "Staging environment naming"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is a deployment window? (fallback review 8)",
+    "choices": [
+      "Approved time for release activity",
+      "Production support ticket status",
+      "Rollback checklist owner",
+      "Staging test account"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is rollback? (fallback review 8)",
+    "choices": [
+      "Returning to a previous stable release",
+      "Approving a deployment window",
+      "Validating a staging release",
+      "Starting a production release"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Deployment & DevOps concept: what is release readiness? (fallback review 9)",
+    "choices": [
+      "Confirmation that deployment conditions are met",
+      "Production users receiving a release",
+      "Rollback after a failed release",
+      "Staging environment naming"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a bug blocks checkout for all users. Which field describes impact?",
+    "choices": [
+      "Severity",
+      "Priority",
+      "Defect status",
+      "Reopen reason"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a fixed bug is sent back to QA. Which status fits?",
+    "choices": [
+      "Retest",
+      "Closed",
+      "Reopened",
+      "Open"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: QA sees the same issue after a fix. Which status fits?",
+    "choices": [
+      "Reopened",
+      "Closed",
+      "Fixed",
+      "Assigned"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a bug blocks checkout for all users. Which field describes impact? (fallback review 2)",
+    "choices": [
+      "Severity",
+      "Priority",
+      "Defect status",
+      "Reopen reason"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a fixed bug is sent back to QA. Which status fits? (fallback review 2)",
+    "choices": [
+      "Retest",
+      "Closed",
+      "Reopened",
+      "Open"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: QA sees the same issue after a fix. Which status fits? (fallback review 2)",
+    "choices": [
+      "Reopened",
+      "Closed",
+      "Fixed",
+      "Assigned"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a bug blocks checkout for all users. Which field describes impact? (fallback review 3)",
+    "choices": [
+      "Severity",
+      "Priority",
+      "Defect status",
+      "Reopen reason"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a fixed bug is sent back to QA. Which status fits? (fallback review 3)",
+    "choices": [
+      "Retest",
+      "Closed",
+      "Reopened",
+      "Open"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: QA sees the same issue after a fix. Which status fits? (fallback review 3)",
+    "choices": [
+      "Reopened",
+      "Closed",
+      "Fixed",
+      "Assigned"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a bug blocks checkout for all users. Which field describes impact? (fallback review 4)",
+    "choices": [
+      "Severity",
+      "Priority",
+      "Defect status",
+      "Reopen reason"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: a fixed bug is sent back to QA. Which status fits? (fallback review 4)",
+    "choices": [
+      "Retest",
+      "Closed",
+      "Reopened",
+      "Open"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking scenario: QA sees the same issue after a fix. Which status fits? (fallback review 4)",
+    "choices": [
+      "Reopened",
+      "Closed",
+      "Fixed",
+      "Assigned"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking concept: what does priority describe? (fallback review 5)",
+    "choices": [
+      "Urgency of fixing the bug",
+      "Impact of the defect",
+      "Actual result text",
+      "Reproduction step count"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking concept: what does severity describe? (fallback review 5)",
+    "choices": [
+      "Impact of the defect",
+      "Fix urgency",
+      "Bug owner name",
+      "Closed date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking concept: what should expected result describe? (fallback review 5)",
+    "choices": [
+      "Expected result behavior",
+      "Actual result behavior",
+      "Defect priority urgency",
+      "Defect owner name"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking concept: what does priority describe? (fallback review 6)",
+    "choices": [
+      "Urgency of fixing the bug",
+      "Impact of the defect",
+      "Actual result text",
+      "Reproduction step count"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking concept: what does severity describe? (fallback review 6)",
+    "choices": [
+      "Impact of the defect",
+      "Fix urgency",
+      "Bug owner name",
+      "Closed date"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking concept: what should expected result describe? (fallback review 6)",
+    "choices": [
+      "Expected result behavior",
+      "Actual result behavior",
+      "Defect priority urgency",
+      "Defect owner name"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Defects & Bug Tracking concept: what does priority describe? (fallback review 7)",
+    "choices": [
+      "Urgency of fixing the bug",
       "Impact of the defect",
       "Actual result text",
       "Reproduction step count"
