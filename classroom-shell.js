@@ -3,6 +3,7 @@ const isTwo=document.body.classList.contains('class-two-page');
 document.body.classList.add('classroom-page');
 const nav=document.querySelector('.academy-nav nav');
 nav.innerHTML=`<details class="class-picker"><summary>${isTwo?'Class Two':'Class One'} <span aria-hidden="true">▾</span></summary><div class="class-picker-panel"><button type="button" data-class-scroll="-1" aria-label="Scroll classes up">▲</button><nav aria-label="Choose a class" class="class-picker-list"><a href="learn.html?class=1#sdlc/lifecycle" ${!isTwo?'aria-current="page"':''}>Class One</a><a href="class-two.html" ${isTwo?'aria-current="page"':''}>Class Two</a></nav><button type="button" data-class-scroll="1" aria-label="Scroll classes down">▼</button></div></details><a href="index.html?topic=SDLC">Quiz &amp; flashcards</a><a href="automation.html">Automation lab</a><a href="curriculum.html">Curriculum</a>`;
+const workspaceLink=document.createElement('a');workspaceLink.href='https://lab.kfk-786.com';workspaceLink.textContent='Coder workspace ↗';workspaceLink.target='_blank';workspaceLink.rel='noopener';nav.append(workspaceLink);
 const picker=nav.querySelector('.class-picker');
 const notesLink=document.createElement('a');notesLink.href='class-notes.html';notesLink.textContent='Class notes';nav.append(notesLink);
 picker.querySelectorAll('[data-class-scroll]').forEach(button=>button.onclick=()=>picker.querySelector('.class-picker-list').scrollBy({top:Number(button.dataset.classScroll)*80,behavior:'smooth'}));

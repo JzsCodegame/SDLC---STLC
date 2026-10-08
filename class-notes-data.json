@@ -881,6 +881,120 @@
       "recording": {
         "availablePrivately": true
       }
+    },
+    {
+      "key": "interview-prep/9",
+      "series": "interview-prep",
+      "classId": "9",
+      "date": "2026-10-07",
+      "title": "ServiceNow QA workflows, business rules, and interview practice",
+      "instructor": "Mehaq",
+      "summary": "This session connects an honest, concise QA introduction with practical ServiceNow testing. It follows a request from the portal into the platform, examines field validation and business rules, and discusses SLA timing, integrations, and regression coverage. Environment-specific examples must be checked against the actual requirement rather than treated as universal ServiceNow behavior.",
+      "keyConcepts": [
+        "Requirement-based workflow testing",
+        "Requester and fulfiller roles",
+        "Business-rule validation",
+        "SLA pause, resume, and breach checks",
+        "Integration and regression evidence"
+      ],
+      "sections": [
+        {
+          "title": "Describe the QA workflow",
+          "text": "Describe experience accurately: understand requirements and acceptance criteria, design cases, execute checks, validate workflow and integration behavior, and report defects with evidence. A concise introduction should use genuine experience; the example is a structure to practice rather than a biography to claim.",
+          "timestamp": "26:09"
+        },
+        {
+          "title": "Validate the catalog form",
+          "text": "Start with the requester role and the correct portal. Compare the catalog item, labels, description, required-field indicators, and valid options with acceptance criteria. Exercise required-field failures and verify the expected feedback. Portal paths and catalog names vary by implementation.",
+          "timestamp": "1:07:04"
+        },
+        {
+          "title": "Trace requests through roles",
+          "text": "Record the request identifier after submission, then use the approved fulfiller role in the platform to locate the same request. Check associated requested items, catalog tasks, assignment groups, and approval behavior against the agreed workflow. Refresh state when appropriate and collect reproducible evidence before concluding a defect exists.",
+          "timestamp": "1:50:30"
+        },
+        {
+          "title": "Check conditional business rules",
+          "text": "Business rules express required conditional behavior. The class used automatically calculated priority and a cancellation reason as examples. Build a decision table from the actual documented conditions, then test expected outcomes and invalid inputs. The example priority mapping is environment-specific, and the transcript uses emergency where other implementations may use urgency.",
+          "timestamp": "1:31:20"
+        },
+        {
+          "title": "Test SLA timing in a controlled environment",
+          "text": "Verify start, pause, resume, and breach behavior against the configured SLA and its business calendar. Shortened test durations require an approved test environment configuration; do not change production timing. The session illustrates excluding paused time, but actual pause conditions, schedules, thresholds, and boundary behavior must come from the SLA definition.",
+          "timestamp": "1:40:15"
+        },
+        {
+          "title": "Validate connected behavior",
+          "text": "Trace a request from portal submission to its platform record using stable identifiers. For external API or directory integrations, verify the agreed data mapping and expected downstream result. A portal and platform view may be parts of the same system; call the check end-to-end workflow validation unless a defined integration boundary is being tested.",
+          "timestamp": "1:46:18"
+        },
+        {
+          "title": "Separate confirmation and regression",
+          "text": "Rerun a previously failing case to confirm its fix, then check related existing behavior for side effects. The class also discussed missing approval behavior in production. Preserve that specific scenario as a regression check with clear prerequisites and expected results; passing it supplies evidence rather than a guarantee that every future defect is prevented.",
+          "timestamp": "1:49:41"
+        }
+      ],
+      "practice": [
+        "Prepare a one-to-two-minute introduction using only experience you can explain and demonstrate.",
+        "Write a requester-to-fulfiller test with the request identifier, role changes, expected records, and evidence.",
+        "Build a business-rule decision table from documented conditions, including one negative case.",
+        "Describe SLA pause/resume and boundary checks without changing production configuration."
+      ],
+      "terms": [
+        {
+          "term": "Acceptance criteria",
+          "definition": "Agreed, testable conditions used to judge required behavior."
+        },
+        {
+          "term": "Requested item",
+          "definition": "A record representing an item within a catalog request; verify the configured relationship and workflow."
+        },
+        {
+          "term": "Business rule",
+          "definition": "Conditional behavior defined by business requirements and implemented in the application."
+        },
+        {
+          "term": "SLA",
+          "definition": "A service-level agreement with configured targets, schedules, and timing conditions."
+        },
+        {
+          "term": "Confirmation testing",
+          "definition": "Repeating a previously failing case to check its specific fix."
+        },
+        {
+          "term": "Regression testing",
+          "definition": "Checking whether a change adversely affected existing behavior."
+        }
+      ],
+      "review": [
+        {
+          "question": "What should guide expected field and workflow behavior?",
+          "answer": "Validated requirements and acceptance criteria for that implementation."
+        },
+        {
+          "question": "Why retain the request identifier after submission?",
+          "answer": "It lets you trace the same request and its related records across views and roles."
+        },
+        {
+          "question": "Is the example priority mapping a universal rule?",
+          "answer": "No. Test the mapping documented and configured for the actual environment."
+        },
+        {
+          "question": "How can SLA checks run faster safely?",
+          "answer": "Use approved shortened timing in a controlled test environment and verify the real configured rules separately; do not alter production timing."
+        },
+        {
+          "question": "How does confirmation testing differ from regression testing?",
+          "answer": "Confirmation checks the specific reported fix; regression checks existing behavior for adverse effects elsewhere."
+        },
+        {
+          "question": "What should an interview introduction claim?",
+          "answer": "Only genuine experience and responsibilities that you can explain and support with examples."
+        }
+      ],
+      "recording": {
+        "availablePrivately": false
+      }
     }
   ]
 }
