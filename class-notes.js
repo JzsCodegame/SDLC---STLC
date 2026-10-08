@@ -18,9 +18,10 @@ function show(){
   else if(info.embedVerified===true){const iframe=document.createElement('iframe');iframe.src=watch;iframe.title=`Class ${session.classId} recording`;iframe.allow='fullscreen';iframe.referrerPolicy='no-referrer';recording.append(iframe);}
   const a=el('a',info.kind==='webex'?'Open recording in WebEx ↗':'Open recording ↗');a.href=watch;a.target='_blank';a.rel='noopener noreferrer';recording.append(a);
  }else{const p=el('p',info?.availablePrivately?'The recording is preserved. Playback will appear here when its student viewing link is ready.':'A recording link has not been added for this session yet.');p.className='notes-empty';recording.append(p);}
- block('Session summary').append(el('p',session.summary));list(block('Key concepts'),session.keyConcepts);
- for(const part of session.sections){const node=block(part.title);node.append(el('p',part.text));const ref=el('p',`Transcript reference · ${part.timestamp}`);ref.className='notes-reference';node.append(ref);}
- list(block('Practice & examples'),session.practice);
+ list(block('Topics covered'),session.keyConcepts);block('Class summary').append(el('p',session.summary));
+ const detailed=block('Detailed class notes');
+ for(const part of session.sections){const node=document.createElement('section');node.className='notes-section';node.append(el('h4',part.title));detailed.append(node);node.append(el('p',part.text));const ref=el('p',`Transcript reference · ${part.timestamp}`);ref.className='notes-reference';node.append(ref);}
+ list(block('Assignments & practice'),session.practice);
  const terms=document.createElement('dl');terms.className='notes-terms';for(const term of session.terms){terms.append(el('dt',term.term),el('dd',term.definition));}block('Key terms').append(terms);
  const review=block('Check your understanding');review.classList.add('notes-review');for(const q of session.review){const detail=document.createElement('details');detail.append(el('summary',q.question),el('p',q.answer));review.append(detail);}
 }
