@@ -40,6 +40,7 @@ const javaOutputBtn = document.getElementById('java-output-btn');
 let questions = [];
 let currentIndex = 0;
 let score = 0;
+let activeQuizTopic = '';
 let timer = null;
 let timeRemaining = 300;
 let studentName = '';
@@ -254,6 +255,11 @@ async function displayRecentScores() {
     }
     
     scoreItem.appendChild(scoreName);
+    const scoreQuiz = document.createElement('div');
+    scoreQuiz.className = 'score-time';
+    scoreQuiz.textContent = typeof scoreData.quizTopic === 'string' && scoreData.quizTopic.trim()
+      ? `${scoreData.quizTopic.trim()} quiz` : 'Quiz not recorded';
+    scoreItem.appendChild(scoreQuiz);
     scoreItem.appendChild(scoreResult);
     if (scoreTime.textContent) {
       scoreItem.appendChild(scoreTime);
@@ -784,10 +790,16 @@ function completeQuestionSet(topic, topicQuestions, count = totalQuestions) {
     ? getJavaW3PracticeQuestions()
     : [...getTopicPracticeQuestions(topic), ...getGeneralSoftwarePracticeQuestions()];
 
-  addUniqueQuestions(completed, seen, pickRandomItems(filteredTopicQuestions, count), count);
-  addUniqueQuestions(completed, seen, pickRandomItems(sameTopicQuestions, count), count);
-  addUniqueQuestions(completed, seen, pickRandomItems(topicPracticeQuestions, count), count);
-  addUniqueQuestions(completed, seen, pickRandomItems(broadPractice, count), count);
+  // Prefer the published daily bank over historical numbered lifecycle questions.
+  // Stable selection keeps review and quiz identical even after a page reload.
+  if (topic === 'SDLC' || topic === 'STLC') {
+    addUniqueQuestions(completed, seen, sameTopicQuestions.filter(question =>
+      new RegExp(`^${topic}\\b`, 'i').test(question.question)), count);
+  }
+  addUniqueQuestions(completed, seen, filteredTopicQuestions, count);
+  addUniqueQuestions(completed, seen, sameTopicQuestions, count);
+  addUniqueQuestions(completed, seen, topicPracticeQuestions, count);
+  addUniqueQuestions(completed, seen, broadPractice, count);
 
   while (completed.length < count && broadPractice.length) {
     const fallback = broadPractice[completed.length % broadPractice.length];
@@ -900,6 +912,7 @@ startBtn.addEventListener('click', () => {
   }
 
 
+  activeQuizTopic = selectedTopic;
   startQuiz();
 });
 
@@ -1136,7 +1149,7 @@ function moveFlashcard(direction) {
 function renderFlashcardList() {
   if (!flashcardList || !flashcardTopicSelect) return;
 
-  const topicMap = ensureJavaTopic(buildTopicMap());
+  const topicMap = buildTopicMap();
 
   if (!topicMap.size) {
     availableTopics = new Map([['Java', getJavaW3PracticeQuestions()]]);
@@ -1207,10 +1220,10 @@ function finishQuiz() {
   const total = Math.min(totalQuestions, selectedQuizQuestions.length);
   const percent = Math.round((score / total) * 100);
 
-  resultSummary.textContent = `${studentName}, you scored ${score}/${total} (${percent}%).`;
+  resultSummary.textContent = `${studentName}, your ${activeQuizTopic} quiz result: ${score}/${total} (${percent}%).`;
   
   // Save score to Firestore and refresh recent scores
-  saveScoreToFirestore(studentName, score, total, percent).then((success) => {
+  saveScoreToFirestore(studentName, score, total, percent, activeQuizTopic).then((success) => {
     if (success) {
       // Wait a moment for Firestore to process, then refresh
       setTimeout(() => {

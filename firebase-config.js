@@ -73,7 +73,7 @@ export async function loadQuestionsFromFirestore() {
 }
 
 // Save score to Firestore
-export async function saveScoreToFirestore(studentName, score, total, percent) {
+export async function saveScoreToFirestore(studentName, score, total, percent, quizTopic = '') {
   await initPromise;
   
   // Validate inputs
@@ -104,6 +104,7 @@ export async function saveScoreToFirestore(studentName, score, total, percent) {
       score,
       total,
       percent,
+      quizTopic: typeof quizTopic === 'string' ? quizTopic.trim() : '',
       timestamp: firestoreModule.serverTimestamp()
     });
     console.log('Score saved to Firestore successfully');
