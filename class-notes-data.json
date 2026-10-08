@@ -93,6 +93,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/266af0e17b54445db80102fee707bfd7",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -178,6 +182,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/1aa866d7412b4b6da1b4e87b87cb17c1",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -453,6 +461,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/55e5036007ea4b84a27a7acb1f4d4376",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -538,6 +550,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/5287e38bb09a408a92e38c73563a2e90",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -624,6 +640,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/5287e38bb09a408a92e38c73563a2e90",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -709,6 +729,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/f1444380fa3f41baafaf5f355996ac4f",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -794,6 +818,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/a66e962f638342daa9e4e180f984326a",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -879,6 +907,10 @@
         }
       ],
       "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/96aad54a942541279b11add96b574f22",
+        "passwordProtected": true,
+        "embedVerified": false,
         "availablePrivately": true
       }
     },
@@ -993,7 +1025,11 @@
         }
       ],
       "recording": {
-        "availablePrivately": false
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/playback/531484cfe5d94d2c8038fe174155f583",
+        "passwordProtected": true,
+        "embedVerified": false,
+        "availablePrivately": true
       }
     }
   ]

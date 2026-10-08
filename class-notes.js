@@ -16,7 +16,7 @@ function show(){
  if(watch){
   if(info.kind==='media'){const video=document.createElement('video');video.controls=true;video.preload='metadata';video.src=watch;video.addEventListener('error',()=>{if(!recording.querySelector('.playback-help')){const p=el('p','Playback is unavailable here. Try opening the recording below.');p.className='playback-help';recording.append(p);}});recording.append(video);}
   else if(info.embedVerified===true){const iframe=document.createElement('iframe');iframe.src=watch;iframe.title=`Class ${session.classId} recording`;iframe.allow='fullscreen';iframe.referrerPolicy='no-referrer';recording.append(iframe);}
-  const a=el('a',info.kind==='webex'?'Open recording in WebEx ↗':'Open recording ↗');a.href=watch;a.target='_blank';a.rel='noopener noreferrer';recording.append(a);
+  const a=el('a',info.kind==='webex'?'Open recording in WebEx ↗':'Open recording ↗');a.href=watch;a.target='_blank';a.rel='noopener noreferrer';recording.append(a);if(info.kind==='webex'&&info.passwordProtected){recording.append(el('p','Open the recording and enter the recording access password supplied with your class. WebEx opens in a new tab.'));}
  }else{const p=el('p',info?.availablePrivately?'The recording is preserved. Playback will appear here when its student viewing link is ready.':'A recording link has not been added for this session yet.');p.className='notes-empty';recording.append(p);}
  list(block('Topics covered'),session.keyConcepts);block('Class summary').append(el('p',session.summary));
  const detailed=block('Detailed class notes');
