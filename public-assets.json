@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    ".nojekyll",
+    "academy-integration.js",
+    "academy-shell.css",
+    "academy-theme.css",
+    "app.js",
+    "automation-release.mjs",
+    "automation.css",
+    "automation.html",
+    "windows-kit.html",
+    "automation.js",
+    "class-one.css",
+    "concept-diagrams.js",
+    "concept-materials.js",
+    "concept-reading.js",
+    "curriculum-data.json",
+    "curriculum.css",
+    "curriculum.html",
+    "curriculum.js",
+    "firebase-config.js",
+    "flashcard-focus.css",
+    "flashcard-focus.js",
+    "index.html",
+    "lab-config.json",
+    "learn.html",
+    "learning-content.js",
+    "learning.css",
+    "learning.js",
+    "lesson-context.js",
+    "lesson-examples.js",
+    "questions.json",
+    "study-materials.css",
+    "styles.css",
+    "visual-dialog.js",
+    "visual-lessons.css",
+    "visual-lessons.js",
+    "whiteboard.css",
+    "whiteboard.js",
+    "worked-examples.js",
+    "downloads/mini-quiz-curriculum-v1.docx",
+    "downloads/mini-quiz-curriculum-v1.pdf",
+    "class-two.html",
+    "class-two.css",
+    "class-two.js",
+    "class-two-content.js",
+    "class-two-examples.js",
+    "classroom-shell.js",
+    "classroom-shell.css",
+    "class-session-notes.js",
+    "class-sessions.json",
+    "class-notes.html",
+    "class-notes.css",
+    "class-notes.js",
+    "class-notes-policy.js",
+    "class-notes-data.json"
+  ],
+  "directories": {
+    "assets/curriculum": [
+      ".png"
+    ],
+    "assets/whimsical": [
+      ".png"
+    ],
+    "practice": [
+      ".html",
+      ".css",
+      ".js"
+    ]
+  }
+}
