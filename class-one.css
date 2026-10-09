@@ -12,4 +12,5 @@
 .concept-examples .example-answer p{margin:12px 0 0}
 .concept-examples .example-takeaway{border-left:3px solid #006a68;padding-left:13px;margin:22px 0 0}
 .concept-examples .example-content{overflow-wrap:anywhere}
+.concept-examples .domain-picker{display:flex;flex-wrap:wrap;align-items:center;gap:12px;font-weight:650;margin:0 0 18px}.concept-examples .domain-picker select{max-width:100%;min-width:0;padding:10px;border:1px solid #9db7ad;border-radius:8px;background:white;color:#173039;font:inherit}.concept-examples .domain-lifecycle{margin:22px 0}.concept-examples .domain-lifecycle summary{cursor:pointer;color:#006a68;font-weight:650}.concept-examples .domain-lifecycle ol{margin-top:18px}
 @media(max-width:650px){.concept-examples .example-title{font-size:18px}.concept-examples .example-practice{padding:12px}.concept-examples .example-steps{padding-left:22px}}
