@@ -3901,503 +3901,503 @@
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A library reservation tool has many features, but patrons still cannot reserve the books they need. What best guides whether the product is useful?",
+    "question": "SDLC scenario: A volunteer team can support only one of two requested services this term. Which decision belongs before committing to delivery?",
     "choices": [
-      "The patrons' problem and agreed needs",
-      "The total number of screens",
-      "The age of the repository",
-      "The number of deployment jobs"
+      "Agree which service fits the purpose, available resources and risks",
+      "Implement both before discussing scope",
+      "Promise both because requests exist",
+      "Use the number of screens as the feasibility measure"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A team has one week for an initial release and three months of requested work. What should it agree before committing?",
+    "question": "SDLC scenario: A clinic requests an appointment reminder. Which discovery question best establishes the need the software should serve?",
     "choices": [
-      "A promise to deliver every request",
-      "A larger test-results font",
-      "The release date without considering scope",
-      "A feasible scope, resources, and risks"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: An export currently drops empty records, but the approved requirement says to retain them. Which behavior should guide implementation?",
-    "choices": [
-      "Whichever behavior makes the test shorter",
-      "The newest screenshot without reviewing the rule",
-      "The validated requirement to retain them",
-      "Whatever the current code does"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: A validated request requires customers to review an order before confirming it. What work specifies how the screens and data support that flow?",
-    "choices": [
-      "Estimating staffing without designing the flow",
-      "Designing the interfaces, data, and user experience",
-      "Declaring every test complete",
-      "Recording a post-release defect only"
+      "Which code formatter should be selected?",
+      "What difficulty causes patients to miss appointments?",
+      "How many repository branches exist?",
+      "What filename should the installer use?"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A programmer finishes a feature from the agreed design and considers skipping developer checks. Which action belongs with development?",
+    "question": "SDLC scenario: A policy says an application must be processed promptly. Why should the team clarify this before coding a deadline check?",
     "choices": [
-      "Check the implementation against the agreed design",
-      "Let syntax alone establish business correctness",
-      "Replace requirements with the current output",
-      "Wait for users to find every defect"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: A release report says only that tests ran. What information would make it useful for a release-risk discussion?",
-    "choices": [
-      "Only the number of terminal windows",
-      "Only the repository creation date",
-      "A claim that running tests guarantees no defects",
-      "Results against requirements and identified defects"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: A tested package exists, but the intended environment still serves an older version. What has not yet been established?",
-    "choices": [
-      "That the old version has source files",
-      "That design documents can be opened",
-      "Controlled deployment and verification of the intended version",
-      "That the package filename is readable"
+      "Every vague rule should become a five-second timeout",
+      "The current program automatically defines the intended deadline",
+      "Promptly does not define a measurable processing deadline",
+      "A vague rule cannot influence implementation"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: Users report a defect in a released receipt calculation. Which ongoing lifecycle responsibility includes correcting it and checking affected behavior?",
+    "question": "SDLC scenario: A service must support two approved user roles. The team now decides which interfaces each role can use. Which lifecycle activity is this?",
     "choices": [
-      "A guarantee supplied by the last passing run",
+      "Deployment verification",
+      "Test closure reporting",
+      "Post-release defect repair only",
+      "Design"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A programmer follows an agreed data design but discovers the implemented total is incorrect in a developer check. What should happen before treating coding as complete?",
+    "choices": [
+      "Correct the implementation and repeat the relevant checks",
+      "Replace the agreed rule with the incorrect total",
+      "Accept compilation as enough evidence of the total",
+      "Remove the check without investigating"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: A team checks draft requirements before code exists. Which statement describes the place of this work in the lifecycle?",
+    "choices": [
+      "All checking must wait for deployment",
+      "Testing-related reviews can begin before coding",
+      "Reviews replace every later product test",
+      "Quality begins only when a browser test can run"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A release script publishes the correct version, but users receive an error from that environment. What evidence is still needed?",
+    "choices": [
+      "Another copy of the local screenshot alone",
+      "The archive name alone",
+      "Verification that the deployed version works in its intended environment",
+      "Only the number of files copied"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: An external policy changes after a system has been released. Why may requirements analysis be needed again?",
+    "choices": [
+      "Requirements become permanently fixed after the first release",
+      "Maintenance is limited to changing colors",
+      "A previous passing suite defines all future policies",
+      "Maintenance can adapt released software to changed needs"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A team shortens releases from months to days. Which lifecycle approach remains appropriate?",
+    "choices": [
+      "Repeat and overlap required activities while retaining quality checks",
+      "Remove requirements analysis from later releases",
+      "Treat deployment automation as a substitute for testing",
+      "Require a container before any review can occur"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: A recurring defect comes from misunderstood requirements. Which action directly supports prevention in the development process?",
+    "choices": [
+      "Run only the same final check and never review its inputs",
+      "Improve requirement reviews and standards for clarity",
+      "Rename every defect to make the count smaller",
+      "Delete all acceptance criteria"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A cancellation rule is agreed, but the team cannot tell whether the feature meets it. What should it make explicit?",
+    "choices": [
+      "Only the color of the results heading",
+      "Only the preferred programming language",
+      "Conditions with inputs, action and expected outcome",
+      "A statement that any outcome is acceptable"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: A batch import accepts 100 records, but the agreed limit has not been specified. What must happen before declaring 101 records a defect?",
+    "choices": [
+      "Assume every batch above 100 must fail",
+      "Use the observed implementation as the only requirement",
+      "Delete the boundary scenario",
+      "Obtain the intended limit and behavior for exceeding it"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A team changes a shared tax calculation. What helps determine which displayed and stored totals may need checking?",
+    "choices": [
+      "Trace dependencies and affected behavior",
+      "Assume only the changed source file can be affected",
+      "Choose checks by filename length alone",
+      "Ignore stored results because the page is visible"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: A release window shrinks unexpectedly. Which basis supports choosing checks for a high-impact shared calculation?",
+    "choices": [
+      "Only whichever tests ran first last year",
+      "Likelihood, impact, dependencies and the time available",
+      "Only the number of screenshots produced",
+      "Only which test names are shortest"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A deployed feature meets its old criteria but users identify a new accessibility need. What should the team do with the information?",
+    "choices": [
+      "Ignore it because the release passed its previous criteria",
+      "Change all criteria without discussion",
+      "Clarify the need and feed it into a reviewed improvement cycle",
+      "Claim old tests prove the new need already works"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: Before adding a teacher dashboard, the team asks which teaching problem it will solve. What is it establishing?",
+    "choices": [
+      "The final number of source files",
+      "A guarantee of zero defects",
+      "The best animation without user context",
+      "The user need that defines usefulness"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A requested school feature needs hardware the budget cannot cover. Which planning discussion should precede a delivery promise?",
+    "choices": [
+      "Whether scope and resources make the change feasible",
+      "Only whether a logo can be displayed",
+      "Whether a test can conceal the cost",
+      "Only which branch name is shortest"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: Two teachers disagree about when an assignment becomes late. What provides a defensible target for the code and tests?",
+    "choices": [
+      "The easier cutoff chosen without telling anyone",
+      "An agreed cutoff validated with the stakeholders",
+      "Different cutoffs in every test",
+      "Whatever incorrect cutoff happens to be in the code"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A result page requirement is agreed, but the service-to-page data exchange is unspecified. Which work fills that gap?",
+    "choices": [
+      "Close the testing work immediately",
+      "Use an unrelated login pass as the design",
+      "Define the interfaces and data flow in the design",
+      "Publish without deciding the exchange"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: An approved scoring design is being implemented. Which additional activity belongs to development?",
+    "choices": [
+      "Discard the requirements once a commit exists",
+      "Accept the commit identifier as proof of correctness",
+      "Postpone every check until users report trouble",
+      "Developer checks of the implemented scoring behavior"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: Before implementation, QA notices an acceptance rule permits several conflicting interpretations. When should the team resolve it?",
+    "choices": [
+      "As soon as it is noticed, before building against a guess",
+      "Only after publication",
+      "Only after every check has been automated",
+      "Never, because all outputs should be accepted"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "SDLC scenario: Local tests pass for a quiz update. What establishes that learners can use that version in the intended environment?",
+    "choices": [
+      "Only renaming the local archive",
+      "A controlled release followed by verification there",
+      "Only capturing the local browser",
+      "Assuming local and hosted environments are equivalent"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "SDLC scenario: A school changes its attendance policy after release. What lifecycle work includes adapting the existing feature?",
+    "choices": [
+      "A reason to stop requirement validation",
+      "Proof no implementation change can be needed",
       "Maintenance",
-      "Initial screen design only",
-      "A replacement for requirements analysis"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "SDLC scenario: A team adopts DevOps and asks whether containers must be introduced before it can continue testing. Which statement follows the lesson?",
-    "choices": [
-      "Containers are optional; QA and testing remain essential",
-      "DevOps requires containers for every test",
-      "DevOps eliminates requirement reviews",
-      "DevOps makes business assertions unnecessary"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: One team improves its review checklist; another checks the built checkout against requirements. How should these activities be understood?",
-    "choices": [
-      "Only the final product test contributes to quality",
-      "A checklist makes product testing unnecessary",
-      "Testing replaces every process review",
-      "Process prevention and product testing both support quality"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: An agreed rule gives free delivery at an order total of 50 or more. Which acceptance check is measurable?",
-    "choices": [
-      "Confirm that checkout looks professional",
-      "Accept any delivery charge if a message appears",
-      "Submit an order totaling 50 and expect zero delivery charge",
-      "Confirm that delivery feels fair"
+      "A replacement for testing"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: A form validates ordinary input, but its specification does not define what happens at the maximum allowed length. What should happen before asserting that edge case?",
+    "question": "SDLC scenario: Delivery is automated and small updates are frequent. How should analysis, design, testing and feedback be handled?",
     "choices": [
-      "Remove all boundary checks",
-      "Clarify the intended boundary behavior",
-      "Assume any observed behavior is correct",
-      "Always reject the input without agreement"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "SDLC scenario: A change to a shared date formatter is proposed. Which activity identifies where existing screens might be affected?",
-    "choices": [
-      "Change-impact analysis of behaviors and dependencies",
-      "Counting only the lines added",
-      "Ignoring screens outside the edited file",
-      "Assuming a small change has no wider effects"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: A dashboard change passes its chosen regression cases. What is a responsible statement about the rest of the product?",
-    "choices": [
-      "Every untested feature is proven correct",
-      "All future releases are now verified",
-      "No other quality checks can add evidence",
-      "Untested conditions may still contain defects"
+      "Drop them after the first successful pipeline run",
+      "Replace them with container startup only",
+      "Perform them only before the first release",
+      "Retain them in shorter, potentially overlapping iterations"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: A released booking system receives requests for a different cancellation rule. How should the team use that post-release information?",
+    "question": "SDLC scenario: Students find a released result explanation confusing. What is a constructive lifecycle response?",
     "choices": [
-      "Change the rule without validating it",
-      "Use yesterday's passing tests as proof the request is irrelevant",
-      "Revisit the needs and plan a reviewed change",
-      "Treat the release as the end of learning"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: A teacher asks for a new progress report without describing the learning difficulty. What question should guide the team first?",
-    "choices": [
-      "Which build filename to choose",
-      "Which user need and benefit the report should serve",
-      "Which animation to add",
-      "How many test files to create"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "SDLC scenario: A requested attendance system depends on equipment outside the school's budget. What should planning examine?",
-    "choices": [
-      "Feasibility, scope, resources, and risks",
-      "Only whether the logo can be drawn",
-      "Only the number of existing commits",
-      "Whether tests can hide the budget constraint"
+      "Use their feedback to plan a reviewed improvement",
+      "Ignore it because deployment finished",
+      "Automatically change the score formula",
+      "Conclude every prior test was invalid"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: Two instructors propose different deadlines for marking work late. How should the team resolve the implementation target?",
+    "question": "STLC scenario: A team identifies testable rules and risks before estimating test effort. Which testing activity is illustrated?",
     "choices": [
-      "Pick the easiest cutoff silently",
-      "Let each test choose a different cutoff",
-      "Copy the existing defect into the specification",
-      "Validate an agreed cutoff with stakeholders"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: The agreed results feature lacks a plan for how its page talks to the service. Which activity addresses that gap?",
-    "choices": [
-      "Close testing without a target",
-      "Treat a successful login as the missing design",
-      "Design the interfaces and data flow",
-      "Announce the release immediately"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: A developer turns an approved scoring design into code. What should accompany that coding work?",
-    "choices": [
-      "Treating a commit as proof the result is correct",
-      "Developer checks on the implementation",
-      "Deleting the agreed scoring rule",
-      "Skipping all checks until maintenance"
+      "Software deployment to production",
+      "Requirement analysis within the testing lifecycle",
+      "Application implementation only",
+      "Discarding testing scope"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: During a pre-coding review, QA finds a rule too vague to test. What is the useful next action?",
+    "question": "STLC scenario: A colleague must repeat a test after the original author leaves. Which missing detail prevents comparing the outcome defensibly?",
     "choices": [
-      "Clarify the rule before building against it",
-      "Ignore it until deployment",
-      "Make every possible output pass",
-      "Wait until all tests are automated to discuss it"
+      "The authors favorite editor color",
+      "The authors preferred keyboard",
+      "The expected result for the specified inputs and actions",
+      "The date the test filename was invented"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A test checks a saved profile before it has performed the save action. What is wrong with its intended prepare-act-assert sequence?",
+    "choices": [
+      "Assertions must always precede setup",
+      "Cleanup is a substitute for saving",
+      "Saving requires no initial state",
+      "It attempts to assert the outcome before performing the relevant action"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A screenshot proves an unexpected value occurred but gives no reproduction steps. What should the defect report add?",
+    "choices": [
+      "The environment, steps, expected result and actual result",
+      "Only another screenshot from a different run",
+      "Only the framework logo",
+      "Only the defect reporters name"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: The quiz works on a developer's computer. What additional step makes the release available responsibly where users will use it?",
+    "question": "STLC scenario: A fixture defines eight equally weighted questions and six correct answers. Which score follows the agreed percentage rule?",
     "choices": [
-      "Only creating a screenshot of the local run",
-      "Only changing the archive name",
-      "Assuming all environments behave identically",
-      "Controlled release and verification in the intended environment"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: A released attendance feature must adapt to a revised school policy. Which lifecycle responsibility covers that adaptation?",
-    "choices": [
-      "A replacement for all testing",
-      "A guarantee that no code changes are needed",
-      "Maintenance of released software",
-      "A reason to stop validating requirements"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: Automated delivery enables frequent small releases. What happens to requirements, design, testing, and feedback?",
-    "choices": [
-      "They are replaced by container startup checks",
-      "They remain and can overlap in shorter iterations",
-      "They become unnecessary once delivery is automated",
-      "They occur only for the first release"
+      "25%",
+      "75%",
+      "60%",
+      "80%"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: Learners say a published result page is hard to understand. How should that feedback enter the lifecycle?",
+    "question": "STLC scenario: A username test includes whitespace-only input, but the specification is silent about it. What should precede a pass/fail assertion?",
     "choices": [
-      "Inform a further reviewed improvement cycle",
-      "Be ignored because deployment is complete",
-      "Automatically replace the accepted scoring rule",
-      "Prove that every earlier test was invalid"
+      "Assume every application must accept it",
+      "Treat current behavior as the agreed rule",
+      "Clarify how whitespace-only input should be handled",
+      "Remove all validation testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A criterion says a successful cancellation changes the booking status to Cancelled. Which check directly evaluates it?",
+    "choices": [
+      "Check only that the browser title exists",
+      "Pass when the click is attempted",
+      "Assert only that some page is visible",
+      "Cancel a valid booking and assert its status is Cancelled"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A corrected invoice defect passes its original failing case. Which separate activity checks whether other invoice totals were harmed?",
+    "choices": [
+      "Regression testing of affected existing behavior",
+      "Only repeating that identical confirmation case",
+      "Renaming the fixed issue",
+      "Checking that a source file exists"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: The test team finishes a run and gathers lessons and remaining risks for the next release. Where does this work fit in the testing lifecycle?",
+    "question": "STLC scenario: A shared session timeout changes. What should guide selection of existing journeys for regression checks?",
     "choices": [
-      "Only initial product deployment",
-      "A substitute for executing every selected case",
-      "Only writing application code",
-      "Completion of testing and its feedback"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A case tells a colleague to click Submit but gives no starting state or expected outcome. What would make it repeatable?",
-    "choices": [
-      "Remove the requirement reference",
-      "Declare any displayed result a pass",
-      "Specify setup, inputs, actions, and expected results",
-      "Add only the author's preferred editor"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: A test for an empty order list starts with leftover orders from another case. What should be done before its action?",
-    "choices": [
-      "Use a longer timeout as a data reset",
-      "Prepare the empty starting state required by the case",
-      "Keep the leftovers and change the expected result",
-      "Skip all result checks"
+      "Only the order of files in the folder",
+      "Which behaviors and dependencies could be affected",
+      "Only the test author assignments",
+      "An assumption that no journey outside the edited file can change"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: A report shows the right steps and wrong result but omits which environment produced it. What information should be added?",
+    "question": "STLC scenario: Selected tests pass in one browser using one fixture. Which release statement accurately represents the evidence?",
     "choices": [
-      "The test environment and evidence from that run",
-      "Only a different browser icon",
-      "A screenshot from an unrelated passing run",
-      "A claim that all environments must be identical"
+      "All browsers and fixtures are proven correct",
+      "No defects can exist in the release",
+      "Those selected conditions passed; other conditions remain unproven",
+      "Exploratory checks can no longer add information"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: An invoice total is present but differs from the agreed calculated amount. Which assertion detects this problem?",
+    "choices": [
+      "Check only that the total element is visible",
+      "Check only that the page opened",
+      "Check only that the test process started",
+      "Compare the displayed total with the exact expected amount"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A fresh browser still sees records created by a previous run. What does this demonstrate?",
+    "choices": [
+      "Browser isolation does not itself reset shared backend data",
+      "A new browser must delete the database",
+      "Cleanup can always be replaced with a page title check",
+      "Tests should depend on the previous runs data"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: An exercise defines a 20 percent discount on a price of 100. Which value should be expected for the final price?",
+    "question": "STLC scenario: A report appears after a variable-duration calculation. What synchronization best expresses readiness?",
     "choices": [
-      "100",
-      "20",
-      "120",
-      "80"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A test design includes an invalid quantity, but no agreed rule says how the app should respond. What is the correct next step?",
-    "choices": [
-      "Accept every observed result",
-      "Avoid discussing the missing rule",
-      "Clarify the intended invalid-input behavior",
-      "Invent an error message and demand it"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: An acceptance rule requires a confirmation number after a successful booking. Which case checks an agreed observable outcome?",
-    "choices": [
-      "Pass when the submit action is attempted",
-      "Submit valid booking data and check that a confirmation number appears",
-      "Check only that the browser opened",
-      "Check only the test filename"
+      "Always sleep a fixed five seconds",
+      "Wait for the required report condition",
+      "Wait for the filename to change",
+      "Skip checking that the report appeared"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: A defect fix changes shared address validation. The original failing address now succeeds. Why test other existing address workflows too?",
+    "question": "STLC scenario: A failing test has a trace from yesterday and a log from today. Which evidence should be tied to the reported failure?",
     "choices": [
-      "To check for side effects through regression testing",
-      "To repeat only the same confirmation case",
-      "To prove every unrelated system is defect-free",
-      "To avoid checking the stated fix"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: Two cases take equal time: one covers an affected payment dependency and one an unchanged decorative label. What should guide priority?",
-    "choices": [
-      "Alphabetical order as the only criterion",
-      "The shortest assertion text alone",
-      "The age of the test filename alone",
-      "Failure likelihood, impact, dependencies, and available time"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A report contains successful checks on staging but no checks on another environment. Which claim is supported?",
-    "choices": [
-      "Production has no remaining defects",
-      "Every browser has already been verified",
-      "The selected checks passed on the tested staging conditions",
-      "All environments are proven equivalent"
+      "Any trace with a similar filename",
+      "Only a screenshot from an unrelated pass",
+      "Inputs and evidence from the run that actually failed",
+      "Evidence is unnecessary if a test has a name"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: A status field is visible, but a case requires the exact status Approved. What should the assertion establish?",
+    "question": "STLC scenario: A test creates a temporary booking and verifies it. What cleanup boundary is appropriate if later tests require it absent?",
     "choices": [
-      "Only that the test started",
-      "The displayed value is Approved",
-      "Only that some status text exists",
-      "Only that the page background appears"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "STLC scenario: A browser test passes alone and fails after another test leaves a user record behind. What is the appropriate independence fix?",
-    "choices": [
-      "Prepare or clean the application state required by each test",
-      "Assume a new browser resets backend records",
-      "Ignore failures after the first run",
-      "Change the expected result to depend on run order"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: A save button becomes enabled after validation completes. What should the test wait for before clicking it?",
-    "choices": [
-      "An arbitrary delay unrelated to readiness",
-      "The previous test's completion message only",
-      "The test file creation time",
-      "The relevant enabled/readiness condition"
+      "Delete every users unrelated bookings",
+      "Assume closing the browser deletes the booking",
+      "Silently make subsequent expectations depend on leftovers",
+      "Remove the booking created by that test when needed"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: Two runs use different fixtures; only the second fails. Which inputs and trace should support the investigation?",
+    "question": "STLC scenario: A tester writes instructions for a colleague to repeat a quiz check. Which set makes the case understandable and repeatable?",
     "choices": [
-      "Any old trace with a similar filename",
-      "No input details if a screenshot exists",
-      "Those from the failing second run",
-      "Only those from the first passing run"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: A case creates a temporary address and the next case must begin without it. What action should follow checking the created address?",
-    "choices": [
-      "Treat a page refresh as proof of backend cleanup",
-      "Remove the test-created data when needed",
-      "Delete unrelated users' data",
-      "Leave the record and silently relax the next case"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "STLC scenario: A colleague will rerun today's test next week. What should its documented case include?",
-    "choices": [
-      "Starting setup, data, actions, and expected outcomes",
-      "Only a statement that the app works",
+      "Setup, input data, actions and expected results",
       "Only the number of clicks",
-      "Only the test author's name"
+      "Only a statement that the quiz works",
+      "Only the testers name"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: The known fixture has five equally weighted questions and exactly three correct answers. What percentage should the score check expect?",
+    "question": "STLC scenario: For an agreed five-question equal-weight fixture, exactly three answers are correct. What should the percentage assertion require?",
     "choices": [
-      "40%",
+      "20%",
+      "60%",
       "80%",
-      "100%",
-      "60%"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A quiz test needs an unanswered quiz at the start. What should the tester do before selecting answers?",
-    "choices": [
-      "Check the final score before acting",
-      "Change the answer key to match leftovers",
-      "Prepare the required unanswered starting state",
-      "Reuse any arbitrary completed quiz"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: One test leaves temporary records that could interfere with later cases. What is appropriate after verifying its result?",
-    "choices": [
-      "Make later cases accept any data",
-      "Clean up the data created by that test when needed",
-      "Delete all unrelated application records",
-      "Assume another browser removes the records"
+      "100%"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: A teammate must investigate an incorrect score. Which defect report gives useful evidence?",
+    "question": "STLC scenario: A test should start with no answers chosen. What belongs before the test selects its answers?",
     "choices": [
-      "Environment, reproduction steps, expected and actual results, and run evidence",
-      "Only a claim that the score is bad",
-      "Only the name of the test framework",
-      "Only a screenshot from another run"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: The agreed score is 60%, while the observed result is 80%. How should the tester handle the difference?",
-    "choices": [
-      "Change the expectation to 80% without a reviewed rule change",
-      "Pass because both values are percentages",
-      "Ignore the result if submission completed",
-      "Compare against the agreed result and report the mismatch"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A redesigned score panel might affect an existing answer-submission journey. Why check that existing journey?",
-    "choices": [
-      "Avoid checking any previously working behavior",
-      "Prove future changes need no checks",
-      "Detect adverse effects of the change",
-      "Test only the new panel's color"
+      "Assert the final score first",
+      "Reuse an arbitrary completed quiz",
+      "Prepare the required unanswered quiz state",
+      "Change the key to fit leftover answers"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: After a fix, QA reruns the exact scenario that reproduced the reported scoring defect. What does that check establish?",
+    "question": "STLC scenario: After validating a test-created record, what helps prevent interference with later cases?",
     "choices": [
-      "Whether deployment to every environment occurred",
-      "Whether the reported defect was fixed in that case",
-      "Whether every other feature is regression-free",
-      "Whether all untested inputs now work"
+      "Delete unrelated application data",
+      "Accept any records in all later cases",
+      "Assume another browser clears the backend",
+      "Clean up that tests temporary data when needed"
     ],
-    "answer": 1
+    "answer": 3
   },
   {
-    "question": "STLC scenario: Only a limited test window remains after a shared scoring change. What makes selection defensible?",
+    "question": "STLC scenario: An incorrect quiz score needs investigation by another teammate. Which report is most useful?",
     "choices": [
-      "Prioritize by likelihood, impact, affected dependencies, and time",
-      "Choose cases solely by alphabetical order",
-      "Run only the newest filename",
-      "Ignore high-impact dependencies"
+      "Environment, reproduction steps, expected and actual results, and matching run evidence",
+      "Only the words score broken",
+      "Only the framework name",
+      "Only a picture from another run"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A shared authentication component is modified. How should the team decide which existing flows need regression checks?",
+    "question": "STLC scenario: An agreed fixture should show 60%, but the application shows 80%. What should the assertion do?",
     "choices": [
-      "Check only the edited line's formatting",
-      "Assume all other flows are unaffected",
-      "Select only cases with the fewest steps",
-      "Trace behaviors and dependencies that the change could affect"
+      "Accept80% merely because it is visible",
+      "Report the difference from the agreed expected value",
+      "Replace the expected value without a reviewed rule change",
+      "Ignore the score if the click succeeded"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: A score-panel redesign is complete. Why run the previously working answer-submission journey?",
+    "choices": [
+      "Avoid all checks of existing behavior",
+      "Prove no future release needs testing",
+      "Check whether the change adversely affected existing behavior",
+      "Test only the new decoration"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: QA reruns the case that originally reproduced a fixed scoring defect. What is the purpose of that specific rerun?",
+    "choices": [
+      "Prove all other features have no regressions",
+      "Verify deployment in every environment",
+      "Prove all untested inputs work",
+      "Confirm that the defect was fixed for that case"
     ],
     "answer": 3
+  },
+  {
+    "question": "STLC scenario: A scoring change leaves time for only a subset of checks. What should determine the selection?",
+    "choices": [
+      "Failure likelihood, impact, affected dependencies and available time",
+      "Alphabetical test names alone",
+      "Only the newest test file",
+      "Ignoring high-impact paths"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: An authentication component used by several flows changes. How should QA identify regression targets?",
+    "choices": [
+      "Inspect only whitespace in the modified line",
+      "Trace the existing behaviors and dependencies the change could affect",
+      "Assume every other flow is unchanged",
+      "Choose only tests with the fewest steps"
+    ],
+    "answer": 1
   }
 ]
