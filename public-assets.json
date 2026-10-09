@@ -57,6 +57,7 @@
     "class-notes-data.json"
   ],
   "directories": {
+    "assets/windows-kit": [".png", ".jpg"],
     "assets/curriculum": [
       ".png"
     ],
