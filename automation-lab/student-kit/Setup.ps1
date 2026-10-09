@@ -1,5 +1,6 @@
 param([switch]$CheckOnly, [switch]$UpdateTools)
 $ErrorActionPreference = 'Stop'
+Import-Module Microsoft.PowerShell.Utility -ErrorAction Stop
 Set-StrictMode -Version Latest
 
 function Refresh-LabPath {

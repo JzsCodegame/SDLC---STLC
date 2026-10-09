@@ -13,6 +13,9 @@ jobs:
     timeout-minutes: 20
     env:
       CYPRESS_INSTALL_BINARY: "0"
+      GIT_CONFIG_COUNT: "1"
+      GIT_CONFIG_KEY_0: safe.directory
+      GIT_CONFIG_VALUE_0: ${{ github.workspace }}
       LAB_CI_IMAGE: cypress/included@sha256:ff49cf81f9c50372b9281235d20ed2793e5424dd1b93f5cfbaad9a57c1ff30be
     steps:
       - uses: actions/checkout@v4
