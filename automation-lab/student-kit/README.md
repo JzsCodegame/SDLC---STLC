@@ -1,54 +1,109 @@
-# Mini Quiz Tech and AI Academy: local automation lab
+# Mini Quiz Academy: Windows student lab
 
-This package is the real Help Desk practice website, its Node API and the same
-regression checks in Playwright and Cypress. It runs on your computer. No cloud
-workspace, payment card, Docker, Kubernetes or model API account is required.
+Follow these steps in order. This kit runs the Help Desk practice website,
+Playwright and Cypress on your Windows computer. You do not need Docker or
+an Academy workspace login. Use Windows 10/11 x64, Internet access and at least
+2 GiB of free disk space. Installation may ask for Windows administrator approval.
 
-## 1. Before the class
+## 1. Download and extract
 
-1. Use a Windows 10/11 x64 computer with Node.js 24 LTS (including npm), Git for
-   Windows and Microsoft Edge or Google Chrome installed. Use your preferred editor.
-   Official installers: https://nodejs.org/en/download and https://git-scm.com/download/win.
-2. Keep at least 2 GiB of disk space for the initial setup. More space may be needed
-   for later exercises and reports. Browser automation uses your computer's memory;
-   close unnecessary applications if it becomes slow.
-3. Download the ZIP from the Academy. Compare its SHA-256 with the Academy release
-   information using `Get-FileHash -Algorithm SHA256 '<downloaded ZIP path>'`.
-4. Right-click the ZIP and select Extract All. Choose a normal local folder you own.
-   Keep each version in a separate folder. Do not open scripts inside the ZIP.
-   Network drives, linked folders and synchronized folder redirection are not
-   supported by the first release's integrity checks.
-5. Open PowerShell in the extracted `Mini Quiz Lab <version>` folder. All commands
-   below run there. `Lab.cmd` works without changing PowerShell execution policy.
-   `node .\lab.mjs <command>` is equivalent. `Lab.ps1` is optional if your existing
-   script policy permits it. Never disable a security policy just to run this lab.
+1. Download the Windows ZIP from the Academy's Automation page.
+2. In File Explorer, open Downloads. Right-click the ZIP, choose Properties,
+   select Unblock if shown, then Apply. This applies only to this downloaded ZIP;
+   do not change your computer's PowerShell security policy.
+3. Right-click the ZIP > Extract All. Extract into a local folder you own,
+   such as Downloads. Do not run files while viewing the ZIP.
+4. Open the extracted folder, then open `Mini Quiz Lab <version>` inside it.
+   You should see `Setup.cmd`, `Lab.cmd` and this README.
 
-## 2. Check, install and start
+## 2. Run setup once
+
+Double-click **Setup.cmd**. Keep its window open until it says **SETUP SUCCEEDED**.
+
+- It checks Node 24 (with npm), Git, Edge/Chrome and VS Code.
+- Compatible tools print PASS and are kept. Missing/unsupported tools are installed
+  or updated using Windows App Installer (winget). Approve the named installer if
+  Windows asks. The kit never disables security checks or uninstalls unrelated apps.
+- It then installs the exact project versions of Playwright, Cypress and the app's
+  dependencies, verifies Cypress, and builds the Help Desk.
+- It prints the exact location of your editable practice folder.
+- Re-running setup keeps your saved source/tests/notes and manual records.
+  Dependency installation refreshes node_modules and the generated build only.
+
+If you see SETUP STOPPED, setup did not succeed. Read the first error above it.
+Fix the stated issue and double-click Setup.cmd again. If App Installer is missing,
+install/update **App Installer** in Microsoft Store, then retry. A school-managed
+computer may need its administrator to approve installation. If scripts are blocked
+by school policy, ask the instructor; do not bypass that policy.
+
+Optional: from this folder in PowerShell, ` .\Setup.cmd -CheckOnly ` checks tools
+without installing. ` .\Setup.cmd -UpdateTools ` requests available Git, browser
+and editor updates. Node stays on compatible 24.x; the kit never jumps it to a
+new major version. Updates can require closing the affected applications.
+
+## 3. Open PowerShell in the correct folder
+
+In File Explorer, stay in the folder containing **Lab.cmd**.
+Click the address bar, type **powershell**, and press Enter.
+In the PowerShell window, type this and press Enter:
 
 ```powershell
-.\Lab.cmd check
-.\Lab.cmd install
+Get-Location
+Get-ChildItem Lab.cmd
+```
+
+The first command shows your current folder. The second should show Lab.cmd.
+If it says the file does not exist, you are in the wrong folder. Close this
+PowerShell window and repeat the File Explorer steps above.
+
+If your instructor gives you a folder path, this command moves into it; replace
+only the example path with your actual extracted kit folder and keep the quotes:
+
+```powershell
+Set-Location "C:\Users\YourName\Downloads\Mini Quiz Lab 1.1.0"
+```
+
+## 4. Run your first visible Playwright test
+
+In that PowerShell window, run:
+
+```powershell
+.\Lab.cmd test playwright-headed
+```
+
+This command builds your saved practice app, starts a separate test server,
+opens a real browser and runs the example tests. You do **not** need to run
+Start first. Watch the browser fill forms and check outcomes. The browser closes
+when the run finishes. The terminal prints passed/failed counts. If something
+fails, keep the error text for your instructor. To open the report, run:
+
+```powershell
+.\Lab.cmd report
+```
+
+## 5. Find your files and change a test
+
+```powershell
+.\Lab.cmd folder
+```
+
+This opens your **editable practice folder** and prints its exact path.
+In VS Code, choose File > Open Folder and select that printed folder.
+Open `tests/playwright/help-desk.spec.ts`. Save your change, return to the kit
+PowerShell window, and run `.\Lab.cmd test playwright-headed` again.
+Edit the student working copy, not the downloaded template.
+
+## 6. Open the app for manual practice
+
+```powershell
 .\Lab.cmd start
 ```
 
-1. Check verifies Node, npm, Git, an installed browser, writable storage, disk space,
-   available ports and the hashes of the shipped files. Missing prerequisites are
-   reported; the launcher does not install global tools or change Windows settings.
-2. Install creates a separate student working copy, runs `npm ci`, installs/verifies
-   the pinned Cypress binary and runs `npm run build`. The first setup needs an
-   Internet connection. npm registry packages and Cypress downloads may need to be
-   allowed by your school's proxy. A failed download stops setup with an error;
-   retry Install after fixing the connection. Do not disable TLS checks.
-3. Playwright uses your installed Edge or Chrome. It does not download another
-   browser for this kit. Cypress downloads its runner and can use Edge or Chrome.
-4. Start opens the app at http://127.0.0.1:4173/ and prints the equivalent PowerShell
-   and npm commands. Keep that terminal open. Ctrl+C stops this lab only.
-5. Use fictional names and tickets. This is a local learning app, not an account
-   system. Do not publish its API or terminal to the Internet.
+This opens http://127.0.0.1:4173/ for you to use manually. Keep this terminal open.
+Press **Ctrl+C** in it to stop the app. Browser tests use their own separate server.
+Use fictional records; this practice app is not a student authentication system.
 
-You can also double-click `Lab.cmd` and choose a numbered menu action.
-
-## 3. Where your work lives
+## 7. Where your work lives
 
 ```text
 Your chosen folder/
@@ -79,7 +134,7 @@ Your chosen folder/
    Configure your own Git name/email if asked. This download has no instructor Git
    history or credentials. Do not commit generated data, dependencies or reports.
 
-## 4. Run tests and inspect evidence
+## 8. Run tests and inspect evidence
 
 Open another PowerShell window in the downloaded kit folder:
 
@@ -113,7 +168,7 @@ $env:CYPRESS_BROWSER = 'edge'
 For Chrome, set both values to `chrome`. The kit wrapper chooses an installed
 browser automatically, preferring Edge. These variables affect this terminal only.
 
-## 5. Ports and troubleshooting
+## 9. Ports and troubleshooting
 
 | Purpose | Port | Saved records |
 | --- | --- | --- |
@@ -138,7 +193,7 @@ browser automatically, preferring Edge. These variables affect this terminal onl
 6. A fresh extraction rehearsal is evidence for this release on the instructor's
    Windows machine, not proof of every student hardware or school policy setup.
 
-## 6. Learning flow
+## 10. Learning flow
 
 Requirement -> manual observation -> assertion -> API/UI test -> failure evidence
 -> correction -> regression rerun -> saved student work.

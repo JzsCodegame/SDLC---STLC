@@ -138,7 +138,7 @@ async function startLab(locations, shouldOpen) {
 async function main(args) {
   const [command = 'help', target] = args;
   if (command === 'help') { console.log('Mini Quiz local lab\nCommands: check | install | start [--no-open] | test api|playwright|cypress|playwright-headed|cypress-open | report | verify\nUse .\\Lab.cmd <command> from PowerShell. Read README.md and EXERCISES.md.'); return; }
-  if (!['check', 'install', 'start', 'test', 'report', 'verify'].includes(command)) throw new Error('Unknown command. Run .\\Lab.cmd help.');
+  if (!['check', 'install', 'start', 'test', 'report', 'verify', 'folder'].includes(command)) throw new Error('Unknown command. Run .\\Lab.cmd help.');
   nodeVersion();
   const manifest = command === 'check' || command === 'install' || command === 'verify' ? await verifyKit(kitRoot) : await readManifest(kitRoot);
   console.log(`Mini Quiz Lab ${manifest.version}; source ${manifest.sourceCommit}`);
@@ -152,9 +152,14 @@ async function main(args) {
     await runNode(['node_modules/cypress/bin/cypress', 'install'], locations.app);
     await runNode(['node_modules/cypress/bin/cypress', 'verify'], locations.app);
     await runNpm(['run', 'build'], locations.app);
-    console.log('Installed and built. Run .\\Lab.cmd start, then open another PowerShell window for tests.'); return;
+    console.log(`SETUP SUCCEEDED. Your editable practice folder:\n${locations.app}\n\nNEXT: .\\Lab.cmd test playwright-headed\nThis starts its own test app and shows browser actions. You do not need to run Start first.\nUse .\\Lab.cmd folder to open your editable files, or .\\Lab.cmd start for manual practice.`); return;
   }
   const locations = await workspace(manifest);
+  if (command === 'folder') {
+    console.log(`EDIT YOUR TESTS HERE:\n${locations.app}\nIn VS Code: File > Open Folder, then choose this folder.\nPlaywright test file: tests/playwright/help-desk.spec.ts\nReturn to the kit terminal and run .\\Lab.cmd test playwright-headed after saving.`);
+    const opener = spawn('explorer.exe', [locations.app], {stdio: 'ignore', windowsHide: true});
+    opener.on('error', () => console.log('Copy the printed folder path into File Explorer.')); opener.unref(); return;
+  }
   if (command === 'start') return startLab(locations, target !== '--no-open');
   if (command === 'report') { await requirePort(8083); return runNpm(['run', 'report:playwright'], locations.app); }
   const scripts = {api: 'test:api', playwright: 'test:playwright', cypress: 'test:cypress', 'playwright-headed': 'test:playwright:headed', 'cypress-open': 'test:cypress:open'};
@@ -163,7 +168,7 @@ async function main(args) {
   const selected = await browser();
   await requirePort(target.startsWith('playwright') ? 4174 : 4175);
   await runNpm(['run', 'build'], locations.app);
-  return runNpm(['run', scripts[target]], locations.app, {PLAYWRIGHT_CHANNEL: selected.playwright, CYPRESS_BROWSER: selected.cypress});
+  return runNpm(['run', scripts[target]], locations.app, {PLAYWRIGHT_CHANNEL: selected.playwright, CYPRESS_BROWSER: selected.cypress, LAB_SLOW_MO: target === 'playwright-headed' ? '500' : '0'});
 }
 
 try {
