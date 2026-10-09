@@ -13,6 +13,8 @@ jobs:
     timeout-minutes: 20
     env:
       CYPRESS_INSTALL_BINARY: "0"
+      PLAYWRIGHT_CHANNEL: chrome
+      CYPRESS_BROWSER: chrome
       GIT_CONFIG_COUNT: "1"
       GIT_CONFIG_KEY_0: safe.directory
       GIT_CONFIG_VALUE_0: ${{ github.workspace }}
