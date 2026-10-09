@@ -1,6 +1,8 @@
 {
   "schemaVersion": 1,
   "files": [
+    ["automation-lab/student-kit/Setup.cmd", "Setup.cmd"],
+    ["automation-lab/student-kit/Setup.ps1", "Setup.ps1"],
     ["automation-lab/student-kit/Lab.cmd", "Lab.cmd"],
     ["automation-lab/student-kit/Lab.ps1", "Lab.ps1"],
     ["automation-lab/student-kit/lab.mjs", "lab.mjs"],

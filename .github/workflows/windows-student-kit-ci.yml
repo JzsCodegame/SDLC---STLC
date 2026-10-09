@@ -1,0 +1,31 @@
+name: Windows student kit Linux verification
+on:
+  push:
+    branches: [codex/windows-student-kit-1.1.0]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/included@sha256:ff49cf81f9c50372b9281235d20ed2793e5424dd1b93f5cfbaad9a57c1ff30be
+      options: --cpus 2 --memory 4g
+    timeout-minutes: 20
+    env:
+      CYPRESS_INSTALL_BINARY: "0"
+      PLAYWRIGHT_CHANNEL: chrome
+      CYPRESS_BROWSER: chrome
+      GIT_CONFIG_COUNT: "1"
+      GIT_CONFIG_KEY_0: safe.directory
+      GIT_CONFIG_VALUE_0: ${{ github.workspace }}
+      LAB_CI_IMAGE: cypress/included@sha256:ff49cf81f9c50372b9281235d20ed2793e5424dd1b93f5cfbaad9a57c1ff30be
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact release source
+        run: node automation-lab/release/run-ci.mjs --source "$GITHUB_SHA" --version 1.1.0 --output .local/windows-kit-ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: windows-kit-1.1.0-linux-proof
+          path: .local/windows-kit-ci/
+          retention-days: 7
