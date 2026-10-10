@@ -1398,256 +1398,6 @@
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: a user cannot access email and needs service restored. Which record fits?",
-    "choices": [
-      "Incident",
-      "Problem ticket",
-      "Change request",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: a planned firewall update needs approval before release. Which record fits?",
-    "choices": [
-      "Change request",
-      "Incident",
-      "Problem ticket",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: repeated outages need root cause investigation. Which record fits?",
-    "choices": [
-      "Problem ticket",
-      "Incident",
-      "Change task",
-      "Service request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: a user cannot access email and needs service restored. Which record fits? (fallback review 2)",
-    "choices": [
-      "Incident",
-      "Problem ticket",
-      "Change request",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: a planned firewall update needs approval before release. Which record fits? (fallback review 2)",
-    "choices": [
-      "Change request",
-      "Incident",
-      "Problem ticket",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: repeated outages need root cause investigation. Which record fits? (fallback review 2)",
-    "choices": [
-      "Problem ticket",
-      "Incident",
-      "Change task",
-      "Service request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: a user cannot access email and needs service restored. Which record fits? (fallback review 3)",
-    "choices": [
-      "Incident",
-      "Problem ticket",
-      "Change request",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: a planned firewall update needs approval before release. Which record fits? (fallback review 3)",
-    "choices": [
-      "Change request",
-      "Incident",
-      "Problem ticket",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: repeated outages need root cause investigation. Which record fits? (fallback review 3)",
-    "choices": [
-      "Problem ticket",
-      "Incident",
-      "Change task",
-      "Service request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: a user cannot access email and needs service restored. Which record fits? (fallback review 4)",
-    "choices": [
-      "Incident",
-      "Problem ticket",
-      "Change request",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: a planned firewall update needs approval before release. Which record fits? (fallback review 4)",
-    "choices": [
-      "Change request",
-      "Incident",
-      "Problem ticket",
-      "Service catalog request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: repeated outages need root cause investigation. Which record fits? (fallback review 4)",
-    "choices": [
-      "Problem ticket",
-      "Incident",
-      "Change task",
-      "Service request"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an SLA measure? (fallback review 5)",
-    "choices": [
-      "Response or resolution target",
-      "Incident category only",
-      "Change approval group",
-      "Problem root cause note"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an assignment group do? (fallback review 5)",
-    "choices": [
-      "Routes work to a support team",
-      "Sets incident priority only",
-      "Approves every change request",
-      "Closes every problem ticket"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 5)",
-    "choices": [
-      "Requesting approved services",
-      "Investigating problem tickets",
-      "Measuring SLA breach time",
-      "Assigning incident priority"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an SLA measure? (fallback review 6)",
-    "choices": [
-      "Response or resolution target",
-      "Incident category only",
-      "Change approval group",
-      "Problem root cause note"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an assignment group do? (fallback review 6)",
-    "choices": [
-      "Routes work to a support team",
-      "Sets incident priority only",
-      "Approves every change request",
-      "Closes every problem ticket"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 6)",
-    "choices": [
-      "Requesting approved services",
-      "Investigating problem tickets",
-      "Measuring SLA breach time",
-      "Assigning incident priority"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an SLA measure? (fallback review 7)",
-    "choices": [
-      "Response or resolution target",
-      "Incident category only",
-      "Change approval group",
-      "Problem root cause note"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an assignment group do? (fallback review 7)",
-    "choices": [
-      "Routes work to a support team",
-      "Sets incident priority only",
-      "Approves every change request",
-      "Closes every problem ticket"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 7)",
-    "choices": [
-      "Requesting approved services",
-      "Investigating problem tickets",
-      "Measuring SLA breach time",
-      "Assigning incident priority"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an SLA measure? (fallback review 8)",
-    "choices": [
-      "Response or resolution target",
-      "Incident category only",
-      "Change approval group",
-      "Problem root cause note"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an assignment group do? (fallback review 8)",
-    "choices": [
-      "Routes work to a support team",
-      "Sets incident priority only",
-      "Approves every change request",
-      "Closes every problem ticket"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what is the service catalog used for? (fallback review 8)",
-    "choices": [
-      "Requesting approved services",
-      "Investigating problem tickets",
-      "Measuring SLA breach time",
-      "Assigning incident priority"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow concept: what does an SLA measure? (fallback review 9)",
-    "choices": [
-      "Response or resolution target",
-      "Incident category only",
-      "Change approval group",
-      "Problem root cause note"
-    ],
-    "answer": 0
-  },
-  {
     "question": "Testing Types scenario: QA checks whether a new login change broke checkout. Which testing type fits?",
     "choices": [
       "Regression testing",
@@ -3901,503 +3651,753 @@
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A volunteer team can support only one of two requested services this term. Which decision belongs before committing to delivery?",
+    "question": "SDLC scenario: A bank plans a same-day transfer feature, but its settlement partner supports only next-day clearing. What should planning resolve first?",
     "choices": [
-      "Agree which service fits the purpose, available resources and risks",
-      "Implement both before discussing scope",
-      "Promise both because requests exist",
-      "Use the number of screens as the feasibility measure"
+      "Feasibility and the delivery scope",
+      "Button colors",
+      "Test execution logs",
+      "Defect closure labels"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A clinic requests an appointment reminder. Which discovery question best establishes the need the software should serve?",
+    "question": "SDLC scenario: A hospital requirement says reminders must be sent at an appropriate time. What must QA obtain before setting a timing assertion?",
     "choices": [
-      "Which code formatter should be selected?",
-      "What difficulty causes patients to miss appointments?",
-      "How many repository branches exist?",
-      "What filename should the installer use?"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "SDLC scenario: A policy says an application must be processed promptly. Why should the team clarify this before coding a deadline check?",
-    "choices": [
-      "Every vague rule should become a five-second timeout",
-      "The current program automatically defines the intended deadline",
-      "Promptly does not define a measurable processing deadline",
-      "A vague rule cannot influence implementation"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: A service must support two approved user roles. The team now decides which interfaces each role can use. Which lifecycle activity is this?",
-    "choices": [
-      "Deployment verification",
-      "Test closure reporting",
-      "Post-release defect repair only",
-      "Design"
+      "The time used by the first developer",
+      "A screenshot of the reminder",
+      "A rule copied from an unrelated clinic",
+      "An agreed, measurable reminder timing rule"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: A programmer follows an agreed data design but discovers the implemented total is incorrect in a developer check. What should happen before treating coding as complete?",
+    "question": "SDLC scenario: A telecom team has agreed billing rules and now defines how the rating service exchanges usage data with invoicing. Which activity is this?",
     "choices": [
-      "Correct the implementation and repeat the relevant checks",
-      "Replace the agreed rule with the incorrect total",
-      "Accept compilation as enough evidence of the total",
-      "Remove the check without investigating"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: A team checks draft requirements before code exists. Which statement describes the place of this work in the lifecycle?",
-    "choices": [
-      "All checking must wait for deployment",
-      "Testing-related reviews can begin before coding",
-      "Reviews replace every later product test",
-      "Quality begins only when a browser test can run"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "SDLC scenario: A release script publishes the correct version, but users receive an error from that environment. What evidence is still needed?",
-    "choices": [
-      "Another copy of the local screenshot alone",
-      "The archive name alone",
-      "Verification that the deployed version works in its intended environment",
-      "Only the number of files copied"
+      "Test closure",
+      "Production incident triage",
+      "Design",
+      "Maintenance"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: An external policy changes after a system has been released. Why may requirements analysis be needed again?",
+    "question": "SDLC scenario: An insurer codes an approved premium formula. What belongs with implementation before handing the feature to wider testing?",
     "choices": [
-      "Requirements become permanently fixed after the first release",
-      "Maintenance is limited to changing colors",
-      "A previous passing suite defines all future policies",
-      "Maintenance can adapt released software to changed needs"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: A team shortens releases from months to days. Which lifecycle approach remains appropriate?",
-    "choices": [
-      "Repeat and overlap required activities while retaining quality checks",
-      "Remove requirements analysis from later releases",
-      "Treat deployment automation as a substitute for testing",
-      "Require a container before any review can occur"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "SDLC scenario: A recurring defect comes from misunderstood requirements. Which action directly supports prevention in the development process?",
-    "choices": [
-      "Run only the same final check and never review its inputs",
-      "Improve requirement reviews and standards for clarity",
-      "Rename every defect to make the count smaller",
-      "Delete all acceptance criteria"
+      "Closing every existing defect",
+      "Developer checks against the agreed formula",
+      "Replacing the formula with the observed result",
+      "Skipping checks until policyholders complain"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A cancellation rule is agreed, but the team cannot tell whether the feature meets it. What should it make explicit?",
+    "question": "SDLC scenario: A retail release passes checkout tests, but nobody has verified the deployed payment endpoint. What remains necessary?",
     "choices": [
-      "Only the color of the results heading",
-      "Only the preferred programming language",
-      "Conditions with inputs, action and expected outcome",
-      "A statement that any outcome is acceptable"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: A batch import accepts 100 records, but the agreed limit has not been specified. What must happen before declaring 101 records a defect?",
-    "choices": [
-      "Assume every batch above 100 must fail",
-      "Use the observed implementation as the only requirement",
-      "Delete the boundary scenario",
-      "Obtain the intended limit and behavior for exceeding it"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: A team changes a shared tax calculation. What helps determine which displayed and stored totals may need checking?",
-    "choices": [
-      "Trace dependencies and affected behavior",
-      "Assume only the changed source file can be affected",
-      "Choose checks by filename length alone",
-      "Ignore stored results because the page is visible"
+      "Verification in the intended release environment",
+      "Assuming local success proves production readiness",
+      "Deleting the local test evidence",
+      "Changing acceptance criteria to match any response"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A release window shrinks unexpectedly. Which basis supports choosing checks for a high-impact shared calculation?",
+    "question": "SDLC scenario: A logistics carrier introduces a new delivery zone after release. Which lifecycle activity includes adapting the existing service?",
     "choices": [
-      "Only whichever tests ran first last year",
-      "Likelihood, impact, dependencies and the time available",
-      "Only the number of screenshots produced",
-      "Only which test names are shortest"
+      "Only initial project identification",
+      "Only archiving test logs",
+      "Only formatting the release announcement",
+      "Maintenance with renewed analysis of the changed need"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A utility repeatedly implements conflicting meter-reading rules. What QA action most directly prevents recurrence?",
+    "choices": [
+      "Accept whichever interpretation is coded first",
+      "Wait for all customers to report errors",
+      "Review and clarify the rules before implementation",
+      "Increase screenshot resolution"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: A travel team receives requests for three booking features but can fund one. What planning evidence helps choose?",
+    "choices": [
+      "Which feature has the shortest test name",
+      "Business benefit, feasibility, resources and risk",
+      "Alphabetical order of feature names",
+      "Number of screenshots per feature"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A deployed feature meets its old criteria but users identify a new accessibility need. What should the team do with the information?",
+    "question": "SDLC scenario: A school portal design omits what happens when an assignment upload fails. What should the team clarify before building that behavior?",
     "choices": [
-      "Ignore it because the release passed its previous criteria",
-      "Change all criteria without discussion",
-      "Clarify the need and feed it into a reviewed improvement cycle",
-      "Claim old tests prove the new need already works"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: Before adding a teacher dashboard, the team asks which teaching problem it will solve. What is it establishing?",
-    "choices": [
-      "The final number of source files",
-      "A guarantee of zero defects",
-      "The best animation without user context",
-      "The user need that defines usefulness"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: A requested school feature needs hardware the budget cannot cover. Which planning discussion should precede a delivery promise?",
-    "choices": [
-      "Whether scope and resources make the change feasible",
-      "Only whether a logo can be displayed",
-      "Whether a test can conceal the cost",
-      "Only which branch name is shortest"
+      "The intended failure response and recovery expectations",
+      "The wording of the eventual defect title only",
+      "The current browser's default error page",
+      "The first behavior produced by the code"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: Two teachers disagree about when an assignment becomes late. What provides a defensible target for the code and tests?",
+    "question": "SDLC scenario: A manufacturer designs a batch identifier shared by scanning and dispatch. Which design concern is directly relevant?",
     "choices": [
-      "The easier cutoff chosen without telling anyone",
-      "An agreed cutoff validated with the stakeholders",
-      "Different cutoffs in every test",
-      "Whatever incorrect cutoff happens to be in the code"
+      "The number of project status emails",
+      "The personal preference of one tester",
+      "The order of test case authors in a document",
+      "Data and interface consistency across those components"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A government service is tested before code exists by reviewing eligibility examples. What lifecycle principle does this show?",
+    "choices": [
+      "Requirement review replaces all later testing",
+      "QA owns every implementation decision",
+      "Quality checks can begin with requirements",
+      "Testing is possible only after deployment"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: An education app learns after release that its instructions confuse first-time learners. What should happen next?",
+    "choices": [
+      "Stop gathering user feedback",
+      "Feed the finding into clarification, change and verification",
+      "Treat the released behavior as permanently correct",
+      "Change the test to ignore all instructions"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A result page requirement is agreed, but the service-to-page data exchange is unspecified. Which work fills that gap?",
+    "question": "SDLC scenario: A bank approves transfers only when the available balance covers the amount. What makes that rule useful to implementation and QA?",
     "choices": [
-      "Close the testing work immediately",
-      "Use an unrelated login pass as the design",
-      "Define the interfaces and data flow in the design",
-      "Publish without deciding the exchange"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: An approved scoring design is being implemented. Which additional activity belongs to development?",
-    "choices": [
-      "Discard the requirements once a commit exists",
-      "Accept the commit identifier as proof of correctness",
-      "Postpone every check until users report trouble",
-      "Developer checks of the implemented scoring behavior"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: Before implementation, QA notices an acceptance rule permits several conflicting interpretations. When should the team resolve it?",
-    "choices": [
-      "As soon as it is noticed, before building against a guess",
-      "Only after publication",
-      "Only after every check has been automated",
-      "Never, because all outputs should be accepted"
+      "Shared agreement on required behavior under stated conditions",
+      "A guarantee that no defects can occur",
+      "Permission to infer all unstated overdraft rules",
+      "A replacement for all interface design"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: Local tests pass for a quiz update. What establishes that learners can use that version in the intended environment?",
+    "question": "SDLC scenario: A media subscription permits cancellation, but its refund cutoff is unspecified. What should precede coding a refund test?",
     "choices": [
-      "Only renaming the local archive",
-      "A controlled release followed by verification there",
-      "Only capturing the local browser",
-      "Assuming local and hosted environments are equivalent"
+      "Choosing midnight because it is convenient",
+      "Copying the current calculation as the requirement",
+      "Removing refund tests from the plan permanently",
+      "Clarification of the cutoff with the responsible stakeholders"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A telecom team changes a shared customer-status service. Why should it trace dependencies before selecting checks?",
+    "choices": [
+      "Only the changed source file can be affected",
+      "A passing unit test identifies every affected journey",
+      "Several existing journeys may depend on the changed status",
+      "Every feature has identical failure risk"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: Before funding an appointment portal, a clinic asks which access problem patients need solved. What is this establishing?",
+    "choices": [
+      "The exact database schema",
+      "The user need and purpose of the product",
+      "A production deployment result",
+      "The final count of defects"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A school changes its attendance policy after release. What lifecycle work includes adapting the existing feature?",
+    "question": "SDLC scenario: A municipal permit feature depends on unavailable integration staff. Which work should address this before promising a release?",
     "choices": [
-      "A reason to stop requirement validation",
-      "Proof no implementation change can be needed",
-      "Maintenance",
-      "A replacement for testing"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "SDLC scenario: Delivery is automated and small updates are frequent. How should analysis, design, testing and feedback be handled?",
-    "choices": [
-      "Drop them after the first successful pipeline run",
-      "Replace them with container startup only",
-      "Perform them only before the first release",
-      "Retain them in shorter, potentially overlapping iterations"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "SDLC scenario: Students find a released result explanation confusing. What is a constructive lifecycle response?",
-    "choices": [
-      "Use their feedback to plan a reviewed improvement",
-      "Ignore it because deployment finished",
-      "Automatically change the score formula",
-      "Conclude every prior test was invalid"
+      "Planning resources and feasibility",
+      "Renaming passed test cases",
+      "Closing the release without review",
+      "Changing the integration response at random"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A team identifies testable rules and risks before estimating test effort. Which testing activity is illustrated?",
+    "question": "SDLC scenario: Two warehouse managers interpret a damaged-item rule differently. What should guide the eventual code and tests?",
     "choices": [
-      "Software deployment to production",
-      "Requirement analysis within the testing lifecycle",
-      "Application implementation only",
-      "Discarding testing scope"
+      "Whichever interpretation is faster to code",
+      "The behavior of the oldest build",
+      "A tester's undocumented assumption",
+      "A clarified and validated business requirement"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: A transport ticketing requirement is agreed, but component responsibilities are not. Which activity defines the solution structure?",
+    "choices": [
+      "Incident closure",
+      "User acceptance sign-off alone",
+      "Design",
+      "Test-result reporting"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: A developer implements agreed discount rules. What should also occur in that lifecycle activity?",
+    "choices": [
+      "Changing requirements after each failure without review",
+      "Developer checks of the implemented behavior",
+      "Declaring the feature accepted without evidence",
+      "Skipping checks because design was approved"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: A colleague must repeat a test after the original author leaves. Which missing detail prevents comparing the outcome defensibly?",
+    "question": "SDLC scenario: QA discovers conflicting wording in a policy before coding begins. When should the ambiguity be resolved?",
     "choices": [
-      "The authors favorite editor color",
-      "The authors preferred keyboard",
-      "The expected result for the specified inputs and actions",
-      "The date the test filename was invented"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: A test checks a saved profile before it has performed the save action. What is wrong with its intended prepare-act-assert sequence?",
-    "choices": [
-      "Assertions must always precede setup",
-      "Cleanup is a substitute for saving",
-      "Saving requires no initial state",
-      "It attempts to assert the outcome before performing the relevant action"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A screenshot proves an unexpected value occurred but gives no reproduction steps. What should the defect report add?",
-    "choices": [
-      "The environment, steps, expected result and actual result",
-      "Only another screenshot from a different run",
-      "Only the framework logo",
-      "Only the defect reporters name"
+      "As soon as it is identified",
+      "Only after the first customer complaint",
+      "After all regression tests are automated",
+      "After production deployment is complete"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A fixture defines eight equally weighted questions and six correct answers. Which score follows the agreed percentage rule?",
+    "question": "SDLC scenario: A booking update passes on a developer laptop. What establishes availability in its intended environment?",
     "choices": [
-      "25%",
-      "75%",
-      "60%",
-      "80%"
+      "A local pass alone",
+      "A copied screenshot from another release",
+      "A new version label without publishing",
+      "Controlled deployment followed by environment verification"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "SDLC scenario: An insurer changes an eligibility policy after launch. What lifecycle work addresses the existing product?",
+    "choices": [
+      "Only deleting obsolete test results",
+      "Only changing the app icon",
+      "Maintenance and any needed renewed requirements work",
+      "Only the first project kickoff"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "SDLC scenario: An online retailer releases small changes every day. How should lifecycle activities be treated?",
+    "choices": [
+      "Performed once and never revisited",
+      "Retained and revisited in short, overlapping iterations",
+      "Removed because deployment is frequent",
+      "Replaced entirely by container setup"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: A username test includes whitespace-only input, but the specification is silent about it. What should precede a pass/fail assertion?",
+    "question": "SDLC scenario: Users report a confusing claim-status explanation in production. What is a useful lifecycle response?",
     "choices": [
-      "Assume every application must accept it",
-      "Treat current behavior as the agreed rule",
-      "Clarify how whitespace-only input should be handled",
-      "Remove all validation testing"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: A criterion says a successful cancellation changes the booking status to Cancelled. Which check directly evaluates it?",
-    "choices": [
-      "Check only that the browser title exists",
-      "Pass when the click is attempted",
-      "Assert only that some page is visible",
-      "Cancel a valid booking and assert its status is Cancelled"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A corrected invoice defect passes its original failing case. Which separate activity checks whether other invoice totals were harmed?",
-    "choices": [
-      "Regression testing of affected existing behavior",
-      "Only repeating that identical confirmation case",
-      "Renaming the fixed issue",
-      "Checking that a source file exists"
+      "Clarify the need, make a reviewed change and verify it",
+      "Keep the wording because tests previously passed",
+      "Disable feedback collection",
+      "Change expected results to any visible text"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A shared session timeout changes. What should guide selection of existing journeys for regression checks?",
+    "question": "STLC scenario: A bank rule requires two approvals for high-value payments. Before writing tests, QA checks thresholds, roles and exceptions. Which activity is this?",
     "choices": [
-      "Only the order of files in the folder",
-      "Which behaviors and dependencies could be affected",
-      "Only the test author assignments",
-      "An assumption that no journey outside the edited file can change"
+      "Requirements analysis for testing",
+      "Production deployment",
+      "Defect closure",
+      "Code compilation"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: A hospital test says submit a referral but omits expected routing. Which missing element prevents a defensible verdict?",
+    "choices": [
+      "The tester's favorite browser theme",
+      "A shorter test identifier",
+      "The release announcement",
+      "The expected result from the requirement"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A telecom test needs a customer without an active plan, but its shared fixture already has one. What should QA do first?",
+    "choices": [
+      "Change the expected result to the fixture",
+      "Delete every customer's plan",
+      "Prepare the required starting state",
+      "Run the test and ignore the existing plan"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A retail defect occurs only with a promotion and a saved address. What evidence helps another tester reproduce it?",
+    "choices": [
+      "Only the release date",
+      "The environment, input conditions, steps and expected versus actual totals",
+      "Only a statement that checkout is broken",
+      "Only the developer's name"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: Selected tests pass in one browser using one fixture. Which release statement accurately represents the evidence?",
+    "question": "STLC scenario: An agreed school fixture has ten equal-weight questions and seven correct responses. Which percentage should QA expect?",
     "choices": [
-      "All browsers and fixtures are proven correct",
-      "No defects can exist in the release",
-      "Those selected conditions passed; other conditions remain unproven",
-      "Exploratory checks can no longer add information"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: An invoice total is present but differs from the agreed calculated amount. Which assertion detects this problem?",
-    "choices": [
-      "Check only that the total element is visible",
-      "Check only that the page opened",
-      "Check only that the test process started",
-      "Compare the displayed total with the exact expected amount"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A fresh browser still sees records created by a previous run. What does this demonstrate?",
-    "choices": [
-      "Browser isolation does not itself reset shared backend data",
-      "A new browser must delete the database",
-      "Cleanup can always be replaced with a page title check",
-      "Tests should depend on the previous runs data"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: A report appears after a variable-duration calculation. What synchronization best expresses readiness?",
-    "choices": [
-      "Always sleep a fixed five seconds",
-      "Wait for the required report condition",
-      "Wait for the filename to change",
-      "Skip checking that the report appeared"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "STLC scenario: A failing test has a trace from yesterday and a log from today. Which evidence should be tied to the reported failure?",
-    "choices": [
-      "Any trace with a similar filename",
-      "Only a screenshot from an unrelated pass",
-      "Inputs and evidence from the run that actually failed",
-      "Evidence is unnecessary if a test has a name"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: A test creates a temporary booking and verifies it. What cleanup boundary is appropriate if later tests require it absent?",
-    "choices": [
-      "Delete every users unrelated bookings",
-      "Assume closing the browser deletes the booking",
-      "Silently make subsequent expectations depend on leftovers",
-      "Remove the booking created by that test when needed"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "STLC scenario: A tester writes instructions for a colleague to repeat a quiz check. Which set makes the case understandable and repeatable?",
-    "choices": [
-      "Setup, input data, actions and expected results",
-      "Only the number of clicks",
-      "Only a statement that the quiz works",
-      "Only the testers name"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: For an agreed five-question equal-weight fixture, exactly three answers are correct. What should the percentage assertion require?",
-    "choices": [
-      "20%",
-      "60%",
-      "80%",
+      "70%",
+      "7%",
+      "30%",
       "100%"
     ],
-    "answer": 1
+    "answer": 0
   },
   {
-    "question": "STLC scenario: A test should start with no answers chosen. What belongs before the test selects its answers?",
+    "question": "STLC scenario: An insurer states that claims over a threshold require review, but does not define whether the threshold itself is included. What should QA do?",
     "choices": [
-      "Assert the final score first",
-      "Reuse an arbitrary completed quiz",
-      "Prepare the required unanswered quiz state",
-      "Change the key to fit leftover answers"
-    ],
-    "answer": 2
-  },
-  {
-    "question": "STLC scenario: After validating a test-created record, what helps prevent interference with later cases?",
-    "choices": [
-      "Delete unrelated application data",
-      "Accept any records in all later cases",
-      "Assume another browser clears the backend",
-      "Clean up that tests temporary data when needed"
+      "Assume every insurer uses the same boundary",
+      "Use the first implemented comparison as proof",
+      "Drop all boundary cases",
+      "Clarify the boundary before assigning pass or fail"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: An incorrect quiz score needs investigation by another teammate. Which report is most useful?",
+    "question": "STLC scenario: A delivery requirement says a signed parcel must become Delivered. Which assertion directly tests this outcome?",
     "choices": [
-      "Environment, reproduction steps, expected and actual results, and matching run evidence",
-      "Only the words score broken",
-      "Only the framework name",
-      "Only a picture from another run"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "STLC scenario: An agreed fixture should show 60%, but the application shows 80%. What should the assertion do?",
-    "choices": [
-      "Accept80% merely because it is visible",
-      "Report the difference from the agreed expected value",
-      "Replace the expected value without a reviewed rule change",
-      "Ignore the score if the click succeeded"
-    ],
-    "answer": 1
-  },
-  {
-    "question": "STLC scenario: A score-panel redesign is complete. Why run the previously working answer-submission journey?",
-    "choices": [
-      "Avoid all checks of existing behavior",
-      "Prove no future release needs testing",
-      "Check whether the change adversely affected existing behavior",
-      "Test only the new decoration"
+      "The tracking page has a logo",
+      "A network request happened",
+      "The parcel's resulting status equals Delivered",
+      "A status label is merely visible"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: QA reruns the case that originally reproduced a fixed scoring defect. What is the purpose of that specific rerun?",
+    "question": "STLC scenario: A fixed utility invoice defect passes its original reproduction case. What should check neighboring tariff calculations?",
     "choices": [
-      "Prove all other features have no regressions",
-      "Verify deployment in every environment",
-      "Prove all untested inputs work",
-      "Confirm that the defect was fixed for that case"
+      "Only rereading the release note",
+      "Regression testing",
+      "Only the same confirmation test again",
+      "Only changing the defect label"
     ],
-    "answer": 3
+    "answer": 1
   },
   {
-    "question": "STLC scenario: A scoring change leaves time for only a subset of checks. What should determine the selection?",
+    "question": "STLC scenario: A shared hotel availability component changes. What should guide selection of affected booking tests?",
     "choices": [
-      "Failure likelihood, impact, affected dependencies and available time",
-      "Alphabetical test names alone",
-      "Only the newest test file",
-      "Ignoring high-impact paths"
+      "Dependency and change-impact analysis",
+      "Only test names starting with A",
+      "Only the newest screenshot",
+      "Equal testing of every unrelated feature"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: An authentication component used by several flows changes. How should QA identify regression targets?",
+    "question": "STLC scenario: A municipal permit release has limited test time. Which approach best allocates the remaining checks?",
     "choices": [
-      "Inspect only whitespace in the modified line",
-      "Trace the existing behaviors and dependencies the change could affect",
-      "Assume every other flow is unchanged",
-      "Choose only tests with the fewest steps"
+      "Run only the shortest tests regardless of risk",
+      "Choose cases alphabetically",
+      "Declare all unexecuted cases passed",
+      "Prioritize likely, high-impact failures and affected dependencies"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A test displays a policy premium but never compares its amount with the agreed rule. What does it fail to establish?",
+    "choices": [
+      "Whether a field was visible",
+      "Whether the browser launched",
+      "Whether the displayed premium is correct",
+      "Whether any page loaded"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A fresh browser sees yesterday's temporary inventory records. What does this show about test isolation?",
+    "choices": [
+      "Cleanup can never be performed",
+      "Browser isolation does not reset shared application data",
+      "Every new browser deletes all backend data",
+      "The old records prove today's test passed"
     ],
     "answer": 1
+  },
+  {
+    "question": "STLC scenario: A media report takes a variable time to generate. What synchronization best supports checking it?",
+    "choices": [
+      "Wait for the required report-ready condition",
+      "Always wait exactly one second",
+      "Remove synchronization entirely",
+      "Treat any timeout as a pass"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: A new defect report attaches a screenshot from another build. What should QA provide instead?",
+    "choices": [
+      "Only the oldest screenshot available",
+      "A generic successful screenshot",
+      "A guessed result with no run details",
+      "Evidence tied to the failing run and its inputs"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A warehouse test creates a temporary shipment. After checking it, what cleanup is appropriate?",
+    "choices": [
+      "Leave all temporary data without considering later tests",
+      "Change the shipment ID to a real customer's ID",
+      "Remove only the test-owned data that later tests require absent",
+      "Delete all shipments in the environment"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A colleague must repeat a customer-registration check. Which test case content is essential?",
+    "choices": [
+      "Only the current implementation value",
+      "Setup, input, action and expected result",
+      "Only the final screenshot name",
+      "Only the author and date"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: An agreed five-question fixture gives equal weight and has three correct answers. What percentage is the expected result?",
+    "choices": [
+      "60%",
+      "3%",
+      "40%",
+      "80%"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: A quiz check requires no previous selections before choosing answers. Which step belongs first?",
+    "choices": [
+      "Assert the final score",
+      "Remove test evidence",
+      "Close the defect",
+      "Prepare the clean starting state"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: A test creates a disposable request and validates it. What helps keep later tests independent?",
+    "choices": [
+      "Assuming browser closure removes the record",
+      "Reusing the request without checking its state",
+      "Appropriate cleanup of that test-created request",
+      "Deleting unrelated production requests"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A scoring defect must be investigated by another team member. What report best supports that work?",
+    "choices": [
+      "Only the current date",
+      "Reproduction steps, environment, expected and actual results, and evidence",
+      "Only the phrase wrong score",
+      "Only the number of developers"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: A reviewed fixture requires 60%, but the result is 80%. What should the test do?",
+    "choices": [
+      "Report the mismatch against the agreed expectation",
+      "Accept any visible percentage",
+      "Change the expected value to 80% automatically",
+      "Ignore the fixture after a failure"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "STLC scenario: A retail total panel is redesigned. Why rerun the existing order-submission flow?",
+    "choices": [
+      "To prove every possible order is defect-free",
+      "To replace review of the new design",
+      "To avoid checking the displayed total",
+      "To detect adverse effects on previously working behavior"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "STLC scenario: QA repeats the exact case that failed before a discount fix. What does this specific check establish?",
+    "choices": [
+      "Whether no future defects can occur",
+      "Whether release approval is automatic",
+      "Whether the original defect is fixed",
+      "Whether every neighboring feature is unaffected"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "STLC scenario: A billing change leaves time for a subset of checks. What should drive prioritization?",
+    "choices": [
+      "The number of screenshots per case",
+      "Failure likelihood, business impact and affected dependencies",
+      "Test file size alone",
+      "The order in which cases were written"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "STLC scenario: A login service shared by claims and payments changes. How should QA identify regression targets?",
+    "choices": [
+      "Trace which journeys depend on that service",
+      "Assume only the login page can be affected",
+      "Retest only an unrelated static page",
+      "Select all tests with the same author"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: A configured incident form requires Description, but accepts an empty value. Which test most directly exposes the defect?",
+    "choices": [
+      "Submit without Description and verify rejection with a validation message",
+      "Check only the logo",
+      "Submit a complete valid record only",
+      "Count the available categories"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: A company requires managerial approval before laptop fulfillment. What should an end-to-end request test verify?",
+    "choices": [
+      "Only that the request has a number",
+      "Only that a catalog image displays",
+      "That every request bypasses approval",
+      "The required approval occurs before fulfillment continues"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "ServiceNow scenario: An instance pauses its response SLA while awaiting a caller and resumes it when work restarts. What should QA check?",
+    "choices": [
+      "That every pause deletes the incident",
+      "That response and resolution timers must be identical",
+      "Configured pause and resume behavior and timer accounting",
+      "That time always runs regardless of state"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "ServiceNow scenario: A Normal Change must be approved before implementation in this organization's workflow. Which negative scenario is most useful?",
+    "choices": [
+      "Close an unrelated incident",
+      "Attempt implementation without the required approval and verify it is blocked",
+      "Create an already approved change only",
+      "Inspect the page font"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "ServiceNow scenario: A support group should receive incidents only when configured routing conditions match. What should QA validate?",
+    "choices": [
+      "Matching and nonmatching cases against the routing rule",
+      "That all incidents go to that group",
+      "That group names are alphabetical",
+      "That routing never depends on record fields"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: An integration retries after a network failure. What should QA check to protect incident data?",
+    "choices": [
+      "Every retry creates another incident",
+      "Failures are hidden from logs",
+      "Field mappings are ignored during retries",
+      "Retry behavior does not create unintended duplicate records"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "ServiceNow scenario: A record producer should create an Incident from a user-facing issue form. What is a core validation?",
+    "choices": [
+      "Only the page title is correct",
+      "Every table receives the same new record",
+      "Submitted values map correctly to the target incident record",
+      "The form always creates a laptop request instead"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "ServiceNow scenario: A customer must see only cases allowed by the company's access requirements. Which test is necessary?",
+    "choices": [
+      "Use the same administrator for every permission check",
+      "Verify authorized access and denied access for an unauthorized customer",
+      "Verify only an administrator can open every case",
+      "Check only whether the portal loads"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "ServiceNow scenario: A CMDB discovery update should refresh an existing server CI. What defect should QA look for?",
+    "choices": [
+      "An unintended duplicate CI instead of updating the matching one",
+      "A changed browser tab title",
+      "A shorter test name",
+      "A new knowledge article"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: An HR onboarding workflow requires tasks in several teams. What makes its validation end to end?",
+    "choices": [
+      "Check the first screen only",
+      "Check only the number of menu items",
+      "Skip task outcomes after submission",
+      "Check creation, routing, required approvals, tasks and completion across the flow"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "ServiceNow scenario: A configured rule assigns Priority 1 when both impact and urgency are High. Which negative case tests its condition?",
+    "choices": [
+      "Assume all incidents must be Priority 1",
+      "Skip checking stored field values",
+      "Use a combination that does not meet both conditions and verify the rule does not wrongly assign Priority 1",
+      "Repeat only High and High"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "ServiceNow scenario: A ServiceNow upgrade completes successfully. What should QA do after initial smoke checks?",
+    "choices": [
+      "Delete all previous test cases",
+      "Regression-test critical workflows, integrations, roles and data",
+      "Assume installation success proves all business flows work",
+      "Test only the new version label"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "ServiceNow scenario: A change workflow sends an approval notification to the wrong group. What should a useful defect include?",
+    "choices": [
+      "Reproduction steps, expected and actual recipients, environment and evidence",
+      "Only the word notification",
+      "Only the browser color scheme",
+      "Only the number of requests in the catalog"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: A request's required variable is saved on the form but missing from its fulfillment task. What should QA investigate?",
+    "choices": [
+      "Only whether the form has a Submit button",
+      "Only whether the portal has a header",
+      "Whether every request uses the same task name",
+      "Data propagation and mapping across workflow stages"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "ServiceNow scenario: A support contract defines business-hours SLA timing. What should QA include in its test data?",
+    "choices": [
+      "An assumption that all SLAs run continuously",
+      "Only records without any SLA attached",
+      "Events inside and outside the configured business schedule",
+      "Only one event at an arbitrary hour"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "ServiceNow scenario: An employee's email stops working and support needs to restore it. Which process fits the immediate need?",
+    "choices": [
+      "Planned Change approval",
+      "Incident Management",
+      "Problem Management for root cause only",
+      "Service Catalog fulfillment of a new laptop"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "ServiceNow scenario: A team plans a controlled firewall modification requiring approval. Which process should manage the planned modification?",
+    "choices": [
+      "Change Management",
+      "Incident restoration",
+      "Knowledge article search",
+      "Problem investigation alone"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: Several service outages share a suspected server cause. Which process focuses on investigating the recurring cause?",
+    "choices": [
+      "Service Catalog ordering",
+      "Incident restoration alone",
+      "Employee onboarding",
+      "Problem Management"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "ServiceNow scenario: An office worker cannot print and needs normal service restored. What record best fits that immediate support issue?",
+    "choices": [
+      "Change for a planned modification",
+      "Catalog request for new equipment",
+      "Incident",
+      "Problem for recurring-cause investigation"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "ServiceNow scenario: A scheduled server upgrade must follow the organization's change approvals. Which process is relevant?",
+    "choices": [
+      "Knowledge article drafting",
+      "Change Management",
+      "Incident restoration",
+      "Password request fulfillment"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "ServiceNow scenario: The same printer fails every week. Which process targets the underlying recurring cause?",
+    "choices": [
+      "Problem Management",
+      "Catalog item fulfillment",
+      "Single-incident restoration only",
+      "Approval of an unrelated network change"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: A configured response SLA targets an initial response within 30 business minutes. What should QA compare?",
+    "choices": [
+      "Only the incident category",
+      "Only the assignment group name",
+      "Only the number of comments",
+      "Actual response timing against that configured target and schedule"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "ServiceNow scenario: A configured routing rule sends payroll incidents to Payroll Support. What is the assignment group's purpose here?",
+    "choices": [
+      "Replace every approval requirement",
+      "Determine every SLA without configuration",
+      "Route the work to the responsible support team",
+      "Guarantee all incidents are resolved instantly"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "ServiceNow scenario: An employee needs to request an approved standard laptop. Which feature provides the selectable request offering?",
+    "choices": [
+      "CMDB relationship map alone",
+      "Service Catalog",
+      "Problem root-cause record",
+      "Incident restoration record"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "ServiceNow scenario: An incident recurs after earlier service restorations. Which process investigates why the failures keep happening?",
+    "choices": [
+      "Problem Management",
+      "New-asset catalog ordering",
+      "Routine incident restoration alone",
+      "HR onboarding"
+    ],
+    "answer": 0
   }
 ]
