@@ -55,10 +55,15 @@
     "class-notes.css",
     "class-notes.js",
     "class-notes-policy.js",
-    "class-notes-data.json"
+    "class-notes-data.json",
+    "quiz-guide.css",
+    "quiz-guide.js"
   ],
   "directories": {
-    "assets/windows-kit": [".png", ".jpg"],
+    "assets/windows-kit": [
+      ".png",
+      ".jpg"
+    ],
     "assets/curriculum": [
       ".png"
     ],
