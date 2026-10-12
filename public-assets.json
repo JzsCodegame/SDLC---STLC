@@ -57,7 +57,9 @@
     "class-notes-policy.js",
     "class-notes-data.json",
     "quiz-guide.css",
-    "quiz-guide.js"
+    "quiz-guide.js",
+    "quiz-guide.html",
+    "quiz-guide-page.css"
   ],
   "directories": {
     "assets/windows-kit": [

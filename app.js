@@ -45,10 +45,10 @@ let timer = null;
 let timeRemaining = 300;
 let studentName = '';
 let selectedQuizQuestions = [];
-let selectedQuizTopic = 'Java';
+let selectedQuizTopic = 'SDLC';
 let availableTopics = new Map();
 let currentFlashcardQuestions = [];
-let currentFlashcardTopic = 'Java';
+let currentFlashcardTopic = 'SDLC';
 let currentFlashcardIndex = 0;
 const totalQuestions = 25;
 const DEFAULT_QUIZ_SECONDS = 300;
@@ -307,6 +307,7 @@ function populateQuizTopicDropdown(topicMap) {
     quizTopicSelect.appendChild(option);
   });
 
+  if (topicMap.has('SDLC')) quizTopicSelect.value = 'SDLC';
   syncJavaPracticeLab();
 }
 
