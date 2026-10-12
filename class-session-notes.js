@@ -1,5 +1,5 @@
 // Only reviewed student notes are public. Raw recordings/transcripts stay private.
-const classId=document.body.classList.contains('class-two-page')?'2':'1';
+const classId=document.body.classList.contains('class-three-page')?'3':document.body.classList.contains('class-two-page')?'2':'1';
 const section=document.createElement('section');section.className='class-session-notes';section.id='class-session-notes';
 section.innerHTML='<h2>Class recordings &amp; notes</h2><p>Choose a session to revisit what we covered.</p><label>Session <select aria-label="Class notes session"></select></label><div class="session-notes-content" aria-live="polite"></div>';
 document.querySelector('.classroom-shell>main').append(section);
