@@ -59,7 +59,14 @@
     "quiz-guide.css",
     "quiz-guide.js",
     "quiz-guide.html",
-    "quiz-guide-page.css"
+    "quiz-guide-page.css",
+    "class-three.html",
+    "class-three.js",
+    "class-three-examples.js",
+    "ui-components.html",
+    "ui-components.js",
+    "ui-components.css",
+    "component-status.json"
   ],
   "directories": {
     "assets/windows-kit": [
