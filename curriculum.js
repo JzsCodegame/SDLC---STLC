@@ -22,7 +22,7 @@ const lessonLink = module => {
   link.href = `learn.html?topic=${encodeURIComponent(topic)}#${concept}`;
   return link;
 };
-let sections = [], moduleSections = [], details = [];
+let sections = [], moduleSections = [], details = [], selectedId = null;
 let pdfPage = 1;
 const pdfPages = 54;
 for (let number = 1; number <= pdfPages; number++) {
@@ -59,7 +59,9 @@ $('pdf-mode').addEventListener('click', () => readingMode(true));
 
 function updatePosition(section) {
   document.querySelectorAll('.module-card').forEach(card => {
-    card.dataset.current = String(card.dataset.section === section.id);
+    const current = card.dataset.section === section.id;
+    card.dataset.current = String(current);
+    if (current) card.setAttribute('aria-current', 'true'); else card.removeAttribute('aria-current');
   });
   if (section.module) {
     const previous = moduleSections[section.module - 2];
@@ -72,32 +74,32 @@ function updatePosition(section) {
   }
 }
 
-function selectSection(id, {scroll = true, record = true} = {}) {
+function selectSection(id, {scroll = true, record = true, preserveSearch = false} = {}) {
   const section = sections.find(item => item.id === id);
   if (!section) return;
+  selectedId = id;
   readingMode(false);
-  $('curriculum-search').value = '';
+  if (!preserveSearch) $('curriculum-search').value = '';
   filterSections();
-  details.forEach(node => { node.open = node.id === id; });
+  details.forEach(node => { node.hidden = node.id !== id; });
   updatePosition(section);
-  if (record && location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+  if (record && location.hash !== '#' + id) history.pushState(null, '', '#' + id);
   if (scroll) {
-    $(id).scrollIntoView({block: 'start'});
-    $(id).querySelector('summary').focus({preventScroll: true});
+    $('curriculum-content').scrollIntoView({block: 'start', behavior: 'instant'});
+    $(id).querySelector('h2').focus({preventScroll: true});
   }
 }
 
 function filterSections() {
   const term = $('curriculum-search').value.trim().toLocaleLowerCase();
   let count = 0;
-  details.forEach((node, i) => {
+  document.querySelectorAll('.module-card').forEach((node, i) => {
     const section = sections[i];
     const text = [section.title, ...section.blocks.map(b => b.text || b.rows?.flat().join(' ') || '')].join(' ');
     node.hidden = !text.toLocaleLowerCase().includes(term);
     if (!node.hidden) count++;
   });
-  document.querySelector('.course-roadmap').hidden = !!term;
-  $('section-count').textContent = term ? `${count} of ${sections.length} sections match` : `${sections.length} sections`;
+  $('section-count').textContent = term ? count + ' of ' + sections.length + ' sections match' : moduleSections.length + ' modules · ' + sections.length + ' sections';
   $('no-results').hidden = count !== 0;
 }
 
@@ -149,26 +151,24 @@ try {
   sections = data.sections;
   moduleSections = sections.filter(s => s.module);
   $('curriculum-sections').replaceChildren();
-  for (const section of moduleSections) {
-    const card = el('article', undefined, 'module-card');
+  for (const section of sections) {
+    const card = el('button', undefined, 'module-card');
+    card.type = 'button';
     card.dataset.section = section.id;
-    card.append(el('span', `MODULE ${String(section.module).padStart(2, '0')}`, 'module-number'), el('h3', section.moduleTitle));
-    const button = el('button', 'Read module scope →');
-    button.addEventListener('click', () => selectSection(section.id));
-    card.append(button, lessonLink(section.module) || el('span', 'Curriculum scope', 'scope-label'));
+    card.setAttribute('aria-controls', section.id);
+    card.append(el('span', section.module ? 'MODULE ' + String(section.module).padStart(2, '0') : 'COURSE GUIDE', 'module-number'), el('span', section.moduleTitle || section.title, 'module-title'));
+    card.addEventListener('click', () => selectSection(section.id, {preserveSearch: true}));
     $('course-modules').append(card);
   }
   sections.forEach((section, i) => {
-    const node = el('details', undefined, 'curriculum-section');
+    const node = el('article', undefined, 'curriculum-section');
     node.id = section.id;
-    node.name = 'curriculum-sections';
-    const summary = el('summary', section.title);
-    summary.addEventListener('click', event => {
-      event.preventDefault();
-      if (node.open) node.open = false;
-      else selectSection(section.id, {scroll: false});
-    });
-    node.append(summary);
+    node.hidden = true;
+    node.setAttribute('aria-labelledby', section.id + '-title');
+    const heading = el('h2', section.title);
+    heading.id = section.id + '-title';
+    heading.tabIndex = -1;
+    node.append(heading);
     const body = el('div', undefined, 'section-body');
     renderBlocks(section.blocks, body);
     const connection = lessonLink(section.module);
@@ -190,10 +190,6 @@ try {
     details.push(node);
     $('curriculum-sections').append(node);
   });
-  const empty = el('p', 'No matching sections. Try a broader term or clear the search.');
-  empty.id = 'no-results';
-  empty.hidden = true;
-  $('curriculum-sections').append(empty);
   $('curriculum-search').addEventListener('input', filterSections);
   filterSections();
   const followHash = () => {
