@@ -22,7 +22,7 @@ const lessonLink = module => {
   link.href = `learn.html?topic=${encodeURIComponent(topic)}#${concept}`;
   return link;
 };
-let sections = [], moduleSections = [], details = [], selectedId = null;
+let sections = [], moduleSections = [], details = [];
 let pdfPage = 1;
 const pdfPages = 54;
 for (let number = 1; number <= pdfPages; number++) {
@@ -77,7 +77,6 @@ function updatePosition(section) {
 function selectSection(id, {scroll = true, record = true, preserveSearch = false} = {}) {
   const section = sections.find(item => item.id === id);
   if (!section) return;
-  selectedId = id;
   readingMode(false);
   if (!preserveSearch) $('curriculum-search').value = '';
   filterSections();
@@ -193,8 +192,8 @@ try {
   $('curriculum-search').addEventListener('input', filterSections);
   filterSections();
   const followHash = () => {
-    if (location.hash) selectSection(location.hash.slice(1), {record: false});
-    else { details.forEach(node => { node.open = false; }); }
+    const id = location.hash.slice(1);
+    selectSection(sections.some(s => s.id === id) ? id : sections[0].id, {record: false, scroll: false});
   };
   window.addEventListener('hashchange', followHash);
   followHash();
