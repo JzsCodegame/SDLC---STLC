@@ -3,6 +3,7 @@
 
 let firestoreReady = false;
 let firestoreModule = null;
+const PRIVATE_ATTEMPT_CAPTURE_VERIFIED = true;
 
 // Configuration constants
 const RECENT_SCORES_HOURS = 24; // Time window for recent scores display
@@ -30,6 +31,8 @@ async function initializeFirebase() {
       collection: firestoreImports.collection,
       getDocs: firestoreImports.getDocs,
       addDoc: firestoreImports.addDoc,
+      doc: firestoreImports.doc,
+      setDoc: firestoreImports.setDoc,
       serverTimestamp: firestoreImports.serverTimestamp,
       query: firestoreImports.query,
       where: firestoreImports.where,
@@ -47,6 +50,26 @@ async function initializeFirebase() {
 
 // Initialize on module load
 const initPromise = initializeFirebase();
+
+export async function saveQuizAttemptToFirestore(attempt) {
+  if (!PRIVATE_ATTEMPT_CAPTURE_VERIFIED) {
+    const error = Error('Private answer capture is awaiting Firebase setup');
+    error.code = 'capture-not-enabled';
+    throw error;
+  }
+  await initPromise;
+  if (!firestoreReady || !firestoreModule) throw Error('Firebase is unavailable');
+  if (!attempt || !/^[a-zA-Z0-9-]{1,80}$/.test(attempt.attemptId) ||
+      attempt.schemaVersion !== 1 || !Array.isArray(attempt.answers)) {
+    throw Error('Invalid quiz attempt');
+  }
+  await firestoreModule.setDoc(
+    firestoreModule.doc(firestoreModule.db, 'quizAttempts', attempt.attemptId),
+    {...attempt, recordedAt: firestoreModule.serverTimestamp()}
+  );
+}
+
+
 
 // Load questions from Firestore
 export async function loadQuestionsFromFirestore() {
@@ -73,7 +96,7 @@ export async function loadQuestionsFromFirestore() {
 }
 
 // Save score to Firestore
-export async function saveScoreToFirestore(studentName, score, total, percent, quizTopic = '') {
+export async function saveScoreToFirestore(studentName, score, total, percent, quizTopic = '', attemptId = '') {
   await initPromise;
   
   // Validate inputs
@@ -105,6 +128,7 @@ export async function saveScoreToFirestore(studentName, score, total, percent, q
       total,
       percent,
       quizTopic: typeof quizTopic === 'string' ? quizTopic.trim() : '',
+      ...(attemptId ? {attemptId} : {}),
       timestamp: firestoreModule.serverTimestamp()
     });
     console.log('Score saved to Firestore successfully');
@@ -156,3 +180,4 @@ export async function loadRecentScores() {
     return [];
   }
 }
+

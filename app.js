@@ -1,4 +1,5 @@
-import { loadQuestionsFromFirestore, saveScoreToFirestore, loadRecentScores } from './firebase-config.js';
+import { loadQuestionsFromFirestore, saveScoreToFirestore, loadRecentScores, saveQuizAttemptToFirestore } from './firebase-config.js?v=private-attempts-20261017';
+import {createQuizAttemptSession} from './quiz-attempt-session.js';
 
 const startScreen = document.getElementById('start-screen');
 const quizScreen = document.getElementById('quiz-screen');
@@ -41,6 +42,8 @@ let questions = [];
 let currentIndex = 0;
 let score = 0;
 let activeQuizTopic = '';
+let quizAttemptSession = null;
+let quizFinished = false;
 let timer = null;
 let timeRemaining = 300;
 let studentName = '';
@@ -920,12 +923,14 @@ startBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', (event) => {
   event.preventDefault();
+  if (quizFinished) return;
   const selected = choicesForm.querySelector('input[name="choice"]:checked');
   if (!selected) {
     alert('Please select an answer.');
     return;
   }
 
+  quizAttemptSession.select(currentIndex, Number(selected.value));
   const isCorrect = Number(selected.value) === selectedQuizQuestions[currentIndex].answer;
   if (isCorrect) score += 1;
 
@@ -946,6 +951,8 @@ restartBtn.addEventListener('click', () => {
 
 function startQuiz() {
   resetState();
+  quizAttemptSession = createQuizAttemptSession({studentName, quizTopic: activeQuizTopic,
+    questions: selectedQuizQuestions.slice(0, totalQuestions)});
   studentDisplay.textContent = `Student: ${studentName}`;
 
   document.body.classList.add('quiz-active');
@@ -1200,7 +1207,7 @@ function startTimer() {
     updateTimer();
 
     if (timeRemaining <= 0) {
-      finishQuiz();
+      finishQuiz('timed-out');
     }
   }, 1000);
 }
@@ -1211,20 +1218,52 @@ function updateTimer() {
   timerDisplay.textContent = `${minutes}:${seconds}`;
 }
 
-function finishQuiz() {
+function finishQuiz(completionReason = 'submitted') {
+  if (quizFinished) return;
+  quizFinished = true;
+  // A checked answer at timeout is part of the attempt even without Next.
+  const checked = choicesForm.querySelector('input[name="choice"]:checked');
+  if (completionReason === 'timed-out' && checked && currentIndex < selectedQuizQuestions.length) {
+    quizAttemptSession.select(currentIndex, Number(checked.value));
+  }
+  const attempt = quizAttemptSession.finish(completionReason);
+  score = attempt.score;
   clearInterval(timer);
   disableCopyPasteBlocking();
   document.body.classList.remove('quiz-active');
   quizScreen.classList.add('hidden');
   resultScreen.classList.remove('hidden');
 
-  const total = Math.min(totalQuestions, selectedQuizQuestions.length);
-  const percent = Math.round((score / total) * 100);
+  const {total, percent} = attempt;
 
   resultSummary.textContent = `${studentName}, your ${activeQuizTopic} quiz result: ${score}/${total} (${percent}%).`;
-  
+  document.querySelector('#attempt-save-status')?.remove();
+  const attemptStatus = document.createElement('p');
+  attemptStatus.id = 'attempt-save-status';
+  attemptStatus.setAttribute('role', 'status');
+  resultSummary.after(attemptStatus);
+  const completedSession = quizAttemptSession;
+  async function persistAttempt() {
+    attemptStatus.textContent = 'Saving your questions and answers privately for the instructor…';
+    try {
+      await completedSession.save(saveQuizAttemptToFirestore);
+      attemptStatus.textContent = `Questions and answers saved. Attempt: ${attempt.attemptId}.`;
+    } catch (error) {
+      if (error.code === 'capture-not-enabled') {
+        attemptStatus.textContent = 'Detailed answer capture is awaiting instructor setup. Check the separate score-saving status below.';
+        return;
+      }
+      attemptStatus.textContent = 'Your detailed answers have not been confirmed saved. Keep this page open and retry. ';
+      const retry = document.createElement('button');
+      retry.type = 'button'; retry.textContent = 'Retry saving answers';
+      retry.addEventListener('click', persistAttempt, {once:true});
+      attemptStatus.append(retry);
+    }
+  }
+  persistAttempt();
+
   // Save score to Firestore and refresh recent scores
-  saveScoreToFirestore(studentName, score, total, percent, activeQuizTopic).then((success) => {
+  saveScoreToFirestore(studentName, score, total, percent, activeQuizTopic, attempt.attemptId).then((success) => {
     if (success) {
       // Wait a moment for Firestore to process, then refresh
       setTimeout(() => {
@@ -1236,9 +1275,12 @@ function finishQuiz() {
 
 function resetState() {
   clearInterval(timer);
+  quizFinished = false;
+  quizAttemptSession = null;
   currentIndex = 0;
   score = 0;
   timeRemaining = getQuizDurationSeconds();
   disableCopyPasteBlocking();
   document.body.classList.remove('quiz-active');
 }
+
