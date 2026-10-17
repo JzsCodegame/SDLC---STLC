@@ -3651,437 +3651,437 @@
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A credit union needs a test-data specialist for a required migration review. What should planning establish before assigning its delivery date?",
+    "question": "SDLC scenario: A food distributor can interrupt ordering for only 30 minutes during a release. What should the project plan assess before promising that release window?",
     "choices": [
-      "The specialist’s availability and time needed for the review",
-      "Set a date using coding estimates alone",
-      "Assume existing staff can cover the review without checking",
-      "Defer the resource decision until after committing"
+      "Whether deployment and required verification fit the operational window",
+      "The deployment duration alone",
+      "Only the number of changed screens",
+      "Whether the release name has been agreed"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A clinic permits appointment rescheduling but has no agreed response when the new slot is already taken. What should QA clarify?",
+    "question": "SDLC scenario: A bank asks its app to round converted balances but never specifies currency precision or rounding rules. What should QA obtain before defining expected amounts?",
     "choices": [
-      "Use the first implemented conflict response as the oracle",
-      "Test only successful slot changes",
-      "Let each tester choose the refusal outcome",
-      "The conflict condition and expected rescheduling outcome"
+      "The current build’s output as the requirement",
+      "Whichever rounding rule the tester prefers",
+      "Only confirmation that the amount is numeric",
+      "Agreed precision and rounding rules with concrete examples"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: A telecom release note says build D is installed, but the deployment record identifies build C. What should QA reconcile before accepting the attached test evidence?",
+    "question": "SDLC scenario: A school deploys its verified enrolment service to production. What check gives evidence that the intended production service is actually usable?",
     "choices": [
-      "Accept whichever record was updated last",
-      "Assume build C and build D have identical behavior",
-      "The actual installed build and the evidence that applies to it",
-      "Attach both versions’ evidence without identifying the installed one"
+      "The deployment command returning success alone",
+      "A passing screenshot from an unrelated environment",
+      "A controlled post-deployment check of the configured enrolment journey",
+      "The source project compiling on a laptop"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: A bank design allows a timeout path to submit the same transfer again, while the requirement permits only one transfer per request ID. What should design review address?",
+    "question": "SDLC scenario: A hospital design lets a referral move directly from Draft to Sent, but the requirement requires clinician review first. What should QA challenge before coding?",
     "choices": [
-      "Review only the initial successful submission",
-      "How the timeout and retry paths preserve the one-transfer requirement",
-      "Assert only that each retry receives a response",
-      "Treat duplicate transfers as acceptable whenever a timeout occurs"
+      "Whether a developer can implement the shortcut quickly",
+      "The missing review gate in the designed state transitions",
+      "Only the wording of the Sent label",
+      "Whether Draft and Sent use different colors"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A warehouse finds repeated defects from misunderstood unit labels. Training attendance is high but the same errors persist. What evidence would show whether prevention improved?",
+    "question": "SDLC scenario: A retailer adds a requirement-review checklist and also tests a completed checkout build. How should QA distinguish these activities?",
     "choices": [
-      "Whether the reviews clarify units and the recurring unit-related defects decline",
-      "Use attendance totals as the sole effectiveness measure",
-      "Count all review meetings without examining their content",
-      "Assume persistent unit defects are unrelated to the review’s purpose"
+      "The checklist supports prevention; executing the build checks the product",
+      "Both activities only prove that checkout has no defects",
+      "Executing the build replaces the need to improve requirement reviews",
+      "A checklist pass guarantees every checkout result is correct"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: An insurer adds a rule effective next month. The current-month behavior must stay unchanged. What should QA distinguish when updating maintained tests?",
+    "question": "SDLC scenario: A released pharmacy service starts rejecting previously valid prescription identifiers. What should maintenance triage establish before changing the validation rule?",
     "choices": [
-      "Apply next month’s rule to all historical dates",
-      "Keep only current-month checks and omit the effective-date transition",
-      "Treat every difference from the old rule as a defect",
-      "Expected behavior before and after the agreed effective date"
+      "Accept the new rejection as the revised requirement",
+      "Remove every identifier check without investigation",
+      "Treat any post-release issue as a new feature request only",
+      "Whether the rejection conflicts with the agreed supported formats and which released conditions reproduce it"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: Travel customers ask for instant cancellation, but the agreed process requires an external approval first. How should the team use the feedback?",
+    "question": "SDLC scenario: A travel pilot gets complaints only from agents using screen readers, while mouse users report success. How should the team use that feedback?",
     "choices": [
-      "Implement the requested shortcut before stakeholder review",
-      "Ignore the feedback because approval already exists",
-      "Review the user need and alternatives while retaining the approval rule until a change is agreed",
-      "Change the acceptance test to allow instant cancellation without agreeing the rule"
+      "Remove keyboard support because mouse users do not need it",
+      "Treat the complaint count alone as proof of the technical cause",
+      "Investigate the affected users’ journey and agree any requirement or implementation changes",
+      "Discard the complaints because most users succeeded"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: A shipping component passes checks with a mock that always returns an address. The approved interface also permits a no-match response. What is the gap?",
+    "question": "SDLC scenario: A supplier component sends prices in cents, but a retail checkout interprets those values as dollars. Each component passes tests using its own units. What is missing?",
     "choices": [
-      "Rerun only the always-successful mock cases",
-      "Verification of the agreed no-match contract and the consumer’s resulting behavior",
-      "Treat no-match responses as impossible because the mock never returns one",
-      "Change the consumer expectation to accept any returned value"
+      "A rule that successful compilation proves price compatibility",
+      "Verification that the components agree on units at their integration boundary",
+      "Another isolated test with the same incompatible assumptions",
+      "A check that both components use numeric types only"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A retailer updates a shared eligibility rule. A background renewal job uses the rule without displaying the new screen. Why should impact analysis include that job?",
+    "question": "SDLC scenario: An airline changes a shared time-zone library. Flight reminders and gate-change notices use it, though neither screen was edited. What should impact analysis examine?",
     "choices": [
-      "Its business result depends on the changed rule even though its UI did not change",
-      "Limit analysis to newly edited screens",
-      "Infer every consumer passes from the interactive screen result",
-      "Ignore scheduled consumers because they have no new UI"
+      "The affected time calculations and notifications across those dependent journeys",
+      "Only the library’s filename",
+      "Only screens with newly added controls",
+      "Only a reminder tested in the server’s local time zone"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A utility has six days before a fixed review. Full scope needs four implementation days followed by three required test days; reduced scope needs three plus three. Which commitment respects the constraints?",
+    "question": "SDLC scenario: A utility release needs two days of environment setup, then three days of mandatory testing, then one day of review. These activities cannot overlap. Management offers five days. What is defensible?",
     "choices": [
-      "Promise full scope by shortening required testing without agreement",
-      "Assume the dependent test phase can finish before implementation",
-      "Keep full scope because four implementation days fit the deadline",
-      "Agree reduced scope and retain the full required testing period"
+      "Promise five days because implementation has already finished",
+      "Overlap review with unavailable test evidence despite the stated sequence",
+      "Quietly remove one mandatory testing day",
+      "Expose the six-day dependency chain and agree a changed date or scope before commitment"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: A grant rule allows payment only when identity is verified and funds remain available. Design checks identity only, and passing tests use funded applicants. What evidence and correction are needed?",
+    "question": "SDLC scenario: A telecom rule permits ordinary roaming only for active accounts in approved countries; emergency calls are an explicit exception to both gates. A design blocks all calls from inactive accounts. What should QA require?",
     "choices": [
-      "Accept only the already passing funded-applicant evidence",
-      "Remove the funds requirement to match implementation",
-      "Align design and implementation with both conditions, then verify no-funds and mixed-condition cases",
-      "Add more funded-applicant tests without checking the missing gate"
+      "Remove both gates for every call",
+      "Test only active accounts in approved countries",
+      "Separate ordinary and emergency paths, then verify account and country combinations against the exception",
+      "Accept the design because ordinary calls are protected"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: A retailer deploys a verified version with a new tax table. Production still loads a cached old table, while the acceptance rule requires the new rates immediately. What closes the gap?",
+    "question": "SDLC scenario: A bank will deploy old and new app versions together. The agreed migration must preserve balances and let both versions read accounts until cutover. New-version tests pass. What release evidence is still needed?",
     "choices": [
-      "Repeat staging tests and infer production cache correctness",
-      "Align the deployed configuration and cache behavior, then verify affected prices against the new table",
-      "Check the deployed version but not which rates it returns",
-      "Accept the cached old rates despite the immediate-effect rule"
+      "A version label change as proof that balances survived",
+      "Migration reconciliation plus old/new compatibility checks before and during the mixed-version period",
+      "Only the newest version’s installation log",
+      "Immediate removal of old-version checks before cutover"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: Two hospital teams use different interpretations of an urgent-referral rule. A local defect is repaired, but a downstream intake service still follows the other interpretation. What completes the response?",
+    "question": "SDLC scenario: A warehouse team closes 80 defect tickets, but many reopen and critical errors still escape. Which response best addresses both product quality and process effectiveness?",
     "choices": [
-      "Agree the shared rule, align affected services, confirm the repair and improve early clarification",
-      "Close all related risks after the local repaired case passes",
-      "Let each team keep its own rule and passing tests",
-      "Review only the local fix while excluding the dependent intake service"
+      "Verify repairs against original failures and investigate recurring escape causes instead of using closure count alone",
+      "Treat 80 closures as proof that release risk is low",
+      "Stop recording reopened defects to improve the metric",
+      "Replace failing checks with ticket-status assertions"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A bank releases in small increments. Automatic approval requires a verified screening interface that is not ready; manual review must continue. What delivery plan preserves those requirements?",
+    "question": "SDLC scenario: A retailer requires stock reservation before charging and no charge if reservation fails. Stock and payment components pass alone, but their integrated failure path charges anyway. What completes development verification?",
     "choices": [
-      "Activate automatic approval before screening is verified",
-      "Withdraw manual review before its replacement is ready",
-      "Verify isolated screening later but claim the full current journey already passes",
-      "Keep automatic approval inactive, verify manual review and the inactive path, then verify screening and the complete journey before activation"
+      "Accept because both isolated components passed",
+      "Change the requirement to permit charges without stock",
+      "Repeat only the successful integrated purchase",
+      "Correct the orchestration and verify both successful reservation and reservation-failure payment behavior"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: A fee change passes single-account cases. A portfolio summary consumes those fees and applies separate grouping rules. What can QA conclude before checking the summary?",
+    "question": "SDLC scenario: An insurer changes a shared search filter to hide closed policies from new-sales searches. Claims processing must still find closed policies. What should impact analysis and verification distinguish?",
     "choices": [
-      "Treat individual fee success as proof of every grouped total",
-      "Exclude the summary because its source file was unchanged",
-      "Single-account evidence is useful, but the affected grouped outcome still needs impact-based verification",
-      "Rerun only the existing single-account cases and call the grouped risk covered"
+      "Check only new-sales search because its requirement changed",
+      "Infer claims compatibility from an unchanged claims screen",
+      "Sales and claims requirements, their shared filter dependency, and both required result sets",
+      "Apply the sales exclusion to every consumer without review"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: A hospital reviews referral requirements early to prevent omissions. What quality purpose does that review primarily serve?",
+    "question": "SDLC scenario: A hospital checks referral requirements before implementation to avoid missing rules. What primary quality objective does this early review support?",
     "choices": [
       "Defect prevention through improving the development process",
-      "Guaranteeing that execution testing is unnecessary",
-      "Counting only production failures",
-      "Replacing agreed requirements with code"
+      "Detecting defects by executing the completed build",
+      "Measuring only production response time",
+      "Approving a release after final execution"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A bank asks for a lost-card freeze capability. What lifecycle artifact does that requested capability describe?",
+    "question": "SDLC scenario: A credit union requests a capability to freeze a missing debit card. What kind of lifecycle input is that requested business capability?",
     "choices": [
-      "A completed production deployment",
-      "A confirmed defect fix",
-      "A test execution result",
+      "A recorded test execution result",
+      "A detailed implementation design",
+      "Evidence of a confirmed repair",
       "A business requirement"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: Before coding, a retailer defines the checkout components and their order-total exchanges. Which lifecycle activity is this?",
+    "question": "SDLC scenario: Before implementation, a retail team specifies checkout components and how totals pass between them. Which lifecycle activity does this describe?",
     "choices": [
+      "Requirements validation",
       "Test execution",
-      "A customer score submission",
       "Solution design",
-      "Production incident closure"
+      "Production deployment"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: An airline developer turns an approved seat-allocation design into executable behavior. Which lifecycle activity is occurring?",
+    "question": "SDLC scenario: An airline programmer implements the approved seat-allocation design as running code. Which lifecycle activity is taking place?",
     "choices": [
-      "Maintenance reporting only",
+      "Solution design",
       "Development",
-      "Requirements approval",
-      "Deployment"
+      "Test planning",
+      "Production deployment"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: A library installs its verified application in the target production environment. Which lifecycle activity is illustrated?",
+    "question": "SDLC scenario: A public library installs a verified application in its intended production environment. Which lifecycle activity is this?",
     "choices": [
       "Deployment",
-      "Test-case design",
-      "Requirement discovery",
-      "Defect reproduction"
+      "Source-code development",
+      "Test-data preparation",
+      "Requirements discovery"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A utility corrects a confirmed defect in software already released. Which lifecycle activity includes this support?",
+    "question": "SDLC scenario: A utility repairs a confirmed fault in an application customers already use. Which lifecycle activity covers this released-system support?",
     "choices": [
-      "Initial project feasibility only",
-      "Test planning only",
-      "Requirement creation without a change",
+      "Initial project feasibility assessment",
+      "Initial product design before the first release",
+      "Test planning before the first implementation",
       "Maintenance"
     ],
     "answer": 3
   },
   {
-    "question": "SDLC scenario: A travel pilot gathers usability difficulties for review. How does that information contribute to lifecycle improvement?",
+    "question": "SDLC scenario: A travel pilot records users’ usability problems for later review. What contribution does this make to lifecycle improvement?",
     "choices": [
-      "Proof that no future verification is needed",
-      "A replacement for all agreed acceptance rules",
+      "Automatic acceptance of every proposed change",
+      "Proof that the pilot meets every acceptance criterion",
       "Feedback that can inform future clarification and improvement",
-      "Automatic approval of every suggestion"
+      "Authorization to replace requirements without review"
     ],
     "answer": 2
   },
   {
-    "question": "SDLC scenario: Telecom integration needs a particular test environment first. What resource and scheduling dependency should its plan contain?",
+    "question": "SDLC scenario: Telecom integration cannot start until a particular test environment is ready. What resource-and-schedule information belongs in the plan?",
     "choices": [
-      "Only a promise that integration will happen somehow",
+      "Only the coding completion date",
       "Its availability date and its dependency on the integration schedule",
-      "Only the final release date",
-      "Only the number of developers"
+      "A release milestone without checking environment readiness",
+      "A staff count without the environment dependency"
     ],
     "answer": 1
   },
   {
-    "question": "SDLC scenario: An insurer has no agreed user response when a policy cancellation is refused. What must be clarified before writing that case?",
+    "question": "SDLC scenario: An insurer has not agreed when cancellation is refused or what the customer should see. What must be settled before defining that test?",
     "choices": [
       "The refusal conditions and expected user-visible outcome",
-      "Whatever text appears in the first build",
-      "The tester’s preferred message without review",
-      "The message from an unrelated insurer"
+      "The refusal message from the first implementation without agreement",
+      "The tester’s preferred refusal outcome",
+      "Only the successful cancellation behavior"
     ],
     "answer": 0
   },
   {
-    "question": "SDLC scenario: A pharmacy installs build B but supplies verification evidence for build A. What identity and evidence should QA reconcile?",
+    "question": "SDLC scenario: A pharmacy has installed version B, but its supplied verification evidence describes version A. What should QA establish before accepting the evidence?",
     "choices": [
-      "Only the spelling of the deployment note",
-      "Only the number of attached files",
-      "Only the time of the release meeting",
+      "Whether the evidence has a newer filename",
+      "Whether any attachment was added after installation",
+      "Whether both versions share a name, without checking behavior",
       "Whether the evidence covers the actual installed version and intended environment"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: An insurance case requires an unexpired policy. Setup accidentally selects an expired one. What should be established before evaluating the intended case?",
+    "question": "STLC scenario: A retail tax test lists click steps but gives no expected tax or calculation rule. What is missing before QA can judge its result?",
     "choices": [
-      "The required unexpired-policy state, or a blocked outcome if it cannot be prepared",
-      "Report a product defect without correcting setup",
-      "Count policy-page access as proof of the required state",
-      "Alter the expectation to match the expired fixture without review"
+      "An expected amount derived from the agreed tax rule and input data",
+      "The current amount copied after the test as its expected value",
+      "Only an extra click before submission",
+      "Only a screenshot proving the page opened"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A library renewal defect occurs only on the third renewal attempt. What must its reproduction steps include?",
+    "question": "STLC scenario: A bank conversion defect appears for one currency pair but its ticket says only wrong amount. What should reproduction evidence retain?",
     "choices": [
-      "Record only the third attempt’s final screen",
-      "Start reproduction with an arbitrary renewal count",
-      "Describe the final error without the triggering sequence",
-      "The starting renewal state and the sequence through the third attempt"
+      "Only the page title",
+      "A different currency pair that happens to pass",
+      "Only the developer’s proposed fix",
+      "The currency pair, input amount, applicable rate context and steps producing the mismatch"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: A bank’s test plan depends on partner account data that has not arrived. What should QA record before execution?",
+    "question": "STLC scenario: A utility test plan covers the meter-reading API but the release also promises an end-to-end billing journey. What planning issue should QA resolve?",
     "choices": [
-      "Mark unavailable cases passed because no assertion failed",
-      "Keep the dependency out of the completion report",
-      "The data dependency, affected cases and schedule or coverage risk",
-      "Assume partner data will arrive without affecting the schedule"
+      "Remove billing from scope without recording the change",
+      "Count an API response as evidence of every billing rule",
+      "Whether and where the billing journey’s dependent steps and expected results are covered",
+      "Assume API success proves the full bill"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: A clinic accepts ages 21 through 70 inclusive. Its suite checks only 21 and 70. What additions test immediate outside-limit rejection?",
+    "question": "STLC scenario: A rail offer accepts ages 10–16 inclusive except age 13. Tests at 9, 10, 16 and 17 pass. What addition targets the untested internal exception?",
     "choices": [
-      "22 and 69",
-      "20 and 71",
-      "30 and 50",
-      "21 and 22"
+      "Treat every interior age as automatically equivalent",
+      "Cases at 12, 13 and 14 with the specified allowed/denied outcomes",
+      "Repeat only 10 and 16",
+      "Add age 11 only and infer the exception"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: An airline fare repair passes its original failing case. A loyalty calculation shares the changed component. What remains distinct from confirming the repair?",
+    "question": "STLC scenario: A telecom repair fixes a missing confirmation email. The changed helper also sends cancellation notices. What evidence separates repair confirmation from regression?",
     "choices": [
-      "Regression verification of the affected loyalty calculation",
-      "Repeat only the repaired fare case under another name",
-      "Use the defect Closed status as loyalty evidence",
-      "Assume shared code makes loyalty regression unnecessary"
+      "Rerun the original missing-email case and separately verify affected cancellation notices",
+      "Use the repaired case as proof about every notice",
+      "Verify cancellation only and assume the original defect is fixed",
+      "Treat the closed defect ticket as both forms of evidence"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A booking UI shows Confirmed before saving its reservation reference. The requirement needs both for the intended booking. What wait establishes the result?",
+    "question": "STLC scenario: A booking page briefly shows Confirmed before a later save failure. The requirement permits success only with a persisted reservation reference. What should the test wait for and assert?",
     "choices": [
-      "Wait for any Confirmed label regardless of booking identity",
-      "Wait only for spinner removal",
-      "Verify only the booking status and omit the required saved reference",
-      "A bounded retrying assertion on that booking’s Confirmed state and saved reference"
+      "Any appearance of Confirmed regardless of persistence",
+      "Only a fixed one-second delay",
+      "Only the absence of the loading spinner",
+      "The intended booking’s required persisted reference and successful final outcome within a bound"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: A warehouse test updates item DEMO-4 but asserts any row with quantity 5. Another item already has quantity 5. What fixes the false-pass risk?",
+    "question": "STLC scenario: A banking test expects USD 100 but checks whether the displayed text contains 100. USD 1000 also passes. Which assertion addresses the false pass?",
     "choices": [
-      "Accept any row containing quantity 5",
-      "Assert the table row count instead of the updated value",
-      "Scope the quantity assertion to item DEMO-4",
-      "Check only that the update button was enabled"
+      "Accept any amount beginning with 100",
+      "Verify only that the balance element is visible",
+      "Verify the exact expected amount and currency for the intended balance",
+      "Check only that the balance contains digits"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: A rail test changes one shared station fixture and later cases inherit the changed zone. Which preparation and cleanup pattern reduces coupling?",
+    "question": "STLC scenario: A library test renews a loan, then a second run fails because the same loan is already at its renewal limit. What test pattern reduces this dependence?",
     "choices": [
-      "Use the zone left by the preceding test",
-      "Use owned fixture data, establish its required zone and clean up only its changes",
-      "Delete all station data after the test",
-      "Allow any starting zone and change the expected result afterward"
+      "Delete all library loans before each run",
+      "Prepare an owned loan in the required starting state for each run and clean up only its data",
+      "Depend on an earlier run to reset the loan",
+      "Raise the expected renewal limit after every failure"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: A freight failure screenshot uses shipment A, but its trace belongs to shipment B. What evidence is needed before attributing a product defect?",
+    "question": "STLC scenario: A freight test reports a duplicate booking after a timeout. Its trace omits the request ID and cannot show whether one or two submissions occurred. What evidence should QA collect?",
     "choices": [
-      "Consistent observations for one identified shipment input, run, build and environment",
-      "Combine both artifacts because they use the same application",
-      "Use shipment B’s trace as proof about shipment A",
-      "Choose whichever artifact supports the initial defect assumption"
+      "Correlated submission and persisted-record evidence for the same request and run",
+      "Only another screenshot of the final page",
+      "A passing run for a different shipment as proof of this failure’s cause",
+      "The timeout message as proof that exactly one request reached the server"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A 25-question equal-weight quiz initially counts 17 correct. Review finds two counted-correct answers wrong and four counted-wrong answers correct. What percentage should QA expect?",
+    "question": "STLC scenario: A wholesale order has six units at 10 each. The rule discounts goods by 10% when quantity is at least 5; delivery costs 5 and is never discounted. What total should the test expect?",
     "choices": [
-      "68%",
-      "60%",
-      "92%",
-      "76%"
+      "54",
+      "58.50",
+      "65",
+      "59"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: A booking rule allows at most five seats per order, inclusive. Two travelers already hold two seats each on one order. Which new requests are valid under that total-order limit?",
+    "question": "STLC scenario: A bank limits each transfer to 400 and the day’s cumulative transfers to 1000, both inclusive. Today 750 is already used. Which next requests distinguish the two limits?",
     "choices": [
-      "Both requests are allowed because each traveler holds fewer than five",
-      "Both are rejected because the order already exists",
-      "One additional seat is allowed; two additional seats exceed the limit",
-      "Two are allowed but one is rejected"
+      "Both are rejected because some daily allowance is already used",
+      "300 is allowed but250 is rejected",
+      "250 is allowed;300 is rejected because it breaches the daily limit despite fitting the per-transfer limit",
+      "Both are allowed because both are below400"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: A clinic changes medicine scheduling and a footer label. A schedule defect can assign the wrong administration time; footer style has low impact. Only one initial run fits. What is justified?",
+    "question": "STLC scenario: A clinic has one short verification window for a critical prescribing journey. Its account service may be unavailable. What sequence yields defensible coverage evidence?",
     "choices": [
-      "Test the footer first and claim both risks are covered",
-      "Test the affected scheduling journey and disclose the deferred footer coverage and residual risk",
-      "Test scheduling but omit the deferred coverage from reporting",
-      "Treat both risks as equal and claim complete coverage after one run"
+      "Treat account-service availability as proof that prescribing is correct",
+      "Check required setup and access first, then execute the critical journey if ready and disclose any blocked coverage",
+      "Mark the prescribing case passed when setup cannot log in",
+      "Spend the window on cosmetic checks and claim prescribing coverage"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: Eighteen critical cases produce 11 passes, 4 failures and 3 blocked results. Two failures are rerun successfully; another is only claimed fixed. What status is defensible?",
+    "question": "STLC scenario: Sixteen cases stand at 8 passed,3 failed,2 blocked and 3 not run. The blocked cases then execute: one passes and one fails. One original failure also passes a confirmed rerun. What is the new status?",
     "choices": [
-      "13 passed, 2 failed pending confirmation of one claimed fix, and 3 blocked",
-      "14 passed, 1 failed and 3 blocked because a claimed fix counts",
-      "18 passed because all cases have been discussed",
-      "15 passed and 3 blocked because failed cases have tickets"
+      "10 passed,3 failed,0 blocked,3 not run",
+      "11 passed,2 failed,0 blocked,3 not run",
+      "10 passed,2 failed,1 blocked,3 not run",
+      "13 passed,3 failed,0 blocked,0 not run"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A closed-account test must reject withdrawals. Setup creates an open account, another case closes it, and cleanup deletes every account. What complete correction is needed?",
+    "question": "STLC scenario: A clinic permits follow-up booking for discharged patients only with a new referral. A test prepares an admitted patient, expects rejection, then deletes all referrals. How should QA correct it?",
     "choices": [
-      "Depend on the other case’s closure and retain global cleanup",
-      "Accept an open-account withdrawal as closed-account rejection evidence",
-      "Change the expected result whenever the shared account state changes",
-      "Independently prepare an owned closed account, assert withdrawal rejection and clean up only its data"
+      "Keep the admitted fixture because rejection is enough",
+      "Assert rejection without checking the patient’s state",
+      "Delete all referrals to make the missing-referral case easier",
+      "Use owned discharged fixtures with and without a new referral, verify both outcomes and clean up only owned data"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: A telecom usage change feeds invoices, and invoices feed a quarterly report with separate aggregation rules. Invoice checks pass. What evidence remains needed?",
+    "question": "STLC scenario: An insurer changes a premium formula. Existing invoice and renewal checks both reuse an outdated expected-value helper, so they pass together. What evidence is needed?",
     "choices": [
-      "Infer the quarterly report from passing invoice cases",
-      "Check only invoice outputs and omit quarterly aggregation",
-      "Assess and verify affected quarterly aggregation using representative invoice inputs",
-      "Replace quarterly expected values with current output without reviewing the rules"
+      "Replace expected values with whatever the new build returns",
+      "Test only the helper’s execution without checking its business rule",
+      "Review the new business rule independently, update the oracle, and verify affected invoice and renewal results",
+      "Treat agreement between the two outdated checks as correctness"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: A transfer test requires enough funds in the sender before its actions begin. What is this required initial condition?",
+    "question": "STLC scenario: A bank-transfer case needs sufficient sender funds before the first action. What test-case term names this starting requirement?",
     "choices": [
       "A precondition",
-      "An actual result",
-      "A defect priority",
-      "A completion report"
+      "A postcondition",
+      "An actual execution result",
+      "A reproduction step"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: A retail refund case expects20 but observes15. Which test-report term identifies the observed15?",
+    "question": "STLC scenario: A refund case expects 20 but the application returns 15. What term describes the observed 15 in the execution record?",
     "choices": [
       "The expected result",
-      "The requirement identifier",
-      "The test precondition",
+      "The input value",
+      "The acceptance criterion",
       "The actual result"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: Before a clinic test run, QA defines scope, timing and resources. Which STLC activity is this?",
+    "question": "STLC scenario: A clinic QA team sets the test scope, schedule and staffing before execution. Which STLC activity is it performing?",
     "choices": [
-      "Production deployment",
-      "Only coding",
+      "Test execution",
+      "Defect repair",
       "Test planning",
-      "Defect closure"
+      "Production deployment"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: A parcel limit accepts up to10kg inclusive. Which value is exactly its accepted upper boundary?",
+    "question": "STLC scenario: A parcel rule accepts weights no greater than 10 kg, including 10 kg. Which value is the accepted upper boundary?",
     "choices": [
       "0 kg",
       "10 kg",
@@ -4091,57 +4091,57 @@
     "answer": 1
   },
   {
-    "question": "STLC scenario: QA reruns the original telecom failure after its repair. What immediate testing objective does that serve?",
+    "question": "STLC scenario: After a telecom bug is repaired, QA reruns the exact case that originally failed. What immediate objective does this serve?",
     "choices": [
       "Confirm the original defect was fixed",
-      "Prove all unrelated behavior is correct",
-      "Replace the need for regression testing",
-      "Approve every future release"
+      "Verify only related features without rerunning the failure",
+      "Approve the complete release from its defect status",
+      "Test an unrelated module instead of the repaired behavior"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: After a booking test clicks Submit, what should establish whether the required business result occurred?",
+    "question": "STLC scenario: A booking test has clicked Submit. What evidence should determine whether its required business behavior succeeded?",
     "choices": [
-      "The fact that the click command returned",
-      "The browser window’s position",
-      "The number of test-script lines",
+      "Only that the click command returned",
+      "Only that a request was sent",
+      "Only that the Submit button was enabled",
       "The required observable booking result"
     ],
     "answer": 3
   },
   {
-    "question": "STLC scenario: A utility test includes a trace to investigate a meter-reading failure. What role does that artifact serve?",
+    "question": "STLC scenario: A utility attaches an execution trace while investigating a meter-reading failure. What purpose does that trace serve?",
     "choices": [
-      "An automatic defect fix",
-      "A replacement for the expected result",
+      "The independently agreed expected result",
+      "The required starting precondition",
       "Supporting execution evidence",
-      "The approved business requirement"
+      "Evidence that the defect has already been repaired"
     ],
     "answer": 2
   },
   {
-    "question": "STLC scenario: A hospital case needs a discharged patient but the chosen fixture is admitted. What should preparation establish?",
+    "question": "STLC scenario: A hospital case is defined for a discharged patient, but setup supplies an admitted patient. What must the setup establish first?",
     "choices": [
-      "Assume a patient record’s existence is sufficient",
+      "Use the admitted patient and silently change the expected result",
       "Establish the required discharged state before testing its specified action",
-      "Count any result as a product failure",
-      "Silently replace the case’s requirement"
+      "Mark the case passed because setup found a patient",
+      "Treat any admitted-patient result as discharged-case evidence"
     ],
     "answer": 1
   },
   {
-    "question": "STLC scenario: A telecom failure occurs during a plan switch. What original state and action sequence should reproduction retain?",
+    "question": "STLC scenario: A telecom defect occurs while changing service plans. What starting state and actions should its reproduction information preserve?",
     "choices": [
       "The original plan, selected new plan and sequence that triggered the mismatch",
-      "Only the last screen title",
-      "Only the count of test accounts",
-      "Only the latest application logo"
+      "Only the final plan after the switch",
+      "Only the build number without the input plans",
+      "A final screenshot without the starting state or sequence"
     ],
     "answer": 0
   },
   {
-    "question": "STLC scenario: Warehouse quantities2–6 are inclusive. Which two values sit just outside the accepted interval?",
+    "question": "STLC scenario: A warehouse permits quantities from 2 to 6 inclusive. Which pair tests the immediately adjacent rejected values?",
     "choices": [
       "2 and 6",
       "3 and 5",
@@ -4151,251 +4151,251 @@
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: A record producer should store its selected contact method on the Incident. Submission creates a number but stores no method. What should QA examine?",
+    "question": "ServiceNow scenario: This record producer must map a false checkbox value to false on the Incident. Submission creates the Incident but stores true. What should QA verify?",
     "choices": [
-      "The configured answer-to-field mapping and persisted value",
-      "Accept a generated Incident number as proof of every field mapping",
-      "Verify the contact method on an unrelated Incident",
-      "Check only the form’s submitted answer without inspecting the target"
-    ],
-    "answer": 0
-  },
-  {
-    "question": "ServiceNow scenario: This catalog item requires an approver selection only for Special Purchase. What cases exercise both configured branches?",
-    "choices": [
-      "Test only Special Purchase with a valid approver",
-      "Test only a normal purchase and infer the mandatory branch",
-      "Open the form as an administrator without submitting either condition",
-      "Special Purchase with the selection missing, and a normal purchase where it is not required"
-    ],
-    "answer": 3
-  },
-  {
-    "question": "ServiceNow scenario: A service must depend on database CI DEMO-DB2. What makes the relationship check meaningful?",
-    "choices": [
-      "Accept any linked database CI",
-      "Verify only that DEMO-DB2 exists somewhere in the CMDB",
-      "Compare the linked database with the intended CI, not merely the presence of any database",
-      "Check only the service name without its linked CI identity"
+      "Only that the producer created a number",
+      "Only submissions with the checkbox selected",
+      "The configured value conversion and persisted target boolean, including false input",
+      "Only that a target boolean exists"
     ],
     "answer": 2
   },
   {
-    "question": "ServiceNow scenario: A Business Rule should act only on qualifying updates. A nonqualifying creation changes the same assignment field. What should QA analyze?",
+    "question": "ServiceNow scenario: This catalog item requires a delivery date when Rush is selected. The form shows the date field correctly. What submission checks remain?",
     "choices": [
-      "Repeat only the successful qualifying update",
-      "The operation trigger, matching condition and resulting field change together",
-      "Verify only the final assignment without its triggering operation",
-      "Treat all creations as qualifying regardless of the configured condition"
+      "An administrator opening the field proves ordinary-user submission rules",
+      "Rush with the date missing must be rejected, while the configured non-Rush path must not require it",
+      "Visibility alone proves mandatory validation",
+      "Only a Rush submission with a valid date is sufficient"
     ],
     "answer": 1
   },
   {
-    "question": "ServiceNow scenario: This HR role may submit its own service requests but cannot change another employee’s request. Own submission passes. What remains to test?",
+    "question": "ServiceNow scenario: The configured CMDB relationship is Application depends on Database. A link exists but its direction is Database depends on Application. What should QA conclude?",
     "choices": [
-      "An unauthorized cross-employee update is denied and the target record stays unchanged",
-      "Infer cross-employee update denial from own-request success",
-      "Use an administrator’s edit as proof of ordinary-role denial",
-      "Verify only that the other employee’s page can be opened"
+      "The relationship exists but does not match the required direction",
+      "Any link between the CIs proves the dependency",
+      "The database CI’s existence alone is sufficient",
+      "The application name makes direction irrelevant"
     ],
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: An integration returns success but saves a valid source department into the Location field. What should QA verify?",
+    "question": "ServiceNow scenario: This update workflow must preserve a manually selected assignment group. A Business Rule runs and replaces it with a default group. What should QA investigate?",
     "choices": [
-      "Accept transport success as proof of semantic mapping",
-      "Check that a requester value exists somewhere without field identity",
-      "Verify the source payload but not the saved target fields",
-      "The agreed field mapping and correct persisted target fields"
+      "Only that the default group exists",
+      "Only a record with no manual group",
+      "The fact that server-side code executed as proof of correct behavior",
+      "The rule’s configured trigger, condition and final saved effect on a manually assigned record"
     ],
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: An asset transfer must update user and department. The new user is correct, but the old department remains. What is the finding?",
+    "question": "ServiceNow scenario: This ordinary requester may read its request but cannot approve it. Reading succeeds and an approval update also succeeds. What distinction should QA make?",
     "choices": [
-      "Accept the transfer because assigned user changed",
-      "Verify only that the new department exists in a list",
-      "The configured transfer is incomplete despite the successful user update",
-      "Treat the old department as correct despite the explicit transfer requirement"
+      "An administrator approving a request proves ordinary-user denial",
+      "A hidden Approve button proves server-side protection",
+      "Read access is permitted, but the unauthorized approval change must be denied and leave approval unchanged",
+      "Read access automatically includes approval authority"
     ],
     "answer": 2
   },
   {
-    "question": "ServiceNow scenario: A CI history requirement identifies the changed field and its old/new values. A row exists but repeats the new value as both old and new. What should QA conclude?",
+    "question": "ServiceNow scenario: This integration applies partial updates: an omitted location must preserve the stored location. An update containing only department clears location. What should QA check?",
     "choices": [
-      "Count any audit row as sufficient regardless of old value",
-      "History was created but its required content is inaccurate",
-      "Use the correct current value as proof of audit accuracy",
-      "Verify only the audit timestamp and omit its old/new values"
+      "Require every optional source field on every request",
+      "The absent-field handling and preservation of the existing location alongside the department update",
+      "Only that the department changed",
+      "Treat an omitted field as an explicit clear despite the configured rule"
     ],
     "answer": 1
   },
   {
-    "question": "ServiceNow scenario: A producer returns an Incident number but stores the requester on another record. What combined check addresses the failure?",
+    "question": "ServiceNow scenario: This asset process excludes Retired laptops from new assignments but retains historical assignments. Which checks cover both requirements?",
     "choices": [
-      "Verify both the created Incident’s identity and its mapped requester value",
-      "Assert only that a number was returned",
-      "Check only that some record has a requester value",
-      "Inspect the requester field without confirming the created Incident identity"
+      "Attempt a new assignment of a Retired laptop and verify that historical assignment records remain available",
+      "Delete historical assignments to prevent reuse",
+      "Verify only that one Active laptop can be assigned",
+      "Assume a retired status label proves both restrictions"
     ],
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: This SLA counts 09:00–17:00 business time and pauses on Awaiting Caller. It starts at16:30, pauses at16:45, resumes next business day at09:15 and is checked at09:35. How much running time accrued?",
+    "question": "ServiceNow scenario: This CI process logs business-field changes but not no-op saves. Saving the same owner again creates a change entry. What should QA compare?",
     "choices": [
-      "50 minutes",
-      "20 minutes",
-      "65 minutes",
-      "35 minutes"
+      "Only that any history row exists",
+      "Only the final owner value",
+      "A changed-field save as proof about an unchanged save",
+      "Whether the owner actually changed and whether the resulting audit event matches the no-op rule"
     ],
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: A change needs approval before implementation, and rejected changes must create no implementation task or implementation notice. Rejection is recorded, but a notice is sent. What should the test verify together?",
+    "question": "ServiceNow scenario: This producer must create an Incident and a follow-up task linked to that same Incident. Both records appear, but the task links elsewhere. What should the test verify together?",
     "choices": [
-      "Accept the rejection record without checking dependent effects",
-      "Verify only that implementation is blocked and ignore prohibited notices",
-      "The blocked transition and absence of both prohibited downstream effects for the rejected change",
-      "Treat the notice as evidence that approval must have succeeded"
+      "Only that the task contains some Incident reference",
+      "Only the producer’s submitted answers",
+      "The created Incident identity, mapped values and the task’s reference to that Incident",
+      "Only the count of newly created records"
     ],
     "answer": 2
   },
   {
-    "question": "ServiceNow scenario: This integration deduplicates by external ID and preserves the newest accepted version. Version 3 is saved; a retried version 2 arrives with the same ID. What should QA verify?",
+    "question": "ServiceNow scenario: These configured SLAs start at 09:00. Response stops at the first reply at 09:12. Resolution runs until 09:45 but pauses 09:20–09:30. Both use continuous time for this interval. What elapsed values should QA expect?",
     "choices": [
-      "Create another record for version 2",
-      "One logical record retains version 3 without a duplicate or stale overwrite",
-      "Overwrite version 3 with version 2 because it arrived last",
-      "Assert one record exists but omit the required retained-version check"
+      "Response45 minutes; resolution12 minutes",
+      "Response12 minutes; resolution35 minutes",
+      "Response12 minutes; resolution45 minutes",
+      "Response35 minutes; resolution35 minutes"
     ],
     "answer": 1
   },
   {
-    "question": "ServiceNow scenario: A request can close only after approval and both fulfillment tasks complete. Approval is granted and one task closes, but the second is open. What state and notification are expected if completion notices are closure-only?",
+    "question": "ServiceNow scenario: This change needs both CAB and security approval before implementation, but planning tasks are allowed earlier. CAB approves while security is pending. What should QA expect?",
     "choices": [
-      "The request stays incomplete and no completion notice is sent",
-      "Close the request because approval and one task completed",
-      "Send the completion notice before the remaining task closes",
-      "Infer both tasks closed from the first task’s completion"
+      "Planning may continue, but implementation remains blocked until the second required approval",
+      "CAB approval alone permits implementation",
+      "Pending security approval forbids every planning task despite the rule",
+      "Creating a planning task proves implementation is authorized"
     ],
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: An approved item should create exactly one task; saving it again must not create another. A task appears before approval and another after approval. What should QA verify across the sequence?",
+    "question": "ServiceNow scenario: This integration rejects conflicting payloads for the same external ID and version, preserving the accepted record. An identical version arrives with a different amount. What should QA verify?",
     "choices": [
-      "Allow one task for every save regardless of approval",
-      "Verify only the post-approval task and ignore the premature one",
-      "Count any two tasks as successful fulfillment without checking their creation gates",
-      "No task before approval, exactly one after approval and no duplicate on another save"
+      "Last arrival overwrites the amount regardless of the configured conflict rule",
+      "A second record is created for the conflicting amount",
+      "One record exists, so its overwritten amount need not be checked",
+      "The conflict is rejected without a duplicate or modification of the accepted amount"
     ],
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: A user can read its own case, but editing requires both ownership and Open state. Its own Closed case opens and an update succeeds. What should QA distinguish?",
+    "question": "ServiceNow scenario: This workflow closes a Normal request when its shipment task completes; Restricted also requires security. Closure sends one notice, and unchanged saves must not resend it. A Normal shipment is complete. What should QA expect?",
     "choices": [
-      "Permit editing solely because ownership matches",
-      "Deny reading as well despite the stated read permission",
-      "Reading is permitted, but the state-gated edit must be denied and leave data unchanged",
-      "Verify only that the case opens and infer update authorization"
+      "Normal closes but sends a fresh completion notice on every save",
+      "The shipment can be ignored because the request is Normal",
+      "Normal closes without an inapplicable security task, sends one notice and does not resend it on an unchanged save",
+      "Normal waits forever for the Restricted-only task"
     ],
     "answer": 2
   },
   {
-    "question": "ServiceNow scenario: A configured Incident Business Rule uses server-side logic. Where does that logic execute?",
+    "question": "ServiceNow scenario: This request needs two approvals and must create one fulfillment task only after both approve. The final approval event is delivered twice. What sequence should QA verify?",
+    "choices": [
+      "Only the final task count without checking premature creation",
+      "No task after the first approval, one after the second, and no additional task after replay",
+      "One task for each approval and another for replay",
+      "One task after the first approval because a later event can correct it"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "ServiceNow scenario: This role may read all support cases but update only Open cases assigned to its group. An Open case moves to another group while its form remains open. What should QA verify?",
+    "choices": [
+      "Reading remains permitted, but a subsequent update is denied server-side and leaves the transferred case unchanged",
+      "The already-open form permanently preserves update rights",
+      "The group transfer must remove reading despite the configured read rule",
+      "A hidden Save button alone proves the backend denies the stale update"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "ServiceNow scenario: A configured Incident Business Rule contains server-side logic. In which execution environment does that logic run?",
     "choices": [
       "The ServiceNow backend",
-      "Only inside a screenshot file",
       "Only in the requester’s browser",
-      "Only in a local spreadsheet"
+      "Only in the external integration client",
+      "Only in the network proxy"
     ],
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: An asset process assigns a laptop to an employee. Which assignment field identifies that user?",
+    "question": "ServiceNow scenario: An asset workflow allocates a laptop to an employee. Which assignment field should identify the intended employee?",
     "choices": [
-      "An unrelated incident number",
-      "The browser title",
-      "The catalog icon",
+      "The requested-by user on an unrelated request",
+      "The stockroom reference",
+      "The location reference",
       "The assigned-to user"
     ],
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: A customer submits a support case. Which link must associate it with the intended customer?",
+    "question": "ServiceNow scenario: A support case is submitted for a customer. What association must point to the intended customer identity?",
     "choices": [
-      "Every account in the instance",
-      "Only the case form’s color",
+      "The assigned support agent",
+      "An unrelated case’s customer reference",
       "The correct customer/account link",
-      "The last account opened by any user"
+      "The last customer opened by another user"
     ],
     "answer": 2
   },
   {
-    "question": "ServiceNow scenario: A server CI is linked to an application CI. Which configured association should QA compare with the expected dependency?",
+    "question": "ServiceNow scenario: The CMDB connects a server CI and an application CI. What should QA compare with the required dependency definition?",
     "choices": [
-      "Only an unrelated asset’s location",
+      "The incident assignment group",
       "Their configured relationship",
-      "Only the number of support tickets",
-      "Only the browser zoom"
+      "The hardware manufacturer",
+      "The support-ticket category"
     ],
     "answer": 1
   },
   {
-    "question": "ServiceNow scenario: A CI update must produce an audit entry under this process. What evidence should QA inspect?",
+    "question": "ServiceNow scenario: Under this CI process, changing a field must produce an audit entry. What evidence should QA inspect for that update?",
     "choices": [
       "The required update history",
-      "Only a different page background",
-      "Only a new unrelated CI",
-      "Only a closed request from last month"
+      "Only the current field value without its history",
+      "Only another CI’s audit entries",
+      "Only the deployment log"
     ],
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: Ordering a catalog item depends on configured availability conditions. What should its availability test evaluate?",
+    "question": "ServiceNow scenario: A catalog item can be ordered only when its configured availability conditions hold. What should an availability check establish?",
     "choices": [
-      "Whether every item has the same icon",
-      "Whether all requests close immediately",
-      "Whether every user becomes an administrator",
+      "Whether a previous request once succeeded for another user",
+      "Whether an ineligible user can bypass the conditions",
+      "Whether a cached listing still shows the item despite its current conditions",
       "Whether ordering follows the configured availability conditions"
     ],
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: A producer creates an Incident using submitted answers. What result should field-mapping validation establish?",
+    "question": "ServiceNow scenario: A producer uses submitted answers to create an Incident. What should validation of its field mappings demonstrate?",
     "choices": [
-      "Only the count of open browser tabs",
-      "Only a different customer’s case",
+      "Only that an Incident number was generated",
+      "Only that the submitted form contains answers",
       "The answers populate the intended Incident fields",
-      "Only that the form has a submit button"
+      "Whether any unrelated Incident contains similar values"
     ],
     "answer": 2
   },
   {
-    "question": "ServiceNow scenario: Extra Equipment makes one catalog field required. What selected and unselected submissions verify both branches?",
+    "question": "ServiceNow scenario: This catalog form requires a field only when Extra Equipment is selected. Which selected and unselected submissions cover the two branches?",
     "choices": [
-      "Only a completed request from another item",
+      "Only the selected branch with the required field populated",
       "Submission with the option selected and the field missing, and submission with the option unselected",
-      "Only selecting an unrelated category twice",
-      "Only an administrator opening the page"
+      "Only the unselected branch",
+      "Only opening the form without submitting either branch"
     ],
     "answer": 1
   },
   {
-    "question": "ServiceNow scenario: A Business Rule updates department when its condition matches. What negative case complements that successful check?",
+    "question": "ServiceNow scenario: A configured Business Rule changes department only for a matching condition. Which negative case should accompany the successful matching case?",
     "choices": [
       "A nonmatching operation leaves the department unchanged",
-      "Every update must change the department",
-      "Only the rule’s display name is checked",
-      "Only the number of incidents is counted"
+      "Every update changes department, including nonmatches",
+      "Only the matching operation is rerun",
+      "Only the rule’s active flag is checked"
     ],
     "answer": 0
   },
   {
-    "question": "ServiceNow scenario: An HR service restricts use to eligible employees. Why does a successful administrator request not prove ordinary-user eligibility enforcement?",
+    "question": "ServiceNow scenario: This HR service is limited to eligible employees. Why is a successful administrator submission insufficient evidence of ordinary-user eligibility enforcement?",
     "choices": [
-      "It proves every user has exactly the right access",
-      "It makes eligibility rules unnecessary",
-      "It proves that direct form links cannot work",
+      "Administrator success establishes access for every ordinary role",
+      "Eligibility does not need testing when the form submits",
+      "An approver’s successful request proves every employee is eligible",
       "It does not demonstrate ordinary eligible-user access and ordinary ineligible-user denial"
     ],
     "answer": 3
