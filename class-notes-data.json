@@ -1166,6 +1166,281 @@
         "embedVerified": false,
         "availablePrivately": true
       }
+    },
+    {
+      "key": "automation/2.1",
+      "series": "automation",
+      "classId": "2.1",
+      "date": "2026-10-07",
+      "title": "Class Two lab — workspace access and visible Playwright execution",
+      "instructor": "Javid Zaman",
+      "summary": "The October 7 lab continues Class Two with hands-on workspace practice. Students connect the editor, terminal, practice application and test browser, and distinguish running a command from observing the expected UI behavior. These focused notes cover the verified lab passages; lengthy access and deployment troubleshooting is condensed. Class 2.1 is this library’s supplemental-session identifier, not a new lecture number announced in the recording.",
+      "keyConcepts": [
+        "Hosted workspace versus desktop practice",
+        "Editor and terminal roles",
+        "Running tests and checking evidence",
+        "Headed execution and browser visibility",
+        "Class materials and recording access"
+      ],
+      "sections": [
+        {
+          "title": "Start in the assigned workspace",
+          "text": "The instructor introduces the shared workspace as the place for supervised practice. Open the assigned environment and locate the practice project before running an exercise. Workspace access and the practice website serve different purposes: the workspace provides files and a terminal, while the application is what the test exercises. The recording describes a historical setup; check the current classroom instructions for today’s access status.",
+          "timestamp": "21:19"
+        },
+        {
+          "title": "Plan the shared practice session",
+          "text": "The lab describes a two-hour daily allocation and one student using the shared practice resource at a time. Prepare the scenario and files before starting so session time goes toward execution and investigation. Save the work before ending the session. This discussion is not proof of simultaneous capacity or a guarantee that an old account or service is currently available.",
+          "timestamp": "21:56"
+        },
+        {
+          "title": "Turn a use case into a small hands-on check",
+          "text": "The purpose of this session is to apply the earlier UI concepts through the Academy’s practice cases. Select one behavior, identify the input and action, and state what should change on the page. Run the corresponding example and compare its assertion with that expected outcome. Hosted and desktop practice are alternative environments; use the current guide for the one you are working in.",
+          "timestamp": "22:43"
+        },
+        {
+          "title": "Keep the lab connected to Class Two",
+          "text": "The instructor explicitly identifies the session as a Class Two lab and brings the whiteboard back into the teaching flow. Revisit the earlier class materials when a locator, control or assertion is unfamiliar. Keep a short lab record with the scenario, framework, expected outcome, observed outcome and any error so repeating a test also reinforces the concept.",
+          "timestamp": "23:14"
+        },
+        {
+          "title": "Inspect the command before changing settings",
+          "text": "During the visible-browser investigation, the instructor asks to see the command again. Check what was actually executed: the selected test, framework, working directory and flags. Compare the command with the current class guide. A test process starting, a browser window opening, and an assertion passing are separate observations; record each instead of assuming one proves the others.",
+          "timestamp": "1:19:23"
+        },
+        {
+          "title": "Separate a test run from its visible browser view",
+          "text": "A participant reports that no new browser window appeared. In a hosted environment, the browser runs within the workspace environment and its live view must be opened through the provided classroom route. A headed option alone does not prove the view is connected. Preserve the terminal result and report the visible symptom; the troubleshooting in this recording should not be treated as a current deployment health check.",
+          "timestamp": "1:21:26"
+        },
+        {
+          "title": "Use the editor’s terminal deliberately",
+          "text": "The lab returns to the editor and its terminal while investigating execution. The editor holds the saved test; the terminal runs the project’s commands. Verify the current directory and save the file before rerunning. Use the published command for the selected framework and retain the complete error message when asking for help, while keeping account credentials out of shared screenshots.",
+          "timestamp": "1:22:55"
+        }
+      ],
+      "practice": [
+        "Choose one Class Two scenario and write its input, action and expected result before running it.",
+        "Locate the saved test file and identify the terminal’s current directory.",
+        "Execute the current guide’s test command and record the actual test outcome.",
+        "For a hosted headed run, open Live test browser and confirm that the view shows the same exercise.",
+        "Save the test and a short outcome/error record before stopping the session."
+      ],
+      "terms": [
+        {
+          "term": "Workspace",
+          "definition": "The environment containing the editor, project files and terminal used for practice."
+        },
+        {
+          "term": "Working directory",
+          "definition": "The folder from which a terminal command resolves relative project paths."
+        },
+        {
+          "term": "Headed run",
+          "definition": "A test run that uses a browser with a graphical display in its execution environment."
+        },
+        {
+          "term": "Assertion",
+          "definition": "A check that the observed result matches the required behavior."
+        }
+      ],
+      "review": [
+        {
+          "question": "What is the difference between the workspace and the practice application?",
+          "answer": "The workspace provides the editor, files and terminal; the application is the system the test exercises."
+        },
+        {
+          "question": "What should you decide before executing an example?",
+          "answer": "The scenario’s input, action and observable expected result."
+        },
+        {
+          "question": "Does a started command prove that the expected UI behavior passed?",
+          "answer": "No. Read the runner result and inspect the relevant assertion and application behavior."
+        },
+        {
+          "question": "Does a headed option alone prove that the hosted live view is connected?",
+          "answer": "No. Open the provided live-browser route and verify that it shows the intended run."
+        },
+        {
+          "question": "What should you inspect before changing configuration?",
+          "answer": "The actual command, selected framework and test, saved file, working directory and reported error."
+        },
+        {
+          "question": "Why keep a short lab record?",
+          "answer": "It connects the expected outcome with the observed result and makes reruns and troubleshooting reproducible."
+        }
+      ],
+      "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/49048b6558684f639c4bcf507cf90274/playback",
+        "passwordProtected": true,
+        "embedVerified": false,
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/10",
+      "series": "interview-prep",
+      "classId": "10",
+      "date": "2026-10-14",
+      "title": "ServiceNow testing — request lifecycle, approvals, access and notifications",
+      "instructor": "Mehaq",
+      "summary": "The October 14 first interview-preparation session rehearses an end-to-end ServiceNow testing explanation, using salary and cloud-request catalog examples. It links portal fields to requests, requested items, catalog tasks, approvals and closure, then extends the discussion to access changes, notifications and configuration items. Every expected state, approval and assignment group must come from the project’s acceptance criteria; the demonstrated workflow is not a universal ServiceNow configuration.",
+      "keyConcepts": [
+        "Acceptance criteria as the test oracle",
+        "Requester and fulfiller perspectives",
+        "Request, requested item and catalog task",
+        "Approval and assignment-group validation",
+        "Group membership and effective access",
+        "Notification content versus delivery",
+        "CMDB and configuration items"
+      ],
+      "sections": [
+        {
+          "title": "Determine approval requirements from the story",
+          "text": "Check the story’s acceptance criteria before using the Approval tab as evidence. The instructor describes both possible defects: an unwanted approval added to a no-approval flow, and a required approval omitted from the implementation. For each catalog item, test the specified approval path and its expected approver; do not infer correctness simply because the UI contains or lacks a tab.",
+          "timestamp": "35:40"
+        },
+        {
+          "title": "Validate the portal catalog item before submission",
+          "text": "In the salary example, locate the catalog item as the permitted test requester. Compare the item name and description, field labels, field types, required indicators and available choices with the acceptance criteria. In the cloud-request example, the request type and multi-line business justification have specific requirements. Include missing required input and invalid choices when the story defines their handling.",
+          "timestamp": "46:05"
+        },
+        {
+          "title": "Trace the same request through the backend",
+          "text": "Record the identifier returned after portal submission, then use the authorized fulfiller perspective to locate the same business request. Distinguish the request from its requested item (RITM) and the service catalog task. Confirm the required records and relationships were generated. The transcript sometimes renders RITM as “return”; these notes use the ServiceNow term requested item rather than interpreting that transcription literally.",
+          "timestamp": "46:46"
+        },
+        {
+          "title": "Validate assignment and closure transitions",
+          "text": "Check the catalog task’s assignment group against the story, then complete the task using the state required by the example. Revisit the requested item and refresh to observe its resulting state. In this demonstrated configuration, task completion should close the requested item. In another project, additional tasks, approvals or flow conditions may alter that outcome; the acceptance criteria define the expected transition.",
+          "timestamp": "47:34"
+        },
+        {
+          "title": "Turn each acceptance criterion into test evidence",
+          "text": "The cloud-request walkthrough identifies the business-justification description as a required multi-line field. Write a step and expected result for each relevant criterion, including label, type, required behavior and choice values. Record the actual result rather than describing only the clicks. A submitted form does not by itself prove that all field requirements were met.",
+          "timestamp": "53:58"
+        },
+        {
+          "title": "Validate access removal as well as access grants",
+          "text": "For the access-request example, follow the configured request and approval process using authorized test identities. Confirm that a granted user appears in the expected group, or that a removed user is absent. Where the story requires effective access testing, impersonate the permitted test user and verify the protected function is allowed or denied as specified. Group membership is evidence about provisioning; it is not a complete test of every ACL rule.",
+          "timestamp": "1:13:07"
+        },
+        {
+          "title": "Verify notification identity and content",
+          "text": "Find the relevant ServiceNow email record for the event under test and compare the expected subject, sender, recipient and message body. Tie its confirmation or request identifier back to the same request. An email record in the platform and receipt in an external mailbox are different observations. Check actual external receipt only when it is required and an approved test mailbox is available.",
+          "timestamp": "1:22:27"
+        },
+        {
+          "title": "Keep notification tests within authorized test data",
+          "text": "The instructor explains that whether testers may use an external mailbox depends on the project’s allowed procedure. Use the supplied test identity and approved mailbox; do not substitute a personal address without permission. State clearly whether the test verified the ServiceNow notification record, external receipt, or both so the evidence does not overstate delivery.",
+          "timestamp": "1:25:49"
+        },
+        {
+          "title": "Validate CMDB information within the assigned scope",
+          "text": "CMDB stores information about configuration items, such as applications and infrastructure. In the class’s dashboard example, verify that the expected widgets and CI details appear for the permitted role and match the story. Where CI records are part of the test, check the specified attributes and relationships. UI or record validation does not establish deep database administration expertise, and these notes do not claim every demonstrated environment had all features configured.",
+          "timestamp": "1:32:17"
+        }
+      ],
+      "practice": [
+        "Write positive and negative checks for the cloud request’s required request type and business justification fields.",
+        "Trace a sample submission through request, RITM and catalog task, recording each identifier and relationship.",
+        "Compare one required-approval scenario and one no-approval scenario against the story.",
+        "Verify a configured assignment group and the resulting requested-item state after task completion.",
+        "Describe both membership and effective-permission checks for an access-removal requirement.",
+        "Prepare a notification evidence table separating platform content checks from approved mailbox receipt.",
+        "Rehearse an interview answer using context, your actual role, test actions, expected results and evidence; do not claim the classroom example as employment experience."
+      ],
+      "terms": [
+        {
+          "term": "Test oracle",
+          "definition": "The authoritative expected behavior used to judge a result; here, the approved acceptance criteria."
+        },
+        {
+          "term": "RITM",
+          "definition": "A requested item record associated with a service request."
+        },
+        {
+          "term": "Catalog task",
+          "definition": "A task used to fulfill work for a requested item in the configured workflow."
+        },
+        {
+          "term": "Impersonation",
+          "definition": "Using an authorized test identity’s perspective to validate its permitted behavior."
+        },
+        {
+          "term": "ACL",
+          "definition": "An access-control rule governing permitted operations on protected resources; testing may require more than checking group membership."
+        },
+        {
+          "term": "CMDB / CI",
+          "definition": "The configuration management database and the configuration items whose attributes and relationships it records."
+        }
+      ],
+      "review": [
+        {
+          "question": "Why compare the story with the Approval tab?",
+          "answer": "The implementation may add an unnecessary approval or omit a required one. The story defines what should happen."
+        },
+        {
+          "question": "Which records should you distinguish after a catalog submission?",
+          "answer": "The request, its requested item (RITM), and the required catalog task records and their relationships."
+        },
+        {
+          "question": "What should a portal field check include?",
+          "answer": "The specified label, description, field type, required behavior, available choices and expected validation."
+        },
+        {
+          "question": "Does completing any catalog task always close its RITM?",
+          "answer": "No. That is the demonstrated scenario’s expected outcome; other configurations may require more tasks or conditions."
+        },
+        {
+          "question": "Is a group-membership check a complete ACL test?",
+          "answer": "No. Check membership provisioning and, where required, the test user’s effective permission on the protected operation."
+        },
+        {
+          "question": "Does a ServiceNow email record prove mailbox receipt?",
+          "answer": "No. Platform notification content and external mailbox delivery need separate evidence."
+        },
+        {
+          "question": "When can an external email address be used?",
+          "answer": "Only under the project’s approved test procedure with an authorized test mailbox."
+        },
+        {
+          "question": "What is appropriate CMDB evidence for the dashboard example?",
+          "answer": "The expected role can view the required widgets and CI details, and the specified fields match the acceptance criteria."
+        }
+      ],
+      "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/f1ead3c13e5145479157240f99b56b23/playback",
+        "passwordProtected": true,
+        "embedVerified": false,
+        "availablePrivately": true
+      }
+    },
+    {
+      "key": "interview-prep/11",
+      "series": "interview-prep",
+      "classId": "11",
+      "date": "2026-10-14",
+      "instructor": "Mehaq",
+      "title": "Second interview session — partial recording; teaching transcript unavailable",
+      "notesStatus": "source-unavailable",
+      "summary": "This entry preserves the October 14 second-session recording, which is a 16-minute 15-second segment. The available WebEx transcript contains only 21 brief greetings and fragmented lines, and its recap reports no substantive teaching discussion. There is not enough reliable material to generate lesson notes or review answers for this segment. Use the first session’s ServiceNow notes for study; they are a separate source, not a reconstructed transcript of this recording.",
+      "relatedNotesKey": "interview-prep/10",
+      "keyConcepts": [],
+      "sections": [],
+      "practice": [],
+      "terms": [],
+      "review": [],
+      "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/4a5dc184439f4020bb09c4f9bbe0798b/playback",
+        "passwordProtected": true,
+        "embedVerified": false,
+        "availablePrivately": true
+      }
     }
   ]
 }
