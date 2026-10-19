@@ -20,6 +20,11 @@ an Academy workspace login. Use Windows 10/11 x64, Internet access and at least
 
 Double-click **Setup.cmd**. Keep its window open until it says **SETUP SUCCEEDED**.
 
+Use **Setup.cmd**, rather than opening Setup.ps1 directly. The launcher verifies
+Setup.ps1 against the package manifest, then removes its Windows download mark
+automatically. It does not change execution policy. If your organization requires
+signed scripts, its administrator must approve the installation.
+
 - It checks Node 24 (with npm), Git, Edge/Chrome and VS Code.
 - Compatible tools print PASS and are kept. Missing/unsupported tools are installed
   or updated using Windows App Installer (winget). Approve the named installer if
