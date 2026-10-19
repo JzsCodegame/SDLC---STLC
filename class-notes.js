@@ -18,6 +18,12 @@ function show(){
   else if(info.embedVerified===true){const iframe=document.createElement('iframe');iframe.src=watch;iframe.title=`Class ${session.classId} recording`;iframe.allow='fullscreen';iframe.referrerPolicy='no-referrer';recording.append(iframe);}
   const a=el('a',info.kind==='webex'?'Open recording in WebEx ↗':'Open recording ↗');a.href=watch;a.target='_blank';a.rel='noopener noreferrer';recording.append(a);if(info.kind==='webex'&&info.passwordProtected){recording.append(el('p','Open the recording and enter the recording access password supplied with your class. WebEx opens in a new tab.'));}
  }else{const p=el('p',info?.availablePrivately?'The recording is preserved. Playback will appear here when its student viewing link is ready.':'A recording link has not been added for this session yet.');p.className='notes-empty';recording.append(p);}
+ if(session.notesStatus==='source-unavailable'){
+  block('Session material availability').append(el('p',session.summary));
+  const related=catalog.sessions.find(s=>s.key===session.relatedNotesKey);
+  if(related){const a=el('a','Read the complete first-session study notes →');const target=new URL(location.href);target.searchParams.set('series',related.series);target.searchParams.set('class',related.classId);a.href=target.href;block('Related study material').append(a);}
+  return;
+ }
  list(block('Topics covered'),session.keyConcepts);block('Class summary').append(el('p',session.summary));
  const detailed=block('Detailed class notes');
  for(const part of session.sections){const node=document.createElement('section');node.className='notes-section';node.append(el('h4',part.title));detailed.append(node);node.append(el('p',part.text));const ref=el('p',`Transcript reference · ${part.timestamp}`);ref.className='notes-reference';node.append(ref);}
