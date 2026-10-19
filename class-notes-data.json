@@ -1031,6 +1031,141 @@
         "embedVerified": false,
         "availablePrivately": true
       }
+    },
+    {
+      "key": "automation/3",
+      "series": "automation",
+      "classId": "3",
+      "date": "2026-10-14",
+      "title": "UI components, locators, and running Playwright and Cypress examples",
+      "instructor": "Javid Zaman",
+      "summary": "Class Three connects visible UI controls to their HTML attributes and test locators, then walks through selecting a scenario, copying the matching Playwright or Cypress example, saving a test file, and running it in the correct workspace. The session includes hands-on browser-workspace practice and Windows setup troubleshooting. The Windows installation attempt encountered a script-execution restriction; it is not evidence of a successful installation.",
+      "keyConcepts": [
+        "UI components and expected outcomes",
+        "HTML elements, attributes, and locators",
+        "Paired Playwright and Cypress examples",
+        "Scenario selection and test-file organization",
+        "Workspace paths and visible test execution",
+        "Windows setup versus test execution",
+        "Regression testing"
+      ],
+      "sections": [
+        {
+          "title": "Identify the component and its expected behavior",
+          "text": "Begin with a small, observable UI behavior: entering text, selecting a dropdown option, checking a checkbox, or choosing a radio option. State the input, action, and expected result before choosing code. A click completing is not enough evidence that the intended result occurred. The practice page supplies small examples so each control can be understood without a large business application.",
+          "timestamp": "14:31"
+        },
+        {
+          "title": "Choose a locator that describes the intended element",
+          "text": "The class compared locating elements by text, label, placeholder, title, test ID, and markup attributes. A locator identifies the control a test must act on. Inspect the real page and select a locator that distinguishes the intended element. In the Playwright examples, labels and roles connect tests to the interface; the Cypress examples use the practice page’s data-cy attributes.",
+          "timestamp": "21:52"
+        },
+        {
+          "title": "Read tags, attributes, and values",
+          "text": "Recognize the element tag, its attribute names, and their values when inspecting markup. This explains how a visible field or button relates to a locator. ID and name are examples of attributes, not interchangeable meanings. HTML describes page structure, CSS controls presentation, and the DOM is the browser’s document representation; the class’s HTML/XML analogy should not be interpreted as a rule that XML is the backend.",
+          "timestamp": "40:44"
+        },
+        {
+          "title": "Compare the same text-entry scenario in both frameworks",
+          "text": "In the demonstrated example, the test enters Ada into the display-name field. The lesson offers Playwright and Cypress versions of the same requirement: compare how each locates the field and enters text, then check the displayed result. Method names differ between frameworks; use the corresponding example rather than mixing calls from the two libraries.",
+          "timestamp": "51:46"
+        },
+        {
+          "title": "Select a scenario and save the matching test file",
+          "text": "Use the Class Three scenario dropdown, such as minimum-length validation, and select the Playwright or Cypress code tab. The code pane updates for that selection. Copy the complete example into the correct framework’s test file, save it, and check the filename and extension. Preserve completed exercises in separate files when useful so changing one scenario does not erase earlier work.",
+          "timestamp": "1:40:46"
+        },
+        {
+          "title": "Run from the correct workspace and observe the live browser",
+          "text": "The hands-on demonstration navigated into the workspace and practice application before running the test. Use cd to change directories; put paths containing spaces inside quotation marks. Keep the editor file, terminal working directory, and selected framework consistent. For hosted practice, open Live test browser to observe a headed run. A successful terminal command is distinct from having the correct browser view open; review the reported test result as well.",
+          "timestamp": "1:11:34"
+        },
+        {
+          "title": "Follow the Windows setup guide in sequence",
+          "text": "For desktop practice, download and extract the approved Windows kit, then follow its step-by-step guide. Setup is separate from running a test; the class navigated into the extracted folder and attempted Setup.cmd. The recording shows troubleshooting and an execution-policy/signature error, not a completed installation. Use the current published guide and verified package; report errors rather than disabling system-wide execution policy or assuming the tools installed.",
+          "timestamp": "1:50:44"
+        },
+        {
+          "title": "Use repeatable checks for regression coverage",
+          "text": "The discussion connected automation to regression: rerun meaningful checks of existing behavior after changes. Understand the requirement and expected result first, then automate a stable example. Keep evidence of what ran and what passed or failed. A template is a starting point; adapt locators, inputs, and assertions to the application being tested instead of treating copied code as proof of coverage.",
+          "timestamp": "2:11:58"
+        }
+      ],
+      "practice": [
+        "Choose the text-entry scenario. Run the Playwright example and explain its locator, action, and result assertion.",
+        "Run the matching Cypress example in its separate framework file; compare its data-cy locator and typing command with Playwright.",
+        "Select minimum-length validation. State the invalid input and expected blocked-save behavior before running the test.",
+        "Save each exercise with the correct filename and extension; identify the terminal’s current directory before execution.",
+        "Open the hosted Live test browser when observing a headed test, then record the scenario, framework, outcome, and any error.",
+        "For desktop setup, use the current Windows guide in order and preserve the exact installer error if a prerequisite check fails."
+      ],
+      "terms": [
+        {
+          "term": "UI component",
+          "definition": "A visible interactive part of a page, such as a text field, dropdown, checkbox, or button."
+        },
+        {
+          "term": "Attribute",
+          "definition": "A named property in an element’s markup, such as id, name, or a dedicated data-cy value."
+        },
+        {
+          "term": "Locator",
+          "definition": "A description used by a test framework to identify a particular page element."
+        },
+        {
+          "term": "Assertion",
+          "definition": "A check that observed behavior matches the expected outcome."
+        },
+        {
+          "term": "Working directory",
+          "definition": "The folder relative paths and commands currently operate from."
+        },
+        {
+          "term": "Regression testing",
+          "definition": "Checking existing behavior for unwanted effects after a change."
+        }
+      ],
+      "review": [
+        {
+          "question": "What should you define before copying a component test?",
+          "answer": "The scenario’s input, action, and observable expected result."
+        },
+        {
+          "question": "What connects a visible control to a test action?",
+          "answer": "A locator that identifies the intended element using the real page’s semantics or attributes."
+        },
+        {
+          "question": "Can Playwright and Cypress method names be mixed in one example?",
+          "answer": "No. Use the complete example for the selected framework and its own test runner."
+        },
+        {
+          "question": "Why save the test in the correct framework folder?",
+          "answer": "The runner must discover the appropriate file and execute it with the intended configuration."
+        },
+        {
+          "question": "Why does cd matter when running a test?",
+          "answer": "It sets the working directory used by commands and relative file paths; quoted paths handle spaces."
+        },
+        {
+          "question": "Where should a student observe a hosted headed run?",
+          "answer": "In the assigned workspace’s Live test browser, while also checking the terminal’s test outcome."
+        },
+        {
+          "question": "Did the Windows troubleshooting in this recording prove setup succeeded?",
+          "answer": "No. A script-execution error was encountered; successful setup requires passing the current package’s checks."
+        },
+        {
+          "question": "Does copying a template prove a requirement is covered?",
+          "answer": "No. Verify that its locators, data, actions, and assertions match the requirement, then execute and inspect the result."
+        }
+      ],
+      "recording": {
+        "kind": "webex",
+        "url": "https://javidzaman-611.my.webex.com/recordingservice/sites/javidzaman-611.my/recording/b5c84ae41fdd41b0b57c0aa2de6b78bf/playback",
+        "passwordProtected": true,
+        "embedVerified": false,
+        "availablePrivately": true
+      }
     }
   ]
 }
