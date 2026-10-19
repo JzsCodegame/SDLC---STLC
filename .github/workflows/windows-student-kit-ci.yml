@@ -1,7 +1,7 @@
 name: Windows student kit Linux verification
 on:
   push:
-    branches: [codex/windows-student-kit-1.1.0]
+    branches: [codex/windows-student-kit-1.1.1]
 permissions:
   contents: read
 jobs:
@@ -22,10 +22,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Verify exact release source
-        run: node automation-lab/release/run-ci.mjs --source "$GITHUB_SHA" --version 1.1.0 --output .local/windows-kit-ci
+        run: node automation-lab/release/run-ci.mjs --source "$GITHUB_SHA" --version 1.1.1 --output .local/windows-kit-ci
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: windows-kit-1.1.0-linux-proof
+          name: windows-kit-1.1.1-linux-proof
           path: .local/windows-kit-ci/
           retention-days: 7
