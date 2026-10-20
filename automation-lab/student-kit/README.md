@@ -20,25 +20,27 @@ an Academy workspace login. Use Windows 10/11 x64, Internet access and at least
 
 Double-click **Setup.cmd**. Keep its window open until it says **SETUP SUCCEEDED**.
 
-If Git for Windows is already installed, you can use the bundled **Setup.sh**
-instead. In the extracted folder, right-click > Open Git Bash here. On Windows 11,
-you may need Show more options first. Enter:
+Or use PowerShell: in File Explorer, click the extracted folder's address bar,
+type **powershell**, press Enter, then enter this one command:
 
-```bash
-bash Setup.sh
+```powershell
+.\Setup.cmd
 ```
 
-No separate script download or chmod command is needed. Wait for
-**SETUP SUCCEEDED**. This uses the same Windows checks and installs the same
-Playwright/Cypress tools, through inline PowerShell without opening a .ps1 file
-or changing execution policy. It is not a WSL/Linux installer. Organization
-application-control rules may still require administrator approval. If Git Bash
-is missing, use Setup.cmd first to install Git; then reopen the folder's menu.
+Both options do the same job. Setup verifies the extracted kit, finds compatible
+Git Bash, installs the pinned official Git for Windows for your user if missing,
+then runs the BUNDLED Setup.sh automatically. You do not open Git Bash yourself.
+The downloaded Git installer must pass its pinned SHA256 and Windows signature
+checks before it runs. Compatible Git is kept.
 
-Use **Setup.cmd**, rather than opening Setup.ps1 directly. The launcher verifies
-Setup.ps1 against the package manifest, then removes its Windows download mark
-automatically. It does not change execution policy. If your organization requires
-signed scripts, its administrator must approve the installation.
+Use **Setup.cmd**; do not open Setup.ps1 or WindowsBootstrap.ps1 directly.
+The launcher runs verified bootstrap text inline, then starts bundled Bash.
+It never changes execution policy. School application-control rules may still
+need administrator approval; ask the instructor if Windows blocks installation.
+
+Optional, if Git Bash already exists: Open Git Bash here in the extracted folder
+and enter **bash Setup.sh**. This is not required for normal setup. Setup.sh is
+for Git Bash on Windows, not WSL/Linux; no chmod or separate download is needed.
 
 - It checks Node 24 (with npm), Git, Edge/Chrome and VS Code.
 - Compatible tools print PASS and are kept. Missing/unsupported tools are installed
@@ -80,7 +82,7 @@ If your instructor gives you a folder path, this command moves into it; replace
 only the example path with your actual extracted kit folder and keep the quotes:
 
 ```powershell
-Set-Location "$env:USERPROFILE\Downloads\Academy-Lab-1.1.2\Mini Quiz Lab 1.1.2"
+cd "$env:USERPROFILE\Downloads\Academy-Lab-1.1.3\Mini Quiz Lab 1.1.3"
 ```
 
 ## 4. Run your first visible Playwright test

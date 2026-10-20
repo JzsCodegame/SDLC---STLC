@@ -5,6 +5,7 @@ Set-StrictMode -Version Latest
 
 function Refresh-LabPath {
     $env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')
+    if ($env:ACADEMY_GIT_BIN) { $env:Path = $env:ACADEMY_GIT_BIN + ';' + $env:Path }
 }
 function Get-LabVersion([string]$Tool) {
     switch ($Tool) {
