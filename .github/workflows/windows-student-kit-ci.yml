@@ -1,7 +1,7 @@
 name: Windows student kit Linux verification
 on:
   push:
-    branches: [codex/windows-student-kit-1.1.2]
+    branches: [codex/windows-student-kit-1.1.3]
 permissions:
   contents: read
 jobs:
@@ -21,13 +21,15 @@ jobs:
       LAB_CI_IMAGE: cypress/included@sha256:ff49cf81f9c50372b9281235d20ed2793e5424dd1b93f5cfbaad9a57c1ff30be
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: 0f1e17e1fa6aab12af080ce4074c312d9f2da874
       - name: Check shared Git Bash installer
-        run: node scripts/build-git-bash-setup.mjs --check
+        run: node scripts/build-git-bash-setup.mjs --check && node scripts/build-windows-bootstrap.mjs --check
       - name: Verify exact release source
-        run: node automation-lab/release/run-ci.mjs --source "$GITHUB_SHA" --version 1.1.2 --output .local/windows-kit-ci
+        run: node automation-lab/release/run-ci.mjs --source 0f1e17e1fa6aab12af080ce4074c312d9f2da874 --version 1.1.3 --output .local/windows-kit-ci
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: windows-kit-1.1.2-linux-proof
+          name: windows-kit-1.1.3-linux-proof
           path: .local/windows-kit-ci/
           retention-days: 7
