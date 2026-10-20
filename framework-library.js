@@ -1,6 +1,6 @@
 import {capabilities,auditMetadata} from './automation-capabilities.js';
 import {workshops} from './framework-workshop-catalog.js';
-import {examples} from './class-three-examples.js';
+import {examples} from './class-three-examples.js?v=20261020-capability-library';
 const $=id=>document.getElementById(id),labels={example:'Paired runnable example',workshop:'Framework workshop',boundary:'Boundary / version requirement',planned:'Open coverage gap'};
 const node=(tag,text,className)=>{const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;};
 const list=(parent,heading,values)=>{if(!values?.length)return;parent.append(node('h4',heading));const ul=node('ul');for(const value of Array.isArray(values)?values:[values])ul.append(node('li',typeof value==='string'?value:JSON.stringify(value)));parent.append(ul);};
