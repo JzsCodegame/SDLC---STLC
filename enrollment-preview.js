@@ -1,0 +1,1 @@
+for(const link of document.querySelectorAll('a[href^="https://lab.kfk-786.com/academy/"]')){const target=new URL(link.href);target.search=location.search;target.hash=location.hash;link.href=target.href;}
