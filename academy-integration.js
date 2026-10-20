@@ -1,3 +1,5 @@
+import {renderLatestClass} from './class-catalog.js';
+renderLatestClass();
 // Bridges the existing quiz/flashcard app to the authored learning sections.
 const routes={
  SDLC:['sdlc','lifecycle'],STLC:['manual','stlc'],Requirements:['requirements','rule'],Design:['sdlc','design'],
