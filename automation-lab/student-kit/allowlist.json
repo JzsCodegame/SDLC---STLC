@@ -20,6 +20,7 @@
     ["automation-lab/practice-app/tsconfig.json", "practice-app/tsconfig.json"],
     ["automation-lab/practice-app/playwright.config.ts", "practice-app/playwright.config.ts"],
     ["automation-lab/practice-app/cypress.config.ts", "practice-app/cypress.config.ts"],
+    ["automation-lab/practice-app/cypress/tsconfig.json", "practice-app/cypress/tsconfig.json"],
     ["automation-lab/practice-app/src/main.tsx", "practice-app/src/main.tsx"],
     ["automation-lab/practice-app/src/style.css", "practice-app/src/style.css"],
     ["automation-lab/practice-app/src/vite-env.d.ts", "practice-app/src/vite-env.d.ts"],
