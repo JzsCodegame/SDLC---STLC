@@ -14,11 +14,26 @@ an Academy workspace login. Use Windows 10/11 x64, Internet access and at least
 3. Right-click the ZIP > Extract All. Extract into a local folder you own,
    such as Downloads. Do not run files while viewing the ZIP.
 4. Open the extracted folder, then open `Mini Quiz Lab <version>` inside it.
-   You should see `Setup.cmd`, `Lab.cmd` and this README.
+   You should see `Setup.cmd`, `Setup.sh`, `Lab.cmd` and this README.
 
 ## 2. Run setup once
 
 Double-click **Setup.cmd**. Keep its window open until it says **SETUP SUCCEEDED**.
+
+If Git for Windows is already installed, you can use the bundled **Setup.sh**
+instead. In the extracted folder, right-click > Open Git Bash here. On Windows 11,
+you may need Show more options first. Enter:
+
+```bash
+bash Setup.sh
+```
+
+No separate script download or chmod command is needed. Wait for
+**SETUP SUCCEEDED**. This uses the same Windows checks and installs the same
+Playwright/Cypress tools, through inline PowerShell without opening a .ps1 file
+or changing execution policy. It is not a WSL/Linux installer. Organization
+application-control rules may still require administrator approval. If Git Bash
+is missing, use Setup.cmd first to install Git; then reopen the folder's menu.
 
 Use **Setup.cmd**, rather than opening Setup.ps1 directly. The launcher verifies
 Setup.ps1 against the package manifest, then removes its Windows download mark
@@ -65,7 +80,7 @@ If your instructor gives you a folder path, this command moves into it; replace
 only the example path with your actual extracted kit folder and keep the quotes:
 
 ```powershell
-Set-Location "C:\Users\YourName\Downloads\Mini Quiz Lab 1.1.0"
+Set-Location "$env:USERPROFILE\Downloads\Academy-Lab-1.1.2\Mini Quiz Lab 1.1.2"
 ```
 
 ## 4. Run your first visible Playwright test
