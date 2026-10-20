@@ -1,4 +1,4 @@
-import {examples,playwrightSpec,cypressSpec} from './class-three-examples.js';
+import {examples,playwrightSpec,cypressSpec} from './class-three-examples.js?v=20261020-capability-library';
 import {modules} from './learning-content.js';import {openVisualLesson} from './visual-lessons.js';
 const $=id=>document.getElementById(id),params=new URLSearchParams(location.search);
 $('section-nav').innerHTML='<a href="#lesson">Component examples</a><a href="framework-library.html">Framework capability library</a><a href="#workbench">Run provided code</a><a href="#review">Recall and mini quiz</a>';
