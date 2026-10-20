@@ -14,7 +14,7 @@ export function validateDefinition(definition) {
   for (const name of definition.files) {
     const permitted = name === '.nojekyll'
       || (name === path.posix.basename(name) && !name.startsWith('.') && rootExtensions.has(path.extname(name)))
-      || ['downloads/mini-quiz-curriculum-v1.docx', 'downloads/mini-quiz-curriculum-v1.pdf'].includes(name);
+      || ['downloads/mini-quiz-curriculum-v1.docx', 'downloads/mini-quiz-curriculum-v1.pdf', 'downloads/academy-ui-fixtures-2026-10-20.zip'].includes(name);
     if (!permitted || name.includes('\\') || names.has(name.toLowerCase())) throw new Error('Unsafe or duplicate public asset: ' + name);
     names.add(name.toLowerCase());
   }
