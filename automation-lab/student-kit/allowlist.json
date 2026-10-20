@@ -29,6 +29,8 @@
     ["automation-lab/practice-app/scripts/run-cypress.mjs", "practice-app/scripts/run-cypress.mjs"],
     ["automation-lab/practice-app/test/api.test.js", "practice-app/test/api.test.js"],
     ["automation-lab/practice-app/tests/playwright/help-desk.spec.ts", "practice-app/tests/playwright/help-desk.spec.ts"],
-    ["automation-lab/practice-app/cypress/e2e/help-desk.cy.ts", "practice-app/cypress/e2e/help-desk.cy.ts"]
+    ["automation-lab/practice-app/cypress/e2e/help-desk.cy.ts", "practice-app/cypress/e2e/help-desk.cy.ts"],
+    ["automation-lab/practice-app/src/code-copy.js", "practice-app/src/code-copy.js"],
+    ["automation-lab/practice-app/src/code-copy.css", "practice-app/src/code-copy.css"]
   ]
 }

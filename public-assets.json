@@ -66,7 +66,9 @@
     "ui-components.html",
     "ui-components.js",
     "ui-components.css",
-    "component-status.json"
+    "component-status.json",
+    "code-copy.js",
+    "code-copy.css"
   ],
   "directories": {
     "assets/windows-kit": [
