@@ -1,0 +1,5915 @@
+{
+  "title": "Quality Assurance, AI and Automation Testing",
+  "version": "1",
+  "date": "September 28, 2026",
+  "pages": 54,
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "1. What we teach",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Software planning, development, testing, release, and improvement"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. IT foundations and early quality assurance"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Manual testing and programming"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Web automation, APIs, and continuous integration"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Responsible AI use"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. A testing project on the existing website"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Review requirements and acceptance criteria early"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Identify ambiguity and risk before implementation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Continue testing through development, release, and maintenance"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. One website throughout the course"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use the existing website throughout the course"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Add or refine forms, tables, asynchronous messages, and API-driven results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Use each addition for manual testing, automation, and regression"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. No new website build is required"
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "2. Learning outcomes and course context",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. What a learner can demonstrate at the end"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Translate a feature request into acceptance criteria, risks, test scenarios, and traceable test cases."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Execute tests, investigate failures, document reproducible defects, and communicate release readiness."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Write browser tests with Selenium, Playwright, and Cypress, using reusable components and meaningful assertions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Test APIs with Karate, run suites through Jenkins, and explain Docker, Kubernetes, AWS, and ServiceNow delivery workflows."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Explain LLMs and use Copilot to assist testing while checking outputs, limitations, and organizational data rules."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Present improvements to the existing website with a tested feature, regression evidence, and a clear handover."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Audience: beginners and career changers entering software quality assurance, plus manual testers moving into automation."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Delivery pace and assessment thresholds in this document are proposed settings for the course, not a fixed institutional or certification requirement."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Basis for this curriculum"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. This document draws on the Mini Quiz Tech & AI Academy hub scope, the revised integration plan, the SDLC Overview worked lesson, and the existing website project."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. The detailed module sequence, suggested duration, grading, and project minimums are curriculum recommendations added to make that scope teachable from beginning to end."
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "title": "3. Teaching sequence from beginning to end",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Suggested duration: 28 weeks"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Guided learning: 6 hours per week, 168 hours total"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Independent practice: about 4 hours per week, 112 hours total"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Adjust delivery pace while retaining practical checkpoints"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Foundations and automation"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Weeks",
+              "Module",
+              "Main evidence"
+            ],
+            [
+              "1",
+              "01 IT and quality foundations",
+              "Environment checklist and website exploration"
+            ],
+            [
+              "2",
+              "02 SDLC and early assurance",
+              "Feature lifecycle and acceptance criteria"
+            ],
+            [
+              "3",
+              "03 STLC and Agile teamwork",
+              "Test plan and traceability matrix"
+            ],
+            [
+              "4",
+              "04 Test design and coverage",
+              "Positive negative and boundary test suite"
+            ],
+            [
+              "5",
+              "05 Execution and defect analysis",
+              "Test results and reproducible defect reports"
+            ],
+            [
+              "6",
+              "06 Web APIs and data basics",
+              "Browser investigation and SQL exercises"
+            ],
+            [
+              "7–8",
+              "07 Java programming",
+              "Small programs and unit tests"
+            ],
+            [
+              "9",
+              "08 Git and build tools",
+              "Reviewed branch and repeatable test command"
+            ],
+            [
+              "10–12",
+              "09 Selenium Playwright and Cypress",
+              "Reliable browser tests for site components"
+            ],
+            [
+              "13–14",
+              "10 Automation framework design",
+              "Maintainable page objects and test data"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-4",
+      "title": "4. Teaching sequence continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. APIs delivery AI and the project"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Weeks",
+              "Module",
+              "Main evidence"
+            ],
+            [
+              "15–16",
+              "11 Karate API and integration testing",
+              "API checks and UI to data reconciliation"
+            ],
+            [
+              "17–19",
+              "12 DevOps cloud and service workflows",
+              "Jenkins Docker Kubernetes AWS and ServiceNow labs"
+            ],
+            [
+              "20",
+              "13 Nonfunctional quality",
+              "Accessibility usability and performance findings"
+            ],
+            [
+              "21",
+              "14 LLMs and Copilot foundations",
+              "AI concepts and a verified prompt exercise"
+            ],
+            [
+              "22",
+              "15 AI assisted test engineering",
+              "Reviewed AI assisted tests and defect analysis"
+            ],
+            [
+              "23",
+              "16 Machine learning foundations",
+              "Dataset split metrics and error analysis"
+            ],
+            [
+              "24",
+              "17 Testing AI enabled features",
+              "Evaluation set and failure analysis"
+            ],
+            [
+              "25–28",
+              "18 Existing website project",
+              "Tested component improvements and portfolio"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. After Module 6: manual QA"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. After Module 11: automation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. After Module 13: pipeline execution"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. After Module 17: AI evaluation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. After Module 18: final demonstration"
+        }
+      ]
+    },
+    {
+      "id": "section-5",
+      "title": "5. How learning works in Mini Quiz Tech & AI Academy",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. A repeatable lesson cycle"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Each lesson connects a short explanation to an observable action on the website."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Recall: Retrieve prior knowledge"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Worked example: Study a demonstrated solution"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Practice: Complete a focused exercise"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Explanation: Describe the result and reasoning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Review: Revisit gaps in understanding"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Mini quizzes support practice throughout the course; they do not replace practical assessment."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Notes and study guide"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "How we use it"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Objectives: State what learners should understand or demonstrate"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Plain-language explanations: Explain each concept in accessible terms"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Website examples: Show how the concept applies to the existing website"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Lesson sources: Record the references supporting the material"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Mini quizzes"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "How we use it"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use short retrieval checks during class and a 25-question topic review."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Answer explanations: Describe why an answer is correct"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Topic tags: Connect each question to its subject"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Question identifiers: Give each question a stable reference"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Flashcards"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "How we use it"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Severity versus priority: Distinguish impact from urgency"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Verification versus validation: Distinguish specified requirements from user needs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Waits versus retries: Distinguish readiness checks from repeated attempts"
+        }
+      ]
+    },
+    {
+      "id": "section-6",
+      "title": "6. Learning element details continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Carousels"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "How we use it"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Present a visual sequence or comparison, usually 8 to 12 slides."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Hands on exercises"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "How we use it"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Task: State the exercise to complete"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Starter material: Supply the resources needed to begin"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Expected evidence: Define what learners must submit"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Self-check rubric: Help learners assess their own work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Learners execute and explain, not only watch."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Review and feedback"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "How we use it"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Incorrect answers: Explain the reasoning error"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Failed tests: Investigate the cause"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Misconceptions: Correct the underlying misunderstanding"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Spaced practice: Revisit earlier topics over time"
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "title": "7. Lesson delivery and class preparation",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. A suggested guided session"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Retrieval practice: 10 minutes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Teaching and demonstration: 20 minutes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Guided lab: 35 minutes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Independent variation: 15 minutes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Review: 10 minutes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Continue longer labs in the next class"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Explain the reasoning before introducing more tools"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. The first worked lesson"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. The first SDLC lesson follows a small existing feature, such as recent scores, through planning, requirements, design, development, testing, deployment, and maintenance."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Requirement: Describe the selected feature on one page"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Design sketch: Show how the feature will work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Test-plan outline: Define the testing approach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Release checklist: Identify checks required before release"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Notes: Explain the lesson concepts"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Quiz: Review the topic with 25 questions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Flashcards: Practice 25 key recall items"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Carousel: Present the lesson visually"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Lab: Apply the concepts hands on"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Worksheet: Record the learner's work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. The sample is a teaching draft."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Review its explanations before classroom use, especially simplified claims about development models and team responsibilities."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. The instructor adapts it to the class and records corrections."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Before the first class"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Check basic computer skills, file navigation, browser use, and reading of simple instructions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Provide a browser, IDE, JDK, Node.js and npm, Git, build tools, and course repository access as each module needs them."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Provide an instructor-approved test environment with synthetic accounts and resettable data."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Use local fixtures or mocks when a service is unavailable."
+        }
+      ]
+    },
+    {
+      "id": "section-8",
+      "title": "8. Module 01 IT and quality foundations",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Quality foundations and early assurance  |  Week 1"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Explain the role of quality assurance and navigate the tools used to investigate a web application."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Client: Sends requests to a service"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Server: Processes requests and returns results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Browser: Displays and runs the web interface"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Operating system: Hosts the application tools"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Files: Store source code and test evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Environment: Supplies the configuration for a test run"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Team roles: Identify who builds, tests, and supports software"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Quality attributes: Describe what makes software fit for use"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Verification: Check work against specified requirements"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Validation: Check whether the result meets user needs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Defect: Identify behavior that fails an agreed expectation"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Explore the existing website"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Map its main user flows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Record three quality risks"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Inspect one request in browser developer tools"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit an environment checklist and a feature map."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Explain why a successful click alone is not proof that the correct outcome occurred."
+        }
+      ],
+      "module": 1,
+      "moduleTitle": "IT and quality foundations"
+    },
+    {
+      "id": "section-9",
+      "title": "9. Module 02 SDLC and early assurance",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Quality foundations and early assurance  |  Week 2"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Follow a feature from an idea to maintenance and improve its requirements before implementation."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Planning: Establish the purpose and scope of a change"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Requirements Analysis: Describe the behavior users need"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Design: Define how the solution will work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Development (implementation): Build the agreed behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Testing: Evaluate the implementation against expectations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Deployment: Deliver the tested change"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Maintenance: Support and improve the released system"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Agile: Deliver and learn through short iterations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Sequential models: Organize work into ordered stages"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Reviews: Find issues before implementation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Testability: Make expected behavior observable"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Risk: Prioritize likely or costly failures"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Acceptance criteria: State measurable completion conditions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Feedback: Revisit earlier decisions when evidence changes"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Choose a component on the existing site."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Write its user story and measurable acceptance criteria, identify missing decisions, and review them with a partner."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit the lifecycle worksheet and revised criteria."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Identify at least one defect that a requirements review could prevent."
+        }
+      ],
+      "module": 2,
+      "moduleTitle": "SDLC and early assurance"
+    },
+    {
+      "id": "section-10",
+      "title": "10. Module 03 STLC and Agile teamwork",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Quality foundations and early assurance  |  Week 3"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Plan the testing needed for a change and make coverage traceable to its requirements."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Requirement analysis: Identify what needs testing"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Test planning: Define the approach and scope"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Test design: Specify cases and expected results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Environment readiness: Confirm the system is ready for testing"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Execution: Run cases and record results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Defect follow-up: Track failures through resolution"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Test closure: Summarize outcomes and remaining risks"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Entry criteria: Define when testing can begin"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Exit criteria: Define when testing can finish"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Estimation: Plan the effort required"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Responsibilities: Assign ownership of testing work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Scrum events: Coordinate delivery and feedback"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. User stories: Describe needs from a user perspective"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Definition of done: Agree on completion expectations"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Prepare a small test plan for the chosen site component and link each acceptance criterion to a test scenario."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Participate in a short planning and defect-triage exercise."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit a test plan and traceability matrix with scope, risks, environment, data, responsibilities, and completion criteria."
+        }
+      ],
+      "module": 3,
+      "moduleTitle": "STLC and Agile teamwork"
+    },
+    {
+      "id": "section-11",
+      "title": "11. Module 04 Test design and coverage",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Manual testing and technical investigation  |  Week 4"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Select test cases deliberately and explain what each case is intended to reveal."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Equivalence partitions: Group inputs with similar expected behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Boundary values: Test the edges of valid ranges"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Decision tables: Cover combinations of conditions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. State transitions: Test changes between system states"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Exploratory charters: Guide focused investigation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Positive tests: Check valid use"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Negative tests: Check invalid use"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Test oracles: Establish how correctness is judged"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Risk prioritization: Test the most significant risks first"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Smoke tests: Check essential behavior quickly"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Regression tests: Detect unintended changes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Integration tests: Check interactions between components"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Acceptance tests: Check agreed user outcomes"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Design tests for a form, filter, or score rule."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Include empty input, valid and invalid values, boundaries, state changes, and recovery after an error."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Preconditions: State what must be true before the case"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Test data: Record the inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Steps: Describe the actions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Expected results: Define the correct outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Rationale: Explain why the case matters"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Demonstrate a decision table or state model instead of listing only happy paths."
+        }
+      ],
+      "module": 4,
+      "moduleTitle": "Test design and coverage"
+    },
+    {
+      "id": "section-12",
+      "title": "12. Module 05 Execution and defect analysis",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Manual testing and technical investigation  |  Week 5"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Run a repeatable test session and produce evidence that another person can use."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Execution records: Preserve the result of each run"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Environment versions: Identify the exact system tested"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Defect lifecycle: Follow an issue from discovery to closure"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Severity: Describe the impact of a defect"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Priority: Decide how urgently to address it"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Reproduction steps: Make a failure repeatable"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Screenshots: Capture visible evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Logs: Capture system evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Retesting: Verify a specific fix"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Regression: Check for related breakage"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Triage: Decide ownership and next action"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Test summaries: Communicate the overall result"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Release uncertainty: State what the evidence does not establish"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Execute the Module 4 suite in the test environment."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Investigate a seeded or naturally occurring failure and distinguish a product defect from bad data, environment failure, or an incorrect test."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit results and reproducible defect reports."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Expected behavior: State what should happen"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Actual behavior: State what happened"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Impact: Explain who or what is affected"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Conditions: Identify the environment and inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Evidence: Attach material that supports the finding"
+        }
+      ],
+      "module": 5,
+      "moduleTitle": "Execution and defect analysis"
+    },
+    {
+      "id": "section-13",
+      "title": "13. Module 06 Web APIs and data basics",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Manual testing and technical investigation  |  Week 6"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Connect what the browser displays to requests, responses, and stored data."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. HTML: Defines page structure"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. CSS: Controls presentation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. DOM: Represents the page as a document tree"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Selectors: Identify page elements"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. HTTP methods: Describe the requested operation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Status codes: Communicate response outcomes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. JSON: Structures exchanged data"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Cookies: Store browser-side values"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Sessions: Maintain interaction state"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Relational tables: Organize structured records"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Primary keys: Identify records uniquely"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Foreign keys: Relate records across tables"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. SELECT: Retrieve SQL records"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Filtering: Restrict query results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "15. Joins: Combine related records"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "16. Data validation: Check stored and displayed values"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "17. Document databases: Store document-shaped records"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Inspect a site interaction, read a JSON response, and query a synthetic SQL dataset."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Reconcile a displayed value with its source record or mocked response."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit a browser investigation and SQL worksheet."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Explain how a correct-looking page can still contain an integration or data defect."
+        }
+      ],
+      "module": 6,
+      "moduleTitle": "Web APIs and data basics"
+    },
+    {
+      "id": "section-14",
+      "title": "14. Module 07 Java programming for testers",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Programming and browser automation  |  Weeks 7 and 8"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Write small readable programs and understand the code used in automation tests."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Variables: Store values"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Types: Describe the kind of value"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Operators: Perform calculations and comparisons"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Conditions: Choose a path based on a result"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Loops: Repeat operations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Methods: Group reusable behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Strings: Represent text"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Arrays: Store indexed values"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Collections: Manage groups of objects"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Classes: Define object structure and behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Objects: Represent instances of a class"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Encapsulation: Control access to internal state"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Inheritance: Reuse behavior through class relationships"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Interfaces: Define a contract for behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "15. Exceptions: Represent execution errors"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "16. File handling: Read and write test resources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "17. Assertions: Compare actual and expected results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "18. Unit tests: Check small pieces of behavior"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Build validators for quiz answers or form fields."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Predict the output of short code snippets, repair faults, and write unit tests for normal, boundary, and invalid inputs."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit small programs and passing unit tests with at least one explained failure."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Use code-based quizzes to assess understanding rather than memorized syntax alone."
+        }
+      ],
+      "module": 7,
+      "moduleTitle": "Java programming for testers"
+    },
+    {
+      "id": "section-15",
+      "title": "15. Module 08 Git collaboration and build tools",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Programming and browser automation  |  Week 9"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Share test code safely and reproduce a test run from documented instructions."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Repositories: Store the project history"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Commits: Record a coherent change"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Branches: Isolate work in progress"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Pull requests: Propose changes for review"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Peer review: Evaluate another person's change"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Conflicts: Reconcile overlapping edits"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Ignore files: Exclude generated or local files"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Dependencies: Track required libraries"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Project structure: Organize code and resources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Maven: Build and run Java projects"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Gradle: Compare another Java build option"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Create a branch for a test change"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Request peer review"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Resolve a planned conflict in the training repository"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Run the suite with the chosen build command"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit the reviewed change and setup instructions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Another learner must be able to reproduce the run without copying the original machine configuration."
+        }
+      ],
+      "module": 8,
+      "moduleTitle": "Git collaboration and build tools"
+    },
+    {
+      "id": "section-16",
+      "title": "16. Module 09 Selenium Playwright and Cypress",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Programming and browser automation  |  Weeks 10 to 12"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Automate the existing website with stable locators, synchronization, and meaningful checks."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Selenium: Automate browsers with Java WebDriver"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. JavaScript: Write browser-test logic"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. TypeScript: Add type checking to JavaScript"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Playwright locators: Identify elements by stable properties"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Playwright auto-waiting: Wait for supported readiness conditions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Playwright assertions: Check expected browser state"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Cypress command chains: Sequence Cypress operations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Cypress retries: Recheck supported commands and assertions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Asynchronous behavior: Handle results that arrive later"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Synchronization: Align the test with application readiness"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Fixtures: Supply repeatable test resources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Network stubs: Control a simulated service response"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Browser contexts: Isolate browser state"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Failure evidence: Capture enough detail to diagnose a failed run"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Automate a form in all three tools, then test a dynamic component."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Compare Selenium explicit waits, Playwright auto-waiting and assertions, and Cypress command chaining and retry behavior."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit a passing and deliberately failing example in each tool."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Explain locator and synchronization choices and select one primary framework for the larger project."
+        }
+      ],
+      "module": 9,
+      "moduleTitle": "Selenium Playwright and Cypress"
+    },
+    {
+      "id": "section-17",
+      "title": "17. Module 10 Maintainable automation frameworks",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Frameworks APIs and continuous integration  |  Weeks 13 and 14"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Refactor a small suite so changes are easier to diagnose and maintain."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Page Object Model: Organize interactions around page components"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Test intent: Separate expected behavior from interaction details"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. JUnit: Execute and report Java tests"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. TestNG: Compare another Java test runner"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Fixtures: Provide shared test resources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Setup: Prepare each test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Teardown: Release resources after each test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Data-driven tests: Run a scenario with multiple inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Configuration: Separate environment settings from test logic"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Reports: Present execution results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Test independence: Avoid dependence on execution order"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Cleanup: Restore reusable test state"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Naming: Make test purpose clear"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Flakiness analysis: Investigate inconsistent results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "15. Retries: Avoid concealing persistent failures"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Refactor the Module 9 tests, introduce synthetic test-data variants, and change one component to observe the cost of maintenance."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Run tests individually and as a suite."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit a documented framework and a before-and-after maintenance explanation."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Retries must not hide persistent failures; each failure needs evidence."
+        }
+      ],
+      "module": 10,
+      "moduleTitle": "Maintainable automation frameworks"
+    },
+    {
+      "id": "section-18",
+      "title": "18. Module 11 Karate API and integration testing",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Frameworks APIs and continuous integration  |  Weeks 15 and 16"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Validate service behavior and show agreement between the user interface and the underlying data."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Karate feature files: Organize API scenarios"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Given When Then: Express setup, action, and expected outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Requests: Define the service call"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Headers: Supply request metadata"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Authentication: Establish identity"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Authorization: Check allowed operations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Response assertions: Check returned values"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Schemas: Check response structure"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Match: Compare Karate values and patterns"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Reusable features: Share repeated scenario behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Data-driven scenarios: Apply multiple test inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Negative cases: Check invalid requests"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Repeated requests: Evaluate repeat behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Error handling: Verify failure responses"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "15. Mocks: Replace unavailable services for a bounded test"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use Karate to test a synthetic score or form-submission endpoint, then reconcile its response with the page."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. If no suitable endpoint exists, use a documented mock behind an existing-site component."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit API cases and automated assertions for valid, invalid, and unavailable-service responses."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Record whether evidence came from a real endpoint or a mock."
+        }
+      ],
+      "module": 11,
+      "moduleTitle": "Karate API and integration testing"
+    },
+    {
+      "id": "section-19",
+      "title": "19. Module 12 DevOps cloud and service workflows",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Frameworks APIs and continuous integration  |  Weeks 17 to 19"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Run tests in a pipeline and use the results to support a release decision."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. DevOps: Coordinate development, testing, and operations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Jenkins checkout: Retrieve the intended source"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Jenkins build: Produce the artifact"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Jenkins tests: Execute the automated checks"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Jenkins reports: Preserve run evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Failure gates: Stop progression after a failed check"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Docker images: Package an application template"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Docker containers: Run instances of an image"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Kubernetes Pods: Host application containers"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Kubernetes Deployments: Maintain the desired application state"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Kubernetes Services: Provide stable access to Pods"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. AWS compute: Run workloads"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. AWS storage: Retain files and artifacts"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. AWS networking: Connect and isolate resources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "15. AWS identity: Control resource access"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "16. AWS monitoring: Observe system behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "17. ServiceNow ITSM: Test incident, problem, change, and request workflows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "18. ServiceNow catalog: Validate request records and Record Producers"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "19. ServiceNow controls: Test SLAs, rules, notifications, and access"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "20. ServiceNow data: Validate assets and configuration relationships"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "21. ServiceNow cases: Test employee and customer service workflows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "22. ServiceNow integrations: Verify mapping, synchronization, and failures"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Run UI and Karate tests in Jenkins"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Launch a Docker test environment"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Inspect a local Kubernetes deployment"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Map the environment to basic AWS services"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Complete the ServiceNow workflow and validation exercises in the detailed teaching sections"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Attach test and rollback evidence"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Pipeline definition: Submit the executable workflow"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Successful run: Preserve passing execution evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Failed run: Show how a failure is handled"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Release checklist: Record the readiness checks"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. A green build must be followed by checks of the actual intended artifact and target environment."
+        }
+      ],
+      "module": 12,
+      "moduleTitle": "DevOps cloud and service workflows"
+    },
+    {
+      "id": "section-20",
+      "title": "20. Module 13 Nonfunctional quality",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Nonfunctional quality and AI assistance  |  Week 20"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Identify quality problems that functional assertions alone may miss."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Usability: Evaluate how easily people complete tasks"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Responsive layout: Check behavior at different screen sizes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Keyboard navigation: Operate without a mouse"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Labels: Identify controls clearly"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Focus: Show and manage the active control"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Browser coverage: Compare supported browsers"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Visual comparison: Detect presentation differences"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Performance baselines: Record expected response behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Reliability: Assess consistent operation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Security concepts: Recognize common protection boundaries"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Accessibility checks: Combine automated scans with manual investigation"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Review an existing-site form using the keyboard and a narrow viewport, measure a small approved performance scenario, and investigate a visual or browser difference."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit prioritized findings with conditions, evidence, and suggested remedies."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Keep load and security exercises within the instructor-provided test environment."
+        }
+      ],
+      "module": 13,
+      "moduleTitle": "Nonfunctional quality"
+    },
+    {
+      "id": "section-21",
+      "title": "21. Module 14 LLMs and Copilot foundations",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Nonfunctional quality and AI assistance  |  Week 21"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Explain what AI assistance can and cannot establish about software quality."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. AI: Introduce systems that perform tasks associated with intelligence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Machine learning: Learn patterns from data"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Generative AI: Produce new content from learned patterns"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. LLMs: Generate language from supplied context"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Tokens: Represent units of model input and output"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Training: Change learned model parameters"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Inference: Generate a result using a trained model"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Context: Supply information for the current response"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Next-token generation: Produce language step by step"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Grounding: Supply relevant reference material"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Hallucinations: Identify plausible but unsupported output"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Evaluation: Judge responses against defined expectations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Microsoft 365 Copilot: Assist with workplace documents"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. GitHub Copilot: Assist with software development"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "15. Approved access: Follow organizational tool and data rules"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "16. Model availability: Check what the selected product permits"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use approved Copilot access to explain a requirement or generate candidate cases; use instructor-provided outputs if access is unavailable."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Compare the response with the source requirement and manually identify omissions or unsupported claims."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Prompt: Record the submitted instruction"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Sanitized inputs: Preserve the non-sensitive context"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Original output: Retain the unedited AI response"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Corrected result: Show the verified revision"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Explain why fluent text and runnable code are not proof of correctness."
+        }
+      ],
+      "module": 14,
+      "moduleTitle": "LLMs and Copilot foundations"
+    },
+    {
+      "id": "section-22",
+      "title": "22. Module 15 AI assisted test engineering",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Nonfunctional quality and AI assistance  |  Week 22"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use AI to improve testing work while retaining human ownership of expected behavior and evidence."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. GitHub Copilot: Draft and explain code for review"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Microsoft 365 Copilot: Support requirement and document work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Structured prompts: State the task and required output"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Case generation: Propose tests from requirements"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Boundary suggestions: Identify edge cases to review"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Synthetic data: Generate nonproduction test inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Test-code drafts: Create code that must be executed and checked"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Refactoring: Propose improvements to existing code"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Log summaries: Condense failure information for review"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Debugging support: Suggest explanations to verify"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Source checks: Compare claims with trusted material"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Reproducibility: Record enough context to repeat the work"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Apply AI assistance to one existing-site component."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Compare its suggested cases with a manually designed baseline, run any generated test code, and review the differences."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit an annotated comparison showing accepted, changed, and rejected suggestions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Independently justify assertions and disclose which artifacts used AI assistance."
+        }
+      ],
+      "module": 15,
+      "moduleTitle": "AI assisted test engineering"
+    },
+    {
+      "id": "section-23",
+      "title": "23. Module 16 Machine learning foundations",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Machine learning AI evaluation and the final project  |  Week 23"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Interpret a basic model evaluation without confusing model performance with application correctness."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Features: Represent model inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Labels: Represent expected target values"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Supervised learning: Learn from labeled examples"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Unsupervised learning: Find patterns without target labels"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Classification: Predict a category"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Regression: Predict a numeric value"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Training split: Supply data for learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Validation split: Support development decisions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Test split: Evaluate held-out examples"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Leakage: Detect unintended access to evaluation information"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Class imbalance: Recognize uneven category representation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Confusion matrix: Summarize classification outcomes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Precision: Assess the correctness of positive predictions"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "14. Recall: Assess how many actual positives were found"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "15. Error metrics: Quantify prediction errors"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "16. Drift: Observe changes in data or behavior"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use a small synthetic dataset in a guided Python notebook or a prepared results worksheet."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Compare two model outputs and explain errors, class balance, and why test data must be held apart."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit an evaluation summary and error analysis."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Advanced mathematics and model training infrastructure are outside this curriculum."
+        }
+      ],
+      "module": 16,
+      "moduleTitle": "Machine learning foundations"
+    },
+    {
+      "id": "section-24",
+      "title": "24. Module 17 Testing AI enabled features",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Machine learning AI evaluation and the final project  |  Week 24"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Design an evaluation for variable AI output and distinguish it from ordinary deterministic assertions."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Evaluation datasets: Collect representative test inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Reference answers: Provide expected response examples"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Rubrics: Define response-quality criteria"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Factuality: Check whether claims are supported"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Grounding: Check the use of supplied sources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Invalid inputs: Test unsuitable requests"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Prompt injection awareness: Recognize attempts to redirect the system"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Privacy: Check handling of sensitive information"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Repeated trials: Observe output variability"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Regression evaluation: Compare behavior after changes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Latency: Measure response time"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Fallbacks: Check behavior when the model is unavailable"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Human review: Resolve judgments requiring interpretation"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Evaluate an optional quiz explanation or hint component on the existing site."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Use recorded responses or a mock if a live model is unavailable."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Include correct, unsupported, irrelevant, and unavailable-response cases."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Evaluation set: Submit the selected test inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Rubric: State the quality criteria"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Results: Record observed outcomes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Failure analysis: Explain the unsuccessful cases"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Fallback checks: Verify unavailable-service behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Record provider and configuration only when a live model is actually used; do not claim a mock tested the model."
+        }
+      ],
+      "module": 17,
+      "moduleTitle": "Testing AI enabled features"
+    },
+    {
+      "id": "section-25",
+      "title": "25. Module 18 Existing website improvement project",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "Machine learning AI evaluation and the final project  |  Weeks 25 to 28"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning outcome"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Demonstrate the complete testing workflow on useful additions to the website we already have."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. What we teach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Scope: Bound the website changes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Risks: Prioritize significant failures"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Acceptance criteria: Define expected behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Incremental improvements: Add testable components to the existing site"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Manual coverage: Investigate behavior directly"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Automated coverage: Repeat selected checks with tools"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Pipeline execution: Run the checks consistently"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Defect correction: Repair and retest failures"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Regression: Check existing behavior after changes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Release evidence: Support the release decision"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Communication: Explain results and limitations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Handover: Provide the test package and operating notes"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical work"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Choose a bounded group of components with the instructor."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Add or refine them in the approved test environment, then apply the course test plan, automation framework, API checks, and relevant AI-assisted or AI-feature evaluation."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Evidence of learning"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Submit the completed project package and demonstrate it live."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Failure: Explain one unsuccessful result"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Improvement: Demonstrate one change made after review"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Limitations: State what remains unresolved"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Site ownership, existing features, and unrelated work are preserved."
+        }
+      ],
+      "module": 18,
+      "moduleTitle": "Existing website improvement project"
+    },
+    {
+      "id": "section-26",
+      "title": "26. Browser automation and Karate practice",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. All learners use Selenium, Playwright, and Cypress."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. We teach Java first, then the JavaScript and TypeScript needed for browser tests, including functions, objects, modules, promises, and async and await."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Cypress command chains need their own execution model; students do not treat them as ordinary promises."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Selenium"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Teaching focus"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Java WebDriver: Control a browser through Selenium Java code"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Explicit waits: Wait until a specified browser condition is satisfied"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Page objects: Encapsulate interactions with a page or component"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Browser lifecycle: Start and close the browser cleanly for a test"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Required evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Form and dynamic component tests with failure evidence"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Playwright"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Teaching focus"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. TypeScript: Add type checking to JavaScript"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Locators: Identify the element a test will interact with"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Auto-waiting: Wait for supported readiness conditions before acting"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Fixtures: Provide shared test resources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Contexts: Isolate browser state between tests"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Network control: Observe or substitute service responses during a test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Traces: Record execution details for diagnosing a failure"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Required evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. The same form flow plus a trace of a failed assertion"
+        }
+      ]
+    },
+    {
+      "id": "section-27",
+      "title": "27. Tool details continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Cypress"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Teaching focus"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. JavaScript or TypeScript"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Command chains: Sequence operations using the Cypress execution model"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Retry behavior: Check what happens when an operation is repeated"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Intercepts: Observe or stub network calls in a Cypress test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Fixtures: Provide shared test resources"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Required evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. The same form flow plus a stubbed response scenario"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Karate"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Teaching focus"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Feature files: Organize Karate scenarios in readable test files"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. HTTP requests: Specify the operation sent to a service"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Match assertions: Check expected values in a Karate response"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Schemas: Check response structure"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Data-driven tests: Run a scenario with multiple inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Reuse: Share common scenario steps across tests"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Required evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Positive API checks: Verify valid service requests"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Negative API checks: Verify invalid service requests"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Authorization checks: Verify permissions for the requested operation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Service-error checks: Verify behavior when the service fails"
+        }
+      ]
+    },
+    {
+      "id": "section-28",
+      "title": "28. JavaScript and test execution",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. JavaScript Node js and npm prerequisites"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. JavaScript variables, functions, arrays, objects, and modules"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Asynchronous execution before Playwright and Cypress"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Node.js: runtime for test tooling"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. npm: package management and script execution"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. TypeScript after JavaScript foundations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Check installations: node --version and npm --version"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Install dependencies: npm install"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Reproduce locked dependencies: npm ci"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Read package.json and define test scripts"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Run defined scripts: npm run test:playwright and npm run test:cypress"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Compare direct commands: npx playwright test and npx cypress run"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Capture the command, exit status, and report"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. Repeat the run in Jenkins"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Depth and project expectations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use one primary browser framework for the maintainable project suite after completing the comparison labs in all three."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Students explain the choice using application needs, team language, debugging evidence, and maintenance costs."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Karate remains the API automation framework for the course."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Run browser tests and Karate checks through documented commands and Jenkins."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Keep test data resettable, expected results independently justified, and results separated by tool."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. A mock response tests the consumer behavior; it does not prove the real service works."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Practical checkpoint"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Demonstrate one passing and one intentionally failing test in each browser tool."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Explain why a wait or retry is needed and show the evidence from a failed run."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Run a data-driven Karate scenario with response and schema checks."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Link a UI result to API evidence and clearly identify any mocked boundary."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Official teaching references: Playwright documentation https://playwright.dev/docs/intro"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Cypress documentation https://docs.cypress.io/app/get-started/why-cypress"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Karate documentation https://docs.karatelabs.io/"
+        }
+      ]
+    },
+    {
+      "id": "section-29",
+      "title": "29. Docker Kubernetes AWS and ServiceNow foundations",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Module 12 connects functional testing with delivery and service operations."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. These are introductory practical skills, not administrator certification or a requirement to migrate the existing website."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Docker and repeatable test environments"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Image: packaged application template"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Container: running instance of an image"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Dockerfiles, builds, and registries"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Ports and environment configuration"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Volumes, logs, and cleanup"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Run a test service or test runner in Docker"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Compare container behavior with a local run"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Kubernetes and application orchestration"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Clusters and nodes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Pods, Deployments, and Services"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Desired state, readiness, and rolling updates"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Inspect a deployment in a local cluster or guided demonstration"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Read logs and observe a replacement Pod"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Run a smoke test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Distinguish Docker packaging from Kubernetes orchestration"
+        }
+      ]
+    },
+    {
+      "id": "section-30",
+      "title": "30. AWS foundations and delivery evidence",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Basic cloud with AWS"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. On-demand resources, regions, and Availability Zones"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Shared responsibility"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. IAM users and roles; least privilege"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. VPC networking and security groups"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. EC2 compute and S3 object storage"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. CloudWatch monitoring"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. EKS: managed Kubernetes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Map access, logs, and cost controls to the test environment"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Use an instructor sandbox or an architecture worksheet."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Live resource creation is optional; when used, apply budgets, scoped access, and cleanup."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Evidence must say whether the learner ran a service or only designed the deployment."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Delivery evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Docker evidence: Record a successful run and cleanup."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Kubernetes evidence: Record a deployment observation and smoke test."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. AWS evidence: Submit an environment map."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Jenkins evidence: Preserve success and failure reports."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. References: Docker https://docs.docker.com/get-started/docker-overview/"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. AWS https://aws.amazon.com/what-is-cloud-computing/"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Kubernetes on AWS https://aws.amazon.com/kubernetes/"
+        }
+      ]
+    },
+    {
+      "id": "section-31",
+      "title": "31. ServiceNow tester foundations and ITSM",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Learning objectives"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Platform purpose: Explain how ServiceNow manages records and business workflows."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Tester role: Turn requirements into checks of data and complete business processes."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Module map: Distinguish ITSM, ITAM, CMDB, HRSD, and CSM."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. ITOM awareness: Recognize IT Operations Management in the platform map; the supplied source does not define a separate detailed ITOM course."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Core service workflows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Incident management: Restore interrupted service and validate the record from creation to closure."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Incident fields: Check caller, category, impact, urgency, and configured priority calculations."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Assignment: Verify that the configured rules route work to the correct support group."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Problem management: Link related incidents and validate investigation of the underlying cause."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Known errors: Check the configured handling of a documented cause and workaround."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Change types: Distinguish standard, normal, and emergency changes."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Change control: Validate required approvals before the configured implementation stage."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Change plans: Check scheduling, implementation steps, rollback instructions, and closure evidence."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Website exercise and evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Website example: Report a failed quiz submission as an incident in the training environment."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Investigation: Link recurring submission failures to a problem record."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Release example: Prepare a change record for the website correction."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Evidence: Submit workflow cases, expected results, record links or screenshots, and a defect report."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Lesson source: ServiceNow All in One.docx; ITSM, Incident Management, Problem Management, and Change Management sections."
+        }
+      ]
+    },
+    {
+      "id": "section-32",
+      "title": "32. ServiceNow catalog requests and record producers",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Concepts and validation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Service Catalog: Explain the self-service entry point for requesting available services."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Catalog items: Check availability and eligibility for the intended users."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Variables: Validate required inputs, defaults, reference choices, and conditional fields."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. REQ: Identify the overall request record."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. RITM: Identify the requested item and verify its submitted values."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. SCTASK: Verify the fulfillment task and its relationship to the requested item."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Approvals: Test approval and rejection paths against the configured requirements."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Fulfillment: Check task assignment and completion before request closure."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Alternative paths: Test cancellation, missing information, and fulfillment failure."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Record Producer: Explain a catalog form that creates a record in a target table."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Field mapping: Check that producer inputs populate the intended target record."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Order guides: Recognize their place among the catalog entry types listed in the source."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Website exercise and evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Catalog example: Request access to the website training environment."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Record Producer example: Submit a website issue and verify the incident that is created."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Negative test: Attempt submission without a required value."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Evidence: Submit a request-to-task trace and a separate producer-to-record mapping check."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Lesson source: ServiceNow All in One.docx; Service Catalog, Request Management, and interview question 28 on Record Producers."
+        }
+      ]
+    },
+    {
+      "id": "section-33",
+      "title": "33. ServiceNow SLAs rules and access",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Time and workflow behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. SLA purpose: Explain the agreed target for response or resolution."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Attachment conditions: Verify that the correct SLA attaches to the relevant record."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Timer lifecycle: Test start, pause, resume, and stop conditions individually."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Business schedules: Verify elapsed time against working hours, holidays, and time zones."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Breach behavior: Check escalation and notification when the configured limit is exceeded."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Record changes: Retest timer behavior after priority or state changes."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Example targets: Treat the handout SLA durations as exercise data, not universal ServiceNow defaults."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Rules and protection"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Business Rules: Explain server-side processing when configured record conditions are met."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Client-side behavior: Explain browser form behavior and distinguish it from server-side validation."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Rule triggers: Test applicable creation, update, and deletion conditions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Data integrity: Verify that rules update the intended values without changing unrelated records."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Notifications: Verify trigger, recipient, subject, content, and timing."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Role access: Check allowed and denied operations using representative user roles."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Knowledge access: Check search results and article visibility for the intended audience."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Website exercise and evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Website example: Test assignment and SLA behavior for a website incident using a supplied priority matrix."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Evidence: Submit a timer worksheet, rule decision cases, and an allowed-versus-denied access matrix."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Lesson source: ServiceNow All in One.docx; SLA validation, roles and security, notifications, and interview questions 25 to 27."
+        }
+      ]
+    },
+    {
+      "id": "section-34",
+      "title": "34. ServiceNow ITAM and CMDB",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Asset management"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. ITAM purpose: Track assets through acquisition, use, transfer, and retirement."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Asset records: Validate identifiers, serial numbers, ownership, location, and required fields."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Procurement and receiving: Check that received quantities create the expected inventory records."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Assignment and transfer: Verify the current user and retained assignment history."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Lifecycle restrictions: Test permitted transitions and reject invalid use of retired or disposed assets."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Software assets: Compare license entitlement with recorded consumption in a supplied scenario."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Configuration data"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. CMDB purpose: Store configuration items and their relationships."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. CI classes: Check that a configuration item uses the intended class and required attributes."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Relationships: Validate links between the website application, its server, and its database."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Asset versus CI: Distinguish asset ownership and lifecycle from configuration and service relationships."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Discovery data: Check incoming updates against expected records and duplicate-handling rules."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Data quality: Inspect missing values, stale values, duplicate records, and configured audit history."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Website exercise and evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Asset example: Follow a synthetic learner laptop from receipt through assignment and retirement."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Website example: Map the website application to sample infrastructure CIs."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Evidence: Submit lifecycle test cases, an asset-to-CI mapping, and a relationship diagram."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Lesson source: ServiceNow All in One.docx; ITAM and CMDB sections, including the CI validation table."
+        }
+      ]
+    },
+    {
+      "id": "section-35",
+      "title": "35. ServiceNow HRSD and customer service",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Employee services"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. HRSM and HRSD: Relate the handout HR service-management terminology to HR Service Delivery."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. HR services: Explain onboarding, offboarding, benefits, and employee information requests."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. HR cases: Validate subject person, requested-for information, service, assignment, and state."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. HR tasks: Check generated work and dependencies across HR, IT, and other fulfillment groups."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Confidentiality: Test permitted case and field access with synthetic employee data."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. HR knowledge: Verify that employees receive appropriate articles without restricted information."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Customer services"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. CSM purpose: Manage customer support cases from submission through closure."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Customer identity: Check account and contact associations on each case."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Customer portal: Validate submission, updates, attachments, and visible status."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Case processing: Test assignment and permitted state transitions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Customer isolation: Verify that one customer cannot access another customer's restricted case."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Communication: Check applicable SLAs, notifications, and knowledge access."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Website exercise and evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Employee example: Trace onboarding tasks that request website training access."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Customer example: Trace a learner support case about a quiz result."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Evidence: Submit one HR case flow, one customer case flow, and negative access tests."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Lesson source: ServiceNow All in One.docx; HRSM, HRSD, and CSM sections, including the customer case validation table."
+        }
+      ]
+    },
+    {
+      "id": "section-36",
+      "title": "36. ServiceNow integration testing and assessment",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Testing approach"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Requirements review: Resolve ambiguous business rules before setting expected results."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Functional tests: Check each requirement with observable outcomes."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Negative tests: Challenge missing inputs and invalid workflow transitions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Integration mapping: Verify source values, transformations, and target records."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Synchronization: Check creation and updates across the participating systems."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Failure handling: Test duplicate submissions and integration errors."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Upgrade testing: Run smoke checks followed by risk-based regression of affected processes."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. End-to-end tests: Trace the business request through all required stages to closure."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Practical assessment"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Website scenario: Trace a website issue through incident, investigation, controlled change, and retest."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Test package: Submit cases with data, preconditions, steps, and expected results."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Defect evidence: Record actual behavior, severity, priority, reproduction steps, and supporting evidence."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Interview practice: Explain each module and a test scenario using the learner's own lab experience."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Training environment: Use configured training modules or clearly labeled simulations when access is unavailable."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Automation link: Apply course browser and Karate skills to authorized, available training interfaces."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Delivery scope: Use these lessons within the suggested course plan; adjust instructor pacing to module access and learner progress."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Lesson source: ServiceNow All in One.docx; tester interview questions 13 to 24 and module integration-validation sections."
+        }
+      ]
+    },
+    {
+      "id": "section-37",
+      "title": "37. Large language models and workplace Copilot",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. What an LLM is and how it works"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. LLM: a model that learns language patterns from training data"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Tokens: units used to represent text"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Inference: generating tokens step by step from context"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Training: changing learned model parameters"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. A prompt supplies context; it does not normally retrain the model"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Context limits and variable outputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Plausible language can still be incorrect"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Grounding supplies relevant material"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Retrieval adds selected source content to context"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Grounding and retrieval do not guarantee accuracy"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Verify claims, expected results, and code against trusted evidence"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Copilot in organizations"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Microsoft 365 Copilot: organizational documents and productivity applications"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. GitHub Copilot: software development and code assistance"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Copilot products use models; Copilot is not one universal LLM"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Features and model access depend on product, licensing, permissions, and organization settings"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Use employer-approved accounts and tools"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Check the context being shared"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Follow organizational data rules"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Do not assume one license provides every model or all company data"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Record the product and visible model; mark hidden model details as unknown"
+        }
+      ]
+    },
+    {
+      "id": "section-38",
+      "title": "38. Copilot practice and verification",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. A simple response flow"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. User task and permitted context"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. product prepares the request"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. model generates a response"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. product presents the result"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. tester verifies the result against requirements and evidence."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Hands on workplace exercise"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Use Microsoft 365 Copilot to summarize a synthetic requirement or prepare a draft test outline."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Use GitHub Copilot to draft a small browser test or explain a failure."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Compare the result with manually written acceptance criteria, execute generated code, and correct unsupported assertions."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Use recorded instructor examples if a license is unavailable."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Learning evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Explain tokens, training, inference, context, grounding, and hallucinations in plain language."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Distinguish the Copilot product from the model it uses and describe why available models may vary."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Sanitized prompt: Record the instruction without sensitive information"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Original output: Preserve the initial AI response"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Verification: Explain how the result was checked"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Corrected result: Present the supported revision"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Explain one accepted and one rejected suggestion using independent evidence."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Terminology: LLM means large language model."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. LMS means learning management system, a different concept used to administer courses and learning records."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. The AI foundations topic here is LLMs."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Official references: Microsoft Copilot overview https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. GitHub Copilot overview https://docs.github.com/en/copilot/get-started/about-github-copilot"
+        }
+      ]
+    },
+    {
+      "id": "section-39",
+      "title": "39. Improving the existing website for testing",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. The existing website is the shared project."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. We add or refine test components in small increments as the course advances."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. The instructor confirms which site and test environment are used for a cohort; the curriculum does not depend on creating a replacement application."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Forms"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Required fields: Reject a submission when mandatory input is missing"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Format rules: Check that input follows the expected pattern"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Clear error and success messages: Explain the result of an attempted action"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Valid and invalid inputs: Check accepted values and rejected values"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Boundaries: Check values at the edges of a permitted range"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Keyboard use: Complete the interaction without a mouse"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Recovery: Continue successfully after an error"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Choices and dates"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Dropdowns: Select one of the available options"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Radio buttons: Choose one option from a group"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Checkboxes: Select or clear independent options"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Date constraints: Enforce the allowed date range"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. State changes: Check behavior after a selection changes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Combinations: Test interactions between selected options"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Default values: Verify the initial selections"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Invalid dates: Reject dates outside the allowed rules"
+        }
+      ]
+    },
+    {
+      "id": "section-40",
+      "title": "40. Component details continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Tables"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Search: Find records matching a query"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Sorting: Arrange records in the requested order"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Pagination: Navigate between groups of records"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Filters: Limit results to matching records"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Empty states: Explain when no records are available"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Expected records: Verify that the correct items are returned"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Ordering: Check the sequence of displayed records"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Counts: Check reported totals against the data"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Combinations: Test interactions between selected options"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. No results: Verify the response to an unmatched query"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Dynamic feedback"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Loading indicators: Show that an operation is in progress"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Delayed results: Handle responses that arrive later"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Disabled actions: Prevent actions while their prerequisites are unmet"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Wait conditions: Continue when the required state is reached"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Repeated clicks: Check behavior when an action is requested again"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Timeouts: Handle an operation that takes too long"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Retry behavior: Check what happens when an operation is repeated"
+        }
+      ]
+    },
+    {
+      "id": "section-41",
+      "title": "41. Component details continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Browser interactions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Dialogs: Handle an interactive prompt"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Additional windows: Switch to the intended browser window"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Safe upload examples: Practice with permitted synthetic files"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Correct context: Act on the intended frame or window"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Cancel paths: Check the result of abandoning an action"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Allowed file rules: Validate permitted upload types and sizes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Cleanup: Restore reusable test state"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Scores or submissions"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. A synthetic submission flow with visible confirmation"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Data consistency: Compare values across the page and service"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Duplicate submission: Check that repeated submissions are handled correctly"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. API responses: Verify the service response to an action"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Error paths: Check the behavior after a failed request"
+        }
+      ]
+    },
+    {
+      "id": "section-42",
+      "title": "42. Component details continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Accessibility"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Labels: Identify the purpose of each user interface control"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Visible focus: Make the active control easy to identify"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Readable errors: Explain validation problems clearly"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Responsive layout: Adapt the interface to different screen sizes"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Keyboard flow: Follow a usable sequence without a mouse"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Focus order: Move between controls in a logical order"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Contrast review: Check that content can be distinguished visually"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Screen sizes: Review the interface at the selected viewport sizes"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Optional AI hint"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students add or refine"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. A bounded hint or explanation with recorded or live responses"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What students test"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Grounding: Check the use of supplied sources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Usefulness: Assess whether the response helps complete the task"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Unavailable response: Check behavior when the AI service cannot answer"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Safe fallback: Provide an appropriate alternative after failure"
+        }
+      ]
+    },
+    {
+      "id": "section-43",
+      "title": "43. Project scope and milestones",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Suggested minimum project scope"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Choose one form or input improvement"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Choose one data or dynamic component improvement"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Choose one quality or error-handling improvement"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Use instructor scaffolding to keep the project focused on testing"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. An AI-backed component is optional"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. A reviewed AI-assisted testing exercise is required"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Project milestones"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Week 25"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Baseline existing behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Agree on component changes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Write acceptance criteria and risks"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Prepare test data and cases"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Weeks 26 and 27"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Implement the agreed improvements"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Execute manual tests"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Add focused automation"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Investigate defects"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Connect the suite to the course pipeline"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "e. Week 28"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Retest fixes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Run regression"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Present test evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Demonstrate the website"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Hand over the test package and remaining findings"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Use resettable synthetic data and an approved test environment."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Keep deliberately defective examples clearly identified in the lab environment."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Shared-site deployment follows the instructor’s existing release process."
+        }
+      ]
+    },
+    {
+      "id": "section-44",
+      "title": "44. Assessments and completion requirements",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Assessment rewards demonstrated testing judgment and reproducible work."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. The proposed weighting below can be adjusted before a cohort begins."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Publish the final rubric and allow learners to correct work after feedback."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Topic quizzes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Weight: 15%"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. 25-question reviews with explanations and follow-up on weak topics"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Practical labs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Weight: 30%"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Manual QA"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Java and JS or TS"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Three UI tools"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Karate"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. DevOps and ServiceNow labs"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Reviews and communication"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Weight: 10%"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Peer review: Evaluate another person's change"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Defect triage: Decide how reported issues will be handled"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Concise summaries: Communicate the essential testing findings"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Clear technical explanations: Explain decisions using understandable evidence"
+        }
+      ]
+    },
+    {
+      "id": "section-45",
+      "title": "45. Assessment details continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. AI evaluation portfolio"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Weight: 15%"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Prompt/output review: Check the AI response against its task and sources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Rejected suggestions: Explain why an AI suggestion was not accepted"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Evaluation cases: Provide inputs used to assess AI behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Error analysis: Explain why observed outcomes were incorrect"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Existing website project"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Weight: 30%"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Component improvements: Demonstrate the changes made to the existing website"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Traceable testing: Connect requirements to tests and results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Automation: Show repeatable checks executed by the test tools"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Results: Record observed outcomes and their supporting evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Demonstration: Show the completed work in operation"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Proposed completion standard"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Achieve at least 70% overall and complete every required practical checkpoint."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Achieve at least 70% on the final project rubric and demonstrate the submitted work independently."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Provide reproducible evidence and disclose AI assistance."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Unsupported results or copied work without understanding do not satisfy a practical requirement."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Record unresolved defects and limitations honestly."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Course completion does not require pretending that an application has no defects."
+        }
+      ]
+    },
+    {
+      "id": "section-46",
+      "title": "46. Final project rubric and portfolio",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Final project rubric"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Scope and traceability"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Points: 15"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What a successful submission shows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Clear criteria: State measurable expected outcomes"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Prioritized risks: Order testing by the significance of failure"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Links from requirements to cases: Show which test covers each requirement"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Test design and manual execution"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Points: 20"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What a successful submission shows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Positive test coverage: Demonstrate valid user behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Negative test coverage: Demonstrate invalid user behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Boundary test coverage: Demonstrate checks at input limits"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Exploratory test coverage: Document focused investigative testing"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "d. Automation and maintainability"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Points: 25"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What a successful submission shows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Reliable assertions: Check outcomes that establish the intended behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Reusable structure: Share interaction code without obscuring test intent"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Controlled data: Use known inputs and reset state between runs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Readable failures: Provide enough context to diagnose a failed check"
+        }
+      ]
+    },
+    {
+      "id": "section-47",
+      "title": "47. Criterion details continued",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. API and pipeline evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Points: 15"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What a successful submission shows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Repeatable commands: Document how another person can rerun the suite"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Integration checks: Verify interactions between application components"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Reports: Summarize the execution results"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Demonstrated failure handling: Show how the workflow responds to a failed check"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Quality and AI judgment"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Points: 15"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What a successful submission shows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Relevant nonfunctional checks and a verified AI-assisted artifact or AI evaluation"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Demonstration and handover"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Points: 10"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "What a successful submission shows"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Clear walkthrough: Explain the project and its evidence step by step"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Reproducible defects: Provide enough detail to recreate each failure"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Setup instructions: Explain how to prepare the test environment"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Limitations: State unresolved issues and coverage gaps"
+        }
+      ]
+    },
+    {
+      "id": "section-48",
+      "title": "48. Required portfolio",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Feature map and acceptance criteria"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Test plan and traceability matrix"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Test cases, execution results, and defect reports"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Java and JavaScript or TypeScript exercises"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Selenium, Playwright, and Cypress examples"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Karate API suite and Jenkins evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Docker and Kubernetes lab evidence"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. AWS environment map and ServiceNow tester validation package"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Copilot review"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Final demonstration and handover notes"
+        }
+      ]
+    },
+    {
+      "id": "section-49",
+      "title": "49. Teaching resources and curriculum coverage",
+      "blocks": [
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Curriculum requirement",
+              "Where it is taught",
+              "Evidence"
+            ],
+            [
+              "Early quality assurance",
+              "Modules 1 to 3",
+              "Reviewed requirements and testable acceptance criteria"
+            ],
+            [
+              "Manual testing and QA practice",
+              "Modules 3 to 6",
+              "Test plan, designed cases, execution and defects"
+            ],
+            [
+              "Coding and test automation",
+              "Modules 7 to 11",
+              "Java and JS or TS, three browser tools, Karate suite"
+            ],
+            [
+              "Delivery and quality reporting",
+              "Modules 12 and 13",
+              "Jenkins, container, cloud and ServiceNow evidence"
+            ],
+            [
+              "AI literacy and responsible use",
+              "Modules 14 and 15",
+              "LLM explanation and reviewed Copilot artifacts"
+            ],
+            [
+              "ML concepts and AI evaluation",
+              "Modules 16 and 17",
+              "Metrics, evaluation dataset and error analysis"
+            ],
+            [
+              "End to end practical application",
+              "Module 18",
+              "Improvements and test evidence for the existing site"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-50",
+      "title": "50. Teaching tools and resources",
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "a. Tools and resources in the Academy"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Learning materials: notes, mini quizzes, flashcards, carousels, and labs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Languages: Java and JavaScript or TypeScript"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Browser automation: Selenium, Playwright, and Cypress"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. API automation: Karate"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Data investigation: SQL and browser developer tools"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Collaboration: Git and GitHub"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Execution: Java test runner, build tool, Node.js, and npm"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Continuous integration: Jenkins"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Machine learning: guided notebook or prepared worksheet"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Google AI Studio and Gemini can support prompt and evaluation lessons where instructor access is available."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Existing Google Docs or Sheets materials support lesson preparation."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Firebase can provide a teaching example of score storage and data validation."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "13. These are integration options from the Academy scope; this curriculum does not assert that each integration is already active."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "b. Academy portal"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. https://jzscodegame.github.io/SDLC---STLC/"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "c. Existing automation playground"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. https://atom-php.onrender.com/index.php"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. The saved integration report identifies the Render site as an automation playground."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Use the existing site selected by the instructor for the component-improvement project."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Check availability and lab access before class; a local copy, fixture, or mock can support the same objective when needed."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Private administration consoles are not student links."
+        }
+      ]
+    },
+    {
+      "id": "section-51",
+      "title": "51. Instructor preparation and upkeep",
+      "blocks": [
+        {
+          "type": "text",
+          "level": 0,
+          "text": "1. Component baseline: Prepare the initial website behavior"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "2. Expected outcomes: Define what the lesson should demonstrate"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "3. Synthetic data: Supply resettable practice inputs"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "4. Starter materials: Prepare the lab resources"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "5. Answer explanations: Verify the reasoning behind quiz answers"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "6. Assessment rubric: Publish the evaluation criteria"
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "7. Review AI-generated content against its lesson sources."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "8. Date and version materials so results can be interpreted against what students actually saw."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "9. Use quiz and lab feedback to select review topics."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "10. Refreshing a dated quiz does not guarantee a different set of questions when the bank is small."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "11. Preserve the previous usable lesson package and test environment when an update fails."
+        },
+        {
+          "type": "text",
+          "level": 0,
+          "text": "12. Confirm student-visible behavior after an approved release."
+        }
+      ]
+    }
+  ]
+}
