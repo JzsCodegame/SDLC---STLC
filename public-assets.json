@@ -68,7 +68,21 @@
     "ui-components.css",
     "component-status.json",
     "code-copy.js",
-    "code-copy.css"
+    "code-copy.css",
+    "framework-library.html",
+    "framework-library.js",
+    "framework-library.css",
+    "automation-capabilities.js",
+    "framework-workshops.js",
+    "framework-supplement-workshops.js",
+    "framework-workshop-catalog.js",
+    "framework-workshop-acceptance.js",
+    "class-three-advanced-examples.js",
+    "ui-advanced.html",
+    "ui-advanced.js",
+    "ui-advanced.css",
+    "framework-fixtures.json",
+    "downloads/academy-ui-fixtures-2026-10-20.zip"
   ],
   "directories": {
     "assets/windows-kit": [

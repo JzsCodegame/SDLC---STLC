@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "kind": "static-practice-fixtures",
+  "date": "2026-10-20",
+  "filename": "academy-ui-fixtures-2026-10-20.zip",
+  "bytes": 14499,
+  "sha256": "96bb63bf7e8942e589b92b0203fd86bfbeb76c07d6c9f2502222401c9a843595",
+  "files": [
+    {
+      "path": "academy-ui-fixtures/public/ui-components.html",
+      "bytes": 7097,
+      "sha256": "a9953ea65324529b73c80ab20f129a0dd1be60938dce238816871e98d84e5699"
+    },
+    {
+      "path": "academy-ui-fixtures/public/ui-components.js",
+      "bytes": 5171,
+      "sha256": "1eb3b4e7d004112480d8c854a2a886506803a54283e034b11d33522258baf49c"
+    },
+    {
+      "path": "academy-ui-fixtures/public/ui-components.css",
+      "bytes": 1576,
+      "sha256": "d8ed88ceca828d1075ffd5998e50e6c4d42a3210528e325f0c46506717b73482"
+    },
+    {
+      "path": "academy-ui-fixtures/public/component-status.json",
+      "bytes": 28,
+      "sha256": "ab5d4e5f860e879a515d48ae7ec3db6cc8311f19b27efe2674e3f1404d6cc84d"
+    },
+    {
+      "path": "academy-ui-fixtures/public/ui-advanced.html",
+      "bytes": 757,
+      "sha256": "dc2b0cc4e342087c0a28d6572d53b43f03883b698915eaeb6bef41eddca9cfa9"
+    },
+    {
+      "path": "academy-ui-fixtures/public/ui-advanced.js",
+      "bytes": 14205,
+      "sha256": "42e55ad176a77b7bcb85d66acd4f042a1049bfcbf31b49bc01932a2affabb9d5"
+    },
+    {
+      "path": "academy-ui-fixtures/public/ui-advanced.css",
+      "bytes": 1465,
+      "sha256": "8b100189a445f6b75258043af550817138d897f1dfd4cf57a4928b6a825e0639"
+    },
+    {
+      "path": "academy-ui-fixtures/public/code-copy.js",
+      "bytes": 2190,
+      "sha256": "ac0ef76eb6be7739cbefd5e85c21d29d86d5a2391c6c457e3ae3b4dd42f0261f"
+    },
+    {
+      "path": "academy-ui-fixtures/public/code-copy.css",
+      "bytes": 1115,
+      "sha256": "dc6fd6714d98ff65ff1e44e504006401ec5bf75bb17f8897601be5298df3f86d"
+    },
+    {
+      "path": "academy-ui-fixtures/README.txt",
+      "bytes": 1211,
+      "sha256": "7bea34b6a4187c055c6ddf2d35036cba44f6caae65377565d34a6198974d9bee"
+    }
+  ]
+}
