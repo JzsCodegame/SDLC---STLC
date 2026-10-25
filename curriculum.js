@@ -142,6 +142,89 @@ function renderBlocks(blocks, body) {
   }
 }
 
+// The visual reader is a view of the original outline, never a second curriculum.
+const svgNS = 'http://www.w3.org/2000/svg';
+const cleanLabel = text => text.replace(/^(?:\d+|[a-z])\.\s+/i, '');
+function svgElement(tag, attributes = {}, text) {
+  const node = document.createElementNS(svgNS, tag);
+  for (const [name, value] of Object.entries(attributes)) node.setAttribute(name, value);
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function wrapLabel(text, width = 38) {
+  const lines = [];
+  for (const word of text.split(/\s+/)) {
+    if (!lines.length || (lines.at(-1) + ' ' + word).length > width) lines.push(word);
+    else lines[lines.length - 1] += ' ' + word;
+  }
+  return lines;
+}
+function renderVisualMap(section, body) {
+  const groups = [];
+  let current = null;
+  for (const block of section.blocks) {
+    if (block.type === 'heading') {
+      current = {title: cleanLabel(block.text), items: []};
+      groups.push(current);
+    } else if (block.type === 'text' && block.text.trim()) {
+      if (!current) {
+        current = {title: section.module ? 'Course context' : cleanLabel(section.title), items: []};
+        groups.push(current);
+      }
+      current.items.push(cleanLabel(block.text));
+    } else if (block.type === 'table') {
+      current = {title: 'Course overview', items: block.rows.slice(1).map(row => row.join(' · '))};
+      groups.push(current);
+    }
+  }
+  const map = el('section', undefined, 'curriculum-visual-map');
+  map.setAttribute('aria-label', `Visual map: ${section.title}`);
+  map.append(el('p', section.module ? 'OUTCOME → CONCEPTS → PRACTICE → EVIDENCE' : 'EXPLORE THIS SECTION', 'visual-map-label'));
+  const grid = el('div', undefined, 'visual-map-grid');
+  const visualGroups = groups.filter(group => group.items.length);
+  visualGroups.forEach((group, index) => {
+    const card = el('div', undefined, 'visual-map-node');
+    const titleLines = wrapLabel(group.title, 33);
+    // A concept tree shows every named concept; longer outcomes stay concise.
+    // Full explanations remain verbatim in the expandable original outline.
+    const conceptTree = group.title === 'What we teach' && group.items.every(item => item.includes(':'));
+    const visibleItems = conceptTree ? group.items.map(item => item.slice(0, item.indexOf(':'))) : group.items.slice(0, 3);
+    const itemLines = visibleItems.map(item => wrapLabel(item, 39).slice(0, 3));
+    const height = 86 + titleLines.length * 22 + itemLines.reduce((total, lines) => total + lines.length * 20 + 14, 0);
+    const svg = svgElement('svg', {viewBox: `0 0 380 ${height}`, role: 'img', 'aria-labelledby': `${section.id}-map-${index}-title ${section.id}-map-${index}-desc`});
+    svg.append(svgElement('title', {id: `${section.id}-map-${index}-title`}, group.title));
+    svg.append(svgElement('desc', {id: `${section.id}-map-${index}-desc`}, visibleItems.join(' · ') + (group.items.length > visibleItems.length ? ' More items in the complete outline below.' : '')));
+    svg.append(svgElement('rect', {x: 1, y: 1, width: 378, height: height - 2, rx: 18, fill: '#f4f8f3', stroke: '#cfdbd8'}));
+    svg.append(svgElement('circle', {cx: 32, cy: 31, r: 16, fill: '#006a68'}));
+    svg.append(svgElement('text', {x: 32, y: 36, 'text-anchor': 'middle', fill: '#fff', 'font-size': 13, 'font-weight': 700}, String(index + 1).padStart(2, '0')));
+    let y = 33;
+    for (const line of titleLines) {
+      svg.append(svgElement('text', {x: 60, y, fill: '#172d36', 'font-size': 17, 'font-weight': 700}, line));
+      y += 22;
+    }
+    y += 17;
+    const branchStart = y - 5;
+    let branchEnd = branchStart;
+    itemLines.forEach((lines, itemIndex) => {
+      branchEnd = y - 5;
+      svg.append(svgElement('path', {d: `M 18 ${y - 5} H 29`, fill: 'none', stroke: '#84ada6', 'stroke-width': 2}));
+      svg.append(svgElement('circle', {cx: 30, cy: y - 5, r: 4, fill: '#006a68'}));
+      lines.forEach((line, lineIndex) => {
+        const truncated = lineIndex === lines.length - 1 && wrapLabel(visibleItems[itemIndex], 39).length > 3;
+        svg.append(svgElement('text', {x: 40, y, fill: '#36545a', 'font-size': 14}, line + (truncated ? '…' : '')));
+        y += 20;
+      });
+      y += 14;
+    });
+    svg.append(svgElement('path', {d: `M 32 47 Q 18 47 18 ${branchStart} V ${branchEnd}`, fill: 'none', stroke: '#84ada6', 'stroke-width': 2}));
+    svg.append(svgElement('text', {x: 22, y: height - 18, fill: '#006a68', 'font-size': 12}, `${group.items.length} ${group.items.length === 1 ? 'point' : 'points'} in the complete outline`));
+    card.append(svg);
+    grid.append(card);
+  });
+  map.append(grid, el('p', 'A visual overview of the original curriculum. Open the complete outline for every point; Word and PDF retain the document format.', 'visual-map-note'));
+  body.append(map);
+}
+
 try {
   const response = await fetch('curriculum-data.json');
   if (!response.ok) throw new Error(`Curriculum response ${response.status}`);
@@ -169,7 +252,13 @@ try {
     heading.tabIndex = -1;
     node.append(heading);
     const body = el('div', undefined, 'section-body');
-    renderBlocks(section.blocks, body);
+    renderVisualMap(section, body);
+    const outline = el('details', undefined, 'curriculum-full-outline');
+    outline.append(el('summary', 'Read the complete original outline'));
+    const outlineBody = el('div', undefined, 'curriculum-outline-body');
+    renderBlocks(section.blocks, outlineBody);
+    outline.append(outlineBody);
+    body.append(outline);
     const connection = lessonLink(section.module);
     if (connection) {
       const note = el('p', 'Connect this scope to an available concept card: ');
