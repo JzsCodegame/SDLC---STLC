@@ -4111,14 +4111,14 @@
     "answer": 1
   },
   {
-    "question": "STLC scenario: A benefits rule accepts a person only when resident AND (age at least 65 OR disability proof). Which expected-results set follows the full rule?",
+    "question": "STLC scenario: A benefits rule requires resident AND (age at least 65 OR disability proof). Case A: resident, age 70, no proof. B: nonresident, age 70, proof. C: resident, age 40, proof. Which cases qualify?",
     "choices": [
-      "Resident age 70 without proof: accept; nonresident age 70 with proof: accept; resident age 40 with proof: accept",
-      "Resident age 70 without proof: reject; nonresident age 70 with proof: reject; resident age 40 with proof: accept",
-      "Resident age 70 without proof: accept; nonresident age 70 with proof: reject; resident age 40 with proof: accept",
-      "Resident age 70 without proof: accept; nonresident age 70 with proof: reject; resident age 40 with proof: reject"
+      "A and B",
+      "A and C",
+      "B and C",
+      "A, B and C"
     ],
-    "answer": 2
+    "answer": 1
   },
   {
     "question": "STLC scenario: A bank transfer must debit 30 from balance 100 and credit balance 20 atomically. Retrying the same transfer ID must not apply it twice. After a timeout the retry returns Success. Which stored balances satisfy both rules?",
@@ -4241,12 +4241,12 @@
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: After a ServiceNow upgrade, smoke testing cannot create an Incident because a required reference lookup fails. Other pages open. What is the strongest next QA action?",
+    "question": "ServiceNow scenario: A customer knowledge search is configured to show only Published, unexpired articles. Article A is Published but expired; B is an unexpired Draft; C is Published and unexpired. Search returns all three. Which expected result correctly tests the publication and expiry filters together?",
     "choices": [
-      "Declare the upgrade accepted because some pages open",
-      "Report the blocking smoke failure and assess it before claiming the full regression run is executable",
-      "Mark all unexecuted regression cases passed",
-      "Remove the required lookup from the business rule to make smoke pass"
+      "Return A and C",
+      "Return C only",
+      "Return B and C",
+      "Return A, B and C"
     ],
     "answer": 1
   },
@@ -4281,22 +4281,22 @@
     "answer": 1
   },
   {
-    "question": "ServiceNow scenario: Only the subject and agents in the assigned HR group may access an HR case. The subject sees a redacted summary; those agents may view full details. The subject is outside that group; Agent A belongs to it; Agent B belongs to another HR group. Which result is correct for both direct links and search?",
+    "question": "ServiceNow scenario: HR-case access is limited to subject S (redacted summary) and assigned HR-group agents (full details). S is outside that group; agent A is inside, B is outside. Which access is required through both search and direct links?",
     "choices": [
-      "Subject and both HR agents see full details because each is logged in",
-      "Subject sees no case; A and B see full details because both are HR agents",
-      "Subject sees full details; A sees the redacted summary; B sees no case",
-      "Subject sees the redacted summary; A sees full details; B sees no case"
+      "S: full; A: full; B: full",
+      "S: denied; A: full; B: full",
+      "S: full; A: redacted; B: denied",
+      "S: redacted; A: full; B: denied"
     ],
     "answer": 3
   },
   {
-    "question": "ServiceNow scenario: CMDB impact follows only current dependency relationships. Billing moves from Server A to Server B; A uses Database X and B uses Database Y. QA must remove Billing-to-A and add Billing-to-B. Afterward, which dependency result is correct?",
+    "question": "ServiceNow scenario: CMDB impact follows current dependency paths only. Billing moves from server A (uses database X) to B (uses Y). Remove Billing-to-A and add Billing-to-B; no other relationships change. Which outages can now affect Billing through its current dependencies?",
     "choices": [
-      "An outage of B or Y can impact Billing through its current path; A or X has no such path",
-      "An outage of A or X impacts Billing through the removed relationship only",
-      "Both old and new paths remain current because the server CIs still exist",
-      "Billing has no dependencies until the retired relationship is recreated"
+      "B or Y only",
+      "A or X only",
+      "A, B, X and Y",
+      "None"
     ],
     "answer": 0
   },
